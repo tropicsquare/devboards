@@ -1,0 +1,1103 @@
+ARM GAS  /tmp/ccZB3sUV.s 			page 1
+
+
+   1              		.cpu cortex-m33
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"cmd.c"
+  14              		.text
+  15              		.section	.text._skip_spaces,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv8-m.main
+  18              		.arch_extension dsp
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu fpv4-sp-d16
+  24              	_skip_spaces:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28              	.L2:
+  29 0000 0368     		ldr	r3, [r0]
+  30 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  31 0004 202A     		cmp	r2, #32
+  32 0006 00D0     		beq	.L3
+  33 0008 7047     		bx	lr
+  34              	.L3:
+  35 000a 0133     		adds	r3, r3, #1
+  36 000c 0360     		str	r3, [r0]
+  37 000e F7E7     		b	.L2
+  39              		.section	.rodata._cmd_help.str1.1,"aMS",%progbits,1
+  40              	.LC0:
+  41 0000 54726F70 		.ascii	"Tropicsquare USB/SPI interface\015\000"
+  41      69637371 
+  41      75617265 
+  41      20555342 
+  41      2F535049 
+  42              	.LC1:
+  43 0020 54797065 		.ascii	"Type HEX characters to make SPI transfer (i.e. \"11"
+  43      20484558 
+  43      20636861 
+  43      72616374 
+  43      65727320 
+  44 0052 32326161 		.ascii	"22aabb\")\015\000"
+  44      62622229 
+  44      0D00
+  45              	.LC2:
+  46 005c 53757070 		.ascii	"Supported commands:\015\000"
+  46      6F727465 
+  46      6420636F 
+  46      6D6D616E 
+ARM GAS  /tmp/ccZB3sUV.s 			page 2
+
+
+  46      64733A0D 
+  47              	.LC3:
+  48 0071 2573203A 		.ascii	"%s : %s\015\012\000"
+  48      2025730D 
+  48      0A00
+  49              		.section	.text._cmd_help,"ax",%progbits
+  50              		.align	1
+  51              		.syntax unified
+  52              		.thumb
+  53              		.thumb_func
+  54              		.fpu fpv4-sp-d16
+  56              	_cmd_help:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 38B5     		push	{r3, r4, r5, lr}
+  60 0002 0D48     		ldr	r0, .L20
+  61 0004 FFF7FEFF 		bl	puts
+  62 0008 0C48     		ldr	r0, .L20+4
+  63 000a FFF7FEFF 		bl	puts
+  64 000e 0C48     		ldr	r0, .L20+8
+  65 0010 FFF7FEFF 		bl	puts
+  66 0014 0B4C     		ldr	r4, .L20+12
+  67 0016 0C4D     		ldr	r5, .L20+16
+  68              	.L7:
+  69 0018 2168     		ldr	r1, [r4]
+  70 001a 51B1     		cbz	r1, .L5
+  71 001c E268     		ldr	r2, [r4, #12]
+  72 001e 32B1     		cbz	r2, .L6
+  73 0020 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  74 0022 23B1     		cbz	r3, .L6
+  75 0024 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+  76 0026 23B1     		cbz	r3, .L5
+  77 0028 2846     		mov	r0, r5
+  78 002a FFF7FEFF 		bl	printf
+  79              	.L6:
+  80 002e 1034     		adds	r4, r4, #16
+  81 0030 F2E7     		b	.L7
+  82              	.L5:
+  83 0032 0120     		movs	r0, #1
+  84 0034 38BD     		pop	{r3, r4, r5, pc}
+  85              	.L21:
+  86 0036 00BF     		.align	2
+  87              	.L20:
+  88 0038 00000000 		.word	.LC0
+  89 003c 20000000 		.word	.LC1
+  90 0040 5C000000 		.word	.LC2
+  91 0044 00000000 		.word	.LANCHOR0
+  92 0048 71000000 		.word	.LC3
+  94              		.section	.rodata._cmd_error.str1.1,"aMS",%progbits,1
+  95              	.LC4:
+  96 0000 4552524F 		.ascii	"ERROR: %s\015\012\000"
+  96      523A2025 
+  96      730D0A00 
+  97              		.section	.text._cmd_error,"ax",%progbits
+  98              		.align	1
+  99              		.syntax unified
+ 100              		.thumb
+ARM GAS  /tmp/ccZB3sUV.s 			page 3
+
+
+ 101              		.thumb_func
+ 102              		.fpu fpv4-sp-d16
+ 104              	_cmd_error:
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 108 0000 0146     		mov	r1, r0
+ 109 0002 0148     		ldr	r0, .L23
+ 110 0004 FFF7FEBF 		b	printf
+ 111              	.L24:
+ 112              		.align	2
+ 113              	.L23:
+ 114 0008 00000000 		.word	.LC4
+ 116              		.section	.rodata._cmd_reset.str1.1,"aMS",%progbits,1
+ 117              	.LC5:
+ 118 0000 52455345 		.ascii	"RESET\015\000"
+ 118      540D00
+ 119              		.section	.text._cmd_reset,"ax",%progbits
+ 120              		.align	1
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu fpv4-sp-d16
+ 126              	_cmd_reset:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129 0000 08B5     		push	{r3, lr}
+ 130 0002 0648     		ldr	r0, .L26
+ 131 0004 FFF7FEFF 		bl	puts
+ 132 0008 0A20     		movs	r0, #10
+ 133 000a FFF7FEFF 		bl	time_delay_ms
+ 134 000e 4FF48070 		mov	r0, #256
+ 135 0012 FFF7FEFF 		bl	wd_reset
+ 136 0016 0120     		movs	r0, #1
+ 137 0018 08BD     		pop	{r3, pc}
+ 138              	.L27:
+ 139 001a 00BF     		.align	2
+ 140              	.L26:
+ 141 001c 00000000 		.word	.LC5
+ 143              		.section	.rodata._cmd_pwr_set.str1.1,"aMS",%progbits,1
+ 144              	.LC6:
+ 145 0000 696E7661 		.ascii	"invalid parameter\000"
+ 145      6C696420 
+ 145      70617261 
+ 145      6D657465 
+ 145      7200
+ 146              		.section	.text._cmd_pwr_set,"ax",%progbits
+ 147              		.align	1
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 151              		.fpu fpv4-sp-d16
+ 153              	_cmd_pwr_set:
+ 154              		@ args = 0, pretend = 0, frame = 0
+ 155              		@ frame_needed = 0, uses_anonymous_args = 0
+ 156 0000 08B5     		push	{r3, lr}
+ 157 0002 0B68     		ldr	r3, [r1]
+ARM GAS  /tmp/ccZB3sUV.s 			page 4
+
+
+ 158 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 159 0006 302A     		cmp	r2, #48
+ 160 0008 06D0     		beq	.L33
+ 161 000a 312A     		cmp	r2, #49
+ 162 000c 0FD0     		beq	.L34
+ 163 000e 0A48     		ldr	r0, .L35
+ 164 0010 FFF7FEFF 		bl	_cmd_error
+ 165 0014 0020     		movs	r0, #0
+ 166              	.L30:
+ 167 0016 08BD     		pop	{r3, pc}
+ 168              	.L33:
+ 169 0018 0022     		movs	r2, #0
+ 170              	.L29:
+ 171 001a 0133     		adds	r3, r3, #1
+ 172 001c 0B60     		str	r3, [r1]
+ 173 001e 0121     		movs	r1, #1
+ 174 0020 064B     		ldr	r3, .L35+4
+ 175 0022 32B1     		cbz	r2, .L31
+ 176 0024 9961     		str	r1, [r3, #24]
+ 177              	.L32:
+ 178 0026 064B     		ldr	r3, .L35+8
+ 179 0028 0120     		movs	r0, #1
+ 180 002a 1A70     		strb	r2, [r3]
+ 181 002c F3E7     		b	.L30
+ 182              	.L34:
+ 183 002e 0122     		movs	r2, #1
+ 184 0030 F3E7     		b	.L29
+ 185              	.L31:
+ 186 0032 9962     		str	r1, [r3, #40]
+ 187 0034 F7E7     		b	.L32
+ 188              	.L36:
+ 189 0036 00BF     		.align	2
+ 190              	.L35:
+ 191 0038 00000000 		.word	.LC6
+ 192 003c 00000242 		.word	1107427328
+ 193 0040 00000000 		.word	.LANCHOR1
+ 195              		.section	.rodata._cmd_basic_reply.isra.0.str1.1,"aMS",%progbits,1
+ 196              	.LC7:
+ 197 0000 25733A20 		.ascii	"%s: \000"
+ 197      00
+ 198              		.section	.text._cmd_basic_reply.isra.0,"ax",%progbits
+ 199              		.align	1
+ 200              		.syntax unified
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.fpu fpv4-sp-d16
+ 205              	_cmd_basic_reply.isra.0:
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		@ link register save eliminated.
+ 209 0000 0146     		mov	r1, r0
+ 210 0002 0148     		ldr	r0, .L38
+ 211 0004 FFF7FEBF 		b	printf
+ 212              	.L39:
+ 213              		.align	2
+ 214              	.L38:
+ 215 0008 00000000 		.word	.LC7
+ARM GAS  /tmp/ccZB3sUV.s 			page 5
+
+
+ 217              		.section	.rodata._cmd_clkdiv.str1.1,"aMS",%progbits,1
+ 218              	.LC8:
+ 219 0000 256C750D 		.ascii	"%lu\015\012\000"
+ 219      0A00
+ 220              		.section	.text._cmd_clkdiv,"ax",%progbits
+ 221              		.align	1
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.fpu fpv4-sp-d16
+ 227              	_cmd_clkdiv:
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230 0000 08B5     		push	{r3, lr}
+ 231 0002 0068     		ldr	r0, [r0]
+ 232 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 233 0008 FFF7FEFF 		bl	spi1_get_prescaler
+ 234 000c 0146     		mov	r1, r0
+ 235 000e 0248     		ldr	r0, .L41
+ 236 0010 FFF7FEFF 		bl	printf
+ 237 0014 0120     		movs	r0, #1
+ 238 0016 08BD     		pop	{r3, pc}
+ 239              	.L42:
+ 240              		.align	2
+ 241              	.L41:
+ 242 0018 00000000 		.word	.LC8
+ 244              		.section	.rodata._cmd_cs.str1.1,"aMS",%progbits,1
+ 245              	.LC9:
+ 246 0000 25750D0A 		.ascii	"%u\015\012\000"
+ 246      00
+ 247              		.section	.text._cmd_cs,"ax",%progbits
+ 248              		.align	1
+ 249              		.syntax unified
+ 250              		.thumb
+ 251              		.thumb_func
+ 252              		.fpu fpv4-sp-d16
+ 254              	_cmd_cs:
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257 0000 08B5     		push	{r3, lr}
+ 258 0002 0068     		ldr	r0, [r0]
+ 259 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 260 0008 FFF7FEFF 		bl	spi1_cs_state
+ 261 000c 0146     		mov	r1, r0
+ 262 000e 0248     		ldr	r0, .L44
+ 263 0010 FFF7FEFF 		bl	printf
+ 264 0014 0120     		movs	r0, #1
+ 265 0016 08BD     		pop	{r3, pc}
+ 266              	.L45:
+ 267              		.align	2
+ 268              	.L44:
+ 269 0018 00000000 		.word	.LC9
+ 271              		.section	.rodata._cmd_sn.str1.1,"aMS",%progbits,1
+ 272              	.LC10:
+ 273 0000 257300   		.ascii	"%s\000"
+ 274              	.LC11:
+ 275 0003 0D00     		.ascii	"\015\000"
+ARM GAS  /tmp/ccZB3sUV.s 			page 6
+
+
+ 276              		.section	.text._cmd_sn,"ax",%progbits
+ 277              		.align	1
+ 278              		.syntax unified
+ 279              		.thumb
+ 280              		.thumb_func
+ 281              		.fpu fpv4-sp-d16
+ 283              	_cmd_sn:
+ 284              		@ args = 0, pretend = 0, frame = 0
+ 285              		@ frame_needed = 0, uses_anonymous_args = 0
+ 286 0000 08B5     		push	{r3, lr}
+ 287 0002 0068     		ldr	r0, [r0]
+ 288 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 289 0008 FFF7FEFF 		bl	ux_device_sn_text
+ 290 000c 0146     		mov	r1, r0
+ 291 000e 0448     		ldr	r0, .L47
+ 292 0010 FFF7FEFF 		bl	printf
+ 293 0014 0348     		ldr	r0, .L47+4
+ 294 0016 FFF7FEFF 		bl	puts
+ 295 001a 0120     		movs	r0, #1
+ 296 001c 08BD     		pop	{r3, pc}
+ 297              	.L48:
+ 298 001e 00BF     		.align	2
+ 299              	.L47:
+ 300 0020 00000000 		.word	.LC10
+ 301 0024 03000000 		.word	.LC11
+ 303              		.section	.rodata._cmd_auto.str1.1,"aMS",%progbits,1
+ 304              	.LC12:
+ 305 0000 312C2025 		.ascii	"1, %02X, %02X\015\012\000"
+ 305      3032582C 
+ 305      20253032 
+ 305      580D0A00 
+ 306              	.LC13:
+ 307 0010 300D00   		.ascii	"0\015\000"
+ 308              		.section	.text._cmd_auto,"ax",%progbits
+ 309              		.align	1
+ 310              		.syntax unified
+ 311              		.thumb
+ 312              		.thumb_func
+ 313              		.fpu fpv4-sp-d16
+ 315              	_cmd_auto:
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318 0000 08B5     		push	{r3, lr}
+ 319 0002 0068     		ldr	r0, [r0]
+ 320 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 321 0008 074B     		ldr	r3, .L52
+ 322 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 323 000c 43B1     		cbz	r3, .L50
+ 324 000e 074B     		ldr	r3, .L52+4
+ 325 0010 0748     		ldr	r0, .L52+8
+ 326 0012 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 327 0014 074B     		ldr	r3, .L52+12
+ 328 0016 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 329 0018 FFF7FEFF 		bl	printf
+ 330              	.L51:
+ 331 001c 0120     		movs	r0, #1
+ 332 001e 08BD     		pop	{r3, pc}
+ARM GAS  /tmp/ccZB3sUV.s 			page 7
+
+
+ 333              	.L50:
+ 334 0020 0548     		ldr	r0, .L52+16
+ 335 0022 FFF7FEFF 		bl	puts
+ 336 0026 F9E7     		b	.L51
+ 337              	.L53:
+ 338              		.align	2
+ 339              	.L52:
+ 340 0028 00000000 		.word	main_spi_auto
+ 341 002c 00000000 		.word	main_spi_no_resp
+ 342 0030 00000000 		.word	.LC12
+ 343 0034 00000000 		.word	main_spi_get_resp
+ 344 0038 10000000 		.word	.LC13
+ 346              		.section	.rodata._cmd_gpo.str1.1,"aMS",%progbits,1
+ 347              	.LC14:
+ 348 0000 25640D0A 		.ascii	"%d\015\012\000"
+ 348      00
+ 349              		.section	.text._cmd_gpo,"ax",%progbits
+ 350              		.align	1
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 354              		.fpu fpv4-sp-d16
+ 356              	_cmd_gpo:
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359 0000 08B5     		push	{r3, lr}
+ 360 0002 0068     		ldr	r0, [r0]
+ 361 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 362 0008 044B     		ldr	r3, .L55
+ 363 000a 0548     		ldr	r0, .L55+4
+ 364 000c 1969     		ldr	r1, [r3, #16]
+ 365 000e 01F00101 		and	r1, r1, #1
+ 366 0012 FFF7FEFF 		bl	printf
+ 367 0016 0120     		movs	r0, #1
+ 368 0018 08BD     		pop	{r3, pc}
+ 369              	.L56:
+ 370 001a 00BF     		.align	2
+ 371              	.L55:
+ 372 001c 00040242 		.word	1107428352
+ 373 0020 00000000 		.word	.LC14
+ 375              		.section	.text._cmd_pwr,"ax",%progbits
+ 376              		.align	1
+ 377              		.syntax unified
+ 378              		.thumb
+ 379              		.thumb_func
+ 380              		.fpu fpv4-sp-d16
+ 382              	_cmd_pwr:
+ 383              		@ args = 0, pretend = 0, frame = 0
+ 384              		@ frame_needed = 0, uses_anonymous_args = 0
+ 385 0000 08B5     		push	{r3, lr}
+ 386 0002 0068     		ldr	r0, [r0]
+ 387 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 388 0008 034B     		ldr	r3, .L58
+ 389 000a 0448     		ldr	r0, .L58+4
+ 390 000c 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 391 000e FFF7FEFF 		bl	printf
+ 392 0012 0120     		movs	r0, #1
+ARM GAS  /tmp/ccZB3sUV.s 			page 8
+
+
+ 393 0014 08BD     		pop	{r3, pc}
+ 394              	.L59:
+ 395 0016 00BF     		.align	2
+ 396              	.L58:
+ 397 0018 00000000 		.word	.LANCHOR1
+ 398 001c 00000000 		.word	.LC14
+ 400              		.section	.rodata._cmd_ver.str1.1,"aMS",%progbits,1
+ 401              	.LC15:
+ 402 0000 54533133 		.ascii	"TS1302\000"
+ 402      303200
+ 403              	.LC16:
+ 404 0007 312E342E 		.ascii	"1.4.1\000"
+ 404      3100
+ 405              	.LC17:
+ 406 000d 46572025 		.ascii	"FW %s, HW %s, https://github.com/tropicsquare\015\012"
+ 406      732C2048 
+ 406      57202573 
+ 406      2C206874 
+ 406      7470733A 
+ 407 003c 00       		.ascii	"\000"
+ 408              		.section	.text._cmd_ver,"ax",%progbits
+ 409              		.align	1
+ 410              		.syntax unified
+ 411              		.thumb
+ 412              		.thumb_func
+ 413              		.fpu fpv4-sp-d16
+ 415              	_cmd_ver:
+ 416              		@ args = 0, pretend = 0, frame = 0
+ 417              		@ frame_needed = 0, uses_anonymous_args = 0
+ 418 0000 08B5     		push	{r3, lr}
+ 419 0002 0068     		ldr	r0, [r0]
+ 420 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 421 0008 034A     		ldr	r2, .L61
+ 422 000a 0449     		ldr	r1, .L61+4
+ 423 000c 0448     		ldr	r0, .L61+8
+ 424 000e FFF7FEFF 		bl	printf
+ 425 0012 0120     		movs	r0, #1
+ 426 0014 08BD     		pop	{r3, pc}
+ 427              	.L62:
+ 428 0016 00BF     		.align	2
+ 429              	.L61:
+ 430 0018 00000000 		.word	.LC15
+ 431 001c 07000000 		.word	.LC16
+ 432 0020 0D000000 		.word	.LC17
+ 434              		.section	.rodata._cmd_button.str1.1,"aMS",%progbits,1
+ 435              	.LC18:
+ 436 0000 310D00   		.ascii	"1\015\000"
+ 437              		.section	.text._cmd_button,"ax",%progbits
+ 438              		.align	1
+ 439              		.syntax unified
+ 440              		.thumb
+ 441              		.thumb_func
+ 442              		.fpu fpv4-sp-d16
+ 444              	_cmd_button:
+ 445              		@ args = 0, pretend = 0, frame = 0
+ 446              		@ frame_needed = 0, uses_anonymous_args = 0
+ 447 0000 08B5     		push	{r3, lr}
+ARM GAS  /tmp/ccZB3sUV.s 			page 9
+
+
+ 448 0002 0068     		ldr	r0, [r0]
+ 449 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 450 0008 044B     		ldr	r3, .L67
+ 451 000a 1B69     		ldr	r3, [r3, #16]
+ 452 000c 1B07     		lsls	r3, r3, #28
+ 453 000e 4CBF     		ite	mi
+ 454 0010 0348     		ldrmi	r0, .L67+4
+ 455 0012 0448     		ldrpl	r0, .L67+8
+ 456 0014 FFF7FEFF 		bl	puts
+ 457 0018 0120     		movs	r0, #1
+ 458 001a 08BD     		pop	{r3, pc}
+ 459              	.L68:
+ 460              		.align	2
+ 461              	.L67:
+ 462 001c 001C0242 		.word	1107434496
+ 463 0020 00000000 		.word	.LC18
+ 464 0024 10000000 		.word	.LC13
+ 466              		.section	.rodata._cmd_id.str1.1,"aMS",%progbits,1
+ 467              	.LC19:
+ 468 0000 5553422F 		.ascii	"USB/SPI converter (master)\015\000"
+ 468      53504920 
+ 468      636F6E76 
+ 468      65727465 
+ 468      7220286D 
+ 469              		.section	.text._cmd_id,"ax",%progbits
+ 470              		.align	1
+ 471              		.syntax unified
+ 472              		.thumb
+ 473              		.thumb_func
+ 474              		.fpu fpv4-sp-d16
+ 476              	_cmd_id:
+ 477              		@ args = 0, pretend = 0, frame = 0
+ 478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 479 0000 08B5     		push	{r3, lr}
+ 480 0002 0068     		ldr	r0, [r0]
+ 481 0004 FFF7FEFF 		bl	_cmd_basic_reply.isra.0
+ 482 0008 0248     		ldr	r0, .L70
+ 483 000a FFF7FEFF 		bl	puts
+ 484 000e 0120     		movs	r0, #1
+ 485 0010 08BD     		pop	{r3, pc}
+ 486              	.L71:
+ 487 0012 00BF     		.align	2
+ 488              	.L70:
+ 489 0014 00000000 		.word	.LC19
+ 491              		.section	.text._cmd_auto_set,"ax",%progbits
+ 492              		.align	1
+ 493              		.syntax unified
+ 494              		.thumb
+ 495              		.thumb_func
+ 496              		.fpu fpv4-sp-d16
+ 498              	_cmd_auto_set:
+ 499              		@ args = 0, pretend = 0, frame = 8
+ 500              		@ frame_needed = 0, uses_anonymous_args = 0
+ 501 0000 AA23     		movs	r3, #170
+ 502 0002 37B5     		push	{r0, r1, r2, r4, r5, lr}
+ 503 0004 8DF80630 		strb	r3, [sp, #6]
+ 504 0008 FF23     		movs	r3, #255
+ARM GAS  /tmp/ccZB3sUV.s 			page 10
+
+
+ 505 000a 8DF80730 		strb	r3, [sp, #7]
+ 506 000e 0B68     		ldr	r3, [r1]
+ 507 0010 0C46     		mov	r4, r1
+ 508 0012 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 509 0014 302A     		cmp	r2, #48
+ 510 0016 37D0     		beq	.L78
+ 511 0018 312A     		cmp	r2, #49
+ 512 001a 37D1     		bne	.L74
+ 513 001c 0125     		movs	r5, #1
+ 514              	.L73:
+ 515 001e 0133     		adds	r3, r3, #1
+ 516 0020 2360     		str	r3, [r4]
+ 517 0022 2046     		mov	r0, r4
+ 518 0024 FFF7FEFF 		bl	_skip_spaces
+ 519 0028 2168     		ldr	r1, [r4]
+ 520 002a 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 521 002c 2C2B     		cmp	r3, #44
+ 522 002e 0BD1     		bne	.L75
+ 523 0030 0131     		adds	r1, r1, #1
+ 524 0032 0122     		movs	r2, #1
+ 525 0034 2160     		str	r1, [r4]
+ 526 0036 0DF10600 		add	r0, sp, #6
+ 527 003a FFF7FEFF 		bl	hex_to_bin
+ 528 003e 0128     		cmp	r0, #1
+ 529 0040 24D1     		bne	.L74
+ 530 0042 2368     		ldr	r3, [r4]
+ 531 0044 0233     		adds	r3, r3, #2
+ 532 0046 2360     		str	r3, [r4]
+ 533              	.L75:
+ 534 0048 2046     		mov	r0, r4
+ 535 004a FFF7FEFF 		bl	_skip_spaces
+ 536 004e 2168     		ldr	r1, [r4]
+ 537 0050 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 538 0052 2C2B     		cmp	r3, #44
+ 539 0054 0BD1     		bne	.L76
+ 540 0056 0131     		adds	r1, r1, #1
+ 541 0058 0122     		movs	r2, #1
+ 542 005a 2160     		str	r1, [r4]
+ 543 005c 0DF10700 		add	r0, sp, #7
+ 544 0060 FFF7FEFF 		bl	hex_to_bin
+ 545 0064 0128     		cmp	r0, #1
+ 546 0066 11D1     		bne	.L74
+ 547 0068 2368     		ldr	r3, [r4]
+ 548 006a 0233     		adds	r3, r3, #2
+ 549 006c 2360     		str	r3, [r4]
+ 550              	.L76:
+ 551 006e 0120     		movs	r0, #1
+ 552 0070 094B     		ldr	r3, .L79
+ 553 0072 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
+ 554 0076 1D70     		strb	r5, [r3]
+ 555 0078 084B     		ldr	r3, .L79+4
+ 556 007a 1A70     		strb	r2, [r3]
+ 557 007c 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 558 0080 074B     		ldr	r3, .L79+8
+ 559 0082 1A70     		strb	r2, [r3]
+ 560              	.L77:
+ 561 0084 03B0     		add	sp, sp, #12
+ARM GAS  /tmp/ccZB3sUV.s 			page 11
+
+
+ 562              		@ sp needed
+ 563 0086 30BD     		pop	{r4, r5, pc}
+ 564              	.L78:
+ 565 0088 0025     		movs	r5, #0
+ 566 008a C8E7     		b	.L73
+ 567              	.L74:
+ 568 008c 0548     		ldr	r0, .L79+12
+ 569 008e FFF7FEFF 		bl	_cmd_error
+ 570 0092 0020     		movs	r0, #0
+ 571 0094 F6E7     		b	.L77
+ 572              	.L80:
+ 573 0096 00BF     		.align	2
+ 574              	.L79:
+ 575 0098 00000000 		.word	main_spi_auto
+ 576 009c 00000000 		.word	main_spi_get_resp
+ 577 00a0 00000000 		.word	main_spi_no_resp
+ 578 00a4 00000000 		.word	.LC6
+ 580              		.section	.text._cmd_cs_set,"ax",%progbits
+ 581              		.align	1
+ 582              		.syntax unified
+ 583              		.thumb
+ 584              		.thumb_func
+ 585              		.fpu fpv4-sp-d16
+ 587              	_cmd_cs_set:
+ 588              		@ args = 0, pretend = 0, frame = 0
+ 589              		@ frame_needed = 0, uses_anonymous_args = 0
+ 590 0000 08B5     		push	{r3, lr}
+ 591 0002 0B68     		ldr	r3, [r1]
+ 592 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 593 0006 302A     		cmp	r2, #48
+ 594 0008 06D0     		beq	.L84
+ 595 000a 312A     		cmp	r2, #49
+ 596 000c 0BD0     		beq	.L85
+ 597 000e 0748     		ldr	r0, .L86
+ 598 0010 FFF7FEFF 		bl	_cmd_error
+ 599 0014 0020     		movs	r0, #0
+ 600              	.L83:
+ 601 0016 08BD     		pop	{r3, pc}
+ 602              	.L84:
+ 603 0018 0020     		movs	r0, #0
+ 604              	.L82:
+ 605 001a 0133     		adds	r3, r3, #1
+ 606 001c 0B60     		str	r3, [r1]
+ 607 001e FFF7FEFF 		bl	spi1_cs
+ 608 0022 0120     		movs	r0, #1
+ 609 0024 F7E7     		b	.L83
+ 610              	.L85:
+ 611 0026 0120     		movs	r0, #1
+ 612 0028 F7E7     		b	.L82
+ 613              	.L87:
+ 614 002a 00BF     		.align	2
+ 615              	.L86:
+ 616 002c 00000000 		.word	.LC6
+ 618              		.section	.text.parse_number,"ax",%progbits
+ 619              		.align	1
+ 620              		.global	parse_number
+ 621              		.syntax unified
+ARM GAS  /tmp/ccZB3sUV.s 			page 12
+
+
+ 622              		.thumb
+ 623              		.thumb_func
+ 624              		.fpu fpv4-sp-d16
+ 626              	parse_number:
+ 627              		@ args = 0, pretend = 0, frame = 0
+ 628              		@ frame_needed = 0, uses_anonymous_args = 0
+ 629 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 630 0002 0D78     		ldrb	r5, [r1]	@ zero_extendqisi2
+ 631 0004 0246     		mov	r2, r0
+ 632 0006 2D2D     		cmp	r5, #45
+ 633 0008 08BF     		it	eq
+ 634 000a 0131     		addeq	r1, r1, #1
+ 635 000c 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 636 000e 303B     		subs	r3, r3, #48
+ 637 0010 092B     		cmp	r3, #9
+ 638 0012 11D8     		bhi	.L94
+ 639 0014 0023     		movs	r3, #0
+ 640 0016 0A27     		movs	r7, #10
+ 641              	.L91:
+ 642 0018 0C78     		ldrb	r4, [r1]	@ zero_extendqisi2
+ 643 001a 0846     		mov	r0, r1
+ 644 001c 303C     		subs	r4, r4, #48
+ 645 001e E6B2     		uxtb	r6, r4
+ 646 0020 092E     		cmp	r6, #9
+ 647 0022 01F10101 		add	r1, r1, #1
+ 648 0026 04D9     		bls	.L92
+ 649 0028 2D2D     		cmp	r5, #45
+ 650 002a 08BF     		it	eq
+ 651 002c 5B42     		rsbeq	r3, r3, #0
+ 652 002e 1360     		str	r3, [r2]
+ 653              	.L88:
+ 654 0030 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 655              	.L92:
+ 656 0032 07FB0343 		mla	r3, r7, r3, r4
+ 657 0036 EFE7     		b	.L91
+ 658              	.L94:
+ 659 0038 0020     		movs	r0, #0
+ 660 003a F9E7     		b	.L88
+ 662              		.section	.text._cmd_clkdiv_set,"ax",%progbits
+ 663              		.align	1
+ 664              		.syntax unified
+ 665              		.thumb
+ 666              		.thumb_func
+ 667              		.fpu fpv4-sp-d16
+ 669              	_cmd_clkdiv_set:
+ 670              		@ args = 0, pretend = 0, frame = 8
+ 671              		@ frame_needed = 0, uses_anonymous_args = 0
+ 672 0000 13B5     		push	{r0, r1, r4, lr}
+ 673 0002 0C46     		mov	r4, r1
+ 674 0004 01A8     		add	r0, sp, #4
+ 675 0006 0968     		ldr	r1, [r1]
+ 676 0008 FFF7FEFF 		bl	parse_number
+ 677 000c 20B1     		cbz	r0, .L97
+ 678 000e 2060     		str	r0, [r4]
+ 679 0010 0198     		ldr	r0, [sp, #4]
+ 680 0012 FFF7FEFF 		bl	spi1_set_prescaler
+ 681 0016 18B9     		cbnz	r0, .L98
+ARM GAS  /tmp/ccZB3sUV.s 			page 13
+
+
+ 682              	.L97:
+ 683 0018 0248     		ldr	r0, .L99
+ 684 001a FFF7FEFF 		bl	_cmd_error
+ 685 001e 0020     		movs	r0, #0
+ 686              	.L98:
+ 687 0020 02B0     		add	sp, sp, #8
+ 688              		@ sp needed
+ 689 0022 10BD     		pop	{r4, pc}
+ 690              	.L100:
+ 691              		.align	2
+ 692              	.L99:
+ 693 0024 00000000 		.word	.LC6
+ 695              		.section	.rodata.cmd_parse.str1.1,"aMS",%progbits,1
+ 696              	.LC20:
+ 697 0000 696C6C65 		.ascii	"illegal parameter\000"
+ 697      67616C20 
+ 697      70617261 
+ 697      6D657465 
+ 697      7200
+ 698              	.LC21:
+ 699 0012 6D697373 		.ascii	"missing parameter\000"
+ 699      696E6720 
+ 699      70617261 
+ 699      6D657465 
+ 699      7200
+ 700              	.LC22:
+ 701 0024 4F4B0D00 		.ascii	"OK\015\000"
+ 702              	.LC23:
+ 703 0028 756E6B6E 		.ascii	"unknown command\000"
+ 703      6F776E20 
+ 703      636F6D6D 
+ 703      616E6400 
+ 704              		.section	.text.cmd_parse,"ax",%progbits
+ 705              		.align	1
+ 706              		.global	cmd_parse
+ 707              		.syntax unified
+ 708              		.thumb
+ 709              		.thumb_func
+ 710              		.fpu fpv4-sp-d16
+ 712              	cmd_parse:
+ 713              		@ args = 0, pretend = 0, frame = 8
+ 714              		@ frame_needed = 0, uses_anonymous_args = 0
+ 715 0000 F7B5     		push	{r0, r1, r2, r4, r5, r6, r7, lr}
+ 716 0002 0190     		str	r0, [sp, #4]
+ 717 0004 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 718 0006 232B     		cmp	r3, #35
+ 719 0008 3AD0     		beq	.L101
+ 720 000a 0026     		movs	r6, #0
+ 721 000c 244F     		ldr	r7, .L131
+ 722              	.L102:
+ 723 000e B4B2     		uxth	r4, r6
+ 724 0010 2301     		lsls	r3, r4, #4
+ 725 0012 F958     		ldr	r1, [r7, r3]
+ 726 0014 07EB0414 		add	r4, r7, r4, lsl #4
+ 727 0018 0029     		cmp	r1, #0
+ 728 001a 3FD0     		beq	.L104
+ 729 001c 0846     		mov	r0, r1
+ARM GAS  /tmp/ccZB3sUV.s 			page 14
+
+
+ 730 001e 0091     		str	r1, [sp]
+ 731 0020 FFF7FEFF 		bl	strlen
+ 732 0024 83B2     		uxth	r3, r0
+ 733 0026 0546     		mov	r5, r0
+ 734 0028 002B     		cmp	r3, #0
+ 735 002a 37D0     		beq	.L104
+ 736 002c C2B2     		uxtb	r2, r0
+ 737 002e DDE90010 		ldrd	r1, r0, [sp]
+ 738 0032 FFF7FEFF 		bl	strnicmp
+ 739 0036 A8B9     		cbnz	r0, .L105
+ 740 0038 019B     		ldr	r3, [sp, #4]
+ 741 003a ADB2     		uxth	r5, r5
+ 742 003c 585D     		ldrb	r0, [r3, r5]	@ zero_extendqisi2
+ 743 003e FFF7FEFF 		bl	is_char
+ 744 0042 78B9     		cbnz	r0, .L105
+ 745 0044 0198     		ldr	r0, [sp, #4]
+ 746 0046 0544     		add	r5, r5, r0
+ 747 0048 01A8     		add	r0, sp, #4
+ 748 004a 0195     		str	r5, [sp, #4]
+ 749 004c FFF7FEFF 		bl	_skip_spaces
+ 750 0050 019B     		ldr	r3, [sp, #4]
+ 751 0052 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 752 0054 3D2A     		cmp	r2, #61
+ 753 0056 15D1     		bne	.L129
+ 754 0058 A268     		ldr	r2, [r4, #8]
+ 755 005a 2AB9     		cbnz	r2, .L108
+ 756 005c 1148     		ldr	r0, .L131+4
+ 757              	.L130:
+ 758 005e FFF7FEFF 		bl	_cmd_error
+ 759 0062 0DE0     		b	.L101
+ 760              	.L105:
+ 761 0064 0136     		adds	r6, r6, #1
+ 762 0066 D2E7     		b	.L102
+ 763              	.L108:
+ 764 0068 0133     		adds	r3, r3, #1
+ 765 006a 0193     		str	r3, [sp, #4]
+ 766 006c 01A9     		add	r1, sp, #4
+ 767 006e FFF7FEFF 		bl	_skip_spaces
+ 768 0072 2046     		mov	r0, r4
+ 769 0074 A368     		ldr	r3, [r4, #8]
+ 770 0076 9847     		blx	r3
+ 771              	.L109:
+ 772 0078 10B1     		cbz	r0, .L101
+ 773 007a 0B48     		ldr	r0, .L131+8
+ 774 007c FFF7FEFF 		bl	puts
+ 775              	.L101:
+ 776 0080 03B0     		add	sp, sp, #12
+ 777              		@ sp needed
+ 778 0082 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 779              	.L129:
+ 780 0084 3F2A     		cmp	r2, #63
+ 781 0086 02D0     		beq	.L110
+ 782 0088 0AB1     		cbz	r2, .L110
+ 783 008a 0848     		ldr	r0, .L131+12
+ 784 008c E7E7     		b	.L130
+ 785              	.L110:
+ 786 008e 6368     		ldr	r3, [r4, #4]
+ARM GAS  /tmp/ccZB3sUV.s 			page 15
+
+
+ 787 0090 0BB9     		cbnz	r3, .L111
+ 788 0092 0748     		ldr	r0, .L131+16
+ 789 0094 E3E7     		b	.L130
+ 790              	.L111:
+ 791 0096 2046     		mov	r0, r4
+ 792 0098 9847     		blx	r3
+ 793 009a EDE7     		b	.L109
+ 794              	.L104:
+ 795 009c 0548     		ldr	r0, .L131+20
+ 796 009e DEE7     		b	.L130
+ 797              	.L132:
+ 798              		.align	2
+ 799              	.L131:
+ 800 00a0 00000000 		.word	.LANCHOR0
+ 801 00a4 00000000 		.word	.LC6
+ 802 00a8 24000000 		.word	.LC22
+ 803 00ac 00000000 		.word	.LC20
+ 804 00b0 12000000 		.word	.LC21
+ 805 00b4 28000000 		.word	.LC23
+ 807              		.section	.rodata.str1.1,"aMS",%progbits,1
+ 808              	.LC24:
+ 809 0000 4155544F 		.ascii	"AUTO\000"
+ 809      00
+ 810              	.LC25:
+ 811 0005 4175746F 		.ascii	"Automatic response reading get/set\000"
+ 811      6D617469 
+ 811      63207265 
+ 811      73706F6E 
+ 811      73652072 
+ 812              	.LC26:
+ 813 0028 42555454 		.ascii	"BUTTON\000"
+ 813      4F4E00
+ 814              	.LC27:
+ 815 002f 47657420 		.ascii	"Get button state\000"
+ 815      62757474 
+ 815      6F6E2073 
+ 815      74617465 
+ 815      00
+ 816              	.LC28:
+ 817 0040 434C4B44 		.ascii	"CLKDIV\000"
+ 817      495600
+ 818              	.LC29:
+ 819 0047 436C6F63 		.ascii	"Clock divisor get/set\000"
+ 819      6B206469 
+ 819      7669736F 
+ 819      72206765 
+ 819      742F7365 
+ 820              	.LC30:
+ 821 005d 435300   		.ascii	"CS\000"
+ 822              	.LC31:
+ 823 0060 53504920 		.ascii	"SPI chip select direct control\000"
+ 823      63686970 
+ 823      2073656C 
+ 823      65637420 
+ 823      64697265 
+ 824              	.LC32:
+ 825 007f 47504F00 		.ascii	"GPO\000"
+ARM GAS  /tmp/ccZB3sUV.s 			page 16
+
+
+ 826              	.LC33:
+ 827 0083 53686F77 		.ascii	"Show GPO state\000"
+ 827      2047504F 
+ 827      20737461 
+ 827      746500
+ 828              	.LC34:
+ 829 0092 48454C50 		.ascii	"HELP\000"
+ 829      00
+ 830              	.LC35:
+ 831 0097 54686973 		.ascii	"This help text\000"
+ 831      2068656C 
+ 831      70207465 
+ 831      787400
+ 832              	.LC36:
+ 833 00a6 494400   		.ascii	"ID\000"
+ 834              	.LC37:
+ 835 00a9 52657175 		.ascii	"Request product id\000"
+ 835      65737420 
+ 835      70726F64 
+ 835      75637420 
+ 835      696400
+ 836              	.LC38:
+ 837 00bc 50575200 		.ascii	"PWR\000"
+ 838              	.LC39:
+ 839 00c0 4765742F 		.ascii	"Get/set target power\000"
+ 839      73657420 
+ 839      74617267 
+ 839      65742070 
+ 839      6F776572 
+ 840              	.LC40:
+ 841 00d5 52455345 		.ascii	"RESET\000"
+ 841      5400
+ 842              	.LC41:
+ 843 00db 496E7374 		.ascii	"Instant reset\000"
+ 843      616E7420 
+ 843      72657365 
+ 843      7400
+ 844              	.LC42:
+ 845 00e9 534E00   		.ascii	"SN\000"
+ 846              	.LC43:
+ 847 00ec 52657175 		.ascii	"Request product serial number\000"
+ 847      65737420 
+ 847      70726F64 
+ 847      75637420 
+ 847      73657269 
+ 848              	.LC44:
+ 849 010a 56455200 		.ascii	"VER\000"
+ 850              	.LC45:
+ 851 010e 52657175 		.ascii	"Request version information\000"
+ 851      65737420 
+ 851      76657273 
+ 851      696F6E20 
+ 851      696E666F 
+ 852              		.section	.data._pwr_state,"aw"
+ 853              		.set	.LANCHOR1,. + 0
+ 856              	_pwr_state:
+ 857 0000 01       		.byte	1
+ARM GAS  /tmp/ccZB3sUV.s 			page 17
+
+
+ 858              		.section	.rodata._CMD_TABLE,"a"
+ 859              		.align	2
+ 860              		.set	.LANCHOR0,. + 0
+ 863              	_CMD_TABLE:
+ 864 0000 00000000 		.word	.LC24
+ 865 0004 00000000 		.word	_cmd_auto
+ 866 0008 00000000 		.word	_cmd_auto_set
+ 867 000c 05000000 		.word	.LC25
+ 868 0010 28000000 		.word	.LC26
+ 869 0014 00000000 		.word	_cmd_button
+ 870 0018 00000000 		.word	0
+ 871 001c 2F000000 		.word	.LC27
+ 872 0020 40000000 		.word	.LC28
+ 873 0024 00000000 		.word	_cmd_clkdiv
+ 874 0028 00000000 		.word	_cmd_clkdiv_set
+ 875 002c 47000000 		.word	.LC29
+ 876 0030 5D000000 		.word	.LC30
+ 877 0034 00000000 		.word	_cmd_cs
+ 878 0038 00000000 		.word	_cmd_cs_set
+ 879 003c 60000000 		.word	.LC31
+ 880 0040 7F000000 		.word	.LC32
+ 881 0044 00000000 		.word	_cmd_gpo
+ 882 0048 00000000 		.word	0
+ 883 004c 83000000 		.word	.LC33
+ 884 0050 92000000 		.word	.LC34
+ 885 0054 00000000 		.word	_cmd_help
+ 886 0058 00000000 		.word	0
+ 887 005c 97000000 		.word	.LC35
+ 888 0060 A6000000 		.word	.LC36
+ 889 0064 00000000 		.word	_cmd_id
+ 890 0068 00000000 		.word	0
+ 891 006c A9000000 		.word	.LC37
+ 892 0070 BC000000 		.word	.LC38
+ 893 0074 00000000 		.word	_cmd_pwr
+ 894 0078 00000000 		.word	_cmd_pwr_set
+ 895 007c C0000000 		.word	.LC39
+ 896 0080 D5000000 		.word	.LC40
+ 897 0084 00000000 		.word	_cmd_reset
+ 898 0088 00000000 		.word	0
+ 899 008c DB000000 		.word	.LC41
+ 900 0090 E9000000 		.word	.LC42
+ 901 0094 00000000 		.word	_cmd_sn
+ 902 0098 00000000 		.word	0
+ 903 009c EC000000 		.word	.LC43
+ 904 00a0 0A010000 		.word	.LC44
+ 905 00a4 00000000 		.word	_cmd_ver
+ 906 00a8 00000000 		.word	0
+ 907 00ac 0E010000 		.word	.LC45
+ 908 00b0 00000000 		.word	0
+ 909 00b4 00000000 		.word	0
+ 910 00b8 00000000 		.word	0
+ 911 00bc 00000000 		.word	0
+ 912              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccZB3sUV.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 cmd.c
+     /tmp/ccZB3sUV.s:16     .text._skip_spaces:0000000000000000 $t
+     /tmp/ccZB3sUV.s:24     .text._skip_spaces:0000000000000000 _skip_spaces
+     /tmp/ccZB3sUV.s:50     .text._cmd_help:0000000000000000 $t
+     /tmp/ccZB3sUV.s:56     .text._cmd_help:0000000000000000 _cmd_help
+     /tmp/ccZB3sUV.s:88     .text._cmd_help:0000000000000038 $d
+     /tmp/ccZB3sUV.s:98     .text._cmd_error:0000000000000000 $t
+     /tmp/ccZB3sUV.s:104    .text._cmd_error:0000000000000000 _cmd_error
+     /tmp/ccZB3sUV.s:114    .text._cmd_error:0000000000000008 $d
+     /tmp/ccZB3sUV.s:120    .text._cmd_reset:0000000000000000 $t
+     /tmp/ccZB3sUV.s:126    .text._cmd_reset:0000000000000000 _cmd_reset
+     /tmp/ccZB3sUV.s:141    .text._cmd_reset:000000000000001c $d
+     /tmp/ccZB3sUV.s:147    .text._cmd_pwr_set:0000000000000000 $t
+     /tmp/ccZB3sUV.s:153    .text._cmd_pwr_set:0000000000000000 _cmd_pwr_set
+     /tmp/ccZB3sUV.s:191    .text._cmd_pwr_set:0000000000000038 $d
+     /tmp/ccZB3sUV.s:199    .text._cmd_basic_reply.isra.0:0000000000000000 $t
+     /tmp/ccZB3sUV.s:205    .text._cmd_basic_reply.isra.0:0000000000000000 _cmd_basic_reply.isra.0
+     /tmp/ccZB3sUV.s:215    .text._cmd_basic_reply.isra.0:0000000000000008 $d
+     /tmp/ccZB3sUV.s:221    .text._cmd_clkdiv:0000000000000000 $t
+     /tmp/ccZB3sUV.s:227    .text._cmd_clkdiv:0000000000000000 _cmd_clkdiv
+     /tmp/ccZB3sUV.s:242    .text._cmd_clkdiv:0000000000000018 $d
+     /tmp/ccZB3sUV.s:248    .text._cmd_cs:0000000000000000 $t
+     /tmp/ccZB3sUV.s:254    .text._cmd_cs:0000000000000000 _cmd_cs
+     /tmp/ccZB3sUV.s:269    .text._cmd_cs:0000000000000018 $d
+     /tmp/ccZB3sUV.s:277    .text._cmd_sn:0000000000000000 $t
+     /tmp/ccZB3sUV.s:283    .text._cmd_sn:0000000000000000 _cmd_sn
+     /tmp/ccZB3sUV.s:300    .text._cmd_sn:0000000000000020 $d
+     /tmp/ccZB3sUV.s:309    .text._cmd_auto:0000000000000000 $t
+     /tmp/ccZB3sUV.s:315    .text._cmd_auto:0000000000000000 _cmd_auto
+     /tmp/ccZB3sUV.s:340    .text._cmd_auto:0000000000000028 $d
+     /tmp/ccZB3sUV.s:350    .text._cmd_gpo:0000000000000000 $t
+     /tmp/ccZB3sUV.s:356    .text._cmd_gpo:0000000000000000 _cmd_gpo
+     /tmp/ccZB3sUV.s:372    .text._cmd_gpo:000000000000001c $d
+     /tmp/ccZB3sUV.s:376    .text._cmd_pwr:0000000000000000 $t
+     /tmp/ccZB3sUV.s:382    .text._cmd_pwr:0000000000000000 _cmd_pwr
+     /tmp/ccZB3sUV.s:397    .text._cmd_pwr:0000000000000018 $d
+     /tmp/ccZB3sUV.s:409    .text._cmd_ver:0000000000000000 $t
+     /tmp/ccZB3sUV.s:415    .text._cmd_ver:0000000000000000 _cmd_ver
+     /tmp/ccZB3sUV.s:430    .text._cmd_ver:0000000000000018 $d
+     /tmp/ccZB3sUV.s:438    .text._cmd_button:0000000000000000 $t
+     /tmp/ccZB3sUV.s:444    .text._cmd_button:0000000000000000 _cmd_button
+     /tmp/ccZB3sUV.s:462    .text._cmd_button:000000000000001c $d
+     /tmp/ccZB3sUV.s:470    .text._cmd_id:0000000000000000 $t
+     /tmp/ccZB3sUV.s:476    .text._cmd_id:0000000000000000 _cmd_id
+     /tmp/ccZB3sUV.s:489    .text._cmd_id:0000000000000014 $d
+     /tmp/ccZB3sUV.s:492    .text._cmd_auto_set:0000000000000000 $t
+     /tmp/ccZB3sUV.s:498    .text._cmd_auto_set:0000000000000000 _cmd_auto_set
+     /tmp/ccZB3sUV.s:575    .text._cmd_auto_set:0000000000000098 $d
+     /tmp/ccZB3sUV.s:581    .text._cmd_cs_set:0000000000000000 $t
+     /tmp/ccZB3sUV.s:587    .text._cmd_cs_set:0000000000000000 _cmd_cs_set
+     /tmp/ccZB3sUV.s:616    .text._cmd_cs_set:000000000000002c $d
+     /tmp/ccZB3sUV.s:619    .text.parse_number:0000000000000000 $t
+     /tmp/ccZB3sUV.s:626    .text.parse_number:0000000000000000 parse_number
+     /tmp/ccZB3sUV.s:663    .text._cmd_clkdiv_set:0000000000000000 $t
+     /tmp/ccZB3sUV.s:669    .text._cmd_clkdiv_set:0000000000000000 _cmd_clkdiv_set
+     /tmp/ccZB3sUV.s:693    .text._cmd_clkdiv_set:0000000000000024 $d
+ARM GAS  /tmp/ccZB3sUV.s 			page 19
+
+
+     /tmp/ccZB3sUV.s:705    .text.cmd_parse:0000000000000000 $t
+     /tmp/ccZB3sUV.s:712    .text.cmd_parse:0000000000000000 cmd_parse
+     /tmp/ccZB3sUV.s:800    .text.cmd_parse:00000000000000a0 $d
+     /tmp/ccZB3sUV.s:856    .data._pwr_state:0000000000000000 _pwr_state
+     /tmp/ccZB3sUV.s:859    .rodata._CMD_TABLE:0000000000000000 $d
+     /tmp/ccZB3sUV.s:863    .rodata._CMD_TABLE:0000000000000000 _CMD_TABLE
+
+UNDEFINED SYMBOLS
+puts
+printf
+time_delay_ms
+wd_reset
+spi1_get_prescaler
+spi1_cs_state
+ux_device_sn_text
+main_spi_auto
+main_spi_no_resp
+main_spi_get_resp
+hex_to_bin
+spi1_cs
+spi1_set_prescaler
+strlen
+strnicmp
+is_char
