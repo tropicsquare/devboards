@@ -2,24 +2,11 @@
 
 This repository contains the design files for the TROPIC01 USB Devkit. Each folder corresponds to a specific PCB revision.
 
-<table border="1">
-  <thead>
-    <tr>
-      <th align="center">PCB Revision</th>
-      <th align="center">TROPIC01 Part Number</th>
-      <th align="center">Picture</th>
-      <th align="center">Order</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><b>1302</b></td>
-      <td align="center">link T301</td>
-      <td align="center"><a href="./pcb/TS1302/img/top.png">🖼️ Top View</a></td>
-      <td align="center">link</td>
-    </tr>
-  </tbody>
-</table>
+| Version | PCB Marking | PCB Revision | Product Variant | TROPIC01 Part Number | BOM                             | Firmware                   | Picture                                 | Order |
+|:-------:|:-----------:|:------------:|:---------------:|:--------------------:|:-------------------------------:|:--------------------------:|:---------------------------------------:|:-----:|
+| 1.0     | none        | **TS1301**     | STM32F1 (256kB) | TR01-C2P-T103        | [BOM](./pcb/TS1302/bom/bom.csv) | [FW A](./fw/firmware_A/)   | [🖼️ Top View](./pcb/TS1301/img/top.png) | link  |
+| 2.0     | none        | **TS1302**     | STM32U5 (256kB) | TR01-C2P-T103        | [BOM](./pcb/TS1302/bom/bom.csv) | [FW B](./fw/firmware_B/)   | [🖼️ Top View](./pcb/TS1302/img/top.png) | link  |
+| 3.0     | none        | **TS1303**     | STM32U5 (256kB) | TR01-C2P-T103        | TBD                             | [FW B](./fw/firmware_B/)   | TBD                                     | link  |
 
 
 ## Getting Started

@@ -2,24 +2,10 @@
 
 This repository contains the design files for the TROPIC01 Arduino Shield. Each folder corresponds to a specific PCB revision.
 
-<table border="1">
-  <thead>
-    <tr>
-      <th align="center">PCB Revision</th>
-      <th align="center">TROPIC01 Part Number</th>
-      <th align="center">Picture</th>
-      <th align="center">Order</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><b>1401</b></td>
-      <td align="center">link T301</td>
-      <td align="center"><a href="./TS1401_design/img/top.png">🖼️ Top View</a></td>
-      <td align="center">link</td>
-    </tr>
-  </tbody>
-</table>
+| Version | PCB Marking  | PCB Revision | Product Variant                 | TROPIC01 Part Number | BOM                                                 | Picture                                    | Order |
+|:-------:|:------------:|:------------:|:-------------------------------:|:--------------------:|:---------------------------------------------------:|:------------------------------------------:|:-----:|
+| 1.0     | 12345,12346  | **1401**     | Assembled with chip             | TR01-C2P-T103        | [BOM](./TS1401_design/bom/bom_variant_chip.csv)     | [🖼️ Top View](./TS1401_design/img/top.png) | link  |
+| 1.0     | 22345       | **1401**     | Assembled with MikroBUS socket  | ---                  | [BOM](./TS1401_design/bom/bom_variant_microbus.csv) | [🖼️ Top View](./TS1401_design/img/top.png) | link  |
 
 
 ## Getting Started

@@ -2,37 +2,12 @@
 
 This repository collects all resources for development boards which are available for the TROPIC01 chip.
 
-<table border="1">
-  <thead>
-    <tr>
-      <th align="center">Development Board</th>
-      <th align="center">Description</th>
-      <th align="center">Resources</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><b>USB Devkit</b></td>
-      <td align="center">TROPIC01 evaluation over USB port</td>
-      <td align="center"><a href="./USB_Devkit/">📁 View</a></td>
-    </tr>
-    <tr>
-      <td align="center"><b>Raspberry Pi Shield</b></td>
-      <td align="center">Shield for Raspberry Pi form factor</td>
-      <td align="center"><a href="./Raspberry_Pi_Shield/">📁 View</a></td>
-    </tr>
-    <tr>
-      <td align="center"><b>Mini Board</b></td>
-      <td align="center">Compact standalone board</td>
-      <td align="center"><a href="./Mini_Board/">📁 View</a></td>
-    </tr>
-    <tr>
-      <td align="center"><b>Arduino Shield</b></td>
-      <td align="center">Shield for Arduino form factor</td>
-      <td align="center"><a href="./Arduino_Shield/">📁 View</a></td>
-    </tr>
-  </tbody>
-</table>
+| Development Board        | Description                           | Resources                       |
+|:------------------------:|:-------------------------------------:|:-------------------------------:|
+| **USB Devkit**           | TROPIC01 evaluation over USB port     | [📁 View](./USB_Devkit/)        |
+| **Raspberry Pi Shield**  | Shield for Raspberry Pi form factor   | [📁 View](./Raspberry_Pi_Shield/) |
+| **Mini Board**           | Compact standalone board              | [📁 View](./Mini_Board/)        |
+| **Arduino Shield**       | Shield for Arduino form factor        | [📁 View](./Arduino_Shield/)    |
 
 ## About TROPIC01
 
