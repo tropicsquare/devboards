@@ -1,0 +1,160 @@
+TROPIC01 Development Boards - Third-Party Software Notices
+===========================================================
+
+This repository contains software and firmware components from various 
+sources. This file provides information about third-party software 
+included in this project and their respective licenses.
+
+---
+
+1. STMicroelectronics STM32 HAL Drivers
+   License: BSD-3-Clause
+   Copyright: STMicroelectronics (2021)
+   Location: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/
+   License File: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md
+   
+   Description:
+   Hardware abstraction layer drivers for STM32U5 microcontrollers.
+   
+   Permissions:
+   - Free use, modification, and redistribution
+   - Commercial use allowed
+   - Must retain copyright notice
+
+---
+
+2. Microsoft Azure RTOS (USBX Library)
+   License: Microsoft Software License Terms for Microsoft Azure RTOS
+   Copyright: Microsoft Corporation
+   Location: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/
+   License File: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt
+   Hardware Requirements: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSED-HARDWARE.txt
+   
+   Description:
+   USB stack implementation for embedded systems.
+   
+   IMPORTANT RESTRICTIONS:
+   - ⚠️ This component has hardware-specific licensing restrictions
+   - Distribution rights apply ONLY to licensed hardware (STM32U5 series)
+   - Cannot be used on non-licensed hardware platforms
+   - Cannot be redistributed as a standalone component
+   - Cannot be used to create competing RTOS products
+   - Must comply with Microsoft Azure RTOS license terms
+   
+   Required Hardware:
+   This software is licensed for use only with STM32U5 series microcontrollers
+   as listed in the LICENSED-HARDWARE.txt file. If you plan to use this code
+   on different hardware, you must:
+   1. Replace this component with an open-source alternative (e.g., TinyUSB), OR
+   2. Obtain appropriate licensing from Microsoft
+   
+   Users must review and comply with the full license terms in the LICENSE.txt
+   file within the STM32_USBX_Library directory.
+
+---
+
+3. Tropic Square Firmware Code
+   License: BSD-3-Clause-Clear (Clear BSD License)
+   Copyright: Tropic Square (2024)
+   Location: USB_Devkit/legacy_fw/firmware_B/app/ and other Tropic Square code
+   License File: LICENSES/FIRMWARE-LICENSE.txt
+   
+   Description:
+   Application firmware and drivers developed by Tropic Square for 
+   TROPIC01 development boards.
+   
+   Permissions:
+   - Free use, modification, and redistribution
+   - Commercial use allowed
+   - No patent license grant (explicit in Clear BSD)
+
+---
+
+License Compatibility Notes:
+============================
+
+✅ COMPATIBLE:
+- STM32 HAL (BSD-3-Clause) is compatible with Clear BSD License
+- Both are permissive open-source licenses
+- Can be combined and redistributed together
+
+⚠️ RESTRICTED:
+- Microsoft Azure RTOS has hardware-specific restrictions
+- Not fully "open source" in the OSI sense
+- Limits portability to non-STM32 platforms
+- Users must ensure compliance with Microsoft license terms
+
+---
+
+Hardware Designs:
+=================
+
+Hardware designs (PCB layouts, schematics, mechanical designs) in this 
+repository are licensed under:
+
+CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P-2.0)
+Copyright (c) 2024 Tropic Square
+License File: LICENSE.txt
+
+This is a permissive open hardware license allowing free use, modification,
+and distribution of hardware designs.
+
+---
+
+How to Comply with These Licenses:
+===================================
+
+When using this repository:
+
+1. Hardware Designs (CERN-OHL-P):
+   - You may freely use, modify, and distribute the PCB designs
+   - Retain the copyright notice and license information
+   - Provide attribution to Tropic Square
+
+2. Tropic Square Firmware (Clear BSD):
+   - You may freely use, modify, and distribute the firmware code
+   - Retain copyright notices in source and binary distributions
+   - Include disclaimer text in distributions
+
+3. STM32 HAL (BSD-3-Clause):
+   - Retain STMicroelectronics copyright notices
+   - Include disclaimer text in distributions
+   - Do not use STMicroelectronics name for endorsement
+
+4. Azure RTOS / USBX (Microsoft Proprietary):
+   - Only use with STM32U5 hardware (or other licensed hardware)
+   - Include Microsoft license terms with any distribution
+   - Cannot modify for use on non-licensed hardware
+   - Review full Microsoft license before any commercial use
+
+---
+
+Recommendations for Users:
+===========================
+
+For Maximum Openness:
+If you want a fully open-source solution without hardware restrictions,
+consider replacing the Azure RTOS/USBX component with an open alternative:
+- TinyUSB (MIT License) - Recommended
+- CherryUSB (Apache 2.0)
+- libusb (LGPL for embedded use)
+
+This would make the entire firmware stack truly open and portable.
+
+---
+
+Questions or Issues:
+====================
+
+For licensing questions or clarifications, please:
+- Review the full license texts in their respective directories
+- Consult with legal counsel for commercial or distribution use
+- Contact Tropic Square for questions about hardware or firmware licenses
+- Contact STMicroelectronics or Microsoft for third-party component questions
+
+---
+
+This NOTICE file was last updated: January 2026
+
+For the most current license information, always refer to the LICENSE
+files in their respective directories.
