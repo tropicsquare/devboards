@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cct1GCjt.s 			page 1
+ARM GAS  /tmp/ccwxasMF.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cct1GCjt.s 			page 1
   58 0030 FFF7FEFF 		bl	USBD_RegisterClass
   59 0034 08B1     		cbz	r0, .L4
   60 0036 FFF7FEFF 		bl	Error_Handler
-ARM GAS  /tmp/cct1GCjt.s 			page 2
+ARM GAS  /tmp/ccwxasMF.s 			page 2
 
 
   61              	.L4:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cct1GCjt.s 			page 1
  118              		.thumb_func
  119              		.fpu softvfp
  121              	USB_LP_CAN1_RX0_IRQHandler:
-ARM GAS  /tmp/cct1GCjt.s 			page 3
+ARM GAS  /tmp/ccwxasMF.s 			page 3
 
 
  122              		@ args = 0, pretend = 0, frame = 0
@@ -141,24 +141,24 @@ ARM GAS  /tmp/cct1GCjt.s 			page 1
  139      00000000 
  139      00000000 
  140              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cct1GCjt.s 			page 4
+ARM GAS  /tmp/ccwxasMF.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_device.c
-     /tmp/cct1GCjt.s:14     .text.usb_clock_init:0000000000000000 $t
-     /tmp/cct1GCjt.s:22     .text.usb_clock_init:0000000000000000 usb_clock_init
-     /tmp/cct1GCjt.s:29     .text.usb_device_init:0000000000000000 $t
-     /tmp/cct1GCjt.s:36     .text.usb_device_init:0000000000000000 usb_device_init
-     /tmp/cct1GCjt.s:78     .text.usb_device_init:000000000000005c $d
-     /tmp/cct1GCjt.s:85     .text.usb_device_connected:0000000000000000 $t
-     /tmp/cct1GCjt.s:92     .text.usb_device_connected:0000000000000000 usb_device_connected
-     /tmp/cct1GCjt.s:111    .text.usb_device_connected:000000000000001c $d
-     /tmp/cct1GCjt.s:114    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 $t
-     /tmp/cct1GCjt.s:121    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 USB_LP_CAN1_RX0_IRQHandler
-     /tmp/cct1GCjt.s:130    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000008 $d
-     /tmp/cct1GCjt.s:138    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
-     /tmp/cct1GCjt.s:134    .bss.hUsbDeviceFS:0000000000000000 $d
+     /tmp/ccwxasMF.s:14     .text.usb_clock_init:0000000000000000 $t
+     /tmp/ccwxasMF.s:22     .text.usb_clock_init:0000000000000000 usb_clock_init
+     /tmp/ccwxasMF.s:29     .text.usb_device_init:0000000000000000 $t
+     /tmp/ccwxasMF.s:36     .text.usb_device_init:0000000000000000 usb_device_init
+     /tmp/ccwxasMF.s:78     .text.usb_device_init:000000000000005c $d
+     /tmp/ccwxasMF.s:85     .text.usb_device_connected:0000000000000000 $t
+     /tmp/ccwxasMF.s:92     .text.usb_device_connected:0000000000000000 usb_device_connected
+     /tmp/ccwxasMF.s:111    .text.usb_device_connected:000000000000001c $d
+     /tmp/ccwxasMF.s:114    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 $t
+     /tmp/ccwxasMF.s:121    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000000 USB_LP_CAN1_RX0_IRQHandler
+     /tmp/ccwxasMF.s:130    .text.USB_LP_CAN1_RX0_IRQHandler:0000000000000008 $d
+     /tmp/ccwxasMF.s:138    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
+     /tmp/ccwxasMF.s:134    .bss.hUsbDeviceFS:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 sys_usb_clock_config

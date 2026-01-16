@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYssy1g.s 			page 1
+ARM GAS  /tmp/cc9EF5aG.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
   50              		.thumb_func
   51              		.fpu softvfp
   53              	_cmd_ver:
-ARM GAS  /tmp/ccYssy1g.s 			page 2
+ARM GAS  /tmp/cc9EF5aG.s 			page 2
 
 
   54              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  106      7220286D 
  107              		.section	.text._cmd_id,"ax",%progbits
  108              		.align	1
-ARM GAS  /tmp/ccYssy1g.s 			page 3
+ARM GAS  /tmp/cc9EF5aG.s 			page 3
 
 
  109              		.syntax unified
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  150              		@ frame_needed = 0, uses_anonymous_args = 0
  151 0000 38B5     		push	{r3, r4, r5, lr}
  152 0002 0D48     		ldr	r0, .L29
-ARM GAS  /tmp/ccYssy1g.s 			page 4
+ARM GAS  /tmp/cc9EF5aG.s 			page 4
 
 
  153 0004 FFF7FEFF 		bl	puts
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  209              	.L32:
  210 001c 00000000 		.word	.LC0
  211 0020 000C0140 		.word	1073810432
-ARM GAS  /tmp/ccYssy1g.s 			page 5
+ARM GAS  /tmp/cc9EF5aG.s 			page 5
 
 
  212 0024 00000000 		.word	.LC4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  268 002a 38BD     		pop	{r3, r4, r5, pc}
  269              	.L42:
  270              		.align	2
-ARM GAS  /tmp/ccYssy1g.s 			page 6
+ARM GAS  /tmp/cc9EF5aG.s 			page 6
 
 
  271              	.L41:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  327 001a 00BF     		.align	2
  328              	.L47:
  329 001c 00000000 		.word	.LC0
-ARM GAS  /tmp/ccYssy1g.s 			page 7
+ARM GAS  /tmp/cc9EF5aG.s 			page 7
 
 
  330 0020 00000000 		.word	.LC13
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  384 0012 0948     		ldr	r0, .L55+12
  385 0014 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  386 0016 094B     		ldr	r3, .L55+16
-ARM GAS  /tmp/ccYssy1g.s 			page 8
+ARM GAS  /tmp/cc9EF5aG.s 			page 8
 
 
  387 0018 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  443 0034 30BD     		pop	{r4, r5, pc}
  445              		.section	.rodata._cmd_pwr_set.str1.1,"aMS",%progbits,1
  446              	.LC17:
-ARM GAS  /tmp/ccYssy1g.s 			page 9
+ARM GAS  /tmp/cc9EF5aG.s 			page 9
 
 
  447 0000 696E7661 		.ascii	"invalid parameter\000"
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  498              	.L70:
  499 004e 00BF     		.align	2
  500              	.L69:
-ARM GAS  /tmp/ccYssy1g.s 			page 10
+ARM GAS  /tmp/cc9EF5aG.s 			page 10
 
 
  501 0050 00000000 		.word	.LC17
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  557 005a 2160     		str	r1, [r4]
  558 005c 0DF10700 		add	r0, sp, #7
  559 0060 FFF7FEFF 		bl	hex_to_bin
-ARM GAS  /tmp/ccYssy1g.s 			page 11
+ARM GAS  /tmp/cc9EF5aG.s 			page 11
 
 
  560 0064 0128     		cmp	r0, #1
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  616 0016 08BD     		pop	{r3, pc}
  617              	.L83:
  618 0018 0020     		movs	r0, #0
-ARM GAS  /tmp/ccYssy1g.s 			page 12
+ARM GAS  /tmp/cc9EF5aG.s 			page 12
 
 
  619              	.L81:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  675 003a F9E7     		b	.L87
  677              		.section	.text._cmd_clkdiv_set,"ax",%progbits
  678              		.align	1
-ARM GAS  /tmp/ccYssy1g.s 			page 13
+ARM GAS  /tmp/cc9EF5aG.s 			page 13
 
 
  679              		.syntax unified
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  724              		.thumb_func
  725              		.fpu softvfp
  727              	cmd_parse:
-ARM GAS  /tmp/ccYssy1g.s 			page 14
+ARM GAS  /tmp/cc9EF5aG.s 			page 14
 
 
  728              		@ args = 0, pretend = 0, frame = 8
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  782 0072 FFF7FEFF 		bl	_skip_spaces
  783 0076 2046     		mov	r0, r4
  784 0078 A368     		ldr	r3, [r4, #8]
-ARM GAS  /tmp/ccYssy1g.s 			page 15
+ARM GAS  /tmp/cc9EF5aG.s 			page 15
 
 
  785 007a 9847     		blx	r3
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  830      742F7365 
  831              	.LC26:
  832 003d 435300   		.ascii	"CS\000"
-ARM GAS  /tmp/ccYssy1g.s 			page 16
+ARM GAS  /tmp/cc9EF5aG.s 			page 16
 
 
  833              	.LC27:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  860 00ea 56455200 		.ascii	"VER\000"
  861              	.LC41:
  862 00ee 52657175 		.ascii	"Request version information\000"
-ARM GAS  /tmp/ccYssy1g.s 			page 17
+ARM GAS  /tmp/cc9EF5aG.s 			page 17
 
 
  862      65737420 
@@ -1018,74 +1018,74 @@ ARM GAS  /tmp/ccYssy1g.s 			page 1
  917 00a8 00000000 		.word	0
  918 00ac 00000000 		.word	0
  919              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccYssy1g.s 			page 18
+ARM GAS  /tmp/cc9EF5aG.s 			page 18
 
 
-ARM GAS  /tmp/ccYssy1g.s 			page 19
+ARM GAS  /tmp/cc9EF5aG.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 cmd.c
-     /tmp/ccYssy1g.s:14     .text._skip_spaces:0000000000000000 $t
-     /tmp/ccYssy1g.s:21     .text._skip_spaces:0000000000000000 _skip_spaces
-     /tmp/ccYssy1g.s:47     .text._cmd_ver:0000000000000000 $t
-     /tmp/ccYssy1g.s:53     .text._cmd_ver:0000000000000000 _cmd_ver
-     /tmp/ccYssy1g.s:69     .text._cmd_ver:0000000000000018 $d
-     /tmp/ccYssy1g.s:78     .text._cmd_pwr:0000000000000000 $t
-     /tmp/ccYssy1g.s:84     .text._cmd_pwr:0000000000000000 _cmd_pwr
-     /tmp/ccYssy1g.s:100    .text._cmd_pwr:0000000000000018 $d
-     /tmp/ccYssy1g.s:108    .text._cmd_id:0000000000000000 $t
-     /tmp/ccYssy1g.s:114    .text._cmd_id:0000000000000000 _cmd_id
-     /tmp/ccYssy1g.s:128    .text._cmd_id:0000000000000014 $d
-     /tmp/ccYssy1g.s:142    .text._cmd_help:0000000000000000 $t
-     /tmp/ccYssy1g.s:148    .text._cmd_help:0000000000000000 _cmd_help
-     /tmp/ccYssy1g.s:180    .text._cmd_help:0000000000000038 $d
-     /tmp/ccYssy1g.s:187    .text._cmd_gpo:0000000000000000 $t
-     /tmp/ccYssy1g.s:193    .text._cmd_gpo:0000000000000000 _cmd_gpo
-     /tmp/ccYssy1g.s:210    .text._cmd_gpo:000000000000001c $d
-     /tmp/ccYssy1g.s:218    .text._cmd_error:0000000000000000 $t
-     /tmp/ccYssy1g.s:224    .text._cmd_error:0000000000000000 _cmd_error
-     /tmp/ccYssy1g.s:234    .text._cmd_error:0000000000000008 $d
-     /tmp/ccYssy1g.s:240    .text._cmd_sn:0000000000000000 $t
-     /tmp/ccYssy1g.s:246    .text._cmd_sn:0000000000000000 _cmd_sn
-     /tmp/ccYssy1g.s:272    .text._cmd_sn:000000000000002c $d
-     /tmp/ccYssy1g.s:280    .text._cmd_reset:0000000000000000 $t
-     /tmp/ccYssy1g.s:286    .text._cmd_reset:0000000000000000 _cmd_reset
-     /tmp/ccYssy1g.s:301    .text._cmd_reset:000000000000001c $d
-     /tmp/ccYssy1g.s:307    .text._cmd_cs:0000000000000000 $t
-     /tmp/ccYssy1g.s:313    .text._cmd_cs:0000000000000000 _cmd_cs
-     /tmp/ccYssy1g.s:329    .text._cmd_cs:000000000000001c $d
-     /tmp/ccYssy1g.s:336    .text._cmd_clkdiv:0000000000000000 $t
-     /tmp/ccYssy1g.s:342    .text._cmd_clkdiv:0000000000000000 _cmd_clkdiv
-     /tmp/ccYssy1g.s:358    .text._cmd_clkdiv:000000000000001c $d
-     /tmp/ccYssy1g.s:367    .text._cmd_auto:0000000000000000 $t
-     /tmp/ccYssy1g.s:373    .text._cmd_auto:0000000000000000 _cmd_auto
-     /tmp/ccYssy1g.s:399    .text._cmd_auto:000000000000002c $d
-     /tmp/ccYssy1g.s:407    .text.LL_GPIO_SetPinMode.constprop.0:0000000000000000 $t
-     /tmp/ccYssy1g.s:413    .text.LL_GPIO_SetPinMode.constprop.0:0000000000000000 LL_GPIO_SetPinMode.constprop.0
-     /tmp/ccYssy1g.s:449    .text._cmd_pwr_set:0000000000000000 $t
-     /tmp/ccYssy1g.s:455    .text._cmd_pwr_set:0000000000000000 _cmd_pwr_set
-     /tmp/ccYssy1g.s:501    .text._cmd_pwr_set:0000000000000050 $d
-     /tmp/ccYssy1g.s:507    .text._cmd_auto_set:0000000000000000 $t
-     /tmp/ccYssy1g.s:513    .text._cmd_auto_set:0000000000000000 _cmd_auto_set
-     /tmp/ccYssy1g.s:590    .text._cmd_auto_set:0000000000000098 $d
-     /tmp/ccYssy1g.s:596    .text._cmd_cs_set:0000000000000000 $t
-     /tmp/ccYssy1g.s:602    .text._cmd_cs_set:0000000000000000 _cmd_cs_set
-     /tmp/ccYssy1g.s:631    .text._cmd_cs_set:000000000000002c $d
-     /tmp/ccYssy1g.s:634    .text.parse_number:0000000000000000 $t
-     /tmp/ccYssy1g.s:641    .text.parse_number:0000000000000000 parse_number
-     /tmp/ccYssy1g.s:678    .text._cmd_clkdiv_set:0000000000000000 $t
-     /tmp/ccYssy1g.s:684    .text._cmd_clkdiv_set:0000000000000000 _cmd_clkdiv_set
-     /tmp/ccYssy1g.s:708    .text._cmd_clkdiv_set:0000000000000024 $d
-     /tmp/ccYssy1g.s:720    .text.cmd_parse:0000000000000000 $t
-     /tmp/ccYssy1g.s:727    .text.cmd_parse:0000000000000000 cmd_parse
-     /tmp/ccYssy1g.s:815    .text.cmd_parse:00000000000000a8 $d
-     /tmp/ccYssy1g.s:867    .data._pwr_state:0000000000000000 _pwr_state
-ARM GAS  /tmp/ccYssy1g.s 			page 20
+     /tmp/cc9EF5aG.s:14     .text._skip_spaces:0000000000000000 $t
+     /tmp/cc9EF5aG.s:21     .text._skip_spaces:0000000000000000 _skip_spaces
+     /tmp/cc9EF5aG.s:47     .text._cmd_ver:0000000000000000 $t
+     /tmp/cc9EF5aG.s:53     .text._cmd_ver:0000000000000000 _cmd_ver
+     /tmp/cc9EF5aG.s:69     .text._cmd_ver:0000000000000018 $d
+     /tmp/cc9EF5aG.s:78     .text._cmd_pwr:0000000000000000 $t
+     /tmp/cc9EF5aG.s:84     .text._cmd_pwr:0000000000000000 _cmd_pwr
+     /tmp/cc9EF5aG.s:100    .text._cmd_pwr:0000000000000018 $d
+     /tmp/cc9EF5aG.s:108    .text._cmd_id:0000000000000000 $t
+     /tmp/cc9EF5aG.s:114    .text._cmd_id:0000000000000000 _cmd_id
+     /tmp/cc9EF5aG.s:128    .text._cmd_id:0000000000000014 $d
+     /tmp/cc9EF5aG.s:142    .text._cmd_help:0000000000000000 $t
+     /tmp/cc9EF5aG.s:148    .text._cmd_help:0000000000000000 _cmd_help
+     /tmp/cc9EF5aG.s:180    .text._cmd_help:0000000000000038 $d
+     /tmp/cc9EF5aG.s:187    .text._cmd_gpo:0000000000000000 $t
+     /tmp/cc9EF5aG.s:193    .text._cmd_gpo:0000000000000000 _cmd_gpo
+     /tmp/cc9EF5aG.s:210    .text._cmd_gpo:000000000000001c $d
+     /tmp/cc9EF5aG.s:218    .text._cmd_error:0000000000000000 $t
+     /tmp/cc9EF5aG.s:224    .text._cmd_error:0000000000000000 _cmd_error
+     /tmp/cc9EF5aG.s:234    .text._cmd_error:0000000000000008 $d
+     /tmp/cc9EF5aG.s:240    .text._cmd_sn:0000000000000000 $t
+     /tmp/cc9EF5aG.s:246    .text._cmd_sn:0000000000000000 _cmd_sn
+     /tmp/cc9EF5aG.s:272    .text._cmd_sn:000000000000002c $d
+     /tmp/cc9EF5aG.s:280    .text._cmd_reset:0000000000000000 $t
+     /tmp/cc9EF5aG.s:286    .text._cmd_reset:0000000000000000 _cmd_reset
+     /tmp/cc9EF5aG.s:301    .text._cmd_reset:000000000000001c $d
+     /tmp/cc9EF5aG.s:307    .text._cmd_cs:0000000000000000 $t
+     /tmp/cc9EF5aG.s:313    .text._cmd_cs:0000000000000000 _cmd_cs
+     /tmp/cc9EF5aG.s:329    .text._cmd_cs:000000000000001c $d
+     /tmp/cc9EF5aG.s:336    .text._cmd_clkdiv:0000000000000000 $t
+     /tmp/cc9EF5aG.s:342    .text._cmd_clkdiv:0000000000000000 _cmd_clkdiv
+     /tmp/cc9EF5aG.s:358    .text._cmd_clkdiv:000000000000001c $d
+     /tmp/cc9EF5aG.s:367    .text._cmd_auto:0000000000000000 $t
+     /tmp/cc9EF5aG.s:373    .text._cmd_auto:0000000000000000 _cmd_auto
+     /tmp/cc9EF5aG.s:399    .text._cmd_auto:000000000000002c $d
+     /tmp/cc9EF5aG.s:407    .text.LL_GPIO_SetPinMode.constprop.0:0000000000000000 $t
+     /tmp/cc9EF5aG.s:413    .text.LL_GPIO_SetPinMode.constprop.0:0000000000000000 LL_GPIO_SetPinMode.constprop.0
+     /tmp/cc9EF5aG.s:449    .text._cmd_pwr_set:0000000000000000 $t
+     /tmp/cc9EF5aG.s:455    .text._cmd_pwr_set:0000000000000000 _cmd_pwr_set
+     /tmp/cc9EF5aG.s:501    .text._cmd_pwr_set:0000000000000050 $d
+     /tmp/cc9EF5aG.s:507    .text._cmd_auto_set:0000000000000000 $t
+     /tmp/cc9EF5aG.s:513    .text._cmd_auto_set:0000000000000000 _cmd_auto_set
+     /tmp/cc9EF5aG.s:590    .text._cmd_auto_set:0000000000000098 $d
+     /tmp/cc9EF5aG.s:596    .text._cmd_cs_set:0000000000000000 $t
+     /tmp/cc9EF5aG.s:602    .text._cmd_cs_set:0000000000000000 _cmd_cs_set
+     /tmp/cc9EF5aG.s:631    .text._cmd_cs_set:000000000000002c $d
+     /tmp/cc9EF5aG.s:634    .text.parse_number:0000000000000000 $t
+     /tmp/cc9EF5aG.s:641    .text.parse_number:0000000000000000 parse_number
+     /tmp/cc9EF5aG.s:678    .text._cmd_clkdiv_set:0000000000000000 $t
+     /tmp/cc9EF5aG.s:684    .text._cmd_clkdiv_set:0000000000000000 _cmd_clkdiv_set
+     /tmp/cc9EF5aG.s:708    .text._cmd_clkdiv_set:0000000000000024 $d
+     /tmp/cc9EF5aG.s:720    .text.cmd_parse:0000000000000000 $t
+     /tmp/cc9EF5aG.s:727    .text.cmd_parse:0000000000000000 cmd_parse
+     /tmp/cc9EF5aG.s:815    .text.cmd_parse:00000000000000a8 $d
+     /tmp/cc9EF5aG.s:867    .data._pwr_state:0000000000000000 _pwr_state
+ARM GAS  /tmp/cc9EF5aG.s 			page 20
 
 
-     /tmp/ccYssy1g.s:870    .rodata._CMD_TABLE:0000000000000000 $d
-     /tmp/ccYssy1g.s:874    .rodata._CMD_TABLE:0000000000000000 _CMD_TABLE
+     /tmp/cc9EF5aG.s:870    .rodata._CMD_TABLE:0000000000000000 $d
+     /tmp/cc9EF5aG.s:874    .rodata._CMD_TABLE:0000000000000000 _CMD_TABLE
 
 UNDEFINED SYMBOLS
 printf

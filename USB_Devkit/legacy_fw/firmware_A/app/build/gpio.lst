@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc967xN5.s 			page 1
+ARM GAS  /tmp/ccA0NYlD.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc967xN5.s 			page 1
   58 000a 0020     		movhi	r0, #0
   59 000c 7047     		bx	lr
   60              	.L8:
-ARM GAS  /tmp/cc967xN5.s 			page 2
+ARM GAS  /tmp/ccA0NYlD.s 			page 2
 
 
   61 000e 00BF     		.align	2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc967xN5.s 			page 1
  118              		.fpu softvfp
  120              	gpio_init:
  121              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc967xN5.s 			page 3
+ARM GAS  /tmp/ccA0NYlD.s 			page 3
 
 
  122              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -156,24 +156,24 @@ ARM GAS  /tmp/cc967xN5.s 			page 1
  157 0038 40004004 		.word	71303232
  158 003c 80008004 		.word	75497600
  159              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cc967xN5.s 			page 4
+ARM GAS  /tmp/ccA0NYlD.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-     /tmp/cc967xN5.s:14     .text.LL_APB2_GRP1_EnableClock:0000000000000000 $t
-     /tmp/cc967xN5.s:21     .text.LL_APB2_GRP1_EnableClock:0000000000000000 LL_APB2_GRP1_EnableClock
-     /tmp/cc967xN5.s:40     .text.LL_APB2_GRP1_EnableClock:0000000000000018 $d
-     /tmp/cc967xN5.s:43     .text.gpio_pin_code:0000000000000000 $t
-     /tmp/cc967xN5.s:50     .text.gpio_pin_code:0000000000000000 gpio_pin_code
-     /tmp/cc967xN5.s:63     .text.gpio_pin_code:0000000000000010 $d
-     /tmp/cc967xN5.s:66     .text.gpio_pin_init:0000000000000000 $t
-     /tmp/cc967xN5.s:73     .text.gpio_pin_init:0000000000000000 gpio_pin_init
-     /tmp/cc967xN5.s:110    .text.gpio_pin_init:0000000000000040 $d
-     /tmp/cc967xN5.s:113    .text.gpio_init:0000000000000000 $t
-     /tmp/cc967xN5.s:120    .text.gpio_init:0000000000000000 gpio_init
-     /tmp/cc967xN5.s:142    .rodata.gpio_ll_map:0000000000000000 gpio_ll_map
-     /tmp/cc967xN5.s:138    .rodata.gpio_ll_map:0000000000000000 $d
+     /tmp/ccA0NYlD.s:14     .text.LL_APB2_GRP1_EnableClock:0000000000000000 $t
+     /tmp/ccA0NYlD.s:21     .text.LL_APB2_GRP1_EnableClock:0000000000000000 LL_APB2_GRP1_EnableClock
+     /tmp/ccA0NYlD.s:40     .text.LL_APB2_GRP1_EnableClock:0000000000000018 $d
+     /tmp/ccA0NYlD.s:43     .text.gpio_pin_code:0000000000000000 $t
+     /tmp/ccA0NYlD.s:50     .text.gpio_pin_code:0000000000000000 gpio_pin_code
+     /tmp/ccA0NYlD.s:63     .text.gpio_pin_code:0000000000000010 $d
+     /tmp/ccA0NYlD.s:66     .text.gpio_pin_init:0000000000000000 $t
+     /tmp/ccA0NYlD.s:73     .text.gpio_pin_init:0000000000000000 gpio_pin_init
+     /tmp/ccA0NYlD.s:110    .text.gpio_pin_init:0000000000000040 $d
+     /tmp/ccA0NYlD.s:113    .text.gpio_init:0000000000000000 $t
+     /tmp/ccA0NYlD.s:120    .text.gpio_init:0000000000000000 gpio_init
+     /tmp/ccA0NYlD.s:142    .rodata.gpio_ll_map:0000000000000000 gpio_ll_map
+     /tmp/ccA0NYlD.s:138    .rodata.gpio_ll_map:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 memset

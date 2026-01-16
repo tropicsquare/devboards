@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWxXfew.s 			page 1
+ARM GAS  /tmp/cchBkskn.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWxXfew.s 			page 1
   58 001c 0023     		movs	r3, #0
   59 001e 8274     		strb	r2, [r0, #18]
   60 0020 4160     		str	r1, [r0, #4]
-ARM GAS  /tmp/ccWxXfew.s 			page 2
+ARM GAS  /tmp/cchBkskn.s 			page 2
 
 
   61 0022 0374     		strb	r3, [r0, #16]
@@ -118,23 +118,23 @@ ARM GAS  /tmp/ccWxXfew.s 			page 1
  119 0026 6368     		ldr	r3, [r4, #4]
  120 0028 2360     		str	r3, [r4]
  121 002a F9E7     		b	.L9
-ARM GAS  /tmp/ccWxXfew.s 			page 3
+ARM GAS  /tmp/cchBkskn.s 			page 3
 
 
  123              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccWxXfew.s 			page 4
+ARM GAS  /tmp/cchBkskn.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 led.c
-     /tmp/ccWxXfew.s:14     .text.led_init:0000000000000000 $t
-     /tmp/ccWxXfew.s:22     .text.led_init:0000000000000000 led_init
-     /tmp/ccWxXfew.s:33     .text.led_cyclic_sequence:0000000000000000 $t
-     /tmp/ccWxXfew.s:40     .text.led_cyclic_sequence:0000000000000000 led_cyclic_sequence
-     /tmp/ccWxXfew.s:66     .text.led_instant_sequence:0000000000000000 $t
-     /tmp/ccWxXfew.s:73     .text.led_instant_sequence:0000000000000000 led_instant_sequence
-     /tmp/ccWxXfew.s:87     .text.led_tick:0000000000000000 $t
-     /tmp/ccWxXfew.s:94     .text.led_tick:0000000000000000 led_tick
+     /tmp/cchBkskn.s:14     .text.led_init:0000000000000000 $t
+     /tmp/cchBkskn.s:22     .text.led_init:0000000000000000 led_init
+     /tmp/cchBkskn.s:33     .text.led_cyclic_sequence:0000000000000000 $t
+     /tmp/cchBkskn.s:40     .text.led_cyclic_sequence:0000000000000000 led_cyclic_sequence
+     /tmp/cchBkskn.s:66     .text.led_instant_sequence:0000000000000000 $t
+     /tmp/cchBkskn.s:73     .text.led_instant_sequence:0000000000000000 led_instant_sequence
+     /tmp/cchBkskn.s:87     .text.led_tick:0000000000000000 $t
+     /tmp/cchBkskn.s:94     .text.led_tick:0000000000000000 led_tick
 
 UNDEFINED SYMBOLS
 memset

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckbRhaR.s 			page 1
+ARM GAS  /tmp/ccD27NKO.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckbRhaR.s 			page 1
   57              		.thumb_func
   58              		.fpu softvfp
   60              	reset_clear:
-ARM GAS  /tmp/cckbRhaR.s 			page 2
+ARM GAS  /tmp/ccD27NKO.s 			page 2
 
 
   61              		@ args = 0, pretend = 0, frame = 0
@@ -80,16 +80,16 @@ ARM GAS  /tmp/cckbRhaR.s 			page 1
   77              	.L9:
   78 001c 00100240 		.word	1073876992
   80              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cckbRhaR.s 			page 3
+ARM GAS  /tmp/ccD27NKO.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 reset.c
-     /tmp/cckbRhaR.s:14     .text.reset_get_type:0000000000000000 $t
-     /tmp/cckbRhaR.s:22     .text.reset_get_type:0000000000000000 reset_get_type
-     /tmp/cckbRhaR.s:49     .text.reset_get_type:0000000000000028 $d
-     /tmp/cckbRhaR.s:53     .text.reset_clear:0000000000000000 $t
-     /tmp/cckbRhaR.s:60     .text.reset_clear:0000000000000000 reset_clear
-     /tmp/cckbRhaR.s:78     .text.reset_clear:000000000000001c $d
+     /tmp/ccD27NKO.s:14     .text.reset_get_type:0000000000000000 $t
+     /tmp/ccD27NKO.s:22     .text.reset_get_type:0000000000000000 reset_get_type
+     /tmp/ccD27NKO.s:49     .text.reset_get_type:0000000000000028 $d
+     /tmp/ccD27NKO.s:53     .text.reset_clear:0000000000000000 $t
+     /tmp/ccD27NKO.s:60     .text.reset_clear:0000000000000000 reset_clear
+     /tmp/ccD27NKO.s:78     .text.reset_clear:000000000000001c $d
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cclSm6Og.s 			page 1
+ARM GAS  /tmp/ccuCYG2R.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
   58 0022 DFE817F0 		tbh	[pc, r7, lsl #1]
   59              	.L7:
   60 0026 0101     		.2byte	(.L13-.L7)/2
-ARM GAS  /tmp/cclSm6Og.s 			page 2
+ARM GAS  /tmp/ccuCYG2R.s 			page 2
 
 
   61 0028 2301     		.2byte	(.L12-.L7)/2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  115 008c ADF80620 		strh	r2, [sp, #6]	@ movhi
  116              	.L94:
  117 0090 2046     		mov	r0, r4
-ARM GAS  /tmp/cclSm6Og.s 			page 3
+ARM GAS  /tmp/ccuCYG2R.s 			page 3
 
 
  118 0092 FFF7FEFF 		bl	USBD_CtlSendData
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  172 00e8 D0F8B432 		ldr	r3, [r0, #692]
  173 00ec 1B69     		ldr	r3, [r3, #16]
  174 00ee EBE7     		b	.L99
-ARM GAS  /tmp/cclSm6Og.s 			page 4
+ARM GAS  /tmp/ccuCYG2R.s 			page 4
 
 
  175              	.L25:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  229 0162 8E78     		ldrb	r6, [r1, #2]	@ zero_extendqisi2
  230 0164 474F     		ldr	r7, .L105
  231 0166 012E     		cmp	r6, #1
-ARM GAS  /tmp/cclSm6Og.s 			page 5
+ARM GAS  /tmp/ccuCYG2R.s 			page 5
 
 
  232 0168 3E70     		strb	r6, [r7]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  286 01de 0028     		cmp	r0, #0
  287 01e0 40D0     		beq	.L95
  288 01e2 2046     		mov	r0, r4
-ARM GAS  /tmp/cclSm6Og.s 			page 6
+ARM GAS  /tmp/ccuCYG2R.s 			page 6
 
 
  289 01e4 FFF7FEFF 		bl	USBD_CtlError.constprop.0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  343 025a 012B     		cmp	r3, #1
  344 025c 7FF439AF 		bne	.L32
  345              	.L92:
-ARM GAS  /tmp/cclSm6Og.s 			page 7
+ARM GAS  /tmp/ccuCYG2R.s 			page 7
 
 
  346 0260 C4F8A432 		str	r3, [r4, #676]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  402 0036 10B9     		cbnz	r0, .L111
  403 0038 2046     		mov	r0, r4
  404 003a FFF7FEFF 		bl	USBD_CtlSendStatus
-ARM GAS  /tmp/cclSm6Og.s 			page 8
+ARM GAS  /tmp/ccuCYG2R.s 			page 8
 
 
  405              	.L111:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  461 0056 11F07F03 		ands	r3, r1, #127
  462 005a 5AD1     		bne	.L138
  463              	.L167:
-ARM GAS  /tmp/cclSm6Og.s 			page 9
+ARM GAS  /tmp/ccuCYG2R.s 			page 9
 
 
  464 005c 2B60     		str	r3, [r5]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  518 00c6 4B06     		lsls	r3, r1, #25
  519 00c8 D3D0     		beq	.L118
  520 00ca FFF7FEFF 		bl	USBD_LL_StallEP
-ARM GAS  /tmp/cclSm6Og.s 			page 10
+ARM GAS  /tmp/ccuCYG2R.s 			page 10
 
 
  521 00ce 8021     		movs	r1, #128
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  577 000e 8380     		strh	r3, [r0, #4]	@ movhi
  578 0010 CB88     		ldrh	r3, [r1, #6]	@ unaligned
  579 0012 C380     		strh	r3, [r0, #6]	@ movhi
-ARM GAS  /tmp/cclSm6Og.s 			page 11
+ARM GAS  /tmp/ccuCYG2R.s 			page 11
 
 
  580 0014 7047     		bx	lr
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  638 002c 5A1C     		adds	r2, r3, #1
  639 002e D2B2     		uxtb	r2, r2
  640 0030 0233     		adds	r3, r3, #2
-ARM GAS  /tmp/cclSm6Og.s 			page 12
+ARM GAS  /tmp/ccuCYG2R.s 			page 12
 
 
  641 0032 8D54     		strb	r5, [r1, r2]
@@ -669,35 +669,35 @@ ARM GAS  /tmp/cclSm6Og.s 			page 1
  649              	cfgidx.0:
  650 0000 00       		.space	1
  651              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cclSm6Og.s 			page 13
+ARM GAS  /tmp/ccuCYG2R.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_ctlreq.c
-     /tmp/cclSm6Og.s:14     .text.USBD_CtlError.constprop.0:0000000000000000 $t
-     /tmp/cclSm6Og.s:21     .text.USBD_CtlError.constprop.0:0000000000000000 USBD_CtlError.constprop.0
-     /tmp/cclSm6Og.s:34     .text.USBD_StdDevReq:0000000000000000 $t
-     /tmp/cclSm6Og.s:41     .text.USBD_StdDevReq:0000000000000000 USBD_StdDevReq
-     /tmp/cclSm6Og.s:60     .text.USBD_StdDevReq:0000000000000026 $d
-     /tmp/cclSm6Og.s:70     .text.USBD_StdDevReq:000000000000003a $t
-     /tmp/cclSm6Og.s:90     .text.USBD_StdDevReq:0000000000000060 $d
-     /tmp/cclSm6Og.s:141    .text.USBD_StdDevReq:00000000000000bc $d
-     /tmp/cclSm6Og.s:147    .text.USBD_StdDevReq:00000000000000c2 $t
-     /tmp/cclSm6Og.s:364    .text.USBD_StdDevReq:0000000000000284 $d
-     /tmp/cclSm6Og.s:367    .text.USBD_StdItfReq:0000000000000000 $t
-     /tmp/cclSm6Og.s:374    .text.USBD_StdItfReq:0000000000000000 USBD_StdItfReq
-     /tmp/cclSm6Og.s:415    .text.USBD_StdEPReq:0000000000000000 $t
-     /tmp/cclSm6Og.s:422    .text.USBD_StdEPReq:0000000000000000 USBD_StdEPReq
-     /tmp/cclSm6Og.s:559    .text.USBD_ParseSetupRequest:0000000000000000 $t
-     /tmp/cclSm6Og.s:566    .text.USBD_ParseSetupRequest:0000000000000000 USBD_ParseSetupRequest
-     /tmp/cclSm6Og.s:583    .text.USBD_CtlError:0000000000000000 $t
-     /tmp/cclSm6Og.s:590    .text.USBD_CtlError:0000000000000000 USBD_CtlError
-     /tmp/cclSm6Og.s:603    .text.USBD_GetString:0000000000000000 $t
-     /tmp/cclSm6Og.s:610    .text.USBD_GetString:0000000000000000 USBD_GetString
-     /tmp/cclSm6Og.s:649    .bss.cfgidx.0:0000000000000000 cfgidx.0
-     /tmp/cclSm6Og.s:650    .bss.cfgidx.0:0000000000000000 $d
-     /tmp/cclSm6Og.s:97     .text.USBD_StdDevReq:0000000000000067 $d
-     /tmp/cclSm6Og.s:97     .text.USBD_StdDevReq:0000000000000068 $t
+     /tmp/ccuCYG2R.s:14     .text.USBD_CtlError.constprop.0:0000000000000000 $t
+     /tmp/ccuCYG2R.s:21     .text.USBD_CtlError.constprop.0:0000000000000000 USBD_CtlError.constprop.0
+     /tmp/ccuCYG2R.s:34     .text.USBD_StdDevReq:0000000000000000 $t
+     /tmp/ccuCYG2R.s:41     .text.USBD_StdDevReq:0000000000000000 USBD_StdDevReq
+     /tmp/ccuCYG2R.s:60     .text.USBD_StdDevReq:0000000000000026 $d
+     /tmp/ccuCYG2R.s:70     .text.USBD_StdDevReq:000000000000003a $t
+     /tmp/ccuCYG2R.s:90     .text.USBD_StdDevReq:0000000000000060 $d
+     /tmp/ccuCYG2R.s:141    .text.USBD_StdDevReq:00000000000000bc $d
+     /tmp/ccuCYG2R.s:147    .text.USBD_StdDevReq:00000000000000c2 $t
+     /tmp/ccuCYG2R.s:364    .text.USBD_StdDevReq:0000000000000284 $d
+     /tmp/ccuCYG2R.s:367    .text.USBD_StdItfReq:0000000000000000 $t
+     /tmp/ccuCYG2R.s:374    .text.USBD_StdItfReq:0000000000000000 USBD_StdItfReq
+     /tmp/ccuCYG2R.s:415    .text.USBD_StdEPReq:0000000000000000 $t
+     /tmp/ccuCYG2R.s:422    .text.USBD_StdEPReq:0000000000000000 USBD_StdEPReq
+     /tmp/ccuCYG2R.s:559    .text.USBD_ParseSetupRequest:0000000000000000 $t
+     /tmp/ccuCYG2R.s:566    .text.USBD_ParseSetupRequest:0000000000000000 USBD_ParseSetupRequest
+     /tmp/ccuCYG2R.s:583    .text.USBD_CtlError:0000000000000000 $t
+     /tmp/ccuCYG2R.s:590    .text.USBD_CtlError:0000000000000000 USBD_CtlError
+     /tmp/ccuCYG2R.s:603    .text.USBD_GetString:0000000000000000 $t
+     /tmp/ccuCYG2R.s:610    .text.USBD_GetString:0000000000000000 USBD_GetString
+     /tmp/ccuCYG2R.s:649    .bss.cfgidx.0:0000000000000000 cfgidx.0
+     /tmp/ccuCYG2R.s:650    .bss.cfgidx.0:0000000000000000 $d
+     /tmp/ccuCYG2R.s:97     .text.USBD_StdDevReq:0000000000000067 $d
+     /tmp/ccuCYG2R.s:97     .text.USBD_StdDevReq:0000000000000068 $t
 
 UNDEFINED SYMBOLS
 USBD_LL_StallEP

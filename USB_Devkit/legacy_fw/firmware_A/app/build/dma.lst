@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cczD1aNJ.s 			page 1
+ARM GAS  /tmp/cccCevkh.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
   58 0004 054B     		ldr	r3, .L5
   59 0006 0C20     		movs	r0, #12
   60 0008 D961     		str	r1, [r3, #28]
-ARM GAS  /tmp/cczD1aNJ.s 			page 2
+ARM GAS  /tmp/cccCevkh.s 			page 2
 
 
   61 000a DA61     		str	r2, [r3, #28]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
  119 0006 074B     		ldr	r3, .L11+4
  120 0008 5A68     		ldr	r2, [r3, #4]
  121 000a 42F0F002 		orr	r2, r2, #240
-ARM GAS  /tmp/cczD1aNJ.s 			page 3
+ARM GAS  /tmp/cccCevkh.s 			page 3
 
 
  122 000e 5A60     		str	r2, [r3, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
  180 0004 7047     		bx	lr
  181              	.L18:
  182 0006 00BF     		.align	2
-ARM GAS  /tmp/cczD1aNJ.s 			page 4
+ARM GAS  /tmp/cccCevkh.s 			page 4
 
 
  183              	.L17:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
  241 0032 074B     		ldr	r3, .L44+4
  242 0034 1870     		strb	r0, [r3]
  243              	.L24:
-ARM GAS  /tmp/cczD1aNJ.s 			page 5
+ARM GAS  /tmp/cccCevkh.s 			page 5
 
 
  244 0036 0906     		lsls	r1, r1, #24
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
  300 003a 1307     		lsls	r3, r2, #28
  301 003c 41BF     		itttt	mi
  302 003e 034A     		ldrmi	r2, .L68
-ARM GAS  /tmp/cczD1aNJ.s 			page 6
+ARM GAS  /tmp/cccCevkh.s 			page 6
 
 
  303 0040 5368     		ldrmi	r3, [r2, #4]
@@ -320,42 +320,42 @@ ARM GAS  /tmp/cczD1aNJ.s 			page 1
  324              	_dma_spi_tx_done:
  325 0000 00       		.space	1
  326              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cczD1aNJ.s 			page 7
+ARM GAS  /tmp/cccCevkh.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 dma.c
-     /tmp/cczD1aNJ.s:14     .text.dma_init:0000000000000000 $t
-     /tmp/cczD1aNJ.s:22     .text.dma_init:0000000000000000 dma_init
-     /tmp/cczD1aNJ.s:42     .text.dma_init:000000000000001c $d
-     /tmp/cczD1aNJ.s:45     .text.dma_init_spi_rx:0000000000000000 $t
-     /tmp/cczD1aNJ.s:52     .text.dma_init_spi_rx:0000000000000000 dma_init_spi_rx
-     /tmp/cczD1aNJ.s:71     .text.dma_init_spi_rx:000000000000001c $d
-     /tmp/cczD1aNJ.s:75     .text.dma_init_spi_tx:0000000000000000 $t
-     /tmp/cczD1aNJ.s:82     .text.dma_init_spi_tx:0000000000000000 dma_init_spi_tx
-     /tmp/cczD1aNJ.s:101    .text.dma_init_spi_tx:000000000000001c $d
-     /tmp/cczD1aNJ.s:105    .text.dma_spi_rx_start:0000000000000000 $t
-     /tmp/cczD1aNJ.s:112    .text.dma_spi_rx_start:0000000000000000 dma_spi_rx_start
-     /tmp/cczD1aNJ.s:132    .text.dma_spi_rx_start:0000000000000020 $d
-     /tmp/cczD1aNJ.s:136    .text.dma_spi_tx_start:0000000000000000 $t
-     /tmp/cczD1aNJ.s:143    .text.dma_spi_tx_start:0000000000000000 dma_spi_tx_start
-     /tmp/cczD1aNJ.s:163    .text.dma_spi_tx_start:0000000000000020 $d
-     /tmp/cczD1aNJ.s:167    .text.dma_spi_rx_done:0000000000000000 $t
-     /tmp/cczD1aNJ.s:174    .text.dma_spi_rx_done:0000000000000000 dma_spi_rx_done
-     /tmp/cczD1aNJ.s:184    .text.dma_spi_rx_done:0000000000000008 $d
-     /tmp/cczD1aNJ.s:187    .text.dma_spi_tx_done:0000000000000000 $t
-     /tmp/cczD1aNJ.s:194    .text.dma_spi_tx_done:0000000000000000 dma_spi_tx_done
-     /tmp/cczD1aNJ.s:204    .text.dma_spi_tx_done:0000000000000008 $d
-     /tmp/cczD1aNJ.s:207    .text.DMA1_Channel2_IRQHandler:0000000000000000 $t
-     /tmp/cczD1aNJ.s:214    .text.DMA1_Channel2_IRQHandler:0000000000000000 DMA1_Channel2_IRQHandler
-     /tmp/cczD1aNJ.s:257    .text.DMA1_Channel2_IRQHandler:000000000000004c $d
-     /tmp/cczD1aNJ.s:261    .text.DMA1_Channel3_IRQHandler:0000000000000000 $t
-     /tmp/cczD1aNJ.s:268    .text.DMA1_Channel3_IRQHandler:0000000000000000 DMA1_Channel3_IRQHandler
-     /tmp/cczD1aNJ.s:311    .text.DMA1_Channel3_IRQHandler:000000000000004c $d
-     /tmp/cczD1aNJ.s:318    .bss._dma_spi_rx_done:0000000000000000 _dma_spi_rx_done
-     /tmp/cczD1aNJ.s:319    .bss._dma_spi_rx_done:0000000000000000 $d
-     /tmp/cczD1aNJ.s:324    .bss._dma_spi_tx_done:0000000000000000 _dma_spi_tx_done
-     /tmp/cczD1aNJ.s:325    .bss._dma_spi_tx_done:0000000000000000 $d
+     /tmp/cccCevkh.s:14     .text.dma_init:0000000000000000 $t
+     /tmp/cccCevkh.s:22     .text.dma_init:0000000000000000 dma_init
+     /tmp/cccCevkh.s:42     .text.dma_init:000000000000001c $d
+     /tmp/cccCevkh.s:45     .text.dma_init_spi_rx:0000000000000000 $t
+     /tmp/cccCevkh.s:52     .text.dma_init_spi_rx:0000000000000000 dma_init_spi_rx
+     /tmp/cccCevkh.s:71     .text.dma_init_spi_rx:000000000000001c $d
+     /tmp/cccCevkh.s:75     .text.dma_init_spi_tx:0000000000000000 $t
+     /tmp/cccCevkh.s:82     .text.dma_init_spi_tx:0000000000000000 dma_init_spi_tx
+     /tmp/cccCevkh.s:101    .text.dma_init_spi_tx:000000000000001c $d
+     /tmp/cccCevkh.s:105    .text.dma_spi_rx_start:0000000000000000 $t
+     /tmp/cccCevkh.s:112    .text.dma_spi_rx_start:0000000000000000 dma_spi_rx_start
+     /tmp/cccCevkh.s:132    .text.dma_spi_rx_start:0000000000000020 $d
+     /tmp/cccCevkh.s:136    .text.dma_spi_tx_start:0000000000000000 $t
+     /tmp/cccCevkh.s:143    .text.dma_spi_tx_start:0000000000000000 dma_spi_tx_start
+     /tmp/cccCevkh.s:163    .text.dma_spi_tx_start:0000000000000020 $d
+     /tmp/cccCevkh.s:167    .text.dma_spi_rx_done:0000000000000000 $t
+     /tmp/cccCevkh.s:174    .text.dma_spi_rx_done:0000000000000000 dma_spi_rx_done
+     /tmp/cccCevkh.s:184    .text.dma_spi_rx_done:0000000000000008 $d
+     /tmp/cccCevkh.s:187    .text.dma_spi_tx_done:0000000000000000 $t
+     /tmp/cccCevkh.s:194    .text.dma_spi_tx_done:0000000000000000 dma_spi_tx_done
+     /tmp/cccCevkh.s:204    .text.dma_spi_tx_done:0000000000000008 $d
+     /tmp/cccCevkh.s:207    .text.DMA1_Channel2_IRQHandler:0000000000000000 $t
+     /tmp/cccCevkh.s:214    .text.DMA1_Channel2_IRQHandler:0000000000000000 DMA1_Channel2_IRQHandler
+     /tmp/cccCevkh.s:257    .text.DMA1_Channel2_IRQHandler:000000000000004c $d
+     /tmp/cccCevkh.s:261    .text.DMA1_Channel3_IRQHandler:0000000000000000 $t
+     /tmp/cccCevkh.s:268    .text.DMA1_Channel3_IRQHandler:0000000000000000 DMA1_Channel3_IRQHandler
+     /tmp/cccCevkh.s:311    .text.DMA1_Channel3_IRQHandler:000000000000004c $d
+     /tmp/cccCevkh.s:318    .bss._dma_spi_rx_done:0000000000000000 _dma_spi_rx_done
+     /tmp/cccCevkh.s:319    .bss._dma_spi_rx_done:0000000000000000 $d
+     /tmp/cccCevkh.s:324    .bss._dma_spi_tx_done:0000000000000000 _dma_spi_tx_done
+     /tmp/cccCevkh.s:325    .bss._dma_spi_tx_done:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 irq_enable

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDaGuGU.s 			page 1
+ARM GAS  /tmp/ccizeUsy.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
   58 0005 0D00     		.ascii	"\015\000"
   59              		.section	.text._parse_hex,"ax",%progbits
   60              		.align	1
-ARM GAS  /tmp/ccDaGuGU.s 			page 2
+ARM GAS  /tmp/ccizeUsy.s 			page 2
 
 
   61              		.syntax unified
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  116              	.L14:
  117 006c 2A46     		mov	r2, r5
  118 006e 3146     		mov	r1, r6
-ARM GAS  /tmp/ccDaGuGU.s 			page 3
+ARM GAS  /tmp/ccizeUsy.s 			page 3
 
 
  119 0070 82A8     		add	r0, sp, #520
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  175 0002 0446     		mov	r4, r0
  176 0004 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  177 0006 0130     		adds	r0, r0, #1
-ARM GAS  /tmp/ccDaGuGU.s 			page 4
+ARM GAS  /tmp/ccizeUsy.s 			page 4
 
 
  178 0008 202B     		cmp	r3, #32
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  234 0048 8DF80100 		strb	r0, [sp, #1]
  235 004c C41C     		adds	r4, r0, #3
  236              	.L45:
-ARM GAS  /tmp/ccDaGuGU.s 			page 5
+ARM GAS  /tmp/ccizeUsy.s 			page 5
 
 
  237 004e AC42     		cmp	r4, r5
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  293 000a 6420     		movs	r0, #100
  294 000c 2561     		str	r5, [r4, #16]
  295 000e FFF7FEFF 		bl	time_delay_ms
-ARM GAS  /tmp/ccDaGuGU.s 			page 6
+ARM GAS  /tmp/ccizeUsy.s 			page 6
 
 
  296 0012 6420     		movs	r0, #100
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  339 000a FFF7FEFF 		bl	sys_clock_config
  340 000e FFF7FEFF 		bl	gpio_init
  341 0012 0122     		movs	r2, #1
-ARM GAS  /tmp/ccDaGuGU.s 			page 7
+ARM GAS  /tmp/ccizeUsy.s 			page 7
 
 
  342 0014 0921     		movs	r1, #9
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  396 009c 0021     		movs	r1, #0
  397 009e 2846     		mov	r0, r5
  398 00a0 FFF7FEFF 		bl	gpio_pin_init
-ARM GAS  /tmp/ccDaGuGU.s 			page 8
+ARM GAS  /tmp/ccizeUsy.s 			page 8
 
 
  399 00a4 0123     		movs	r3, #1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  453 0126 65D8     		bhi	.L59
  454 0128 DFE803F0 		tbb	[pc, r3]
  455              	.L61:
-ARM GAS  /tmp/ccDaGuGU.s 			page 9
+ARM GAS  /tmp/ccizeUsy.s 			page 9
 
 
  456 012c 02       		.byte	(.L64-.L61)/2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  510 01aa 2B61     		str	r3, [r5, #16]
  511              	.L69:
  512 01ac 244B     		ldr	r3, .L78+52
-ARM GAS  /tmp/ccDaGuGU.s 			page 10
+ARM GAS  /tmp/ccizeUsy.s 			page 10
 
 
  513 01ae 1F70     		strb	r7, [r3]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  567 020c 00080140 		.word	1073809408
  568 0210 000C0140 		.word	1073810432
  569 0214 00000000 		.word	gpio_ll_map
-ARM GAS  /tmp/ccDaGuGU.s 			page 11
+ARM GAS  /tmp/ccizeUsy.s 			page 11
 
 
  570 0218 00000000 		.word	.LANCHOR3
@@ -657,48 +657,48 @@ ARM GAS  /tmp/ccDaGuGU.s 			page 1
  634              	reset_type:
  635 0000 00       		.space	1
  636              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccDaGuGU.s 			page 12
+ARM GAS  /tmp/ccizeUsy.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccDaGuGU.s:14     .text._led1_on:0000000000000000 $t
-     /tmp/ccDaGuGU.s:21     .text._led1_on:0000000000000000 _led1_on
-     /tmp/ccDaGuGU.s:32     .text._led1_on:000000000000000c $d
-     /tmp/ccDaGuGU.s:35     .text._led1_off:0000000000000000 $t
-     /tmp/ccDaGuGU.s:41     .text._led1_off:0000000000000000 _led1_off
-     /tmp/ccDaGuGU.s:52     .text._led1_off:000000000000000c $d
-     /tmp/ccDaGuGU.s:60     .text._parse_hex:0000000000000000 $t
-     /tmp/ccDaGuGU.s:66     .text._parse_hex:0000000000000000 _parse_hex
-     /tmp/ccDaGuGU.s:158    .text._parse_hex:00000000000000b8 $d
-     /tmp/ccDaGuGU.s:164    .text._tty_rx_parser:0000000000000000 $t
-     /tmp/ccDaGuGU.s:170    .text._tty_rx_parser:0000000000000000 _tty_rx_parser
-     /tmp/ccDaGuGU.s:194    .text._tty_rx_parser:0000000000000028 $d
-     /tmp/ccDaGuGU.s:197    .text._spi_auto_task:0000000000000000 $t
-     /tmp/ccDaGuGU.s:203    .text._spi_auto_task:0000000000000000 _spi_auto_task
-     /tmp/ccDaGuGU.s:265    .text._spi_auto_task:000000000000008c $d
-     /tmp/ccDaGuGU.s:272    .text.Error_Handler:0000000000000000 $t
-     /tmp/ccDaGuGU.s:279    .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/ccDaGuGU.s:303    .text.Error_Handler:000000000000001c $d
-     /tmp/ccDaGuGU.s:325    .text.startup.main:0000000000000000 $t
-     /tmp/ccDaGuGU.s:332    .text.startup.main:0000000000000000 main
-     /tmp/ccDaGuGU.s:456    .text.startup.main:000000000000012c $d
-     /tmp/ccDaGuGU.s:460    .text.startup.main:0000000000000130 $t
-     /tmp/ccDaGuGU.s:567    .text.startup.main:000000000000020c $d
-     /tmp/ccDaGuGU.s:622    .bss.main_spi_no_resp:0000000000000000 main_spi_no_resp
-     /tmp/ccDaGuGU.s:616    .bss.main_spi_get_resp:0000000000000000 main_spi_get_resp
-     /tmp/ccDaGuGU.s:610    .bss.main_spi_auto:0000000000000000 main_spi_auto
-     /tmp/ccDaGuGU.s:597    .bss._spi_cs_active:0000000000000000 _spi_cs_active
-     /tmp/ccDaGuGU.s:598    .bss._spi_cs_active:0000000000000000 $d
-     /tmp/ccDaGuGU.s:600    .bss.led1:0000000000000000 $d
-     /tmp/ccDaGuGU.s:604    .bss.led1:0000000000000000 led1
-     /tmp/ccDaGuGU.s:611    .bss.main_spi_auto:0000000000000000 $d
-     /tmp/ccDaGuGU.s:617    .bss.main_spi_get_resp:0000000000000000 $d
-     /tmp/ccDaGuGU.s:623    .bss.main_spi_no_resp:0000000000000000 $d
-     /tmp/ccDaGuGU.s:628    .bss.prev_state.0:0000000000000000 prev_state.0
-     /tmp/ccDaGuGU.s:629    .bss.prev_state.0:0000000000000000 $d
-     /tmp/ccDaGuGU.s:634    .bss.reset_type:0000000000000000 reset_type
-     /tmp/ccDaGuGU.s:635    .bss.reset_type:0000000000000000 $d
+     /tmp/ccizeUsy.s:14     .text._led1_on:0000000000000000 $t
+     /tmp/ccizeUsy.s:21     .text._led1_on:0000000000000000 _led1_on
+     /tmp/ccizeUsy.s:32     .text._led1_on:000000000000000c $d
+     /tmp/ccizeUsy.s:35     .text._led1_off:0000000000000000 $t
+     /tmp/ccizeUsy.s:41     .text._led1_off:0000000000000000 _led1_off
+     /tmp/ccizeUsy.s:52     .text._led1_off:000000000000000c $d
+     /tmp/ccizeUsy.s:60     .text._parse_hex:0000000000000000 $t
+     /tmp/ccizeUsy.s:66     .text._parse_hex:0000000000000000 _parse_hex
+     /tmp/ccizeUsy.s:158    .text._parse_hex:00000000000000b8 $d
+     /tmp/ccizeUsy.s:164    .text._tty_rx_parser:0000000000000000 $t
+     /tmp/ccizeUsy.s:170    .text._tty_rx_parser:0000000000000000 _tty_rx_parser
+     /tmp/ccizeUsy.s:194    .text._tty_rx_parser:0000000000000028 $d
+     /tmp/ccizeUsy.s:197    .text._spi_auto_task:0000000000000000 $t
+     /tmp/ccizeUsy.s:203    .text._spi_auto_task:0000000000000000 _spi_auto_task
+     /tmp/ccizeUsy.s:265    .text._spi_auto_task:000000000000008c $d
+     /tmp/ccizeUsy.s:272    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccizeUsy.s:279    .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccizeUsy.s:303    .text.Error_Handler:000000000000001c $d
+     /tmp/ccizeUsy.s:325    .text.startup.main:0000000000000000 $t
+     /tmp/ccizeUsy.s:332    .text.startup.main:0000000000000000 main
+     /tmp/ccizeUsy.s:456    .text.startup.main:000000000000012c $d
+     /tmp/ccizeUsy.s:460    .text.startup.main:0000000000000130 $t
+     /tmp/ccizeUsy.s:567    .text.startup.main:000000000000020c $d
+     /tmp/ccizeUsy.s:622    .bss.main_spi_no_resp:0000000000000000 main_spi_no_resp
+     /tmp/ccizeUsy.s:616    .bss.main_spi_get_resp:0000000000000000 main_spi_get_resp
+     /tmp/ccizeUsy.s:610    .bss.main_spi_auto:0000000000000000 main_spi_auto
+     /tmp/ccizeUsy.s:597    .bss._spi_cs_active:0000000000000000 _spi_cs_active
+     /tmp/ccizeUsy.s:598    .bss._spi_cs_active:0000000000000000 $d
+     /tmp/ccizeUsy.s:600    .bss.led1:0000000000000000 $d
+     /tmp/ccizeUsy.s:604    .bss.led1:0000000000000000 led1
+     /tmp/ccizeUsy.s:611    .bss.main_spi_auto:0000000000000000 $d
+     /tmp/ccizeUsy.s:617    .bss.main_spi_get_resp:0000000000000000 $d
+     /tmp/ccizeUsy.s:623    .bss.main_spi_no_resp:0000000000000000 $d
+     /tmp/ccizeUsy.s:628    .bss.prev_state.0:0000000000000000 prev_state.0
+     /tmp/ccizeUsy.s:629    .bss.prev_state.0:0000000000000000 $d
+     /tmp/ccizeUsy.s:634    .bss.reset_type:0000000000000000 reset_type
+     /tmp/ccizeUsy.s:635    .bss.reset_type:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 hex_to_bin
@@ -717,7 +717,7 @@ sys_clock_config
 gpio_init
 gpio_pin_init
 wd_init
-ARM GAS  /tmp/ccDaGuGU.s 			page 13
+ARM GAS  /tmp/ccizeUsy.s 			page 13
 
 
 wd_run

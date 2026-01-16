@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cctRJwbY.s 			page 1
+ARM GAS  /tmp/cc4bbrrw.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
   49              		.section	.text.buf_range_normalize,"ax",%progbits
   50              		.align	1
   51              		.syntax unified
-ARM GAS  /tmp/cctRJwbY.s 			page 2
+ARM GAS  /tmp/cc4bbrrw.s 			page 2
 
 
   52              		.thumb
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  110              		.syntax unified
  111              		.thumb
  112              		.thumb_func
-ARM GAS  /tmp/cctRJwbY.s 			page 3
+ARM GAS  /tmp/cc4bbrrw.s 			page 3
 
 
  113              		.fpu softvfp
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  165              		.section	.rodata.buf_init.str1.1,"aMS",%progbits,1
  166              	.LC2:
  167 0000 41535345 		.ascii	"ASSERT: ../sdk/common/buf.c:24 BUF_RANGE_FAILURE bu"
-ARM GAS  /tmp/cctRJwbY.s 			page 4
+ARM GAS  /tmp/cc4bbrrw.s 			page 4
 
 
  167      52543A20 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  219              	buf_fill:
  220              		@ args = 0, pretend = 0, frame = 0
  221              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cctRJwbY.s 			page 5
+ARM GAS  /tmp/cc4bbrrw.s 			page 5
 
 
  222              		@ link register save eliminated.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  280 0006 0D46     		mov	r5, r1
  281 0008 FFF7FEFF 		bl	strlen
  282 000c A388     		ldrh	r3, [r4, #4]
-ARM GAS  /tmp/cctRJwbY.s 			page 6
+ARM GAS  /tmp/cc4bbrrw.s 			page 6
 
 
  283 000e 8342     		cmp	r3, r0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  332              		.fpu softvfp
  334              	buf_replace_vfmt:
  335              		@ args = 4, pretend = 0, frame = 8
-ARM GAS  /tmp/cctRJwbY.s 			page 7
+ARM GAS  /tmp/cc4bbrrw.s 			page 7
 
 
  336              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  392 0010 FFF7FEFF 		bl	buf_replace_vfmt
  393 0014 05B0     		add	sp, sp, #20
  394              		@ sp needed
-ARM GAS  /tmp/cctRJwbY.s 			page 8
+ARM GAS  /tmp/cc4bbrrw.s 			page 8
 
 
  395 0016 BDE81040 		pop	{r4, lr}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  454              		.align	1
  455              		.global	buf_replace_str
  456              		.syntax unified
-ARM GAS  /tmp/cctRJwbY.s 			page 9
+ARM GAS  /tmp/cc4bbrrw.s 			page 9
 
 
  457              		.thumb
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  517              		.section	.text.buf_mem_shift,"ax",%progbits
  518              		.align	1
  519              		.global	buf_mem_shift
-ARM GAS  /tmp/cctRJwbY.s 			page 10
+ARM GAS  /tmp/cc4bbrrw.s 			page 10
 
 
  520              		.syntax unified
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  577 0024 5A42     		rsbs	r2, r3, #0
  578 0026 C91A     		subs	r1, r1, r3
  579 0028 2844     		add	r0, r0, r5
-ARM GAS  /tmp/cctRJwbY.s 			page 11
+ARM GAS  /tmp/cc4bbrrw.s 			page 11
 
 
  580 002a FFF7FEFF 		bl	buf_mem_shift
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  631              	buf_insert_mem:
  632              		@ args = 0, pretend = 0, frame = 8
  633              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cctRJwbY.s 			page 12
+ARM GAS  /tmp/cc4bbrrw.s 			page 12
 
 
  634 0000 37B5     		push	{r0, r1, r2, r4, r5, lr}
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  689              		.align	1
  690              		.global	buf_insert_char
  691              		.syntax unified
-ARM GAS  /tmp/cctRJwbY.s 			page 13
+ARM GAS  /tmp/cc4bbrrw.s 			page 13
 
 
  692              		.thumb
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  749 0046 0134     		addne	r4, r4, #1
  750 0048 092A     		cmp	r2, #9
  751 004a 8CBF     		ite	hi
-ARM GAS  /tmp/cctRJwbY.s 			page 14
+ARM GAS  /tmp/cc4bbrrw.s 			page 14
 
 
  752 004c 3732     		addhi	r2, r2, #55
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  810 001a FFF7FEBF 		b	buf_insert_mem
  812              		.section	.text.buf_assign_str,"ax",%progbits
  813              		.align	1
-ARM GAS  /tmp/cctRJwbY.s 			page 15
+ARM GAS  /tmp/cc4bbrrw.s 			page 15
 
 
  814              		.global	buf_assign_str
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  874              		.syntax unified
  875              		.thumb
  876              		.thumb_func
-ARM GAS  /tmp/cctRJwbY.s 			page 16
+ARM GAS  /tmp/cc4bbrrw.s 			page 16
 
 
  877              		.fpu softvfp
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  937              		.thumb
  938              		.thumb_func
  939              		.fpu softvfp
-ARM GAS  /tmp/cctRJwbY.s 			page 17
+ARM GAS  /tmp/cc4bbrrw.s 			page 17
 
 
  941              	buf_assign_s16:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1000              		.syntax unified
  1001              		.thumb
  1002              		.thumb_func
-ARM GAS  /tmp/cctRJwbY.s 			page 18
+ARM GAS  /tmp/cc4bbrrw.s 			page 18
 
 
  1003              		.fpu softvfp
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1062 0010 2A46     		mov	r2, r5
  1063 0012 2046     		mov	r0, r4
  1064 0014 BDE87040 		pop	{r4, r5, r6, lr}
-ARM GAS  /tmp/cctRJwbY.s 			page 19
+ARM GAS  /tmp/cc4bbrrw.s 			page 19
 
 
  1065 0018 6FF00041 		mvn	r1, #-2147483648
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1113 0038 0C46     		mov	r4, r1
  1114              	.L106:
  1115 003a AE68     		ldr	r6, [r5, #8]
-ARM GAS  /tmp/cctRJwbY.s 			page 20
+ARM GAS  /tmp/cc4bbrrw.s 			page 20
 
 
  1116 003c 2868     		ldr	r0, [r5]
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1172 0016 02B0     		add	sp, sp, #8
  1173 0018 7047     		bx	lr
  1175              		.section	.text.buf_append_fmt,"ax",%progbits
-ARM GAS  /tmp/cctRJwbY.s 			page 21
+ARM GAS  /tmp/cc4bbrrw.s 			page 21
 
 
  1176              		.align	1
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1235 0002 03B5     		push	{r0, r1, lr}
  1236 0004 03AA     		add	r2, sp, #12
  1237 0006 52F8041B 		ldr	r1, [r2], #4
-ARM GAS  /tmp/cctRJwbY.s 			page 22
+ARM GAS  /tmp/cc4bbrrw.s 			page 22
 
 
  1238 000a 0192     		str	r2, [sp, #4]
@@ -1269,104 +1269,104 @@ ARM GAS  /tmp/cctRJwbY.s 			page 1
  1243 0016 03B0     		add	sp, sp, #12
  1244 0018 7047     		bx	lr
  1246              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cctRJwbY.s 			page 23
+ARM GAS  /tmp/cc4bbrrw.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 buf.c
-     /tmp/cctRJwbY.s:18     .text.buf_range_check:0000000000000000 $t
-     /tmp/cctRJwbY.s:25     .text.buf_range_check:0000000000000000 buf_range_check
-     /tmp/cctRJwbY.s:47     .text.buf_range_check:000000000000001c $d
-     /tmp/cctRJwbY.s:50     .text.buf_range_normalize:0000000000000000 $t
-     /tmp/cctRJwbY.s:56     .text.buf_range_normalize:0000000000000000 buf_range_normalize
-     /tmp/cctRJwbY.s:85     .text.buf_init_full:0000000000000000 $t
-     /tmp/cctRJwbY.s:92     .text.buf_init_full:0000000000000000 buf_init_full
-     /tmp/cctRJwbY.s:108    .text.buf_free:0000000000000000 $t
-     /tmp/cctRJwbY.s:115    .text.buf_free:0000000000000000 buf_free
-     /tmp/cctRJwbY.s:133    .text.buf_adjust:0000000000000000 $t
-     /tmp/cctRJwbY.s:140    .text.buf_adjust:0000000000000000 buf_adjust
-     /tmp/cctRJwbY.s:163    .text.buf_adjust:0000000000000020 $d
-     /tmp/cctRJwbY.s:170    .text.buf_init:0000000000000000 $t
-     /tmp/cctRJwbY.s:177    .text.buf_init:0000000000000000 buf_init
-     /tmp/cctRJwbY.s:209    .text.buf_init:0000000000000030 $d
-     /tmp/cctRJwbY.s:212    .text.buf_fill:0000000000000000 $t
-     /tmp/cctRJwbY.s:219    .text.buf_fill:0000000000000000 buf_fill
-     /tmp/cctRJwbY.s:240    .text.buf_equals_buf:0000000000000000 $t
-     /tmp/cctRJwbY.s:247    .text.buf_equals_buf:0000000000000000 buf_equals_buf
-     /tmp/cctRJwbY.s:267    .text.buf_equals_str:0000000000000000 $t
-     /tmp/cctRJwbY.s:274    .text.buf_equals_str:0000000000000000 buf_equals_str
-     /tmp/cctRJwbY.s:297    .text.buf_mem:0000000000000000 $t
-     /tmp/cctRJwbY.s:304    .text.buf_mem:0000000000000000 buf_mem
-     /tmp/cctRJwbY.s:327    .text.buf_replace_vfmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:334    .text.buf_replace_vfmt:0000000000000000 buf_replace_vfmt
-     /tmp/cctRJwbY.s:372    .text.buf_replace_vfmt:0000000000000048 $d
-     /tmp/cctRJwbY.s:375    .text.buf_replace_fmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:382    .text.buf_replace_fmt:0000000000000000 buf_replace_fmt
-     /tmp/cctRJwbY.s:400    .text.buf_mem_copy:0000000000000000 $t
-     /tmp/cctRJwbY.s:407    .text.buf_mem_copy:0000000000000000 buf_mem_copy
-     /tmp/cctRJwbY.s:423    .text.buf_replace_mem:0000000000000000 $t
-     /tmp/cctRJwbY.s:430    .text.buf_replace_mem:0000000000000000 buf_replace_mem
-     /tmp/cctRJwbY.s:454    .text.buf_replace_str:0000000000000000 $t
-     /tmp/cctRJwbY.s:461    .text.buf_replace_str:0000000000000000 buf_replace_str
-     /tmp/cctRJwbY.s:480    .text.buf_replace_buf:0000000000000000 $t
-     /tmp/cctRJwbY.s:487    .text.buf_replace_buf:0000000000000000 buf_replace_buf
-     /tmp/cctRJwbY.s:498    .text.buf_replace_s16:0000000000000000 $t
-     /tmp/cctRJwbY.s:505    .text.buf_replace_s16:0000000000000000 buf_replace_s16
-     /tmp/cctRJwbY.s:518    .text.buf_mem_shift:0000000000000000 $t
-     /tmp/cctRJwbY.s:525    .text.buf_mem_shift:0000000000000000 buf_mem_shift
-     /tmp/cctRJwbY.s:554    .text.buf_delete:0000000000000000 $t
-     /tmp/cctRJwbY.s:561    .text.buf_delete:0000000000000000 buf_delete
-     /tmp/cctRJwbY.s:591    .text.buf_trim:0000000000000000 $t
-     /tmp/cctRJwbY.s:598    .text.buf_trim:0000000000000000 buf_trim
-     /tmp/cctRJwbY.s:624    .text.buf_insert_mem:0000000000000000 $t
-     /tmp/cctRJwbY.s:631    .text.buf_insert_mem:0000000000000000 buf_insert_mem
-     /tmp/cctRJwbY.s:686    .text.buf_insert_mem:0000000000000068 $d
-     /tmp/cctRJwbY.s:689    .text.buf_insert_char:0000000000000000 $t
-     /tmp/cctRJwbY.s:696    .text.buf_insert_char:0000000000000000 buf_insert_char
-     /tmp/cctRJwbY.s:709    .text.buf_insert_hex:0000000000000000 $t
-     /tmp/cctRJwbY.s:716    .text.buf_insert_hex:0000000000000000 buf_insert_hex
-     /tmp/cctRJwbY.s:767    .text.buf_assign_char:0000000000000000 $t
-     /tmp/cctRJwbY.s:774    .text.buf_assign_char:0000000000000000 buf_assign_char
-     /tmp/cctRJwbY.s:789    .text.buf_insert_str:0000000000000000 $t
-     /tmp/cctRJwbY.s:796    .text.buf_insert_str:0000000000000000 buf_insert_str
-ARM GAS  /tmp/cctRJwbY.s 			page 24
+     /tmp/cc4bbrrw.s:18     .text.buf_range_check:0000000000000000 $t
+     /tmp/cc4bbrrw.s:25     .text.buf_range_check:0000000000000000 buf_range_check
+     /tmp/cc4bbrrw.s:47     .text.buf_range_check:000000000000001c $d
+     /tmp/cc4bbrrw.s:50     .text.buf_range_normalize:0000000000000000 $t
+     /tmp/cc4bbrrw.s:56     .text.buf_range_normalize:0000000000000000 buf_range_normalize
+     /tmp/cc4bbrrw.s:85     .text.buf_init_full:0000000000000000 $t
+     /tmp/cc4bbrrw.s:92     .text.buf_init_full:0000000000000000 buf_init_full
+     /tmp/cc4bbrrw.s:108    .text.buf_free:0000000000000000 $t
+     /tmp/cc4bbrrw.s:115    .text.buf_free:0000000000000000 buf_free
+     /tmp/cc4bbrrw.s:133    .text.buf_adjust:0000000000000000 $t
+     /tmp/cc4bbrrw.s:140    .text.buf_adjust:0000000000000000 buf_adjust
+     /tmp/cc4bbrrw.s:163    .text.buf_adjust:0000000000000020 $d
+     /tmp/cc4bbrrw.s:170    .text.buf_init:0000000000000000 $t
+     /tmp/cc4bbrrw.s:177    .text.buf_init:0000000000000000 buf_init
+     /tmp/cc4bbrrw.s:209    .text.buf_init:0000000000000030 $d
+     /tmp/cc4bbrrw.s:212    .text.buf_fill:0000000000000000 $t
+     /tmp/cc4bbrrw.s:219    .text.buf_fill:0000000000000000 buf_fill
+     /tmp/cc4bbrrw.s:240    .text.buf_equals_buf:0000000000000000 $t
+     /tmp/cc4bbrrw.s:247    .text.buf_equals_buf:0000000000000000 buf_equals_buf
+     /tmp/cc4bbrrw.s:267    .text.buf_equals_str:0000000000000000 $t
+     /tmp/cc4bbrrw.s:274    .text.buf_equals_str:0000000000000000 buf_equals_str
+     /tmp/cc4bbrrw.s:297    .text.buf_mem:0000000000000000 $t
+     /tmp/cc4bbrrw.s:304    .text.buf_mem:0000000000000000 buf_mem
+     /tmp/cc4bbrrw.s:327    .text.buf_replace_vfmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:334    .text.buf_replace_vfmt:0000000000000000 buf_replace_vfmt
+     /tmp/cc4bbrrw.s:372    .text.buf_replace_vfmt:0000000000000048 $d
+     /tmp/cc4bbrrw.s:375    .text.buf_replace_fmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:382    .text.buf_replace_fmt:0000000000000000 buf_replace_fmt
+     /tmp/cc4bbrrw.s:400    .text.buf_mem_copy:0000000000000000 $t
+     /tmp/cc4bbrrw.s:407    .text.buf_mem_copy:0000000000000000 buf_mem_copy
+     /tmp/cc4bbrrw.s:423    .text.buf_replace_mem:0000000000000000 $t
+     /tmp/cc4bbrrw.s:430    .text.buf_replace_mem:0000000000000000 buf_replace_mem
+     /tmp/cc4bbrrw.s:454    .text.buf_replace_str:0000000000000000 $t
+     /tmp/cc4bbrrw.s:461    .text.buf_replace_str:0000000000000000 buf_replace_str
+     /tmp/cc4bbrrw.s:480    .text.buf_replace_buf:0000000000000000 $t
+     /tmp/cc4bbrrw.s:487    .text.buf_replace_buf:0000000000000000 buf_replace_buf
+     /tmp/cc4bbrrw.s:498    .text.buf_replace_s16:0000000000000000 $t
+     /tmp/cc4bbrrw.s:505    .text.buf_replace_s16:0000000000000000 buf_replace_s16
+     /tmp/cc4bbrrw.s:518    .text.buf_mem_shift:0000000000000000 $t
+     /tmp/cc4bbrrw.s:525    .text.buf_mem_shift:0000000000000000 buf_mem_shift
+     /tmp/cc4bbrrw.s:554    .text.buf_delete:0000000000000000 $t
+     /tmp/cc4bbrrw.s:561    .text.buf_delete:0000000000000000 buf_delete
+     /tmp/cc4bbrrw.s:591    .text.buf_trim:0000000000000000 $t
+     /tmp/cc4bbrrw.s:598    .text.buf_trim:0000000000000000 buf_trim
+     /tmp/cc4bbrrw.s:624    .text.buf_insert_mem:0000000000000000 $t
+     /tmp/cc4bbrrw.s:631    .text.buf_insert_mem:0000000000000000 buf_insert_mem
+     /tmp/cc4bbrrw.s:686    .text.buf_insert_mem:0000000000000068 $d
+     /tmp/cc4bbrrw.s:689    .text.buf_insert_char:0000000000000000 $t
+     /tmp/cc4bbrrw.s:696    .text.buf_insert_char:0000000000000000 buf_insert_char
+     /tmp/cc4bbrrw.s:709    .text.buf_insert_hex:0000000000000000 $t
+     /tmp/cc4bbrrw.s:716    .text.buf_insert_hex:0000000000000000 buf_insert_hex
+     /tmp/cc4bbrrw.s:767    .text.buf_assign_char:0000000000000000 $t
+     /tmp/cc4bbrrw.s:774    .text.buf_assign_char:0000000000000000 buf_assign_char
+     /tmp/cc4bbrrw.s:789    .text.buf_insert_str:0000000000000000 $t
+     /tmp/cc4bbrrw.s:796    .text.buf_insert_str:0000000000000000 buf_insert_str
+ARM GAS  /tmp/cc4bbrrw.s 			page 24
 
 
-     /tmp/cctRJwbY.s:813    .text.buf_assign_str:0000000000000000 $t
-     /tmp/cctRJwbY.s:820    .text.buf_assign_str:0000000000000000 buf_assign_str
-     /tmp/cctRJwbY.s:835    .text.buf_insert_buf:0000000000000000 $t
-     /tmp/cctRJwbY.s:842    .text.buf_insert_buf:0000000000000000 buf_insert_buf
-     /tmp/cctRJwbY.s:850    .text.buf_assign_buf:0000000000000000 $t
-     /tmp/cctRJwbY.s:857    .text.buf_assign_buf:0000000000000000 buf_assign_buf
-     /tmp/cctRJwbY.s:872    .text.buf_insert_s8:0000000000000000 $t
-     /tmp/cctRJwbY.s:879    .text.buf_insert_s8:0000000000000000 buf_insert_s8
-     /tmp/cctRJwbY.s:892    .text.buf_assign_s8:0000000000000000 $t
-     /tmp/cctRJwbY.s:899    .text.buf_assign_s8:0000000000000000 buf_assign_s8
-     /tmp/cctRJwbY.s:914    .text.buf_insert_s16:0000000000000000 $t
-     /tmp/cctRJwbY.s:921    .text.buf_insert_s16:0000000000000000 buf_insert_s16
-     /tmp/cctRJwbY.s:934    .text.buf_assign_s16:0000000000000000 $t
-     /tmp/cctRJwbY.s:941    .text.buf_assign_s16:0000000000000000 buf_assign_s16
-     /tmp/cctRJwbY.s:956    .text.buf_insert_s32:0000000000000000 $t
-     /tmp/cctRJwbY.s:963    .text.buf_insert_s32:0000000000000000 buf_insert_s32
-     /tmp/cctRJwbY.s:976    .text.buf_assign_s32:0000000000000000 $t
-     /tmp/cctRJwbY.s:983    .text.buf_assign_s32:0000000000000000 buf_assign_s32
-     /tmp/cctRJwbY.s:998    .text.buf_insert_s64:0000000000000000 $t
-     /tmp/cctRJwbY.s:1005   .text.buf_insert_s64:0000000000000000 buf_insert_s64
-     /tmp/cctRJwbY.s:1018   .text.buf_assign_s64:0000000000000000 $t
-     /tmp/cctRJwbY.s:1025   .text.buf_assign_s64:0000000000000000 buf_assign_s64
-     /tmp/cctRJwbY.s:1045   .text.buf_assign_mem:0000000000000000 $t
-     /tmp/cctRJwbY.s:1052   .text.buf_assign_mem:0000000000000000 buf_assign_mem
-     /tmp/cctRJwbY.s:1073   .text.buf_insert_vfmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:1080   .text.buf_insert_vfmt:0000000000000000 buf_insert_vfmt
-     /tmp/cctRJwbY.s:1150   .text.buf_insert_vfmt:0000000000000088 $d
-     /tmp/cctRJwbY.s:1153   .text.buf_insert_fmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:1160   .text.buf_insert_fmt:0000000000000000 buf_insert_fmt
-     /tmp/cctRJwbY.s:1176   .text.buf_append_fmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:1183   .text.buf_append_fmt:0000000000000000 buf_append_fmt
-     /tmp/cctRJwbY.s:1200   .text.buf_assign_vfmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:1207   .text.buf_assign_vfmt:0000000000000000 buf_assign_vfmt
-     /tmp/cctRJwbY.s:1224   .text.buf_assign_fmt:0000000000000000 $t
-     /tmp/cctRJwbY.s:1231   .text.buf_assign_fmt:0000000000000000 buf_assign_fmt
+     /tmp/cc4bbrrw.s:813    .text.buf_assign_str:0000000000000000 $t
+     /tmp/cc4bbrrw.s:820    .text.buf_assign_str:0000000000000000 buf_assign_str
+     /tmp/cc4bbrrw.s:835    .text.buf_insert_buf:0000000000000000 $t
+     /tmp/cc4bbrrw.s:842    .text.buf_insert_buf:0000000000000000 buf_insert_buf
+     /tmp/cc4bbrrw.s:850    .text.buf_assign_buf:0000000000000000 $t
+     /tmp/cc4bbrrw.s:857    .text.buf_assign_buf:0000000000000000 buf_assign_buf
+     /tmp/cc4bbrrw.s:872    .text.buf_insert_s8:0000000000000000 $t
+     /tmp/cc4bbrrw.s:879    .text.buf_insert_s8:0000000000000000 buf_insert_s8
+     /tmp/cc4bbrrw.s:892    .text.buf_assign_s8:0000000000000000 $t
+     /tmp/cc4bbrrw.s:899    .text.buf_assign_s8:0000000000000000 buf_assign_s8
+     /tmp/cc4bbrrw.s:914    .text.buf_insert_s16:0000000000000000 $t
+     /tmp/cc4bbrrw.s:921    .text.buf_insert_s16:0000000000000000 buf_insert_s16
+     /tmp/cc4bbrrw.s:934    .text.buf_assign_s16:0000000000000000 $t
+     /tmp/cc4bbrrw.s:941    .text.buf_assign_s16:0000000000000000 buf_assign_s16
+     /tmp/cc4bbrrw.s:956    .text.buf_insert_s32:0000000000000000 $t
+     /tmp/cc4bbrrw.s:963    .text.buf_insert_s32:0000000000000000 buf_insert_s32
+     /tmp/cc4bbrrw.s:976    .text.buf_assign_s32:0000000000000000 $t
+     /tmp/cc4bbrrw.s:983    .text.buf_assign_s32:0000000000000000 buf_assign_s32
+     /tmp/cc4bbrrw.s:998    .text.buf_insert_s64:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1005   .text.buf_insert_s64:0000000000000000 buf_insert_s64
+     /tmp/cc4bbrrw.s:1018   .text.buf_assign_s64:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1025   .text.buf_assign_s64:0000000000000000 buf_assign_s64
+     /tmp/cc4bbrrw.s:1045   .text.buf_assign_mem:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1052   .text.buf_assign_mem:0000000000000000 buf_assign_mem
+     /tmp/cc4bbrrw.s:1073   .text.buf_insert_vfmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1080   .text.buf_insert_vfmt:0000000000000000 buf_insert_vfmt
+     /tmp/cc4bbrrw.s:1150   .text.buf_insert_vfmt:0000000000000088 $d
+     /tmp/cc4bbrrw.s:1153   .text.buf_insert_fmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1160   .text.buf_insert_fmt:0000000000000000 buf_insert_fmt
+     /tmp/cc4bbrrw.s:1176   .text.buf_append_fmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1183   .text.buf_append_fmt:0000000000000000 buf_append_fmt
+     /tmp/cc4bbrrw.s:1200   .text.buf_assign_vfmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1207   .text.buf_assign_vfmt:0000000000000000 buf_assign_vfmt
+     /tmp/cc4bbrrw.s:1224   .text.buf_assign_fmt:0000000000000000 $t
+     /tmp/cc4bbrrw.s:1231   .text.buf_assign_fmt:0000000000000000 buf_assign_fmt
 
 UNDEFINED SYMBOLS
 puts

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccOeori2.s 			page 1
+ARM GAS  /tmp/ccZhO1V1.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
   59              		.fpu softvfp
   61              	uart2_getchar:
   62              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccOeori2.s 			page 2
+ARM GAS  /tmp/ccZhO1V1.s 			page 2
 
 
   63              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  119 001c 0120     		movs	r0, #1
  120 001e 0132     		adds	r2, r2, #1
  121 0020 B2F5806F 		cmp	r2, #1024
-ARM GAS  /tmp/ccOeori2.s 			page 3
+ARM GAS  /tmp/ccZhO1V1.s 			page 3
 
 
  122 0024 1A60     		str	r2, [r3]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  178 001e 1360     		str	r3, [r2]
  179 0020 044B     		ldr	r3, .L20+12
  180 0022 5960     		str	r1, [r3, #4]
-ARM GAS  /tmp/ccOeori2.s 			page 4
+ARM GAS  /tmp/ccZhO1V1.s 			page 4
 
 
  181 0024 7047     		bx	lr
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  237 004a 1A68     		ldr	r2, [r3]
  238 004c 0132     		adds	r2, r2, #1
  239 004e B2F5007F 		cmp	r2, #512
-ARM GAS  /tmp/ccOeori2.s 			page 5
+ARM GAS  /tmp/ccZhO1V1.s 			page 5
 
 
  240 0052 1A60     		str	r2, [r3]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  296 0034 CDE90223 		strd	r2, r3, [sp, #8]
  297 0038 FFF7FEFF 		bl	LL_GPIO_Init
  298 003c F368     		ldr	r3, [r6, #12]
-ARM GAS  /tmp/ccOeori2.s 			page 6
+ARM GAS  /tmp/ccZhO1V1.s 			page 6
 
 
  299 003e 2846     		mov	r0, r5
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  356              		.global	u2_tx_wr_cnt
  357              		.global	u2_tx_wr_index
  358              		.global	u2_tx_buf
-ARM GAS  /tmp/ccOeori2.s 			page 7
+ARM GAS  /tmp/ccZhO1V1.s 			page 7
 
 
  359              		.global	u2_rx_run
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  423              	u2_tx_rd_index:
  424 0000 00000000 		.space	4
  425              		.section	.bss.u2_tx_run,"aw",%nobits
-ARM GAS  /tmp/ccOeori2.s 			page 8
+ARM GAS  /tmp/ccZhO1V1.s 			page 8
 
 
  426              		.align	2
@@ -436,57 +436,57 @@ ARM GAS  /tmp/ccOeori2.s 			page 1
  444              	u2_tx_wr_index:
  445 0000 00000000 		.space	4
  446              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccOeori2.s 			page 9
+ARM GAS  /tmp/ccZhO1V1.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 uart.c
-     /tmp/ccOeori2.s:14     .text.uart_brr_value:0000000000000000 $t
-     /tmp/ccOeori2.s:22     .text.uart_brr_value:0000000000000000 uart_brr_value
-     /tmp/ccOeori2.s:40     .text.main_wakeup:0000000000000000 $t
-     /tmp/ccOeori2.s:47     .text.main_wakeup:0000000000000000 main_wakeup
-     /tmp/ccOeori2.s:54     .text.uart2_getchar:0000000000000000 $t
-     /tmp/ccOeori2.s:61     .text.uart2_getchar:0000000000000000 uart2_getchar
-     /tmp/ccOeori2.s:90     .text.uart2_getchar:0000000000000030 $d
-     /tmp/ccOeori2.s:96     .text.uart2_putchar:0000000000000000 $t
-     /tmp/ccOeori2.s:103    .text.uart2_putchar:0000000000000000 uart2_putchar
-     /tmp/ccOeori2.s:145    .text.uart2_putchar:000000000000004c $d
-     /tmp/ccOeori2.s:153    .text.u2_tx:0000000000000000 $t
-     /tmp/ccOeori2.s:160    .text.u2_tx:0000000000000000 u2_tx
-     /tmp/ccOeori2.s:185    .text.u2_tx:0000000000000028 $d
-     /tmp/ccOeori2.s:191    .text.USART2_IRQHandler:0000000000000000 $t
-     /tmp/ccOeori2.s:198    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
-     /tmp/ccOeori2.s:255    .text.USART2_IRQHandler:0000000000000068 $d
-     /tmp/ccOeori2.s:265    .text.uart2_init:0000000000000000 $t
-     /tmp/ccOeori2.s:272    .text.uart2_init:0000000000000000 uart2_init
-     /tmp/ccOeori2.s:321    .text.uart2_init:000000000000006c $d
-     /tmp/ccOeori2.s:327    .text.uart2_set_state:0000000000000000 $t
-     /tmp/ccOeori2.s:334    .text.uart2_set_state:0000000000000000 uart2_set_state
-     /tmp/ccOeori2.s:351    .text.uart2_set_state:0000000000000014 $d
-     /tmp/ccOeori2.s:430    .bss.u2_tx_run:0000000000000000 u2_tx_run
-     /tmp/ccOeori2.s:416    .bss.u2_tx_rd_cnt:0000000000000000 u2_tx_rd_cnt
-     /tmp/ccOeori2.s:423    .bss.u2_tx_rd_index:0000000000000000 u2_tx_rd_index
-     /tmp/ccOeori2.s:437    .bss.u2_tx_wr_cnt:0000000000000000 u2_tx_wr_cnt
-     /tmp/ccOeori2.s:444    .bss.u2_tx_wr_index:0000000000000000 u2_tx_wr_index
-     /tmp/ccOeori2.s:409    .bss.u2_tx_buf:0000000000000000 u2_tx_buf
-     /tmp/ccOeori2.s:389    .bss.u2_rx_run:0000000000000000 u2_rx_run
-     /tmp/ccOeori2.s:376    .bss.u2_rx_rd_cnt:0000000000000000 u2_rx_rd_cnt
-     /tmp/ccOeori2.s:383    .bss.u2_rx_rd_index:0000000000000000 u2_rx_rd_index
-     /tmp/ccOeori2.s:396    .bss.u2_rx_wr_cnt:0000000000000000 u2_rx_wr_cnt
-     /tmp/ccOeori2.s:403    .bss.u2_rx_wr_index:0000000000000000 u2_rx_wr_index
-     /tmp/ccOeori2.s:369    .bss.u2_rx_buf:0000000000000000 u2_rx_buf
-     /tmp/ccOeori2.s:370    .bss.u2_rx_buf:0000000000000000 $d
-     /tmp/ccOeori2.s:372    .bss.u2_rx_rd_cnt:0000000000000000 $d
-     /tmp/ccOeori2.s:379    .bss.u2_rx_rd_index:0000000000000000 $d
-     /tmp/ccOeori2.s:386    .bss.u2_rx_run:0000000000000000 $d
-     /tmp/ccOeori2.s:392    .bss.u2_rx_wr_cnt:0000000000000000 $d
-     /tmp/ccOeori2.s:399    .bss.u2_rx_wr_index:0000000000000000 $d
-     /tmp/ccOeori2.s:410    .bss.u2_tx_buf:0000000000000000 $d
-     /tmp/ccOeori2.s:412    .bss.u2_tx_rd_cnt:0000000000000000 $d
-     /tmp/ccOeori2.s:419    .bss.u2_tx_rd_index:0000000000000000 $d
-     /tmp/ccOeori2.s:426    .bss.u2_tx_run:0000000000000000 $d
-     /tmp/ccOeori2.s:433    .bss.u2_tx_wr_cnt:0000000000000000 $d
-     /tmp/ccOeori2.s:440    .bss.u2_tx_wr_index:0000000000000000 $d
+     /tmp/ccZhO1V1.s:14     .text.uart_brr_value:0000000000000000 $t
+     /tmp/ccZhO1V1.s:22     .text.uart_brr_value:0000000000000000 uart_brr_value
+     /tmp/ccZhO1V1.s:40     .text.main_wakeup:0000000000000000 $t
+     /tmp/ccZhO1V1.s:47     .text.main_wakeup:0000000000000000 main_wakeup
+     /tmp/ccZhO1V1.s:54     .text.uart2_getchar:0000000000000000 $t
+     /tmp/ccZhO1V1.s:61     .text.uart2_getchar:0000000000000000 uart2_getchar
+     /tmp/ccZhO1V1.s:90     .text.uart2_getchar:0000000000000030 $d
+     /tmp/ccZhO1V1.s:96     .text.uart2_putchar:0000000000000000 $t
+     /tmp/ccZhO1V1.s:103    .text.uart2_putchar:0000000000000000 uart2_putchar
+     /tmp/ccZhO1V1.s:145    .text.uart2_putchar:000000000000004c $d
+     /tmp/ccZhO1V1.s:153    .text.u2_tx:0000000000000000 $t
+     /tmp/ccZhO1V1.s:160    .text.u2_tx:0000000000000000 u2_tx
+     /tmp/ccZhO1V1.s:185    .text.u2_tx:0000000000000028 $d
+     /tmp/ccZhO1V1.s:191    .text.USART2_IRQHandler:0000000000000000 $t
+     /tmp/ccZhO1V1.s:198    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
+     /tmp/ccZhO1V1.s:255    .text.USART2_IRQHandler:0000000000000068 $d
+     /tmp/ccZhO1V1.s:265    .text.uart2_init:0000000000000000 $t
+     /tmp/ccZhO1V1.s:272    .text.uart2_init:0000000000000000 uart2_init
+     /tmp/ccZhO1V1.s:321    .text.uart2_init:000000000000006c $d
+     /tmp/ccZhO1V1.s:327    .text.uart2_set_state:0000000000000000 $t
+     /tmp/ccZhO1V1.s:334    .text.uart2_set_state:0000000000000000 uart2_set_state
+     /tmp/ccZhO1V1.s:351    .text.uart2_set_state:0000000000000014 $d
+     /tmp/ccZhO1V1.s:430    .bss.u2_tx_run:0000000000000000 u2_tx_run
+     /tmp/ccZhO1V1.s:416    .bss.u2_tx_rd_cnt:0000000000000000 u2_tx_rd_cnt
+     /tmp/ccZhO1V1.s:423    .bss.u2_tx_rd_index:0000000000000000 u2_tx_rd_index
+     /tmp/ccZhO1V1.s:437    .bss.u2_tx_wr_cnt:0000000000000000 u2_tx_wr_cnt
+     /tmp/ccZhO1V1.s:444    .bss.u2_tx_wr_index:0000000000000000 u2_tx_wr_index
+     /tmp/ccZhO1V1.s:409    .bss.u2_tx_buf:0000000000000000 u2_tx_buf
+     /tmp/ccZhO1V1.s:389    .bss.u2_rx_run:0000000000000000 u2_rx_run
+     /tmp/ccZhO1V1.s:376    .bss.u2_rx_rd_cnt:0000000000000000 u2_rx_rd_cnt
+     /tmp/ccZhO1V1.s:383    .bss.u2_rx_rd_index:0000000000000000 u2_rx_rd_index
+     /tmp/ccZhO1V1.s:396    .bss.u2_rx_wr_cnt:0000000000000000 u2_rx_wr_cnt
+     /tmp/ccZhO1V1.s:403    .bss.u2_rx_wr_index:0000000000000000 u2_rx_wr_index
+     /tmp/ccZhO1V1.s:369    .bss.u2_rx_buf:0000000000000000 u2_rx_buf
+     /tmp/ccZhO1V1.s:370    .bss.u2_rx_buf:0000000000000000 $d
+     /tmp/ccZhO1V1.s:372    .bss.u2_rx_rd_cnt:0000000000000000 $d
+     /tmp/ccZhO1V1.s:379    .bss.u2_rx_rd_index:0000000000000000 $d
+     /tmp/ccZhO1V1.s:386    .bss.u2_rx_run:0000000000000000 $d
+     /tmp/ccZhO1V1.s:392    .bss.u2_rx_wr_cnt:0000000000000000 $d
+     /tmp/ccZhO1V1.s:399    .bss.u2_rx_wr_index:0000000000000000 $d
+     /tmp/ccZhO1V1.s:410    .bss.u2_tx_buf:0000000000000000 $d
+     /tmp/ccZhO1V1.s:412    .bss.u2_tx_rd_cnt:0000000000000000 $d
+     /tmp/ccZhO1V1.s:419    .bss.u2_tx_rd_index:0000000000000000 $d
+     /tmp/ccZhO1V1.s:426    .bss.u2_tx_run:0000000000000000 $d
+     /tmp/ccZhO1V1.s:433    .bss.u2_tx_wr_cnt:0000000000000000 $d
+     /tmp/ccZhO1V1.s:440    .bss.u2_tx_wr_index:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 LL_GPIO_Init

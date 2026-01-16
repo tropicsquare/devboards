@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccnor0o6.s 			page 1
+ARM GAS  /tmp/ccapKA5X.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
   60              	USB_DisableGlobalInt:
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccnor0o6.s 			page 2
+ARM GAS  /tmp/ccapKA5X.s 			page 2
 
 
   63              		@ link register save eliminated.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  123              		@ frame_needed = 0, uses_anonymous_args = 0
  124              		@ link register save eliminated.
  125 0000 0020     		movs	r0, #0
-ARM GAS  /tmp/ccnor0o6.s 			page 3
+ARM GAS  /tmp/ccapKA5X.s 			page 3
 
 
  126 0002 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  184 0040 3443     		orrs	r4, r4, r6
  185 0042 23F82240 		strh	r4, [r3, r2, lsl #2]	@ movhi
  186 0046 0C7B     		ldrb	r4, [r1, #12]	@ zero_extendqisi2
-ARM GAS  /tmp/ccnor0o6.s 			page 4
+ARM GAS  /tmp/ccapKA5X.s 			page 4
 
 
  187 0048 03EB021C 		add	ip, r3, r2, lsl #4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  241 00ca B4F80C14 		ldrh	r1, [r4, #1036]
  242 00ce 21F4F841 		bic	r1, r1, #31744
  243 00d2 0904     		lsls	r1, r1, #16
-ARM GAS  /tmp/ccnor0o6.s 			page 5
+ARM GAS  /tmp/ccapKA5X.s 			page 5
 
 
  244 00d4 090C     		lsrs	r1, r1, #16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  298 0164 7608     		lsrs	r6, r6, #1
  299 0166 6444     		add	r4, r4, ip
  300 0168 7600     		lsls	r6, r6, #1
-ARM GAS  /tmp/ccnor0o6.s 			page 6
+ARM GAS  /tmp/ccapKA5X.s 			page 6
 
 
  301 016a A4F80064 		strh	r6, [r4, #1024]	@ movhi
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  355 0202 33F82210 		ldrh	r1, [r3, r2, lsl #2]
  356 0206 89B2     		uxth	r1, r1
  357 0208 3940     		ands	r1, r1, r7
-ARM GAS  /tmp/ccnor0o6.s 			page 7
+ARM GAS  /tmp/ccapKA5X.s 			page 7
 
 
  358 020a 41F44041 		orr	r1, r1, #49152
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  414 000a 30F82320 		ldrh	r2, [r0, r3, lsl #2]
  415 000e 5106     		lsls	r1, r2, #25
  416 0010 0DD5     		bpl	.L64
-ARM GAS  /tmp/ccnor0o6.s 			page 8
+ARM GAS  /tmp/ccapKA5X.s 			page 8
 
 
  417 0012 30F82320 		ldrh	r2, [r0, r3, lsl #2]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  471 00ac 5206     		lsls	r2, r2, #25
  472 00ae 0DD5     		bpl	.L69
  473 00b0 30F82320 		ldrh	r2, [r0, r3, lsl #2]
-ARM GAS  /tmp/ccnor0o6.s 			page 9
+ARM GAS  /tmp/ccapKA5X.s 			page 9
 
 
  474 00b4 22F4E042 		bic	r2, r2, #28672
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  528 0156 42F0C002 		orr	r2, r2, #192
  529 015a 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
  530              	.L71:
-ARM GAS  /tmp/ccnor0o6.s 			page 10
+ARM GAS  /tmp/ccapKA5X.s 			page 10
 
 
  531 015e 48F28001 		movw	r1, #32896
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  588              		.section	.text.USB_EPClearStall,"ax",%progbits
  589              		.align	1
  590              		.global	USB_EPClearStall
-ARM GAS  /tmp/ccnor0o6.s 			page 11
+ARM GAS  /tmp/ccapKA5X.s 			page 11
 
 
  591              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  646 007c 30F82230 		ldrh	r3, [r0, r2, lsl #2]
  647 0080 23F48043 		bic	r3, r3, #16384
  648 0084 23F07003 		bic	r3, r3, #112
-ARM GAS  /tmp/ccnor0o6.s 			page 12
+ARM GAS  /tmp/ccapKA5X.s 			page 12
 
 
  649 0088 1B04     		lsls	r3, r3, #16
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  710              		.align	1
  711              		.global	USB_DevDisconnect
  712              		.syntax unified
-ARM GAS  /tmp/ccnor0o6.s 			page 13
+ARM GAS  /tmp/ccapKA5X.s 			page 13
 
 
  713              		.thumb
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  775              		.thumb_func
  776              		.fpu softvfp
  778              	USB_ReadDevOutEPInterrupt:
-ARM GAS  /tmp/ccnor0o6.s 			page 14
+ARM GAS  /tmp/ccapKA5X.s 			page 14
 
 
  779              		@ args = 0, pretend = 0, frame = 0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  841 0000 B0F84030 		ldrh	r3, [r0, #64]
  842 0004 9BB2     		uxth	r3, r3
  843 0006 43F01003 		orr	r3, r3, #16
-ARM GAS  /tmp/ccnor0o6.s 			page 15
+ARM GAS  /tmp/ccapKA5X.s 			page 15
 
 
  844 000a A0F84030 		strh	r3, [r0, #64]	@ movhi
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  904              		@ frame_needed = 0, uses_anonymous_args = 0
  905 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  906 0002 0C46     		mov	r4, r1
-ARM GAS  /tmp/ccnor0o6.s 			page 16
+ARM GAS  /tmp/ccapKA5X.s 			page 16
 
 
  907 0004 4978     		ldrb	r1, [r1, #1]	@ zero_extendqisi2
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  961 0090 20F82720 		strh	r2, [r0, r7, lsl #2]	@ movhi
  962 0094 30F82770 		ldrh	r7, [r0, r7, lsl #2]
  963 0098 9B1B     		subs	r3, r3, r6
-ARM GAS  /tmp/ccnor0o6.s 			page 17
+ARM GAS  /tmp/ccapKA5X.s 			page 17
 
 
  964 009a 17F04007 		ands	r7, r7, #64
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1018 0118 3752     		strh	r7, [r6, r0]	@ movhi
  1019              	.L158:
  1020 011a 2289     		ldrh	r2, [r4, #8]
-ARM GAS  /tmp/ccnor0o6.s 			page 18
+ARM GAS  /tmp/ccapKA5X.s 			page 18
 
 
  1021              	.L243:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1075 0196 5708     		lsrs	r7, r2, #1
  1076 0198 D207     		lsls	r2, r2, #31
  1077 019a 48BF     		it	mi
-ARM GAS  /tmp/ccnor0o6.s 			page 19
+ARM GAS  /tmp/ccapKA5X.s 			page 19
 
 
  1078 019c 0137     		addmi	r7, r7, #1
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1132 022a 226A     		ldr	r2, [r4, #32]
  1133 022c 2369     		ldr	r3, [r4, #16]
  1134 022e 6169     		ldr	r1, [r4, #20]
-ARM GAS  /tmp/ccnor0o6.s 			page 20
+ARM GAS  /tmp/ccapKA5X.s 			page 20
 
 
  1135 0230 9A42     		cmp	r2, r3
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1189 02ac 22F80C30 		strh	r3, [r2, ip]	@ movhi
  1190 02b0 2289     		ldrh	r2, [r4, #8]
  1191 02b2 FFF7FEFF 		bl	USB_WritePMA
-ARM GAS  /tmp/ccnor0o6.s 			page 21
+ARM GAS  /tmp/ccapKA5X.s 			page 21
 
 
  1192 02b6 226A     		ldr	r2, [r4, #32]
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1246 032e A369     		ldr	r3, [r4, #24]
  1247 0330 2169     		ldr	r1, [r4, #16]
  1248 0332 8B42     		cmp	r3, r1
-ARM GAS  /tmp/ccnor0o6.s 			page 22
+ARM GAS  /tmp/ccapKA5X.s 			page 22
 
 
  1249 0334 88BF     		it	hi
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1303 03ac 2278     		ldrb	r2, [r4]	@ zero_extendqisi2
  1304 03ae 89B2     		uxth	r1, r1
  1305 03b0 05F20C40 		addw	r0, r5, #1036
-ARM GAS  /tmp/ccnor0o6.s 			page 23
+ARM GAS  /tmp/ccapKA5X.s 			page 23
 
 
  1306 03b4 1201     		lsls	r2, r2, #4
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1360 0430 08BF     		it	eq
  1361 0432 06F1FF36 		addeq	r6, r6, #-1
  1362 0436 40EA8620 		orr	r0, r0, r6, lsl #10
-ARM GAS  /tmp/ccnor0o6.s 			page 24
+ARM GAS  /tmp/ccapKA5X.s 			page 24
 
 
  1363 043a B3E7     		b	.L247
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1417 04b0 B5F85010 		ldrh	r1, [r5, #80]
  1418 04b4 2278     		ldrb	r2, [r4]	@ zero_extendqisi2
  1419 04b6 89B2     		uxth	r1, r1
-ARM GAS  /tmp/ccnor0o6.s 			page 25
+ARM GAS  /tmp/ccapKA5X.s 			page 25
 
 
  1420 04b8 05F20C40 		addw	r0, r5, #1036
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1475              		.thumb_func
  1476              		.fpu softvfp
  1478              	USB_ReadPMA:
-ARM GAS  /tmp/ccnor0o6.s 			page 26
+ARM GAS  /tmp/ccapKA5X.s 			page 26
 
 
  1479              		@ args = 0, pretend = 0, frame = 0
@@ -1527,73 +1527,73 @@ ARM GAS  /tmp/ccnor0o6.s 			page 1
  1502 0032 04F8010C 		strb	r0, [r4, #-1]
  1503 0036 ECE7     		b	.L267
  1505              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccnor0o6.s 			page 27
+ARM GAS  /tmp/ccapKA5X.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_ll_usb.c
-     /tmp/ccnor0o6.s:14     .text.USB_CoreInit:0000000000000000 $t
-     /tmp/ccnor0o6.s:22     .text.USB_CoreInit:0000000000000000 USB_CoreInit
-     /tmp/ccnor0o6.s:34     .text.USB_EnableGlobalInt:0000000000000000 $t
-     /tmp/ccnor0o6.s:41     .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
-     /tmp/ccnor0o6.s:53     .text.USB_DisableGlobalInt:0000000000000000 $t
-     /tmp/ccnor0o6.s:60     .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
-     /tmp/ccnor0o6.s:73     .text.USB_SetCurrentMode:0000000000000000 $t
-     /tmp/ccnor0o6.s:80     .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
-     /tmp/ccnor0o6.s:88     .text.USB_DevInit:0000000000000000 $t
-     /tmp/ccnor0o6.s:95     .text.USB_DevInit:0000000000000000 USB_DevInit
-     /tmp/ccnor0o6.s:114    .text.USB_FlushTxFifo:0000000000000000 $t
-     /tmp/ccnor0o6.s:121    .text.USB_FlushTxFifo:0000000000000000 USB_FlushTxFifo
-     /tmp/ccnor0o6.s:129    .text.USB_FlushRxFifo:0000000000000000 $t
-     /tmp/ccnor0o6.s:136    .text.USB_FlushRxFifo:0000000000000000 USB_FlushRxFifo
-     /tmp/ccnor0o6.s:144    .text.USB_ActivateEndpoint:0000000000000000 $t
-     /tmp/ccnor0o6.s:151    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
-     /tmp/ccnor0o6.s:167    .text.USB_ActivateEndpoint:0000000000000020 $d
-     /tmp/ccnor0o6.s:171    .text.USB_ActivateEndpoint:0000000000000024 $t
-     /tmp/ccnor0o6.s:393    .text.USB_ActivateEndpoint:000000000000026c $d
-     /tmp/ccnor0o6.s:398    .text.USB_DeactivateEndpoint:0000000000000000 $t
-     /tmp/ccnor0o6.s:405    .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
-     /tmp/ccnor0o6.s:553    .text.USB_EPSetStall:0000000000000000 $t
-     /tmp/ccnor0o6.s:560    .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
-     /tmp/ccnor0o6.s:589    .text.USB_EPClearStall:0000000000000000 $t
-     /tmp/ccnor0o6.s:596    .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
-     /tmp/ccnor0o6.s:655    .text.USB_StopDevice:0000000000000000 $t
-     /tmp/ccnor0o6.s:662    .text.USB_StopDevice:0000000000000000 USB_StopDevice
-     /tmp/ccnor0o6.s:676    .text.USB_SetDevAddress:0000000000000000 $t
-     /tmp/ccnor0o6.s:683    .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
-     /tmp/ccnor0o6.s:695    .text.USB_DevConnect:0000000000000000 $t
-     /tmp/ccnor0o6.s:702    .text.USB_DevConnect:0000000000000000 USB_DevConnect
-     /tmp/ccnor0o6.s:710    .text.USB_DevDisconnect:0000000000000000 $t
-     /tmp/ccnor0o6.s:717    .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
-     /tmp/ccnor0o6.s:725    .text.USB_ReadInterrupts:0000000000000000 $t
-     /tmp/ccnor0o6.s:732    .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
-     /tmp/ccnor0o6.s:741    .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 $t
-     /tmp/ccnor0o6.s:748    .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 USB_ReadDevAllOutEpInterrupt
-     /tmp/ccnor0o6.s:756    .text.USB_ReadDevAllInEpInterrupt:0000000000000000 $t
-     /tmp/ccnor0o6.s:763    .text.USB_ReadDevAllInEpInterrupt:0000000000000000 USB_ReadDevAllInEpInterrupt
-     /tmp/ccnor0o6.s:771    .text.USB_ReadDevOutEPInterrupt:0000000000000000 $t
-     /tmp/ccnor0o6.s:778    .text.USB_ReadDevOutEPInterrupt:0000000000000000 USB_ReadDevOutEPInterrupt
-     /tmp/ccnor0o6.s:786    .text.USB_ReadDevInEPInterrupt:0000000000000000 $t
-     /tmp/ccnor0o6.s:793    .text.USB_ReadDevInEPInterrupt:0000000000000000 USB_ReadDevInEPInterrupt
-     /tmp/ccnor0o6.s:801    .text.USB_ClearInterrupts:0000000000000000 $t
-     /tmp/ccnor0o6.s:808    .text.USB_ClearInterrupts:0000000000000000 USB_ClearInterrupts
-     /tmp/ccnor0o6.s:815    .text.USB_EP0_OutStart:0000000000000000 $t
-     /tmp/ccnor0o6.s:822    .text.USB_EP0_OutStart:0000000000000000 USB_EP0_OutStart
-     /tmp/ccnor0o6.s:830    .text.USB_ActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccnor0o6.s:837    .text.USB_ActivateRemoteWakeup:0000000000000000 USB_ActivateRemoteWakeup
-     /tmp/ccnor0o6.s:849    .text.USB_DeActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccnor0o6.s:856    .text.USB_DeActivateRemoteWakeup:0000000000000000 USB_DeActivateRemoteWakeup
-     /tmp/ccnor0o6.s:869    .text.USB_WritePMA:0000000000000000 $t
-     /tmp/ccnor0o6.s:876    .text.USB_WritePMA:0000000000000000 USB_WritePMA
-     /tmp/ccnor0o6.s:895    .text.USB_EPStartXfer:0000000000000000 $t
-     /tmp/ccnor0o6.s:902    .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
-ARM GAS  /tmp/ccnor0o6.s 			page 28
+     /tmp/ccapKA5X.s:14     .text.USB_CoreInit:0000000000000000 $t
+     /tmp/ccapKA5X.s:22     .text.USB_CoreInit:0000000000000000 USB_CoreInit
+     /tmp/ccapKA5X.s:34     .text.USB_EnableGlobalInt:0000000000000000 $t
+     /tmp/ccapKA5X.s:41     .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
+     /tmp/ccapKA5X.s:53     .text.USB_DisableGlobalInt:0000000000000000 $t
+     /tmp/ccapKA5X.s:60     .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
+     /tmp/ccapKA5X.s:73     .text.USB_SetCurrentMode:0000000000000000 $t
+     /tmp/ccapKA5X.s:80     .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
+     /tmp/ccapKA5X.s:88     .text.USB_DevInit:0000000000000000 $t
+     /tmp/ccapKA5X.s:95     .text.USB_DevInit:0000000000000000 USB_DevInit
+     /tmp/ccapKA5X.s:114    .text.USB_FlushTxFifo:0000000000000000 $t
+     /tmp/ccapKA5X.s:121    .text.USB_FlushTxFifo:0000000000000000 USB_FlushTxFifo
+     /tmp/ccapKA5X.s:129    .text.USB_FlushRxFifo:0000000000000000 $t
+     /tmp/ccapKA5X.s:136    .text.USB_FlushRxFifo:0000000000000000 USB_FlushRxFifo
+     /tmp/ccapKA5X.s:144    .text.USB_ActivateEndpoint:0000000000000000 $t
+     /tmp/ccapKA5X.s:151    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
+     /tmp/ccapKA5X.s:167    .text.USB_ActivateEndpoint:0000000000000020 $d
+     /tmp/ccapKA5X.s:171    .text.USB_ActivateEndpoint:0000000000000024 $t
+     /tmp/ccapKA5X.s:393    .text.USB_ActivateEndpoint:000000000000026c $d
+     /tmp/ccapKA5X.s:398    .text.USB_DeactivateEndpoint:0000000000000000 $t
+     /tmp/ccapKA5X.s:405    .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
+     /tmp/ccapKA5X.s:553    .text.USB_EPSetStall:0000000000000000 $t
+     /tmp/ccapKA5X.s:560    .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
+     /tmp/ccapKA5X.s:589    .text.USB_EPClearStall:0000000000000000 $t
+     /tmp/ccapKA5X.s:596    .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
+     /tmp/ccapKA5X.s:655    .text.USB_StopDevice:0000000000000000 $t
+     /tmp/ccapKA5X.s:662    .text.USB_StopDevice:0000000000000000 USB_StopDevice
+     /tmp/ccapKA5X.s:676    .text.USB_SetDevAddress:0000000000000000 $t
+     /tmp/ccapKA5X.s:683    .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
+     /tmp/ccapKA5X.s:695    .text.USB_DevConnect:0000000000000000 $t
+     /tmp/ccapKA5X.s:702    .text.USB_DevConnect:0000000000000000 USB_DevConnect
+     /tmp/ccapKA5X.s:710    .text.USB_DevDisconnect:0000000000000000 $t
+     /tmp/ccapKA5X.s:717    .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
+     /tmp/ccapKA5X.s:725    .text.USB_ReadInterrupts:0000000000000000 $t
+     /tmp/ccapKA5X.s:732    .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
+     /tmp/ccapKA5X.s:741    .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 $t
+     /tmp/ccapKA5X.s:748    .text.USB_ReadDevAllOutEpInterrupt:0000000000000000 USB_ReadDevAllOutEpInterrupt
+     /tmp/ccapKA5X.s:756    .text.USB_ReadDevAllInEpInterrupt:0000000000000000 $t
+     /tmp/ccapKA5X.s:763    .text.USB_ReadDevAllInEpInterrupt:0000000000000000 USB_ReadDevAllInEpInterrupt
+     /tmp/ccapKA5X.s:771    .text.USB_ReadDevOutEPInterrupt:0000000000000000 $t
+     /tmp/ccapKA5X.s:778    .text.USB_ReadDevOutEPInterrupt:0000000000000000 USB_ReadDevOutEPInterrupt
+     /tmp/ccapKA5X.s:786    .text.USB_ReadDevInEPInterrupt:0000000000000000 $t
+     /tmp/ccapKA5X.s:793    .text.USB_ReadDevInEPInterrupt:0000000000000000 USB_ReadDevInEPInterrupt
+     /tmp/ccapKA5X.s:801    .text.USB_ClearInterrupts:0000000000000000 $t
+     /tmp/ccapKA5X.s:808    .text.USB_ClearInterrupts:0000000000000000 USB_ClearInterrupts
+     /tmp/ccapKA5X.s:815    .text.USB_EP0_OutStart:0000000000000000 $t
+     /tmp/ccapKA5X.s:822    .text.USB_EP0_OutStart:0000000000000000 USB_EP0_OutStart
+     /tmp/ccapKA5X.s:830    .text.USB_ActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccapKA5X.s:837    .text.USB_ActivateRemoteWakeup:0000000000000000 USB_ActivateRemoteWakeup
+     /tmp/ccapKA5X.s:849    .text.USB_DeActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccapKA5X.s:856    .text.USB_DeActivateRemoteWakeup:0000000000000000 USB_DeActivateRemoteWakeup
+     /tmp/ccapKA5X.s:869    .text.USB_WritePMA:0000000000000000 $t
+     /tmp/ccapKA5X.s:876    .text.USB_WritePMA:0000000000000000 USB_WritePMA
+     /tmp/ccapKA5X.s:895    .text.USB_EPStartXfer:0000000000000000 $t
+     /tmp/ccapKA5X.s:902    .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
+ARM GAS  /tmp/ccapKA5X.s 			page 28
 
 
-     /tmp/ccnor0o6.s:1276   .text.USB_EPStartXfer:000000000000036c $d
-     /tmp/ccnor0o6.s:1278   .text.USB_EPStartXfer:0000000000000370 $t
-     /tmp/ccnor0o6.s:1468   .text.USB_EPStartXfer:0000000000000518 $d
-     /tmp/ccnor0o6.s:1471   .text.USB_ReadPMA:0000000000000000 $t
-     /tmp/ccnor0o6.s:1478   .text.USB_ReadPMA:0000000000000000 USB_ReadPMA
+     /tmp/ccapKA5X.s:1276   .text.USB_EPStartXfer:000000000000036c $d
+     /tmp/ccapKA5X.s:1278   .text.USB_EPStartXfer:0000000000000370 $t
+     /tmp/ccapKA5X.s:1468   .text.USB_EPStartXfer:0000000000000518 $d
+     /tmp/ccapKA5X.s:1471   .text.USB_ReadPMA:0000000000000000 $t
+     /tmp/ccapKA5X.s:1478   .text.USB_ReadPMA:0000000000000000 USB_ReadPMA
 
 NO UNDEFINED SYMBOLS

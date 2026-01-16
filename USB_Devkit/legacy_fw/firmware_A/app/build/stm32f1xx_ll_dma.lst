@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6nehmd.s 			page 1
+ARM GAS  /tmp/cchosbog.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6nehmd.s 			page 1
   56 003a E8E7     		b	.L4
   57              	.L3:
   58 003c 0229     		cmp	r1, #2
-ARM GAS  /tmp/cc6nehmd.s 			page 2
+ARM GAS  /tmp/cchosbog.s 			page 2
 
 
   59 003e 01D1     		bne	.L6
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6nehmd.s 			page 1
  113 0094 02D1     		bne	.L16
  114 0096 4FF48073 		mov	r3, #256
  115 009a F8E7     		b	.L25
-ARM GAS  /tmp/cc6nehmd.s 			page 3
+ARM GAS  /tmp/cchosbog.s 			page 3
 
 
  116              	.L16:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6nehmd.s 			page 1
  172 0010 1669     		ldr	r6, [r2, #16]
  173 0012 4459     		ldr	r4, [r0, r5]
  174 0014 3343     		orrs	r3, r3, r6
-ARM GAS  /tmp/cc6nehmd.s 			page 4
+ARM GAS  /tmp/cchosbog.s 			page 4
 
 
  175 0016 5669     		ldr	r6, [r2, #20]
@@ -234,19 +234,19 @@ ARM GAS  /tmp/cc6nehmd.s 			page 1
  230 0000 081C3044 		.ascii	"\010\0340DXl\200"
  230      586C80
  231              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/cc6nehmd.s 			page 5
+ARM GAS  /tmp/cchosbog.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_ll_dma.c
-     /tmp/cc6nehmd.s:14     .text.LL_DMA_DeInit:0000000000000000 $t
-     /tmp/cc6nehmd.s:22     .text.LL_DMA_DeInit:0000000000000000 LL_DMA_DeInit
-     /tmp/cc6nehmd.s:142    .text.LL_DMA_DeInit:00000000000000c8 $d
-     /tmp/cc6nehmd.s:156    .text.LL_DMA_Init:0000000000000000 $t
-     /tmp/cc6nehmd.s:163    .text.LL_DMA_Init:0000000000000000 LL_DMA_Init
-     /tmp/cc6nehmd.s:203    .text.LL_DMA_Init:000000000000004c $d
-     /tmp/cc6nehmd.s:206    .text.LL_DMA_StructInit:0000000000000000 $t
-     /tmp/cc6nehmd.s:213    .text.LL_DMA_StructInit:0000000000000000 LL_DMA_StructInit
-     /tmp/cc6nehmd.s:229    .rodata.CHANNEL_OFFSET_TAB:0000000000000000 CHANNEL_OFFSET_TAB
+     /tmp/cchosbog.s:14     .text.LL_DMA_DeInit:0000000000000000 $t
+     /tmp/cchosbog.s:22     .text.LL_DMA_DeInit:0000000000000000 LL_DMA_DeInit
+     /tmp/cchosbog.s:142    .text.LL_DMA_DeInit:00000000000000c8 $d
+     /tmp/cchosbog.s:156    .text.LL_DMA_Init:0000000000000000 $t
+     /tmp/cchosbog.s:163    .text.LL_DMA_Init:0000000000000000 LL_DMA_Init
+     /tmp/cchosbog.s:203    .text.LL_DMA_Init:000000000000004c $d
+     /tmp/cchosbog.s:206    .text.LL_DMA_StructInit:0000000000000000 $t
+     /tmp/cchosbog.s:213    .text.LL_DMA_StructInit:0000000000000000 LL_DMA_StructInit
+     /tmp/cchosbog.s:229    .rodata.CHANNEL_OFFSET_TAB:0000000000000000 CHANNEL_OFFSET_TAB
 
 NO UNDEFINED SYMBOLS

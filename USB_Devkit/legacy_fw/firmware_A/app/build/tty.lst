@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccscqUNg.s 			page 1
+ARM GAS  /tmp/ccQ0oG4y.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
   57              		.global	_write
   58              		.syntax unified
   59              		.thumb
-ARM GAS  /tmp/ccscqUNg.s 			page 2
+ARM GAS  /tmp/ccQ0oG4y.s 			page 2
 
 
   60              		.thumb_func
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
  119              		.align	2
  120              	.L20:
  121 0024 00000000 		.word	.LANCHOR0
-ARM GAS  /tmp/ccscqUNg.s 			page 3
+ARM GAS  /tmp/ccQ0oG4y.s 			page 3
 
 
  122 0028 00000000 		.word	.LANCHOR1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
  178 0048 00000000 		.word	.LANCHOR2
  180              		.section	.text.tty_rx_task,"ax",%progbits
  181              		.align	1
-ARM GAS  /tmp/ccscqUNg.s 			page 4
+ARM GAS  /tmp/ccQ0oG4y.s 			page 4
 
 
  182              		.global	tty_rx_task
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
  241              	.L48:
  242 0012 14F8013F 		ldrb	r3, [r4, #1]!	@ zero_extendqisi2
  243 0016 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccscqUNg.s 			page 5
+ARM GAS  /tmp/ccQ0oG4y.s 			page 5
 
 
  244 0018 FBD1     		bne	.L48
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
  297              		.align	1
  298              		.global	tty_init
  299              		.syntax unified
-ARM GAS  /tmp/ccscqUNg.s 			page 6
+ARM GAS  /tmp/ccQ0oG4y.s 			page 6
 
 
  300              		.thumb
@@ -352,46 +352,46 @@ ARM GAS  /tmp/ccscqUNg.s 			page 1
  353      00000000 
  353      00000000 
  354              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccscqUNg.s 			page 7
+ARM GAS  /tmp/ccQ0oG4y.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 tty.c
-     /tmp/ccscqUNg.s:14     .text._usb_send_data:0000000000000000 $t
-     /tmp/ccscqUNg.s:21     .text._usb_send_data:0000000000000000 _usb_send_data
-     /tmp/ccscqUNg.s:56     .text._write:0000000000000000 $t
-     /tmp/ccscqUNg.s:63     .text._write:0000000000000000 _write
-     /tmp/ccscqUNg.s:75     .text._read:0000000000000000 $t
-     /tmp/ccscqUNg.s:82     .text._read:0000000000000000 _read
-     /tmp/ccscqUNg.s:90     .text._usb_getchar:0000000000000000 $t
-     /tmp/ccscqUNg.s:97     .text._usb_getchar:0000000000000000 _usb_getchar
-     /tmp/ccscqUNg.s:121    .text._usb_getchar:0000000000000024 $d
-     /tmp/ccscqUNg.s:331    .bss._usb_stream_buffer:0000000000000000 _usb_stream_buffer
-     /tmp/ccscqUNg.s:126    .text._rx_feed:0000000000000000 $t
-     /tmp/ccscqUNg.s:133    .text._rx_feed:0000000000000000 _rx_feed
-     /tmp/ccscqUNg.s:178    .text._rx_feed:0000000000000048 $d
-     /tmp/ccscqUNg.s:181    .text.tty_rx_task:0000000000000000 $t
-     /tmp/ccscqUNg.s:188    .text.tty_rx_task:0000000000000000 tty_rx_task
-     /tmp/ccscqUNg.s:206    .text.tty_rx_task:0000000000000018 $d
-     /tmp/ccscqUNg.s:209    .text.tty_put_binary:0000000000000000 $t
-     /tmp/ccscqUNg.s:216    .text.tty_put_binary:0000000000000000 tty_put_binary
-     /tmp/ccscqUNg.s:224    .text.tty_put_text:0000000000000000 $t
-     /tmp/ccscqUNg.s:231    .text.tty_put_text:0000000000000000 tty_put_text
-     /tmp/ccscqUNg.s:251    .text._usb_rx_handler:0000000000000000 $t
-     /tmp/ccscqUNg.s:257    .text._usb_rx_handler:0000000000000000 _usb_rx_handler
-     /tmp/ccscqUNg.s:291    .text._usb_rx_handler:0000000000000038 $d
-     /tmp/ccscqUNg.s:297    .text.tty_init:0000000000000000 $t
-     /tmp/ccscqUNg.s:304    .text.tty_init:0000000000000000 tty_init
-     /tmp/ccscqUNg.s:317    .text.tty_init:0000000000000010 $d
-     /tmp/ccscqUNg.s:326    .bss._rx_callback:0000000000000000 _rx_callback
-     /tmp/ccscqUNg.s:322    .bss._rx_callback:0000000000000000 $d
-     /tmp/ccscqUNg.s:332    .bss._usb_stream_buffer:0000000000000000 $d
-     /tmp/ccscqUNg.s:334    .bss._usb_stream_rd_ptr:0000000000000000 $d
-     /tmp/ccscqUNg.s:338    .bss._usb_stream_rd_ptr:0000000000000000 _usb_stream_rd_ptr
-     /tmp/ccscqUNg.s:341    .bss._usb_stream_wr_ptr:0000000000000000 $d
-     /tmp/ccscqUNg.s:345    .bss._usb_stream_wr_ptr:0000000000000000 _usb_stream_wr_ptr
-     /tmp/ccscqUNg.s:348    .bss.usb_rx_buf.1:0000000000000000 $d
-     /tmp/ccscqUNg.s:352    .bss.usb_rx_buf.1:0000000000000000 usb_rx_buf.1
+     /tmp/ccQ0oG4y.s:14     .text._usb_send_data:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:21     .text._usb_send_data:0000000000000000 _usb_send_data
+     /tmp/ccQ0oG4y.s:56     .text._write:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:63     .text._write:0000000000000000 _write
+     /tmp/ccQ0oG4y.s:75     .text._read:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:82     .text._read:0000000000000000 _read
+     /tmp/ccQ0oG4y.s:90     .text._usb_getchar:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:97     .text._usb_getchar:0000000000000000 _usb_getchar
+     /tmp/ccQ0oG4y.s:121    .text._usb_getchar:0000000000000024 $d
+     /tmp/ccQ0oG4y.s:331    .bss._usb_stream_buffer:0000000000000000 _usb_stream_buffer
+     /tmp/ccQ0oG4y.s:126    .text._rx_feed:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:133    .text._rx_feed:0000000000000000 _rx_feed
+     /tmp/ccQ0oG4y.s:178    .text._rx_feed:0000000000000048 $d
+     /tmp/ccQ0oG4y.s:181    .text.tty_rx_task:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:188    .text.tty_rx_task:0000000000000000 tty_rx_task
+     /tmp/ccQ0oG4y.s:206    .text.tty_rx_task:0000000000000018 $d
+     /tmp/ccQ0oG4y.s:209    .text.tty_put_binary:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:216    .text.tty_put_binary:0000000000000000 tty_put_binary
+     /tmp/ccQ0oG4y.s:224    .text.tty_put_text:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:231    .text.tty_put_text:0000000000000000 tty_put_text
+     /tmp/ccQ0oG4y.s:251    .text._usb_rx_handler:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:257    .text._usb_rx_handler:0000000000000000 _usb_rx_handler
+     /tmp/ccQ0oG4y.s:291    .text._usb_rx_handler:0000000000000038 $d
+     /tmp/ccQ0oG4y.s:297    .text.tty_init:0000000000000000 $t
+     /tmp/ccQ0oG4y.s:304    .text.tty_init:0000000000000000 tty_init
+     /tmp/ccQ0oG4y.s:317    .text.tty_init:0000000000000010 $d
+     /tmp/ccQ0oG4y.s:326    .bss._rx_callback:0000000000000000 _rx_callback
+     /tmp/ccQ0oG4y.s:322    .bss._rx_callback:0000000000000000 $d
+     /tmp/ccQ0oG4y.s:332    .bss._usb_stream_buffer:0000000000000000 $d
+     /tmp/ccQ0oG4y.s:334    .bss._usb_stream_rd_ptr:0000000000000000 $d
+     /tmp/ccQ0oG4y.s:338    .bss._usb_stream_rd_ptr:0000000000000000 _usb_stream_rd_ptr
+     /tmp/ccQ0oG4y.s:341    .bss._usb_stream_wr_ptr:0000000000000000 $d
+     /tmp/ccQ0oG4y.s:345    .bss._usb_stream_wr_ptr:0000000000000000 _usb_stream_wr_ptr
+     /tmp/ccQ0oG4y.s:348    .bss.usb_rx_buf.1:0000000000000000 $d
+     /tmp/ccQ0oG4y.s:352    .bss.usb_rx_buf.1:0000000000000000 usb_rx_buf.1
 
 UNDEFINED SYMBOLS
 usb_device_connected

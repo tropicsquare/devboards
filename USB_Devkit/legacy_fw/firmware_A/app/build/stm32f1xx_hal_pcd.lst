@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccUiU9el.s 			page 1
+ARM GAS  /tmp/ccaDNzkg.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
   58 0032 271D     		adds	r7, r4, #4
   59 0034 3360     		str	r3, [r6]
   60 0036 2646     		mov	r6, r4
-ARM GAS  /tmp/ccUiU9el.s 			page 2
+ARM GAS  /tmp/ccaDNzkg.s 			page 2
 
 
   61 0038 97E80E00 		ldm	r7, {r1, r2, r3}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  115 00c0 1864     		str	r0, [r3, #64]
  116 00c2 D1E7     		b	.L6
  117              	.L9:
-ARM GAS  /tmp/ccUiU9el.s 			page 3
+ARM GAS  /tmp/ccaDNzkg.s 			page 3
 
 
  118 00c4 05FB0042 		mla	r2, r5, r0, r4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  176 001c F3D1     		bne	.L16
  177 001e 2046     		mov	r0, r4
  178 0020 FFF7FEFF 		bl	HAL_PCD_MspDeInit
-ARM GAS  /tmp/ccUiU9el.s 			page 4
+ARM GAS  /tmp/ccaDNzkg.s 			page 4
 
 
  179 0024 84F8A952 		strb	r5, [r4, #681]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  237 001c FFF7FEFF 		bl	HAL_PCDEx_SetConnectionState
  238 0020 2068     		ldr	r0, [r4]
  239 0022 FFF7FEFF 		bl	USB_DevDisconnect
-ARM GAS  /tmp/ccUiU9el.s 			page 5
+ARM GAS  /tmp/ccaDNzkg.s 			page 5
 
 
  240 0026 0020     		movs	r0, #0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  301              		.thumb
  302              		.thumb_func
  303              		.fpu softvfp
-ARM GAS  /tmp/ccUiU9el.s 			page 6
+ARM GAS  /tmp/ccaDNzkg.s 			page 6
 
 
  305              	HAL_PCD_SetupStageCallback:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  368              		.align	1
  369              		.weak	HAL_PCD_ISOOUTIncompleteCallback
  370              		.syntax unified
-ARM GAS  /tmp/ccUiU9el.s 			page 7
+ARM GAS  /tmp/ccaDNzkg.s 			page 7
 
 
  371              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  434 0000 10B5     		push	{r4, lr}
  435 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
  436 0006 0446     		mov	r4, r0
-ARM GAS  /tmp/ccUiU9el.s 			page 8
+ARM GAS  /tmp/ccaDNzkg.s 			page 8
 
 
  437 0008 012B     		cmp	r3, #1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  495 0006 0446     		mov	r4, r0
  496 0008 012A     		cmp	r2, #1
  497 000a 0BD0     		beq	.L45
-ARM GAS  /tmp/ccUiU9el.s 			page 9
+ARM GAS  /tmp/ccaDNzkg.s 			page 9
 
 
  498 000c 0122     		movs	r2, #1
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  554 0052 FFF7FEFF 		bl	USB_ReadInterrupts
  555 0056 4104     		lsls	r1, r0, #17
  556 0058 08D5     		bpl	.L117
-ARM GAS  /tmp/ccUiU9el.s 			page 10
+ARM GAS  /tmp/ccaDNzkg.s 			page 10
 
 
  557 005a 2268     		ldr	r2, [r4]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  611 00e8 9542     		cmp	r5, r2
  612 00ea 26F8027B 		strh	r7, [r6], #2	@ movhi
  613 00ee F9D1     		bne	.L121
-ARM GAS  /tmp/ccUiU9el.s 			page 11
+ARM GAS  /tmp/ccaDNzkg.s 			page 11
 
 
  614 00f0 B3F84020 		ldrh	r2, [r3, #64]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  668 018c C305     		lsls	r3, r0, #23
  669 018e 08D5     		bpl	.L46
  670 0190 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/ccUiU9el.s 			page 12
+ARM GAS  /tmp/ccaDNzkg.s 			page 12
 
 
  671 0192 B2F84430 		ldrh	r3, [r2, #68]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  725 022c 03EBC203 		add	r3, r3, r2, lsl #3
  726 0230 00EB4303 		add	r3, r0, r3, lsl #1
  727 0234 B3F80C34 		ldrh	r3, [r3, #1036]
-ARM GAS  /tmp/ccUiU9el.s 			page 13
+ARM GAS  /tmp/ccaDNzkg.s 			page 13
 
 
  728 0238 B4F86E21 		ldrh	r2, [r4, #366]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  782 02da C25A     		ldrh	r2, [r0, r3]
  783 02dc 22F4F842 		bic	r2, r2, #31744
  784 02e0 1204     		lsls	r2, r2, #16
-ARM GAS  /tmp/ccUiU9el.s 			page 14
+ARM GAS  /tmp/ccaDNzkg.s 			page 14
 
 
  785 02e2 120C     		lsrs	r2, r2, #16
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  839 0362 00F5806C 		add	ip, r0, #1024
  840 0366 B3B9     		cbnz	r3, .L63
  841 0368 B0F85030 		ldrh	r3, [r0, #80]
-ARM GAS  /tmp/ccUiU9el.s 			page 15
+ARM GAS  /tmp/ccaDNzkg.s 			page 15
 
 
  842 036c 91F86821 		ldrb	r2, [r1, #360]	@ zero_extendqisi2
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  896 040a 22F4E042 		bic	r2, r2, #28672
  897 040e 22F07002 		bic	r2, r2, #112
  898 0412 1204     		lsls	r2, r2, #16
-ARM GAS  /tmp/ccUiU9el.s 			page 16
+ARM GAS  /tmp/ccaDNzkg.s 			page 16
 
 
  899 0414 120C     		lsrs	r2, r2, #16
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  953 04a0 B1F87221 		ldrh	r2, [r1, #370]
  954 04a4 72E7     		b	.L201
  955              	.L65:
-ARM GAS  /tmp/ccUiU9el.s 			page 17
+ARM GAS  /tmp/ccaDNzkg.s 			page 17
 
 
  956 04a6 30F82320 		ldrh	r2, [r0, r3, lsl #2]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1010 0544 95F82810 		ldrb	r1, [r5, #40]	@ zero_extendqisi2
  1011 0548 032B     		cmp	r3, #3
  1012 054a 04D0     		beq	.L78
-ARM GAS  /tmp/ccUiU9el.s 			page 18
+ARM GAS  /tmp/ccaDNzkg.s 			page 18
 
 
  1013 054c 1BB1     		cbz	r3, .L78
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1067 05c8 2823     		movs	r3, #40
  1068 05ca 03FB0643 		mla	r3, r3, r6, r4
  1069 05ce B0F850C0 		ldrh	ip, [r0, #80]
-ARM GAS  /tmp/ccUiU9el.s 			page 19
+ARM GAS  /tmp/ccaDNzkg.s 			page 19
 
 
  1070 05d2 4FEAC10A 		lsl	r10, r1, #3
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1124 0664 FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
  1125 0668 002F     		cmp	r7, #0
  1126 066a 00F0E280 		beq	.L89
-ARM GAS  /tmp/ccUiU9el.s 			page 20
+ARM GAS  /tmp/ccaDNzkg.s 			page 20
 
 
  1127              	.L207:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1181 0702 C3F848E0 		str	lr, [r3, #72]
  1182              	.L93:
  1183 0706 95F829C0 		ldrb	ip, [r5, #41]	@ zero_extendqisi2
-ARM GAS  /tmp/ccUiU9el.s 			page 21
+ARM GAS  /tmp/ccaDNzkg.s 			page 21
 
 
  1184 070a 93B2     		uxth	r3, r2
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1238 0792 0EF1FF3E 		addeq	lr, lr, #-1
  1239 0796 48EA8E2E 		orr	lr, r8, lr, lsl #10
  1240 079a F1E7     		b	.L203
-ARM GAS  /tmp/ccUiU9el.s 			page 22
+ARM GAS  /tmp/ccaDNzkg.s 			page 22
 
 
  1241              	.L95:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1295              	.L104:
  1296 0826 2046     		mov	r0, r4
  1297 0828 FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
-ARM GAS  /tmp/ccUiU9el.s 			page 23
+ARM GAS  /tmp/ccaDNzkg.s 			page 23
 
 
  1298 082c 002F     		cmp	r7, #0
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1352 08c0 AEEB030E 		sub	lr, lr, r3
  1353 08c4 C2F848E0 		str	lr, [r2, #72]
  1354              	.L107:
-ARM GAS  /tmp/ccUiU9el.s 			page 24
+ARM GAS  /tmp/ccaDNzkg.s 			page 24
 
 
  1355 08c8 95F82920 		ldrb	r2, [r5, #41]	@ zero_extendqisi2
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1409 094a 48EA8E2E 		orr	lr, r8, lr, lsl #10
  1410 094e F1E7     		b	.L205
  1411              	.L109:
-ARM GAS  /tmp/ccUiU9el.s 			page 25
+ARM GAS  /tmp/ccaDNzkg.s 			page 25
 
 
  1412 0950 012A     		cmp	r2, #1
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1468 004e 4443     		muls	r4, r0, r4
  1469 0050 04F5B471 		add	r1, r4, #360
  1470 0054 2C44     		add	r4, r4, r5
-ARM GAS  /tmp/ccUiU9el.s 			page 26
+ARM GAS  /tmp/ccaDNzkg.s 			page 26
 
 
  1471 0056 2944     		add	r1, r1, r5
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1528              		.thumb
  1529              		.thumb_func
  1530              		.fpu softvfp
-ARM GAS  /tmp/ccUiU9el.s 			page 27
+ARM GAS  /tmp/ccaDNzkg.s 			page 27
 
 
  1532              	HAL_PCD_EP_Receive:
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1590 001c 0144     		add	r1, r1, r0
  1591 001e A364     		str	r3, [r4, #72]
  1592 0020 6664     		str	r6, [r4, #68]
-ARM GAS  /tmp/ccUiU9el.s 			page 28
+ARM GAS  /tmp/ccaDNzkg.s 			page 28
 
 
  1593 0022 84F82920 		strb	r2, [r4, #41]
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1649 005a 83F86921 		strb	r2, [r3, #361]
  1650 005e E0E7     		b	.L232
  1651              	.L234:
-ARM GAS  /tmp/ccUiU9el.s 			page 29
+ARM GAS  /tmp/ccaDNzkg.s 			page 29
 
 
  1652 0060 0120     		movs	r0, #1
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1708 005c F3E7     		b	.L237
  1709              	.L241:
  1710 005e 0220     		movs	r0, #2
-ARM GAS  /tmp/ccUiU9el.s 			page 30
+ARM GAS  /tmp/ccaDNzkg.s 			page 30
 
 
  1711 0060 F1E7     		b	.L237
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1771              	HAL_PCD_DeActivateRemoteWakeup:
  1772              		@ args = 0, pretend = 0, frame = 0
  1773              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccUiU9el.s 			page 31
+ARM GAS  /tmp/ccaDNzkg.s 			page 31
 
 
  1774              		@ link register save eliminated.
@@ -1818,83 +1818,83 @@ ARM GAS  /tmp/ccUiU9el.s 			page 1
  1790 0000 90F8A902 		ldrb	r0, [r0, #681]	@ zero_extendqisi2
  1791 0004 7047     		bx	lr
  1793              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccUiU9el.s 			page 32
+ARM GAS  /tmp/ccaDNzkg.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_pcd.c
-     /tmp/ccUiU9el.s:14     .text.HAL_PCD_MspInit:0000000000000000 $t
-     /tmp/ccUiU9el.s:22     .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-     /tmp/ccUiU9el.s:29     .text.HAL_PCD_Init:0000000000000000 $t
-     /tmp/ccUiU9el.s:36     .text.HAL_PCD_Init:0000000000000000 HAL_PCD_Init
-     /tmp/ccUiU9el.s:137    .text.HAL_PCD_MspDeInit:0000000000000000 $t
-     /tmp/ccUiU9el.s:144    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-     /tmp/ccUiU9el.s:151    .text.HAL_PCD_DeInit:0000000000000000 $t
-     /tmp/ccUiU9el.s:158    .text.HAL_PCD_DeInit:0000000000000000 HAL_PCD_DeInit
-     /tmp/ccUiU9el.s:183    .text.HAL_PCD_Start:0000000000000000 $t
-     /tmp/ccUiU9el.s:190    .text.HAL_PCD_Start:0000000000000000 HAL_PCD_Start
-     /tmp/ccUiU9el.s:216    .text.HAL_PCD_Stop:0000000000000000 $t
-     /tmp/ccUiU9el.s:223    .text.HAL_PCD_Stop:0000000000000000 HAL_PCD_Stop
-     /tmp/ccUiU9el.s:249    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 $t
-     /tmp/ccUiU9el.s:256    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 HAL_PCD_WKUP_IRQHandler
-     /tmp/ccUiU9el.s:267    .text.HAL_PCD_WKUP_IRQHandler:000000000000000c $d
-     /tmp/ccUiU9el.s:270    .text.HAL_PCD_DataOutStageCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:277    .text.HAL_PCD_DataOutStageCallback:0000000000000000 HAL_PCD_DataOutStageCallback
-     /tmp/ccUiU9el.s:284    .text.HAL_PCD_DataInStageCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:291    .text.HAL_PCD_DataInStageCallback:0000000000000000 HAL_PCD_DataInStageCallback
-     /tmp/ccUiU9el.s:298    .text.HAL_PCD_SetupStageCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:305    .text.HAL_PCD_SetupStageCallback:0000000000000000 HAL_PCD_SetupStageCallback
-     /tmp/ccUiU9el.s:312    .text.HAL_PCD_SOFCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:319    .text.HAL_PCD_SOFCallback:0000000000000000 HAL_PCD_SOFCallback
-     /tmp/ccUiU9el.s:326    .text.HAL_PCD_ResetCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:333    .text.HAL_PCD_ResetCallback:0000000000000000 HAL_PCD_ResetCallback
-     /tmp/ccUiU9el.s:340    .text.HAL_PCD_SuspendCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:347    .text.HAL_PCD_SuspendCallback:0000000000000000 HAL_PCD_SuspendCallback
-     /tmp/ccUiU9el.s:354    .text.HAL_PCD_ResumeCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:361    .text.HAL_PCD_ResumeCallback:0000000000000000 HAL_PCD_ResumeCallback
-     /tmp/ccUiU9el.s:368    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:375    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 HAL_PCD_ISOOUTIncompleteCallback
-     /tmp/ccUiU9el.s:382    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:389    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 HAL_PCD_ISOINIncompleteCallback
-     /tmp/ccUiU9el.s:396    .text.HAL_PCD_ConnectCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:403    .text.HAL_PCD_ConnectCallback:0000000000000000 HAL_PCD_ConnectCallback
-     /tmp/ccUiU9el.s:410    .text.HAL_PCD_DisconnectCallback:0000000000000000 $t
-     /tmp/ccUiU9el.s:417    .text.HAL_PCD_DisconnectCallback:0000000000000000 HAL_PCD_DisconnectCallback
-     /tmp/ccUiU9el.s:424    .text.HAL_PCD_DevConnect:0000000000000000 $t
-     /tmp/ccUiU9el.s:431    .text.HAL_PCD_DevConnect:0000000000000000 HAL_PCD_DevConnect
-     /tmp/ccUiU9el.s:453    .text.HAL_PCD_DevDisconnect:0000000000000000 $t
-     /tmp/ccUiU9el.s:460    .text.HAL_PCD_DevDisconnect:0000000000000000 HAL_PCD_DevDisconnect
-     /tmp/ccUiU9el.s:483    .text.HAL_PCD_SetAddress:0000000000000000 $t
-     /tmp/ccUiU9el.s:490    .text.HAL_PCD_SetAddress:0000000000000000 HAL_PCD_SetAddress
-     /tmp/ccUiU9el.s:512    .text.HAL_PCD_IRQHandler:0000000000000000 $t
-     /tmp/ccUiU9el.s:519    .text.HAL_PCD_IRQHandler:0000000000000000 HAL_PCD_IRQHandler
-     /tmp/ccUiU9el.s:816    .text.HAL_PCD_IRQHandler:0000000000000320 $d
-     /tmp/ccUiU9el.s:819    .text.HAL_PCD_IRQHandler:0000000000000328 $t
-     /tmp/ccUiU9el.s:1423   .text.HAL_PCD_EP_Open:0000000000000000 $t
-     /tmp/ccUiU9el.s:1430   .text.HAL_PCD_EP_Open:0000000000000000 HAL_PCD_EP_Open
-     /tmp/ccUiU9el.s:1479   .text.HAL_PCD_EP_Close:0000000000000000 $t
-     /tmp/ccUiU9el.s:1486   .text.HAL_PCD_EP_Close:0000000000000000 HAL_PCD_EP_Close
-     /tmp/ccUiU9el.s:1525   .text.HAL_PCD_EP_Receive:0000000000000000 $t
-     /tmp/ccUiU9el.s:1532   .text.HAL_PCD_EP_Receive:0000000000000000 HAL_PCD_EP_Receive
-     /tmp/ccUiU9el.s:1553   .text.HAL_PCD_EP_GetRxCount:0000000000000000 $t
-     /tmp/ccUiU9el.s:1560   .text.HAL_PCD_EP_GetRxCount:0000000000000000 HAL_PCD_EP_GetRxCount
-ARM GAS  /tmp/ccUiU9el.s 			page 33
+     /tmp/ccaDNzkg.s:14     .text.HAL_PCD_MspInit:0000000000000000 $t
+     /tmp/ccaDNzkg.s:22     .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+     /tmp/ccaDNzkg.s:29     .text.HAL_PCD_Init:0000000000000000 $t
+     /tmp/ccaDNzkg.s:36     .text.HAL_PCD_Init:0000000000000000 HAL_PCD_Init
+     /tmp/ccaDNzkg.s:137    .text.HAL_PCD_MspDeInit:0000000000000000 $t
+     /tmp/ccaDNzkg.s:144    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+     /tmp/ccaDNzkg.s:151    .text.HAL_PCD_DeInit:0000000000000000 $t
+     /tmp/ccaDNzkg.s:158    .text.HAL_PCD_DeInit:0000000000000000 HAL_PCD_DeInit
+     /tmp/ccaDNzkg.s:183    .text.HAL_PCD_Start:0000000000000000 $t
+     /tmp/ccaDNzkg.s:190    .text.HAL_PCD_Start:0000000000000000 HAL_PCD_Start
+     /tmp/ccaDNzkg.s:216    .text.HAL_PCD_Stop:0000000000000000 $t
+     /tmp/ccaDNzkg.s:223    .text.HAL_PCD_Stop:0000000000000000 HAL_PCD_Stop
+     /tmp/ccaDNzkg.s:249    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 $t
+     /tmp/ccaDNzkg.s:256    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 HAL_PCD_WKUP_IRQHandler
+     /tmp/ccaDNzkg.s:267    .text.HAL_PCD_WKUP_IRQHandler:000000000000000c $d
+     /tmp/ccaDNzkg.s:270    .text.HAL_PCD_DataOutStageCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:277    .text.HAL_PCD_DataOutStageCallback:0000000000000000 HAL_PCD_DataOutStageCallback
+     /tmp/ccaDNzkg.s:284    .text.HAL_PCD_DataInStageCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:291    .text.HAL_PCD_DataInStageCallback:0000000000000000 HAL_PCD_DataInStageCallback
+     /tmp/ccaDNzkg.s:298    .text.HAL_PCD_SetupStageCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:305    .text.HAL_PCD_SetupStageCallback:0000000000000000 HAL_PCD_SetupStageCallback
+     /tmp/ccaDNzkg.s:312    .text.HAL_PCD_SOFCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:319    .text.HAL_PCD_SOFCallback:0000000000000000 HAL_PCD_SOFCallback
+     /tmp/ccaDNzkg.s:326    .text.HAL_PCD_ResetCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:333    .text.HAL_PCD_ResetCallback:0000000000000000 HAL_PCD_ResetCallback
+     /tmp/ccaDNzkg.s:340    .text.HAL_PCD_SuspendCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:347    .text.HAL_PCD_SuspendCallback:0000000000000000 HAL_PCD_SuspendCallback
+     /tmp/ccaDNzkg.s:354    .text.HAL_PCD_ResumeCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:361    .text.HAL_PCD_ResumeCallback:0000000000000000 HAL_PCD_ResumeCallback
+     /tmp/ccaDNzkg.s:368    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:375    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 HAL_PCD_ISOOUTIncompleteCallback
+     /tmp/ccaDNzkg.s:382    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:389    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 HAL_PCD_ISOINIncompleteCallback
+     /tmp/ccaDNzkg.s:396    .text.HAL_PCD_ConnectCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:403    .text.HAL_PCD_ConnectCallback:0000000000000000 HAL_PCD_ConnectCallback
+     /tmp/ccaDNzkg.s:410    .text.HAL_PCD_DisconnectCallback:0000000000000000 $t
+     /tmp/ccaDNzkg.s:417    .text.HAL_PCD_DisconnectCallback:0000000000000000 HAL_PCD_DisconnectCallback
+     /tmp/ccaDNzkg.s:424    .text.HAL_PCD_DevConnect:0000000000000000 $t
+     /tmp/ccaDNzkg.s:431    .text.HAL_PCD_DevConnect:0000000000000000 HAL_PCD_DevConnect
+     /tmp/ccaDNzkg.s:453    .text.HAL_PCD_DevDisconnect:0000000000000000 $t
+     /tmp/ccaDNzkg.s:460    .text.HAL_PCD_DevDisconnect:0000000000000000 HAL_PCD_DevDisconnect
+     /tmp/ccaDNzkg.s:483    .text.HAL_PCD_SetAddress:0000000000000000 $t
+     /tmp/ccaDNzkg.s:490    .text.HAL_PCD_SetAddress:0000000000000000 HAL_PCD_SetAddress
+     /tmp/ccaDNzkg.s:512    .text.HAL_PCD_IRQHandler:0000000000000000 $t
+     /tmp/ccaDNzkg.s:519    .text.HAL_PCD_IRQHandler:0000000000000000 HAL_PCD_IRQHandler
+     /tmp/ccaDNzkg.s:816    .text.HAL_PCD_IRQHandler:0000000000000320 $d
+     /tmp/ccaDNzkg.s:819    .text.HAL_PCD_IRQHandler:0000000000000328 $t
+     /tmp/ccaDNzkg.s:1423   .text.HAL_PCD_EP_Open:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1430   .text.HAL_PCD_EP_Open:0000000000000000 HAL_PCD_EP_Open
+     /tmp/ccaDNzkg.s:1479   .text.HAL_PCD_EP_Close:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1486   .text.HAL_PCD_EP_Close:0000000000000000 HAL_PCD_EP_Close
+     /tmp/ccaDNzkg.s:1525   .text.HAL_PCD_EP_Receive:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1532   .text.HAL_PCD_EP_Receive:0000000000000000 HAL_PCD_EP_Receive
+     /tmp/ccaDNzkg.s:1553   .text.HAL_PCD_EP_GetRxCount:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1560   .text.HAL_PCD_EP_GetRxCount:0000000000000000 HAL_PCD_EP_GetRxCount
+ARM GAS  /tmp/ccaDNzkg.s 			page 33
 
 
-     /tmp/ccUiU9el.s:1571   .text.HAL_PCD_EP_Transmit:0000000000000000 $t
-     /tmp/ccUiU9el.s:1578   .text.HAL_PCD_EP_Transmit:0000000000000000 HAL_PCD_EP_Transmit
-     /tmp/ccUiU9el.s:1601   .text.HAL_PCD_EP_SetStall:0000000000000000 $t
-     /tmp/ccUiU9el.s:1608   .text.HAL_PCD_EP_SetStall:0000000000000000 HAL_PCD_EP_SetStall
-     /tmp/ccUiU9el.s:1659   .text.HAL_PCD_EP_ClrStall:0000000000000000 $t
-     /tmp/ccUiU9el.s:1666   .text.HAL_PCD_EP_ClrStall:0000000000000000 HAL_PCD_EP_ClrStall
-     /tmp/ccUiU9el.s:1714   .text.HAL_PCD_EP_Flush:0000000000000000 $t
-     /tmp/ccUiU9el.s:1721   .text.HAL_PCD_EP_Flush:0000000000000000 HAL_PCD_EP_Flush
-     /tmp/ccUiU9el.s:1749   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccUiU9el.s:1756   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 HAL_PCD_ActivateRemoteWakeup
-     /tmp/ccUiU9el.s:1764   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccUiU9el.s:1771   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 HAL_PCD_DeActivateRemoteWakeup
-     /tmp/ccUiU9el.s:1779   .text.HAL_PCD_GetState:0000000000000000 $t
-     /tmp/ccUiU9el.s:1786   .text.HAL_PCD_GetState:0000000000000000 HAL_PCD_GetState
+     /tmp/ccaDNzkg.s:1571   .text.HAL_PCD_EP_Transmit:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1578   .text.HAL_PCD_EP_Transmit:0000000000000000 HAL_PCD_EP_Transmit
+     /tmp/ccaDNzkg.s:1601   .text.HAL_PCD_EP_SetStall:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1608   .text.HAL_PCD_EP_SetStall:0000000000000000 HAL_PCD_EP_SetStall
+     /tmp/ccaDNzkg.s:1659   .text.HAL_PCD_EP_ClrStall:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1666   .text.HAL_PCD_EP_ClrStall:0000000000000000 HAL_PCD_EP_ClrStall
+     /tmp/ccaDNzkg.s:1714   .text.HAL_PCD_EP_Flush:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1721   .text.HAL_PCD_EP_Flush:0000000000000000 HAL_PCD_EP_Flush
+     /tmp/ccaDNzkg.s:1749   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1756   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 HAL_PCD_ActivateRemoteWakeup
+     /tmp/ccaDNzkg.s:1764   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1771   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 HAL_PCD_DeActivateRemoteWakeup
+     /tmp/ccaDNzkg.s:1779   .text.HAL_PCD_GetState:0000000000000000 $t
+     /tmp/ccaDNzkg.s:1786   .text.HAL_PCD_GetState:0000000000000000 HAL_PCD_GetState
 
 UNDEFINED SYMBOLS
 USB_DisableGlobalInt

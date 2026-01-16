@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccGtaZBr.s 			page 1
+ARM GAS  /tmp/cci22gg0.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccGtaZBr.s 			page 1
   58 0000 0146     		mov	r1, r0
   59 0002 0423     		movs	r3, #4
   60 0004 1022     		movs	r2, #16
-ARM GAS  /tmp/ccGtaZBr.s 			page 2
+ARM GAS  /tmp/cci22gg0.s 			page 2
 
 
   61              	.L10:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccGtaZBr.s 			page 1
  117 002e AB42     		cmp	r3, r5
  118 0030 F3D0     		beq	.L20
  119              	.L21:
-ARM GAS  /tmp/ccGtaZBr.s 			page 3
+ARM GAS  /tmp/cci22gg0.s 			page 3
 
 
  120 0032 A3F14105 		sub	r5, r3, #65
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccGtaZBr.s 			page 1
  178              	.L34:
  179 0004 8842     		cmp	r0, r1
  180 0006 08DA     		bge	.L33
-ARM GAS  /tmp/ccGtaZBr.s 			page 4
+ARM GAS  /tmp/cci22gg0.s 			page 4
 
 
  181 0008 135C     		ldrb	r3, [r2, r0]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccGtaZBr.s 			page 1
  239 001e 11F8010C 		ldrb	r0, [r1, #-1]	@ zero_extendqisi2
  240 0022 FFF7FEFF 		bl	_hex_to_bin
  241 0026 2401     		lsls	r4, r4, #4
-ARM GAS  /tmp/ccGtaZBr.s 			page 5
+ARM GAS  /tmp/cci22gg0.s 			page 5
 
 
  242 0028 0028     		cmp	r0, #0
@@ -250,24 +250,24 @@ ARM GAS  /tmp/ccGtaZBr.s 			page 1
  248 0036 0137     		adds	r7, r7, #1
  249 0038 E7E7     		b	.L41
  251              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
-ARM GAS  /tmp/ccGtaZBr.s 			page 6
+ARM GAS  /tmp/cci22gg0.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 util.c
-     /tmp/ccGtaZBr.s:14     .text._hex_to_bin:0000000000000000 $t
-     /tmp/ccGtaZBr.s:21     .text._hex_to_bin:0000000000000000 _hex_to_bin
-     /tmp/ccGtaZBr.s:47     .text.lsqrt:0000000000000000 $t
-     /tmp/ccGtaZBr.s:54     .text.lsqrt:0000000000000000 lsqrt
-     /tmp/ccGtaZBr.s:84     .text.strnicmp:0000000000000000 $t
-     /tmp/ccGtaZBr.s:91     .text.strnicmp:0000000000000000 strnicmp
-     /tmp/ccGtaZBr.s:136    .text.is_char:0000000000000000 $t
-     /tmp/ccGtaZBr.s:143    .text.is_char:0000000000000000 is_char
-     /tmp/ccGtaZBr.s:165    .text.is_number:0000000000000000 $t
-     /tmp/ccGtaZBr.s:172    .text.is_number:0000000000000000 is_number
-     /tmp/ccGtaZBr.s:196    .text.is_hex:0000000000000000 $t
-     /tmp/ccGtaZBr.s:203    .text.is_hex:0000000000000000 is_hex
-     /tmp/ccGtaZBr.s:213    .text.hex_to_bin:0000000000000000 $t
-     /tmp/ccGtaZBr.s:220    .text.hex_to_bin:0000000000000000 hex_to_bin
+     /tmp/cci22gg0.s:14     .text._hex_to_bin:0000000000000000 $t
+     /tmp/cci22gg0.s:21     .text._hex_to_bin:0000000000000000 _hex_to_bin
+     /tmp/cci22gg0.s:47     .text.lsqrt:0000000000000000 $t
+     /tmp/cci22gg0.s:54     .text.lsqrt:0000000000000000 lsqrt
+     /tmp/cci22gg0.s:84     .text.strnicmp:0000000000000000 $t
+     /tmp/cci22gg0.s:91     .text.strnicmp:0000000000000000 strnicmp
+     /tmp/cci22gg0.s:136    .text.is_char:0000000000000000 $t
+     /tmp/cci22gg0.s:143    .text.is_char:0000000000000000 is_char
+     /tmp/cci22gg0.s:165    .text.is_number:0000000000000000 $t
+     /tmp/cci22gg0.s:172    .text.is_number:0000000000000000 is_number
+     /tmp/cci22gg0.s:196    .text.is_hex:0000000000000000 $t
+     /tmp/cci22gg0.s:203    .text.is_hex:0000000000000000 is_hex
+     /tmp/cci22gg0.s:213    .text.hex_to_bin:0000000000000000 $t
+     /tmp/cci22gg0.s:220    .text.hex_to_bin:0000000000000000 hex_to_bin
 
 NO UNDEFINED SYMBOLS
