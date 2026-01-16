@@ -1,0 +1,797 @@
+ARM GAS  /tmp/ccsw3rBI.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_ll_tim.c"
+  12              		.text
+  13              		.section	.text.LL_TIM_DeInit,"ax",%progbits
+  14              		.align	1
+  15              		.global	LL_TIM_DeInit
+  16              		.arch armv7-m
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	LL_TIM_DeInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 B0F1804F 		cmp	r0, #1073741824
+  27 0004 09D1     		bne	.L2
+  28 0006 344B     		ldr	r3, .L14
+  29 0008 1A69     		ldr	r2, [r3, #16]
+  30 000a 42F00102 		orr	r2, r2, #1
+  31 000e 1A61     		str	r2, [r3, #16]
+  32 0010 1A69     		ldr	r2, [r3, #16]
+  33 0012 22F00102 		bic	r2, r2, #1
+  34              	.L13:
+  35 0016 1A61     		str	r2, [r3, #16]
+  36 0018 0CE0     		b	.L11
+  37              	.L2:
+  38 001a 304B     		ldr	r3, .L14+4
+  39 001c 9842     		cmp	r0, r3
+  40 001e 0BD1     		bne	.L4
+  41 0020 03F56443 		add	r3, r3, #58368
+  42 0024 DA68     		ldr	r2, [r3, #12]
+  43 0026 42F40062 		orr	r2, r2, #2048
+  44 002a DA60     		str	r2, [r3, #12]
+  45 002c DA68     		ldr	r2, [r3, #12]
+  46 002e 22F40062 		bic	r2, r2, #2048
+  47              	.L12:
+  48 0032 DA60     		str	r2, [r3, #12]
+  49              	.L11:
+  50 0034 0020     		movs	r0, #0
+  51 0036 7047     		bx	lr
+  52              	.L4:
+  53 0038 294B     		ldr	r3, .L14+8
+  54 003a 9842     		cmp	r0, r3
+  55 003c 09D1     		bne	.L5
+  56 003e 03F50333 		add	r3, r3, #134144
+  57 0042 1A69     		ldr	r2, [r3, #16]
+  58 0044 42F00202 		orr	r2, r2, #2
+ARM GAS  /tmp/ccsw3rBI.s 			page 2
+
+
+  59 0048 1A61     		str	r2, [r3, #16]
+  60 004a 1A69     		ldr	r2, [r3, #16]
+  61 004c 22F00202 		bic	r2, r2, #2
+  62 0050 E1E7     		b	.L13
+  63              	.L5:
+  64 0052 244B     		ldr	r3, .L14+12
+  65 0054 9842     		cmp	r0, r3
+  66 0056 09D1     		bne	.L6
+  67 0058 03F50233 		add	r3, r3, #133120
+  68 005c 1A69     		ldr	r2, [r3, #16]
+  69 005e 42F00402 		orr	r2, r2, #4
+  70 0062 1A61     		str	r2, [r3, #16]
+  71 0064 1A69     		ldr	r2, [r3, #16]
+  72 0066 22F00402 		bic	r2, r2, #4
+  73 006a D4E7     		b	.L13
+  74              	.L6:
+  75 006c 1E4B     		ldr	r3, .L14+16
+  76 006e 9842     		cmp	r0, r3
+  77 0070 09D1     		bne	.L7
+  78 0072 03F50133 		add	r3, r3, #132096
+  79 0076 1A69     		ldr	r2, [r3, #16]
+  80 0078 42F00802 		orr	r2, r2, #8
+  81 007c 1A61     		str	r2, [r3, #16]
+  82 007e 1A69     		ldr	r2, [r3, #16]
+  83 0080 22F00802 		bic	r2, r2, #8
+  84 0084 C7E7     		b	.L13
+  85              	.L7:
+  86 0086 194B     		ldr	r3, .L14+20
+  87 0088 9842     		cmp	r0, r3
+  88 008a 09D1     		bne	.L8
+  89 008c 03F50033 		add	r3, r3, #131072
+  90 0090 1A69     		ldr	r2, [r3, #16]
+  91 0092 42F01002 		orr	r2, r2, #16
+  92 0096 1A61     		str	r2, [r3, #16]
+  93 0098 1A69     		ldr	r2, [r3, #16]
+  94 009a 22F01002 		bic	r2, r2, #16
+  95 009e BAE7     		b	.L13
+  96              	.L8:
+  97 00a0 134B     		ldr	r3, .L14+24
+  98 00a2 9842     		cmp	r0, r3
+  99 00a4 09D1     		bne	.L9
+ 100 00a6 03F5FE33 		add	r3, r3, #130048
+ 101 00aa 1A69     		ldr	r2, [r3, #16]
+ 102 00ac 42F02002 		orr	r2, r2, #32
+ 103 00b0 1A61     		str	r2, [r3, #16]
+ 104 00b2 1A69     		ldr	r2, [r3, #16]
+ 105 00b4 22F02002 		bic	r2, r2, #32
+ 106 00b8 ADE7     		b	.L13
+ 107              	.L9:
+ 108 00ba 0E4B     		ldr	r3, .L14+28
+ 109 00bc 9842     		cmp	r0, r3
+ 110 00be 09D1     		bne	.L10
+ 111 00c0 03F55C43 		add	r3, r3, #56320
+ 112 00c4 DA68     		ldr	r2, [r3, #12]
+ 113 00c6 42F40052 		orr	r2, r2, #8192
+ 114 00ca DA60     		str	r2, [r3, #12]
+ 115 00cc DA68     		ldr	r2, [r3, #12]
+ARM GAS  /tmp/ccsw3rBI.s 			page 3
+
+
+ 116 00ce 22F40052 		bic	r2, r2, #8192
+ 117 00d2 AEE7     		b	.L12
+ 118              	.L10:
+ 119 00d4 0120     		movs	r0, #1
+ 120 00d6 7047     		bx	lr
+ 121              	.L15:
+ 122              		.align	2
+ 123              	.L14:
+ 124 00d8 00100240 		.word	1073876992
+ 125 00dc 002C0140 		.word	1073818624
+ 126 00e0 00040040 		.word	1073742848
+ 127 00e4 00080040 		.word	1073743872
+ 128 00e8 000C0040 		.word	1073744896
+ 129 00ec 00100040 		.word	1073745920
+ 130 00f0 00140040 		.word	1073746944
+ 131 00f4 00340140 		.word	1073820672
+ 133              		.section	.text.LL_TIM_StructInit,"ax",%progbits
+ 134              		.align	1
+ 135              		.global	LL_TIM_StructInit
+ 136              		.syntax unified
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.fpu softvfp
+ 141              	LL_TIM_StructInit:
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144              		@ link register save eliminated.
+ 145 0000 0023     		movs	r3, #0
+ 146 0002 4FF0FF32 		mov	r2, #-1
+ 147 0006 0380     		strh	r3, [r0]	@ movhi
+ 148 0008 C0E90223 		strd	r2, r3, [r0, #8]
+ 149 000c 4360     		str	r3, [r0, #4]
+ 150 000e 0361     		str	r3, [r0, #16]
+ 151 0010 7047     		bx	lr
+ 153              		.section	.text.LL_TIM_Init,"ax",%progbits
+ 154              		.align	1
+ 155              		.global	LL_TIM_Init
+ 156              		.syntax unified
+ 157              		.thumb
+ 158              		.thumb_func
+ 159              		.fpu softvfp
+ 161              	LL_TIM_Init:
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 165 0000 244A     		ldr	r2, .L29
+ 166 0002 0368     		ldr	r3, [r0]
+ 167 0004 9042     		cmp	r0, r2
+ 168 0006 12D0     		beq	.L18
+ 169 0008 02F50062 		add	r2, r2, #2048
+ 170 000c 9042     		cmp	r0, r2
+ 171 000e 0ED0     		beq	.L18
+ 172 0010 B0F1804F 		cmp	r0, #1073741824
+ 173 0014 0BD0     		beq	.L18
+ 174 0016 A2F59832 		sub	r2, r2, #77824
+ 175 001a 9042     		cmp	r0, r2
+ 176 001c 07D0     		beq	.L18
+ARM GAS  /tmp/ccsw3rBI.s 			page 4
+
+
+ 177 001e 02F58062 		add	r2, r2, #1024
+ 178 0022 9042     		cmp	r0, r2
+ 179 0024 03D0     		beq	.L18
+ 180 0026 02F58062 		add	r2, r2, #1024
+ 181 002a 9042     		cmp	r0, r2
+ 182 002c 1DD1     		bne	.L19
+ 183              	.L18:
+ 184 002e 4A68     		ldr	r2, [r1, #4]
+ 185 0030 23F07003 		bic	r3, r3, #112
+ 186 0034 1343     		orrs	r3, r3, r2
+ 187 0036 174A     		ldr	r2, .L29
+ 188 0038 9042     		cmp	r0, r2
+ 189 003a 12D0     		beq	.L20
+ 190 003c 02F50062 		add	r2, r2, #2048
+ 191 0040 9042     		cmp	r0, r2
+ 192 0042 0ED0     		beq	.L20
+ 193 0044 B0F1804F 		cmp	r0, #1073741824
+ 194 0048 0BD0     		beq	.L20
+ 195 004a A2F59832 		sub	r2, r2, #77824
+ 196 004e 9042     		cmp	r0, r2
+ 197 0050 07D0     		beq	.L20
+ 198 0052 02F58062 		add	r2, r2, #1024
+ 199 0056 9042     		cmp	r0, r2
+ 200 0058 03D0     		beq	.L20
+ 201 005a 02F58062 		add	r2, r2, #1024
+ 202 005e 9042     		cmp	r0, r2
+ 203 0060 03D1     		bne	.L19
+ 204              	.L20:
+ 205 0062 CA68     		ldr	r2, [r1, #12]
+ 206 0064 23F44073 		bic	r3, r3, #768
+ 207 0068 1343     		orrs	r3, r3, r2
+ 208              	.L19:
+ 209 006a 0360     		str	r3, [r0]
+ 210 006c 8B68     		ldr	r3, [r1, #8]
+ 211 006e C362     		str	r3, [r0, #44]
+ 212 0070 0B88     		ldrh	r3, [r1]
+ 213 0072 8362     		str	r3, [r0, #40]
+ 214 0074 074B     		ldr	r3, .L29
+ 215 0076 9842     		cmp	r0, r3
+ 216 0078 03D0     		beq	.L21
+ 217 007a 03F50063 		add	r3, r3, #2048
+ 218 007e 9842     		cmp	r0, r3
+ 219 0080 01D1     		bne	.L22
+ 220              	.L21:
+ 221 0082 0B69     		ldr	r3, [r1, #16]
+ 222 0084 0363     		str	r3, [r0, #48]
+ 223              	.L22:
+ 224 0086 4369     		ldr	r3, [r0, #20]
+ 225 0088 43F00103 		orr	r3, r3, #1
+ 226 008c 4361     		str	r3, [r0, #20]
+ 227 008e 0020     		movs	r0, #0
+ 228 0090 7047     		bx	lr
+ 229              	.L30:
+ 230 0092 00BF     		.align	2
+ 231              	.L29:
+ 232 0094 002C0140 		.word	1073818624
+ 234              		.section	.text.LL_TIM_OC_StructInit,"ax",%progbits
+ARM GAS  /tmp/ccsw3rBI.s 			page 5
+
+
+ 235              		.align	1
+ 236              		.global	LL_TIM_OC_StructInit
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 240              		.fpu softvfp
+ 242              	LL_TIM_OC_StructInit:
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+ 246 0000 0023     		movs	r3, #0
+ 247 0002 C0E90033 		strd	r3, r3, [r0]
+ 248 0006 C0E90233 		strd	r3, r3, [r0, #8]
+ 249 000a C0E90433 		strd	r3, r3, [r0, #16]
+ 250 000e C0E90633 		strd	r3, r3, [r0, #24]
+ 251 0012 7047     		bx	lr
+ 253              		.section	.text.LL_TIM_OC_Init,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	LL_TIM_OC_Init
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ 259              		.fpu softvfp
+ 261              	LL_TIM_OC_Init:
+ 262              		@ args = 0, pretend = 0, frame = 0
+ 263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 264 0000 B1F5807F 		cmp	r1, #256
+ 265 0004 30B5     		push	{r4, r5, lr}
+ 266 0006 00F09B80 		beq	.L33
+ 267 000a 05D8     		bhi	.L34
+ 268 000c 0129     		cmp	r1, #1
+ 269 000e 2DD0     		beq	.L35
+ 270 0010 1029     		cmp	r1, #16
+ 271 0012 5FD0     		beq	.L36
+ 272              	.L48:
+ 273 0014 0120     		movs	r0, #1
+ 274              	.L37:
+ 275 0016 30BD     		pop	{r4, r5, pc}
+ 276              	.L34:
+ 277 0018 B1F5805F 		cmp	r1, #4096
+ 278 001c FAD1     		bne	.L48
+ 279 001e 036A     		ldr	r3, [r0, #32]
+ 280 0020 1568     		ldr	r5, [r2]
+ 281 0022 23F48053 		bic	r3, r3, #4096
+ 282 0026 0362     		str	r3, [r0, #32]
+ 283 0028 036A     		ldr	r3, [r0, #32]
+ 284 002a 4468     		ldr	r4, [r0, #4]
+ 285 002c C169     		ldr	r1, [r0, #28]
+ 286 002e 23F40053 		bic	r3, r3, #8192
+ 287 0032 21F4E641 		bic	r1, r1, #29440
+ 288 0036 41EA0521 		orr	r1, r1, r5, lsl #8
+ 289 003a 1569     		ldr	r5, [r2, #16]
+ 290 003c 43EA0533 		orr	r3, r3, r5, lsl #12
+ 291 0040 5568     		ldr	r5, [r2, #4]
+ 292 0042 23F48053 		bic	r3, r3, #4096
+ 293 0046 43EA0533 		orr	r3, r3, r5, lsl #12
+ 294 004a 584D     		ldr	r5, .L49
+ARM GAS  /tmp/ccsw3rBI.s 			page 6
+
+
+ 295 004c A842     		cmp	r0, r5
+ 296 004e 03D0     		beq	.L45
+ 297 0050 05F50065 		add	r5, r5, #2048
+ 298 0054 A842     		cmp	r0, r5
+ 299 0056 04D1     		bne	.L46
+ 300              	.L45:
+ 301 0058 9569     		ldr	r5, [r2, #24]
+ 302 005a 24F48044 		bic	r4, r4, #16384
+ 303 005e 44EA8514 		orr	r4, r4, r5, lsl #6
+ 304              	.L46:
+ 305 0062 D268     		ldr	r2, [r2, #12]
+ 306 0064 4460     		str	r4, [r0, #4]
+ 307 0066 C161     		str	r1, [r0, #28]
+ 308 0068 0264     		str	r2, [r0, #64]
+ 309 006a 30E0     		b	.L47
+ 310              	.L35:
+ 311 006c 036A     		ldr	r3, [r0, #32]
+ 312 006e 1568     		ldr	r5, [r2]
+ 313 0070 23F00103 		bic	r3, r3, #1
+ 314 0074 0362     		str	r3, [r0, #32]
+ 315 0076 036A     		ldr	r3, [r0, #32]
+ 316 0078 4168     		ldr	r1, [r0, #4]
+ 317 007a 8469     		ldr	r4, [r0, #24]
+ 318 007c 23F00203 		bic	r3, r3, #2
+ 319 0080 24F07304 		bic	r4, r4, #115
+ 320 0084 2C43     		orrs	r4, r4, r5
+ 321 0086 1569     		ldr	r5, [r2, #16]
+ 322 0088 2B43     		orrs	r3, r3, r5
+ 323 008a 5568     		ldr	r5, [r2, #4]
+ 324 008c 23F00103 		bic	r3, r3, #1
+ 325 0090 2B43     		orrs	r3, r3, r5
+ 326 0092 464D     		ldr	r5, .L49
+ 327 0094 A842     		cmp	r0, r5
+ 328 0096 03D0     		beq	.L39
+ 329 0098 05F50065 		add	r5, r5, #2048
+ 330 009c A842     		cmp	r0, r5
+ 331 009e 12D1     		bne	.L40
+ 332              	.L39:
+ 333 00a0 5569     		ldr	r5, [r2, #20]
+ 334 00a2 23F00803 		bic	r3, r3, #8
+ 335 00a6 43EA8503 		orr	r3, r3, r5, lsl #2
+ 336 00aa 9568     		ldr	r5, [r2, #8]
+ 337 00ac 23F00403 		bic	r3, r3, #4
+ 338 00b0 43EA8503 		orr	r3, r3, r5, lsl #2
+ 339 00b4 9569     		ldr	r5, [r2, #24]
+ 340 00b6 21F48071 		bic	r1, r1, #256
+ 341 00ba 2943     		orrs	r1, r1, r5
+ 342 00bc D569     		ldr	r5, [r2, #28]
+ 343 00be 21F40071 		bic	r1, r1, #512
+ 344 00c2 41EA4501 		orr	r1, r1, r5, lsl #1
+ 345              	.L40:
+ 346 00c6 D268     		ldr	r2, [r2, #12]
+ 347 00c8 4160     		str	r1, [r0, #4]
+ 348 00ca 8461     		str	r4, [r0, #24]
+ 349 00cc 4263     		str	r2, [r0, #52]
+ 350              	.L47:
+ 351 00ce 0362     		str	r3, [r0, #32]
+ARM GAS  /tmp/ccsw3rBI.s 			page 7
+
+
+ 352 00d0 0020     		movs	r0, #0
+ 353 00d2 A0E7     		b	.L37
+ 354              	.L36:
+ 355 00d4 036A     		ldr	r3, [r0, #32]
+ 356 00d6 1568     		ldr	r5, [r2]
+ 357 00d8 23F01003 		bic	r3, r3, #16
+ 358 00dc 0362     		str	r3, [r0, #32]
+ 359 00de 036A     		ldr	r3, [r0, #32]
+ 360 00e0 4168     		ldr	r1, [r0, #4]
+ 361 00e2 8469     		ldr	r4, [r0, #24]
+ 362 00e4 23F02003 		bic	r3, r3, #32
+ 363 00e8 24F4E644 		bic	r4, r4, #29440
+ 364 00ec 44EA0524 		orr	r4, r4, r5, lsl #8
+ 365 00f0 1569     		ldr	r5, [r2, #16]
+ 366 00f2 43EA0513 		orr	r3, r3, r5, lsl #4
+ 367 00f6 5568     		ldr	r5, [r2, #4]
+ 368 00f8 23F01003 		bic	r3, r3, #16
+ 369 00fc 43EA0513 		orr	r3, r3, r5, lsl #4
+ 370 0100 2A4D     		ldr	r5, .L49
+ 371 0102 A842     		cmp	r0, r5
+ 372 0104 03D0     		beq	.L41
+ 373 0106 05F50065 		add	r5, r5, #2048
+ 374 010a A842     		cmp	r0, r5
+ 375 010c 13D1     		bne	.L42
+ 376              	.L41:
+ 377 010e 5569     		ldr	r5, [r2, #20]
+ 378 0110 23F08003 		bic	r3, r3, #128
+ 379 0114 43EA8513 		orr	r3, r3, r5, lsl #6
+ 380 0118 9568     		ldr	r5, [r2, #8]
+ 381 011a 23F04003 		bic	r3, r3, #64
+ 382 011e 43EA8513 		orr	r3, r3, r5, lsl #6
+ 383 0122 9569     		ldr	r5, [r2, #24]
+ 384 0124 21F48061 		bic	r1, r1, #1024
+ 385 0128 41EA8501 		orr	r1, r1, r5, lsl #2
+ 386 012c D569     		ldr	r5, [r2, #28]
+ 387 012e 21F40061 		bic	r1, r1, #2048
+ 388 0132 41EAC501 		orr	r1, r1, r5, lsl #3
+ 389              	.L42:
+ 390 0136 D268     		ldr	r2, [r2, #12]
+ 391 0138 4160     		str	r1, [r0, #4]
+ 392 013a 8461     		str	r4, [r0, #24]
+ 393 013c 8263     		str	r2, [r0, #56]
+ 394 013e C6E7     		b	.L47
+ 395              	.L33:
+ 396 0140 036A     		ldr	r3, [r0, #32]
+ 397 0142 1568     		ldr	r5, [r2]
+ 398 0144 23F48073 		bic	r3, r3, #256
+ 399 0148 0362     		str	r3, [r0, #32]
+ 400 014a 036A     		ldr	r3, [r0, #32]
+ 401 014c 4168     		ldr	r1, [r0, #4]
+ 402 014e C469     		ldr	r4, [r0, #28]
+ 403 0150 23F40073 		bic	r3, r3, #512
+ 404 0154 24F07304 		bic	r4, r4, #115
+ 405 0158 2C43     		orrs	r4, r4, r5
+ 406 015a 1569     		ldr	r5, [r2, #16]
+ 407 015c 43EA0523 		orr	r3, r3, r5, lsl #8
+ 408 0160 5568     		ldr	r5, [r2, #4]
+ARM GAS  /tmp/ccsw3rBI.s 			page 8
+
+
+ 409 0162 23F48073 		bic	r3, r3, #256
+ 410 0166 43EA0523 		orr	r3, r3, r5, lsl #8
+ 411 016a 104D     		ldr	r5, .L49
+ 412 016c A842     		cmp	r0, r5
+ 413 016e 03D0     		beq	.L43
+ 414 0170 05F50065 		add	r5, r5, #2048
+ 415 0174 A842     		cmp	r0, r5
+ 416 0176 13D1     		bne	.L44
+ 417              	.L43:
+ 418 0178 5569     		ldr	r5, [r2, #20]
+ 419 017a 23F40063 		bic	r3, r3, #2048
+ 420 017e 43EA8523 		orr	r3, r3, r5, lsl #10
+ 421 0182 9568     		ldr	r5, [r2, #8]
+ 422 0184 23F48063 		bic	r3, r3, #1024
+ 423 0188 43EA8523 		orr	r3, r3, r5, lsl #10
+ 424 018c 9569     		ldr	r5, [r2, #24]
+ 425 018e 21F48051 		bic	r1, r1, #4096
+ 426 0192 41EA0511 		orr	r1, r1, r5, lsl #4
+ 427 0196 D569     		ldr	r5, [r2, #28]
+ 428 0198 21F40051 		bic	r1, r1, #8192
+ 429 019c 41EA4511 		orr	r1, r1, r5, lsl #5
+ 430              	.L44:
+ 431 01a0 D268     		ldr	r2, [r2, #12]
+ 432 01a2 4160     		str	r1, [r0, #4]
+ 433 01a4 C461     		str	r4, [r0, #28]
+ 434 01a6 C263     		str	r2, [r0, #60]
+ 435 01a8 91E7     		b	.L47
+ 436              	.L50:
+ 437 01aa 00BF     		.align	2
+ 438              	.L49:
+ 439 01ac 002C0140 		.word	1073818624
+ 441              		.section	.text.LL_TIM_IC_StructInit,"ax",%progbits
+ 442              		.align	1
+ 443              		.global	LL_TIM_IC_StructInit
+ 444              		.syntax unified
+ 445              		.thumb
+ 446              		.thumb_func
+ 447              		.fpu softvfp
+ 449              	LL_TIM_IC_StructInit:
+ 450              		@ args = 0, pretend = 0, frame = 0
+ 451              		@ frame_needed = 0, uses_anonymous_args = 0
+ 452              		@ link register save eliminated.
+ 453 0000 0023     		movs	r3, #0
+ 454 0002 4FF48032 		mov	r2, #65536
+ 455 0006 C0E90233 		strd	r3, r3, [r0, #8]
+ 456 000a C0E90032 		strd	r3, r2, [r0]
+ 457 000e 7047     		bx	lr
+ 459              		.section	.text.LL_TIM_IC_Init,"ax",%progbits
+ 460              		.align	1
+ 461              		.global	LL_TIM_IC_Init
+ 462              		.syntax unified
+ 463              		.thumb
+ 464              		.thumb_func
+ 465              		.fpu softvfp
+ 467              	LL_TIM_IC_Init:
+ 468              		@ args = 0, pretend = 0, frame = 0
+ 469              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccsw3rBI.s 			page 9
+
+
+ 470 0000 B1F5807F 		cmp	r1, #256
+ 471 0004 10B5     		push	{r4, lr}
+ 472 0006 52D0     		beq	.L53
+ 473 0008 05D8     		bhi	.L54
+ 474 000a 0129     		cmp	r1, #1
+ 475 000c 1ED0     		beq	.L55
+ 476 000e 1029     		cmp	r1, #16
+ 477 0010 35D0     		beq	.L56
+ 478              	.L60:
+ 479 0012 0120     		movs	r0, #1
+ 480              	.L57:
+ 481 0014 10BD     		pop	{r4, pc}
+ 482              	.L54:
+ 483 0016 B1F5805F 		cmp	r1, #4096
+ 484 001a FAD1     		bne	.L60
+ 485 001c 036A     		ldr	r3, [r0, #32]
+ 486 001e D468     		ldr	r4, [r2, #12]
+ 487 0020 5168     		ldr	r1, [r2, #4]
+ 488 0022 23F48053 		bic	r3, r3, #4096
+ 489 0026 0362     		str	r3, [r0, #32]
+ 490 0028 C369     		ldr	r3, [r0, #28]
+ 491 002a 2143     		orrs	r1, r1, r4
+ 492 002c 9468     		ldr	r4, [r2, #8]
+ 493 002e 23F47F43 		bic	r3, r3, #65280
+ 494 0032 2143     		orrs	r1, r1, r4
+ 495 0034 43EA1123 		orr	r3, r3, r1, lsr #8
+ 496 0038 C361     		str	r3, [r0, #28]
+ 497 003a 036A     		ldr	r3, [r0, #32]
+ 498 003c 1268     		ldr	r2, [r2]
+ 499 003e 23F40053 		bic	r3, r3, #8192
+ 500 0042 43EA0233 		orr	r3, r3, r2, lsl #12
+ 501 0046 43F48053 		orr	r3, r3, #4096
+ 502 004a 15E0     		b	.L59
+ 503              	.L55:
+ 504 004c 036A     		ldr	r3, [r0, #32]
+ 505 004e D468     		ldr	r4, [r2, #12]
+ 506 0050 5168     		ldr	r1, [r2, #4]
+ 507 0052 23F00103 		bic	r3, r3, #1
+ 508 0056 0362     		str	r3, [r0, #32]
+ 509 0058 8369     		ldr	r3, [r0, #24]
+ 510 005a 2143     		orrs	r1, r1, r4
+ 511 005c 9468     		ldr	r4, [r2, #8]
+ 512 005e 23F0FF03 		bic	r3, r3, #255
+ 513 0062 2143     		orrs	r1, r1, r4
+ 514 0064 43EA1143 		orr	r3, r3, r1, lsr #16
+ 515 0068 8361     		str	r3, [r0, #24]
+ 516 006a 036A     		ldr	r3, [r0, #32]
+ 517 006c 1268     		ldr	r2, [r2]
+ 518 006e 23F00A03 		bic	r3, r3, #10
+ 519 0072 1343     		orrs	r3, r3, r2
+ 520 0074 43F00103 		orr	r3, r3, #1
+ 521              	.L59:
+ 522 0078 0362     		str	r3, [r0, #32]
+ 523 007a 0020     		movs	r0, #0
+ 524 007c CAE7     		b	.L57
+ 525              	.L56:
+ 526 007e 036A     		ldr	r3, [r0, #32]
+ARM GAS  /tmp/ccsw3rBI.s 			page 10
+
+
+ 527 0080 D468     		ldr	r4, [r2, #12]
+ 528 0082 5168     		ldr	r1, [r2, #4]
+ 529 0084 23F01003 		bic	r3, r3, #16
+ 530 0088 0362     		str	r3, [r0, #32]
+ 531 008a 8369     		ldr	r3, [r0, #24]
+ 532 008c 2143     		orrs	r1, r1, r4
+ 533 008e 9468     		ldr	r4, [r2, #8]
+ 534 0090 23F47F43 		bic	r3, r3, #65280
+ 535 0094 2143     		orrs	r1, r1, r4
+ 536 0096 43EA1123 		orr	r3, r3, r1, lsr #8
+ 537 009a 8361     		str	r3, [r0, #24]
+ 538 009c 036A     		ldr	r3, [r0, #32]
+ 539 009e 1268     		ldr	r2, [r2]
+ 540 00a0 23F0A003 		bic	r3, r3, #160
+ 541 00a4 43EA0213 		orr	r3, r3, r2, lsl #4
+ 542 00a8 43F01003 		orr	r3, r3, #16
+ 543 00ac E4E7     		b	.L59
+ 544              	.L53:
+ 545 00ae 036A     		ldr	r3, [r0, #32]
+ 546 00b0 D468     		ldr	r4, [r2, #12]
+ 547 00b2 5168     		ldr	r1, [r2, #4]
+ 548 00b4 23F48073 		bic	r3, r3, #256
+ 549 00b8 0362     		str	r3, [r0, #32]
+ 550 00ba C369     		ldr	r3, [r0, #28]
+ 551 00bc 2143     		orrs	r1, r1, r4
+ 552 00be 9468     		ldr	r4, [r2, #8]
+ 553 00c0 23F0FF03 		bic	r3, r3, #255
+ 554 00c4 2143     		orrs	r1, r1, r4
+ 555 00c6 43EA1143 		orr	r3, r3, r1, lsr #16
+ 556 00ca C361     		str	r3, [r0, #28]
+ 557 00cc 036A     		ldr	r3, [r0, #32]
+ 558 00ce 1268     		ldr	r2, [r2]
+ 559 00d0 23F42063 		bic	r3, r3, #2560
+ 560 00d4 43EA0223 		orr	r3, r3, r2, lsl #8
+ 561 00d8 43F48073 		orr	r3, r3, #256
+ 562 00dc CCE7     		b	.L59
+ 564              		.section	.text.LL_TIM_ENCODER_StructInit,"ax",%progbits
+ 565              		.align	1
+ 566              		.global	LL_TIM_ENCODER_StructInit
+ 567              		.syntax unified
+ 568              		.thumb
+ 569              		.thumb_func
+ 570              		.fpu softvfp
+ 572              	LL_TIM_ENCODER_StructInit:
+ 573              		@ args = 0, pretend = 0, frame = 0
+ 574              		@ frame_needed = 0, uses_anonymous_args = 0
+ 575              		@ link register save eliminated.
+ 576 0000 0023     		movs	r3, #0
+ 577 0002 0122     		movs	r2, #1
+ 578 0004 C0E90023 		strd	r2, r3, [r0]
+ 579 0008 4FF48032 		mov	r2, #65536
+ 580 000c C0E90433 		strd	r3, r3, [r0, #16]
+ 581 0010 C0E90223 		strd	r2, r3, [r0, #8]
+ 582 0014 C0E90623 		strd	r2, r3, [r0, #24]
+ 583 0018 0362     		str	r3, [r0, #32]
+ 584 001a 7047     		bx	lr
+ 586              		.section	.text.LL_TIM_ENCODER_Init,"ax",%progbits
+ARM GAS  /tmp/ccsw3rBI.s 			page 11
+
+
+ 587              		.align	1
+ 588              		.global	LL_TIM_ENCODER_Init
+ 589              		.syntax unified
+ 590              		.thumb
+ 591              		.thumb_func
+ 592              		.fpu softvfp
+ 594              	LL_TIM_ENCODER_Init:
+ 595              		@ args = 0, pretend = 0, frame = 0
+ 596              		@ frame_needed = 0, uses_anonymous_args = 0
+ 597 0000 036A     		ldr	r3, [r0, #32]
+ 598 0002 30B5     		push	{r4, r5, lr}
+ 599 0004 4A89     		ldrh	r2, [r1, #10]
+ 600 0006 4D8A     		ldrh	r5, [r1, #18]
+ 601 0008 23F01103 		bic	r3, r3, #17
+ 602 000c 0362     		str	r3, [r0, #32]
+ 603 000e 8469     		ldr	r4, [r0, #24]
+ 604 0010 2A43     		orrs	r2, r2, r5
+ 605 0012 CD89     		ldrh	r5, [r1, #14]
+ 606 0014 24F0FF04 		bic	r4, r4, #255
+ 607 0018 2A43     		orrs	r2, r2, r5
+ 608 001a 2243     		orrs	r2, r2, r4
+ 609 001c 22F47F44 		bic	r4, r2, #65280
+ 610 0020 0A6A     		ldr	r2, [r1, #32]
+ 611 0022 8D69     		ldr	r5, [r1, #24]
+ 612 0024 120A     		lsrs	r2, r2, #8
+ 613 0026 42EA1522 		orr	r2, r2, r5, lsr #8
+ 614 002a CD69     		ldr	r5, [r1, #28]
+ 615 002c 036A     		ldr	r3, [r0, #32]
+ 616 002e 42EA1522 		orr	r2, r2, r5, lsr #8
+ 617 0032 2243     		orrs	r2, r2, r4
+ 618 0034 4C68     		ldr	r4, [r1, #4]
+ 619 0036 23F0AA03 		bic	r3, r3, #170
+ 620 003a 2343     		orrs	r3, r3, r4
+ 621 003c 4C69     		ldr	r4, [r1, #20]
+ 622 003e 0968     		ldr	r1, [r1]
+ 623 0040 43EA0413 		orr	r3, r3, r4, lsl #4
+ 624 0044 8468     		ldr	r4, [r0, #8]
+ 625 0046 43F01103 		orr	r3, r3, #17
+ 626 004a 24F00704 		bic	r4, r4, #7
+ 627 004e 2143     		orrs	r1, r1, r4
+ 628 0050 8160     		str	r1, [r0, #8]
+ 629 0052 8261     		str	r2, [r0, #24]
+ 630 0054 0362     		str	r3, [r0, #32]
+ 631 0056 0020     		movs	r0, #0
+ 632 0058 30BD     		pop	{r4, r5, pc}
+ 634              		.section	.text.LL_TIM_HALLSENSOR_StructInit,"ax",%progbits
+ 635              		.align	1
+ 636              		.global	LL_TIM_HALLSENSOR_StructInit
+ 637              		.syntax unified
+ 638              		.thumb
+ 639              		.thumb_func
+ 640              		.fpu softvfp
+ 642              	LL_TIM_HALLSENSOR_StructInit:
+ 643              		@ args = 0, pretend = 0, frame = 0
+ 644              		@ frame_needed = 0, uses_anonymous_args = 0
+ 645              		@ link register save eliminated.
+ 646 0000 0023     		movs	r3, #0
+ARM GAS  /tmp/ccsw3rBI.s 			page 12
+
+
+ 647 0002 C0E90033 		strd	r3, r3, [r0]
+ 648 0006 C0E90233 		strd	r3, r3, [r0, #8]
+ 649 000a 7047     		bx	lr
+ 651              		.section	.text.LL_TIM_HALLSENSOR_Init,"ax",%progbits
+ 652              		.align	1
+ 653              		.global	LL_TIM_HALLSENSOR_Init
+ 654              		.syntax unified
+ 655              		.thumb
+ 656              		.thumb_func
+ 657              		.fpu softvfp
+ 659              	LL_TIM_HALLSENSOR_Init:
+ 660              		@ args = 0, pretend = 0, frame = 0
+ 661              		@ frame_needed = 0, uses_anonymous_args = 0
+ 662 0000 036A     		ldr	r3, [r0, #32]
+ 663 0002 F0B5     		push	{r4, r5, r6, r7, lr}
+ 664 0004 23F01103 		bic	r3, r3, #17
+ 665 0008 0362     		str	r3, [r0, #32]
+ 666 000a 4568     		ldr	r5, [r0, #4]
+ 667 000c 4B89     		ldrh	r3, [r1, #10]
+ 668 000e 8669     		ldr	r6, [r0, #24]
+ 669 0010 CF88     		ldrh	r7, [r1, #6]
+ 670 0012 26F0FF06 		bic	r6, r6, #255
+ 671 0016 3B43     		orrs	r3, r3, r7
+ 672 0018 026A     		ldr	r2, [r0, #32]
+ 673 001a 3343     		orrs	r3, r3, r6
+ 674 001c 8468     		ldr	r4, [r0, #8]
+ 675 001e 23F47C43 		bic	r3, r3, #64512
+ 676 0022 0E68     		ldr	r6, [r1]
+ 677 0024 24F07704 		bic	r4, r4, #119
+ 678 0028 43F4E043 		orr	r3, r3, #28672
+ 679 002c 45F0D005 		orr	r5, r5, #208
+ 680 0030 44F04404 		orr	r4, r4, #68
+ 681 0034 43F00303 		orr	r3, r3, #3
+ 682 0038 22F0AA02 		bic	r2, r2, #170
+ 683 003c 4560     		str	r5, [r0, #4]
+ 684 003e 3243     		orrs	r2, r2, r6
+ 685 0040 8460     		str	r4, [r0, #8]
+ 686 0042 8361     		str	r3, [r0, #24]
+ 687 0044 CB68     		ldr	r3, [r1, #12]
+ 688 0046 42F01102 		orr	r2, r2, #17
+ 689 004a 0262     		str	r2, [r0, #32]
+ 690 004c 8363     		str	r3, [r0, #56]
+ 691 004e 0020     		movs	r0, #0
+ 692 0050 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 694              		.section	.text.LL_TIM_BDTR_StructInit,"ax",%progbits
+ 695              		.align	1
+ 696              		.global	LL_TIM_BDTR_StructInit
+ 697              		.syntax unified
+ 698              		.thumb
+ 699              		.thumb_func
+ 700              		.fpu softvfp
+ 702              	LL_TIM_BDTR_StructInit:
+ 703              		@ args = 0, pretend = 0, frame = 0
+ 704              		@ frame_needed = 0, uses_anonymous_args = 0
+ 705              		@ link register save eliminated.
+ 706 0000 0023     		movs	r3, #0
+ 707 0002 C0E90033 		strd	r3, r3, [r0]
+ARM GAS  /tmp/ccsw3rBI.s 			page 13
+
+
+ 708 0006 C0E90433 		strd	r3, r3, [r0, #16]
+ 709 000a 8360     		str	r3, [r0, #8]
+ 710 000c 0373     		strb	r3, [r0, #12]
+ 711 000e C381     		strh	r3, [r0, #14]	@ movhi
+ 712 0010 7047     		bx	lr
+ 714              		.section	.text.LL_TIM_BDTR_Init,"ax",%progbits
+ 715              		.align	1
+ 716              		.global	LL_TIM_BDTR_Init
+ 717              		.syntax unified
+ 718              		.thumb
+ 719              		.thumb_func
+ 720              		.fpu softvfp
+ 722              	LL_TIM_BDTR_Init:
+ 723              		@ args = 0, pretend = 0, frame = 0
+ 724              		@ frame_needed = 0, uses_anonymous_args = 0
+ 725              		@ link register save eliminated.
+ 726 0000 8A68     		ldr	r2, [r1, #8]
+ 727 0002 0B7B     		ldrb	r3, [r1, #12]	@ zero_extendqisi2
+ 728 0004 1343     		orrs	r3, r3, r2
+ 729 0006 4A68     		ldr	r2, [r1, #4]
+ 730 0008 23F48063 		bic	r3, r3, #1024
+ 731 000c 1343     		orrs	r3, r3, r2
+ 732 000e 0A68     		ldr	r2, [r1]
+ 733 0010 23F40063 		bic	r3, r3, #2048
+ 734 0014 1343     		orrs	r3, r3, r2
+ 735 0016 CA89     		ldrh	r2, [r1, #14]
+ 736 0018 23F48053 		bic	r3, r3, #4096
+ 737 001c 1343     		orrs	r3, r3, r2
+ 738 001e 0A69     		ldr	r2, [r1, #16]
+ 739 0020 23F40053 		bic	r3, r3, #8192
+ 740 0024 1343     		orrs	r3, r3, r2
+ 741 0026 4A69     		ldr	r2, [r1, #20]
+ 742 0028 23F44043 		bic	r3, r3, #49152
+ 743 002c 1343     		orrs	r3, r3, r2
+ 744 002e 4364     		str	r3, [r0, #68]
+ 745 0030 0020     		movs	r0, #0
+ 746 0032 7047     		bx	lr
+ 748              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccsw3rBI.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_ll_tim.c
+     /tmp/ccsw3rBI.s:14     .text.LL_TIM_DeInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:22     .text.LL_TIM_DeInit:0000000000000000 LL_TIM_DeInit
+     /tmp/ccsw3rBI.s:124    .text.LL_TIM_DeInit:00000000000000d8 $d
+     /tmp/ccsw3rBI.s:134    .text.LL_TIM_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:141    .text.LL_TIM_StructInit:0000000000000000 LL_TIM_StructInit
+     /tmp/ccsw3rBI.s:154    .text.LL_TIM_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:161    .text.LL_TIM_Init:0000000000000000 LL_TIM_Init
+     /tmp/ccsw3rBI.s:232    .text.LL_TIM_Init:0000000000000094 $d
+     /tmp/ccsw3rBI.s:235    .text.LL_TIM_OC_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:242    .text.LL_TIM_OC_StructInit:0000000000000000 LL_TIM_OC_StructInit
+     /tmp/ccsw3rBI.s:254    .text.LL_TIM_OC_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:261    .text.LL_TIM_OC_Init:0000000000000000 LL_TIM_OC_Init
+     /tmp/ccsw3rBI.s:439    .text.LL_TIM_OC_Init:00000000000001ac $d
+     /tmp/ccsw3rBI.s:442    .text.LL_TIM_IC_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:449    .text.LL_TIM_IC_StructInit:0000000000000000 LL_TIM_IC_StructInit
+     /tmp/ccsw3rBI.s:460    .text.LL_TIM_IC_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:467    .text.LL_TIM_IC_Init:0000000000000000 LL_TIM_IC_Init
+     /tmp/ccsw3rBI.s:565    .text.LL_TIM_ENCODER_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:572    .text.LL_TIM_ENCODER_StructInit:0000000000000000 LL_TIM_ENCODER_StructInit
+     /tmp/ccsw3rBI.s:587    .text.LL_TIM_ENCODER_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:594    .text.LL_TIM_ENCODER_Init:0000000000000000 LL_TIM_ENCODER_Init
+     /tmp/ccsw3rBI.s:635    .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:642    .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 LL_TIM_HALLSENSOR_StructInit
+     /tmp/ccsw3rBI.s:652    .text.LL_TIM_HALLSENSOR_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:659    .text.LL_TIM_HALLSENSOR_Init:0000000000000000 LL_TIM_HALLSENSOR_Init
+     /tmp/ccsw3rBI.s:695    .text.LL_TIM_BDTR_StructInit:0000000000000000 $t
+     /tmp/ccsw3rBI.s:702    .text.LL_TIM_BDTR_StructInit:0000000000000000 LL_TIM_BDTR_StructInit
+     /tmp/ccsw3rBI.s:715    .text.LL_TIM_BDTR_Init:0000000000000000 $t
+     /tmp/ccsw3rBI.s:722    .text.LL_TIM_BDTR_Init:0000000000000000 LL_TIM_BDTR_Init
+
+NO UNDEFINED SYMBOLS

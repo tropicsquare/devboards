@@ -1,0 +1,289 @@
+ARM GAS  /tmp/ccfiixZm.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"time.c"
+  12              		.text
+  13              		.section	.text._get_timer_time,"ax",%progbits
+  14              		.align	1
+  15              		.arch armv7-m
+  16              		.syntax unified
+  17              		.thumb
+  18              		.thumb_func
+  19              		.fpu softvfp
+  21              	_get_timer_time:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24 0000 4FF08042 		mov	r2, #1073741824
+  25 0004 536A     		ldr	r3, [r2, #36]
+  26 0006 30B5     		push	{r4, r5, lr}
+  27 0008 632B     		cmp	r3, #99
+  28 000a 04D8     		bhi	.L2
+  29 000c 1269     		ldr	r2, [r2, #16]
+  30 000e D207     		lsls	r2, r2, #31
+  31 0010 48BF     		it	mi
+  32 0012 03F57A73 		addmi	r3, r3, #1000
+  33              	.L2:
+  34 0016 4FF47A72 		mov	r2, #1000
+  35 001a 054C     		ldr	r4, .L6
+  36 001c 2068     		ldr	r0, [r4]
+  37 001e 6568     		ldr	r5, [r4, #4]
+  38 0020 A0FB0201 		umull	r0, r1, r0, r2
+  39 0024 02FB0511 		mla	r1, r2, r5, r1
+  40 0028 C018     		adds	r0, r0, r3
+  41 002a 41F10001 		adc	r1, r1, #0
+  42 002e 30BD     		pop	{r4, r5, pc}
+  43              	.L7:
+  44              		.align	2
+  45              	.L6:
+  46 0030 00000000 		.word	.LANCHOR0
+  48              		.section	.text.TIM2_IRQHandler,"ax",%progbits
+  49              		.align	1
+  50              		.global	TIM2_IRQHandler
+  51              		.syntax unified
+  52              		.thumb
+  53              		.thumb_func
+  54              		.fpu softvfp
+  56              	TIM2_IRQHandler:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60 0000 4FF08043 		mov	r3, #1073741824
+ARM GAS  /tmp/ccfiixZm.s 			page 2
+
+
+  61 0004 1A69     		ldr	r2, [r3, #16]
+  62 0006 D207     		lsls	r2, r2, #31
+  63 0008 0BD5     		bpl	.L8
+  64 000a 1A69     		ldr	r2, [r3, #16]
+  65 000c 22F00102 		bic	r2, r2, #1
+  66 0010 1A61     		str	r2, [r3, #16]
+  67 0012 044A     		ldr	r2, .L13
+  68 0014 D2E90031 		ldrd	r3, r1, [r2]
+  69 0018 0133     		adds	r3, r3, #1
+  70 001a 41F10001 		adc	r1, r1, #0
+  71 001e C2E90031 		strd	r3, r1, [r2]
+  72              	.L8:
+  73 0022 7047     		bx	lr
+  74              	.L14:
+  75              		.align	2
+  76              	.L13:
+  77 0024 00000000 		.word	.LANCHOR0
+  79              		.section	.text.timer_init,"ax",%progbits
+  80              		.align	1
+  81              		.global	timer_init
+  82              		.syntax unified
+  83              		.thumb
+  84              		.thumb_func
+  85              		.fpu softvfp
+  87              	timer_init:
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90              		@ link register save eliminated.
+  91 0000 104B     		ldr	r3, .L16
+  92 0002 0121     		movs	r1, #1
+  93 0004 DA69     		ldr	r2, [r3, #28]
+  94 0006 0020     		movs	r0, #0
+  95 0008 42F00102 		orr	r2, r2, #1
+  96 000c DA61     		str	r2, [r3, #28]
+  97 000e 1A69     		ldr	r2, [r3, #16]
+  98 0010 42F00102 		orr	r2, r2, #1
+  99 0014 1A61     		str	r2, [r3, #16]
+ 100 0016 1A69     		ldr	r2, [r3, #16]
+ 101 0018 22F00102 		bic	r2, r2, #1
+ 102 001c 1A61     		str	r2, [r3, #16]
+ 103 001e 4FF08043 		mov	r3, #1073741824
+ 104 0022 4FF47A72 		mov	r2, #1000
+ 105 0026 DA62     		str	r2, [r3, #44]
+ 106 0028 4722     		movs	r2, #71
+ 107 002a 9A62     		str	r2, [r3, #40]
+ 108 002c 1960     		str	r1, [r3]
+ 109 002e DA68     		ldr	r2, [r3, #12]
+ 110 0030 0A43     		orrs	r2, r2, r1
+ 111 0032 DA60     		str	r2, [r3, #12]
+ 112 0034 044A     		ldr	r2, .L16+4
+ 113 0036 82F81C03 		strb	r0, [r2, #796]
+ 114 003a 4FF08050 		mov	r0, #268435456
+ 115 003e 1060     		str	r0, [r2]
+ 116 0040 5961     		str	r1, [r3, #20]
+ 117 0042 7047     		bx	lr
+ 118              	.L17:
+ 119              		.align	2
+ARM GAS  /tmp/ccfiixZm.s 			page 3
+
+
+ 120              	.L16:
+ 121 0044 00100240 		.word	1073876992
+ 122 0048 00E100E0 		.word	-536813312
+ 124              		.section	.text.timer_get_time,"ax",%progbits
+ 125              		.align	1
+ 126              		.global	timer_get_time
+ 127              		.syntax unified
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.fpu softvfp
+ 132              	timer_get_time:
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135 0000 08B5     		push	{r3, lr}
+ 136              		.syntax unified
+ 137              	@ 962 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 138 0002 72B6     		cpsid i
+ 139              	@ 0 "" 2
+ 140              		.thumb
+ 141              		.syntax unified
+ 142 0004 FFF7FEFF 		bl	_get_timer_time
+ 143              		.syntax unified
+ 144              	@ 951 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 145 0008 62B6     		cpsie i
+ 146              	@ 0 "" 2
+ 147              		.thumb
+ 148              		.syntax unified
+ 149 000a 08BD     		pop	{r3, pc}
+ 151              		.section	.text.timer_get_time_irq,"ax",%progbits
+ 152              		.align	1
+ 153              		.global	timer_get_time_irq
+ 154              		.syntax unified
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.fpu softvfp
+ 159              	timer_get_time_irq:
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162 0000 08B5     		push	{r3, lr}
+ 163 0002 FFF7FEFF 		bl	TIM2_IRQHandler
+ 164 0006 BDE80840 		pop	{r3, lr}
+ 165 000a FFF7FEBF 		b	_get_timer_time
+ 167              		.section	.text.time_delay_ms,"ax",%progbits
+ 168              		.align	1
+ 169              		.global	time_delay_ms
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.fpu softvfp
+ 175              	time_delay_ms:
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178 0000 70B5     		push	{r4, r5, r6, lr}
+ 179 0002 4FF47A75 		mov	r5, #1000
+ 180 0006 4543     		muls	r5, r0, r5
+ 181 0008 FFF7FEFF 		bl	timer_get_time
+ 182 000c 0446     		mov	r4, r0
+ARM GAS  /tmp/ccfiixZm.s 			page 4
+
+
+ 183 000e 0E46     		mov	r6, r1
+ 184              	.L21:
+ 185 0010 FFF7FEFF 		bl	timer_get_time
+ 186 0014 031B     		subs	r3, r0, r4
+ 187 0016 61EB0602 		sbc	r2, r1, r6
+ 188 001a AB42     		cmp	r3, r5
+ 189 001c 72F10003 		sbcs	r3, r2, #0
+ 190 0020 F6D3     		bcc	.L21
+ 191 0022 70BD     		pop	{r4, r5, r6, pc}
+ 193              		.section	.text.time_delay_us,"ax",%progbits
+ 194              		.align	1
+ 195              		.global	time_delay_us
+ 196              		.syntax unified
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.fpu softvfp
+ 201              	time_delay_us:
+ 202              		@ args = 0, pretend = 0, frame = 0
+ 203              		@ frame_needed = 0, uses_anonymous_args = 0
+ 204 0000 70B5     		push	{r4, r5, r6, lr}
+ 205 0002 0546     		mov	r5, r0
+ 206 0004 FFF7FEFF 		bl	timer_get_time
+ 207 0008 0446     		mov	r4, r0
+ 208 000a 0E46     		mov	r6, r1
+ 209              	.L24:
+ 210 000c FFF7FEFF 		bl	timer_get_time
+ 211 0010 031B     		subs	r3, r0, r4
+ 212 0012 61EB0602 		sbc	r2, r1, r6
+ 213 0016 AB42     		cmp	r3, r5
+ 214 0018 72F10003 		sbcs	r3, r2, #0
+ 215 001c F6D3     		bcc	.L24
+ 216 001e 70BD     		pop	{r4, r5, r6, pc}
+ 218              		.section	.text.timer3_init,"ax",%progbits
+ 219              		.align	1
+ 220              		.global	timer3_init
+ 221              		.syntax unified
+ 222              		.thumb
+ 223              		.thumb_func
+ 224              		.fpu softvfp
+ 226              	timer3_init:
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229              		@ link register save eliminated.
+ 230 0000 0C4B     		ldr	r3, .L27
+ 231 0002 DA69     		ldr	r2, [r3, #28]
+ 232 0004 42F00202 		orr	r2, r2, #2
+ 233 0008 DA61     		str	r2, [r3, #28]
+ 234 000a 1A69     		ldr	r2, [r3, #16]
+ 235 000c 42F00202 		orr	r2, r2, #2
+ 236 0010 1A61     		str	r2, [r3, #16]
+ 237 0012 1A69     		ldr	r2, [r3, #16]
+ 238 0014 22F00202 		bic	r2, r2, #2
+ 239 0018 1A61     		str	r2, [r3, #16]
+ 240 001a 4FF6FF72 		movw	r2, #65535
+ 241 001e A3F50333 		sub	r3, r3, #134144
+ 242 0022 DA62     		str	r2, [r3, #44]
+ 243 0024 4722     		movs	r2, #71
+ARM GAS  /tmp/ccfiixZm.s 			page 5
+
+
+ 244 0026 9A62     		str	r2, [r3, #40]
+ 245 0028 0822     		movs	r2, #8
+ 246 002a 1A60     		str	r2, [r3]
+ 247 002c 0122     		movs	r2, #1
+ 248 002e 5A61     		str	r2, [r3, #20]
+ 249 0030 7047     		bx	lr
+ 250              	.L28:
+ 251 0032 00BF     		.align	2
+ 252              	.L27:
+ 253 0034 00100240 		.word	1073876992
+ 255              		.section	.bss.timer_ms,"aw",%nobits
+ 256              		.align	3
+ 257              		.set	.LANCHOR0,. + 0
+ 260              	timer_ms:
+ 261 0000 00000000 		.space	8
+ 261      00000000 
+ 262              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccfiixZm.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 time.c
+     /tmp/ccfiixZm.s:14     .text._get_timer_time:0000000000000000 $t
+     /tmp/ccfiixZm.s:21     .text._get_timer_time:0000000000000000 _get_timer_time
+     /tmp/ccfiixZm.s:46     .text._get_timer_time:0000000000000030 $d
+     /tmp/ccfiixZm.s:49     .text.TIM2_IRQHandler:0000000000000000 $t
+     /tmp/ccfiixZm.s:56     .text.TIM2_IRQHandler:0000000000000000 TIM2_IRQHandler
+     /tmp/ccfiixZm.s:77     .text.TIM2_IRQHandler:0000000000000024 $d
+     /tmp/ccfiixZm.s:80     .text.timer_init:0000000000000000 $t
+     /tmp/ccfiixZm.s:87     .text.timer_init:0000000000000000 timer_init
+     /tmp/ccfiixZm.s:121    .text.timer_init:0000000000000044 $d
+     /tmp/ccfiixZm.s:125    .text.timer_get_time:0000000000000000 $t
+     /tmp/ccfiixZm.s:132    .text.timer_get_time:0000000000000000 timer_get_time
+     /tmp/ccfiixZm.s:152    .text.timer_get_time_irq:0000000000000000 $t
+     /tmp/ccfiixZm.s:159    .text.timer_get_time_irq:0000000000000000 timer_get_time_irq
+     /tmp/ccfiixZm.s:168    .text.time_delay_ms:0000000000000000 $t
+     /tmp/ccfiixZm.s:175    .text.time_delay_ms:0000000000000000 time_delay_ms
+     /tmp/ccfiixZm.s:194    .text.time_delay_us:0000000000000000 $t
+     /tmp/ccfiixZm.s:201    .text.time_delay_us:0000000000000000 time_delay_us
+     /tmp/ccfiixZm.s:219    .text.timer3_init:0000000000000000 $t
+     /tmp/ccfiixZm.s:226    .text.timer3_init:0000000000000000 timer3_init
+     /tmp/ccfiixZm.s:253    .text.timer3_init:0000000000000034 $d
+     /tmp/ccfiixZm.s:256    .bss.timer_ms:0000000000000000 $d
+     /tmp/ccfiixZm.s:260    .bss.timer_ms:0000000000000000 timer_ms
+
+NO UNDEFINED SYMBOLS

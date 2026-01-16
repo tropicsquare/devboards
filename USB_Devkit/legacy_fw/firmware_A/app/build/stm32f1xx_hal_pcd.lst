@@ -1,0 +1,1922 @@
+ARM GAS  /tmp/ccUiU9el.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_pcd.c"
+  12              		.text
+  13              		.section	.text.HAL_PCD_MspInit,"ax",%progbits
+  14              		.align	1
+  15              		.weak	HAL_PCD_MspInit
+  16              		.arch armv7-m
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	HAL_PCD_MspInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 7047     		bx	lr
+  28              		.section	.text.HAL_PCD_Init,"ax",%progbits
+  29              		.align	1
+  30              		.global	HAL_PCD_Init
+  31              		.syntax unified
+  32              		.thumb
+  33              		.thumb_func
+  34              		.fpu softvfp
+  36              	HAL_PCD_Init:
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  40 0002 0446     		mov	r4, r0
+  41 0004 87B0     		sub	sp, sp, #28
+  42 0006 10B3     		cbz	r0, .L11
+  43 0008 90F8A932 		ldrb	r3, [r0, #681]	@ zero_extendqisi2
+  44 000c 03F0FF02 		and	r2, r3, #255
+  45 0010 1BB9     		cbnz	r3, .L4
+  46 0012 80F8A822 		strb	r2, [r0, #680]
+  47 0016 FFF7FEFF 		bl	HAL_PCD_MspInit
+  48              	.L4:
+  49 001a 0323     		movs	r3, #3
+  50 001c 2546     		mov	r5, r4
+  51 001e 6E46     		mov	r6, sp
+  52 0020 84F8A932 		strb	r3, [r4, #681]
+  53 0024 55F8100B 		ldr	r0, [r5], #16
+  54 0028 FFF7FEFF 		bl	USB_DisableGlobalInt
+  55 002c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  56 002e 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+  57 0030 2B68     		ldr	r3, [r5]
+  58 0032 271D     		adds	r7, r4, #4
+  59 0034 3360     		str	r3, [r6]
+  60 0036 2646     		mov	r6, r4
+ARM GAS  /tmp/ccUiU9el.s 			page 2
+
+
+  61 0038 97E80E00 		ldm	r7, {r1, r2, r3}
+  62 003c 56F8100B 		ldr	r0, [r6], #16
+  63 0040 FFF7FEFF 		bl	USB_CoreInit
+  64 0044 0546     		mov	r5, r0
+  65 0046 20B1     		cbz	r0, .L5
+  66 0048 0223     		movs	r3, #2
+  67 004a 84F8A932 		strb	r3, [r4, #681]
+  68              	.L11:
+  69 004e 0125     		movs	r5, #1
+  70 0050 4CE0     		b	.L3
+  71              	.L5:
+  72 0052 0146     		mov	r1, r0
+  73 0054 2068     		ldr	r0, [r4]
+  74 0056 FFF7FEFF 		bl	USB_SetCurrentMode
+  75 005a 2946     		mov	r1, r5
+  76 005c 4FF0010E 		mov	lr, #1
+  77 0060 2825     		movs	r5, #40
+  78 0062 0846     		mov	r0, r1
+  79 0064 D4F804C0 		ldr	ip, [r4, #4]
+  80              	.L6:
+  81 0068 CAB2     		uxtb	r2, r1
+  82 006a 9445     		cmp	ip, r2
+  83 006c 01F10101 		add	r1, r1, #1
+  84 0070 1BD8     		bhi	.L7
+  85 0072 0023     		movs	r3, #0
+  86 0074 2825     		movs	r5, #40
+  87 0076 1946     		mov	r1, r3
+  88              	.L8:
+  89 0078 D8B2     		uxtb	r0, r3
+  90 007a 8445     		cmp	ip, r0
+  91 007c 03F10103 		add	r3, r3, #1
+  92 0080 20D8     		bhi	.L9
+  93 0082 EC46     		mov	ip, sp
+  94 0084 3546     		mov	r5, r6
+  95 0086 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  96 0088 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  97 008c 2B68     		ldr	r3, [r5]
+  98 008e CCF80030 		str	r3, [ip]
+  99 0092 97E80E00 		ldm	r7, {r1, r2, r3}
+ 100 0096 2068     		ldr	r0, [r4]
+ 101 0098 FFF7FEFF 		bl	USB_DevInit
+ 102 009c 0123     		movs	r3, #1
+ 103 009e 0546     		mov	r5, r0
+ 104 00a0 E8B1     		cbz	r0, .L10
+ 105 00a2 0222     		movs	r2, #2
+ 106 00a4 84F8A922 		strb	r2, [r4, #681]
+ 107 00a8 D1E7     		b	.L11
+ 108              	.L7:
+ 109 00aa 05FB0243 		mla	r3, r5, r2, r4
+ 110 00ae C3E90E00 		strd	r0, r0, [r3, #56]
+ 111 00b2 83F829E0 		strb	lr, [r3, #41]
+ 112 00b6 83F82820 		strb	r2, [r3, #40]
+ 113 00ba DA86     		strh	r2, [r3, #54]	@ movhi
+ 114 00bc 83F82B00 		strb	r0, [r3, #43]
+ 115 00c0 1864     		str	r0, [r3, #64]
+ 116 00c2 D1E7     		b	.L6
+ 117              	.L9:
+ARM GAS  /tmp/ccUiU9el.s 			page 3
+
+
+ 118 00c4 05FB0042 		mla	r2, r5, r0, r4
+ 119 00c8 C2E95E11 		strd	r1, r1, [r2, #376]
+ 120 00cc 82F86911 		strb	r1, [r2, #361]
+ 121 00d0 82F86801 		strb	r0, [r2, #360]
+ 122 00d4 82F86B11 		strb	r1, [r2, #363]
+ 123 00d8 C2F88011 		str	r1, [r2, #384]
+ 124 00dc CCE7     		b	.L8
+ 125              	.L10:
+ 126 00de 84F82400 		strb	r0, [r4, #36]
+ 127 00e2 2068     		ldr	r0, [r4]
+ 128 00e4 84F8A932 		strb	r3, [r4, #681]
+ 129 00e8 FFF7FEFF 		bl	USB_DevDisconnect
+ 130              	.L3:
+ 131 00ec 2846     		mov	r0, r5
+ 132 00ee 07B0     		add	sp, sp, #28
+ 133              		@ sp needed
+ 134 00f0 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 136              		.section	.text.HAL_PCD_MspDeInit,"ax",%progbits
+ 137              		.align	1
+ 138              		.weak	HAL_PCD_MspDeInit
+ 139              		.syntax unified
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.fpu softvfp
+ 144              	HAL_PCD_MspDeInit:
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+ 148 0000 7047     		bx	lr
+ 150              		.section	.text.HAL_PCD_DeInit,"ax",%progbits
+ 151              		.align	1
+ 152              		.global	HAL_PCD_DeInit
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.fpu softvfp
+ 158              	HAL_PCD_DeInit:
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161 0000 38B5     		push	{r3, r4, r5, lr}
+ 162 0002 0446     		mov	r4, r0
+ 163 0004 10B9     		cbnz	r0, .L14
+ 164              	.L16:
+ 165 0006 0125     		movs	r5, #1
+ 166              	.L15:
+ 167 0008 2846     		mov	r0, r5
+ 168 000a 38BD     		pop	{r3, r4, r5, pc}
+ 169              	.L14:
+ 170 000c 0323     		movs	r3, #3
+ 171 000e 80F8A932 		strb	r3, [r0, #681]
+ 172 0012 0068     		ldr	r0, [r0]
+ 173 0014 FFF7FEFF 		bl	USB_StopDevice
+ 174 0018 0546     		mov	r5, r0
+ 175 001a 0028     		cmp	r0, #0
+ 176 001c F3D1     		bne	.L16
+ 177 001e 2046     		mov	r0, r4
+ 178 0020 FFF7FEFF 		bl	HAL_PCD_MspDeInit
+ARM GAS  /tmp/ccUiU9el.s 			page 4
+
+
+ 179 0024 84F8A952 		strb	r5, [r4, #681]
+ 180 0028 EEE7     		b	.L15
+ 182              		.section	.text.HAL_PCD_Start,"ax",%progbits
+ 183              		.align	1
+ 184              		.global	HAL_PCD_Start
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.fpu softvfp
+ 190              	HAL_PCD_Start:
+ 191              		@ args = 0, pretend = 0, frame = 0
+ 192              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193 0000 38B5     		push	{r3, r4, r5, lr}
+ 194 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
+ 195 0006 0446     		mov	r4, r0
+ 196 0008 012B     		cmp	r3, #1
+ 197 000a 10D0     		beq	.L19
+ 198 000c 0125     		movs	r5, #1
+ 199 000e 80F8A852 		strb	r5, [r0, #680]
+ 200 0012 0068     		ldr	r0, [r0]
+ 201 0014 FFF7FEFF 		bl	USB_EnableGlobalInt
+ 202 0018 2946     		mov	r1, r5
+ 203 001a 2046     		mov	r0, r4
+ 204 001c FFF7FEFF 		bl	HAL_PCDEx_SetConnectionState
+ 205 0020 2068     		ldr	r0, [r4]
+ 206 0022 FFF7FEFF 		bl	USB_DevConnect
+ 207 0026 0020     		movs	r0, #0
+ 208 0028 84F8A802 		strb	r0, [r4, #680]
+ 209              	.L18:
+ 210 002c 38BD     		pop	{r3, r4, r5, pc}
+ 211              	.L19:
+ 212 002e 0220     		movs	r0, #2
+ 213 0030 FCE7     		b	.L18
+ 215              		.section	.text.HAL_PCD_Stop,"ax",%progbits
+ 216              		.align	1
+ 217              		.global	HAL_PCD_Stop
+ 218              		.syntax unified
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.fpu softvfp
+ 223              	HAL_PCD_Stop:
+ 224              		@ args = 0, pretend = 0, frame = 0
+ 225              		@ frame_needed = 0, uses_anonymous_args = 0
+ 226 0000 10B5     		push	{r4, lr}
+ 227 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
+ 228 0006 0446     		mov	r4, r0
+ 229 0008 012B     		cmp	r3, #1
+ 230 000a 10D0     		beq	.L22
+ 231 000c 0123     		movs	r3, #1
+ 232 000e 80F8A832 		strb	r3, [r0, #680]
+ 233 0012 0068     		ldr	r0, [r0]
+ 234 0014 FFF7FEFF 		bl	USB_DisableGlobalInt
+ 235 0018 0021     		movs	r1, #0
+ 236 001a 2046     		mov	r0, r4
+ 237 001c FFF7FEFF 		bl	HAL_PCDEx_SetConnectionState
+ 238 0020 2068     		ldr	r0, [r4]
+ 239 0022 FFF7FEFF 		bl	USB_DevDisconnect
+ARM GAS  /tmp/ccUiU9el.s 			page 5
+
+
+ 240 0026 0020     		movs	r0, #0
+ 241 0028 84F8A802 		strb	r0, [r4, #680]
+ 242              	.L21:
+ 243 002c 10BD     		pop	{r4, pc}
+ 244              	.L22:
+ 245 002e 0220     		movs	r0, #2
+ 246 0030 FCE7     		b	.L21
+ 248              		.section	.text.HAL_PCD_WKUP_IRQHandler,"ax",%progbits
+ 249              		.align	1
+ 250              		.global	HAL_PCD_WKUP_IRQHandler
+ 251              		.syntax unified
+ 252              		.thumb
+ 253              		.thumb_func
+ 254              		.fpu softvfp
+ 256              	HAL_PCD_WKUP_IRQHandler:
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259              		@ link register save eliminated.
+ 260 0000 4FF48022 		mov	r2, #262144
+ 261 0004 014B     		ldr	r3, .L24
+ 262 0006 5A61     		str	r2, [r3, #20]
+ 263 0008 7047     		bx	lr
+ 264              	.L25:
+ 265 000a 00BF     		.align	2
+ 266              	.L24:
+ 267 000c 00040140 		.word	1073808384
+ 269              		.section	.text.HAL_PCD_DataOutStageCallback,"ax",%progbits
+ 270              		.align	1
+ 271              		.weak	HAL_PCD_DataOutStageCallback
+ 272              		.syntax unified
+ 273              		.thumb
+ 274              		.thumb_func
+ 275              		.fpu softvfp
+ 277              	HAL_PCD_DataOutStageCallback:
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		@ link register save eliminated.
+ 281 0000 7047     		bx	lr
+ 283              		.section	.text.HAL_PCD_DataInStageCallback,"ax",%progbits
+ 284              		.align	1
+ 285              		.weak	HAL_PCD_DataInStageCallback
+ 286              		.syntax unified
+ 287              		.thumb
+ 288              		.thumb_func
+ 289              		.fpu softvfp
+ 291              	HAL_PCD_DataInStageCallback:
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294              		@ link register save eliminated.
+ 295 0000 7047     		bx	lr
+ 297              		.section	.text.HAL_PCD_SetupStageCallback,"ax",%progbits
+ 298              		.align	1
+ 299              		.weak	HAL_PCD_SetupStageCallback
+ 300              		.syntax unified
+ 301              		.thumb
+ 302              		.thumb_func
+ 303              		.fpu softvfp
+ARM GAS  /tmp/ccUiU9el.s 			page 6
+
+
+ 305              	HAL_PCD_SetupStageCallback:
+ 306              		@ args = 0, pretend = 0, frame = 0
+ 307              		@ frame_needed = 0, uses_anonymous_args = 0
+ 308              		@ link register save eliminated.
+ 309 0000 7047     		bx	lr
+ 311              		.section	.text.HAL_PCD_SOFCallback,"ax",%progbits
+ 312              		.align	1
+ 313              		.weak	HAL_PCD_SOFCallback
+ 314              		.syntax unified
+ 315              		.thumb
+ 316              		.thumb_func
+ 317              		.fpu softvfp
+ 319              	HAL_PCD_SOFCallback:
+ 320              		@ args = 0, pretend = 0, frame = 0
+ 321              		@ frame_needed = 0, uses_anonymous_args = 0
+ 322              		@ link register save eliminated.
+ 323 0000 7047     		bx	lr
+ 325              		.section	.text.HAL_PCD_ResetCallback,"ax",%progbits
+ 326              		.align	1
+ 327              		.weak	HAL_PCD_ResetCallback
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.fpu softvfp
+ 333              	HAL_PCD_ResetCallback:
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 337 0000 7047     		bx	lr
+ 339              		.section	.text.HAL_PCD_SuspendCallback,"ax",%progbits
+ 340              		.align	1
+ 341              		.weak	HAL_PCD_SuspendCallback
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.fpu softvfp
+ 347              	HAL_PCD_SuspendCallback:
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350              		@ link register save eliminated.
+ 351 0000 7047     		bx	lr
+ 353              		.section	.text.HAL_PCD_ResumeCallback,"ax",%progbits
+ 354              		.align	1
+ 355              		.weak	HAL_PCD_ResumeCallback
+ 356              		.syntax unified
+ 357              		.thumb
+ 358              		.thumb_func
+ 359              		.fpu softvfp
+ 361              	HAL_PCD_ResumeCallback:
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 364              		@ link register save eliminated.
+ 365 0000 7047     		bx	lr
+ 367              		.section	.text.HAL_PCD_ISOOUTIncompleteCallback,"ax",%progbits
+ 368              		.align	1
+ 369              		.weak	HAL_PCD_ISOOUTIncompleteCallback
+ 370              		.syntax unified
+ARM GAS  /tmp/ccUiU9el.s 			page 7
+
+
+ 371              		.thumb
+ 372              		.thumb_func
+ 373              		.fpu softvfp
+ 375              	HAL_PCD_ISOOUTIncompleteCallback:
+ 376              		@ args = 0, pretend = 0, frame = 0
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378              		@ link register save eliminated.
+ 379 0000 7047     		bx	lr
+ 381              		.section	.text.HAL_PCD_ISOINIncompleteCallback,"ax",%progbits
+ 382              		.align	1
+ 383              		.weak	HAL_PCD_ISOINIncompleteCallback
+ 384              		.syntax unified
+ 385              		.thumb
+ 386              		.thumb_func
+ 387              		.fpu softvfp
+ 389              	HAL_PCD_ISOINIncompleteCallback:
+ 390              		@ args = 0, pretend = 0, frame = 0
+ 391              		@ frame_needed = 0, uses_anonymous_args = 0
+ 392              		@ link register save eliminated.
+ 393 0000 7047     		bx	lr
+ 395              		.section	.text.HAL_PCD_ConnectCallback,"ax",%progbits
+ 396              		.align	1
+ 397              		.weak	HAL_PCD_ConnectCallback
+ 398              		.syntax unified
+ 399              		.thumb
+ 400              		.thumb_func
+ 401              		.fpu softvfp
+ 403              	HAL_PCD_ConnectCallback:
+ 404              		@ args = 0, pretend = 0, frame = 0
+ 405              		@ frame_needed = 0, uses_anonymous_args = 0
+ 406              		@ link register save eliminated.
+ 407 0000 7047     		bx	lr
+ 409              		.section	.text.HAL_PCD_DisconnectCallback,"ax",%progbits
+ 410              		.align	1
+ 411              		.weak	HAL_PCD_DisconnectCallback
+ 412              		.syntax unified
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.fpu softvfp
+ 417              	HAL_PCD_DisconnectCallback:
+ 418              		@ args = 0, pretend = 0, frame = 0
+ 419              		@ frame_needed = 0, uses_anonymous_args = 0
+ 420              		@ link register save eliminated.
+ 421 0000 7047     		bx	lr
+ 423              		.section	.text.HAL_PCD_DevConnect,"ax",%progbits
+ 424              		.align	1
+ 425              		.global	HAL_PCD_DevConnect
+ 426              		.syntax unified
+ 427              		.thumb
+ 428              		.thumb_func
+ 429              		.fpu softvfp
+ 431              	HAL_PCD_DevConnect:
+ 432              		@ args = 0, pretend = 0, frame = 0
+ 433              		@ frame_needed = 0, uses_anonymous_args = 0
+ 434 0000 10B5     		push	{r4, lr}
+ 435 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
+ 436 0006 0446     		mov	r4, r0
+ARM GAS  /tmp/ccUiU9el.s 			page 8
+
+
+ 437 0008 012B     		cmp	r3, #1
+ 438 000a 0BD0     		beq	.L39
+ 439 000c 0121     		movs	r1, #1
+ 440 000e 80F8A812 		strb	r1, [r0, #680]
+ 441 0012 FFF7FEFF 		bl	HAL_PCDEx_SetConnectionState
+ 442 0016 2068     		ldr	r0, [r4]
+ 443 0018 FFF7FEFF 		bl	USB_DevConnect
+ 444 001c 0020     		movs	r0, #0
+ 445 001e 84F8A802 		strb	r0, [r4, #680]
+ 446              	.L38:
+ 447 0022 10BD     		pop	{r4, pc}
+ 448              	.L39:
+ 449 0024 0220     		movs	r0, #2
+ 450 0026 FCE7     		b	.L38
+ 452              		.section	.text.HAL_PCD_DevDisconnect,"ax",%progbits
+ 453              		.align	1
+ 454              		.global	HAL_PCD_DevDisconnect
+ 455              		.syntax unified
+ 456              		.thumb
+ 457              		.thumb_func
+ 458              		.fpu softvfp
+ 460              	HAL_PCD_DevDisconnect:
+ 461              		@ args = 0, pretend = 0, frame = 0
+ 462              		@ frame_needed = 0, uses_anonymous_args = 0
+ 463 0000 10B5     		push	{r4, lr}
+ 464 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
+ 465 0006 0446     		mov	r4, r0
+ 466 0008 012B     		cmp	r3, #1
+ 467 000a 0CD0     		beq	.L42
+ 468 000c 0123     		movs	r3, #1
+ 469 000e 0021     		movs	r1, #0
+ 470 0010 80F8A832 		strb	r3, [r0, #680]
+ 471 0014 FFF7FEFF 		bl	HAL_PCDEx_SetConnectionState
+ 472 0018 2068     		ldr	r0, [r4]
+ 473 001a FFF7FEFF 		bl	USB_DevDisconnect
+ 474 001e 0020     		movs	r0, #0
+ 475 0020 84F8A802 		strb	r0, [r4, #680]
+ 476              	.L41:
+ 477 0024 10BD     		pop	{r4, pc}
+ 478              	.L42:
+ 479 0026 0220     		movs	r0, #2
+ 480 0028 FCE7     		b	.L41
+ 482              		.section	.text.HAL_PCD_SetAddress,"ax",%progbits
+ 483              		.align	1
+ 484              		.global	HAL_PCD_SetAddress
+ 485              		.syntax unified
+ 486              		.thumb
+ 487              		.thumb_func
+ 488              		.fpu softvfp
+ 490              	HAL_PCD_SetAddress:
+ 491              		@ args = 0, pretend = 0, frame = 0
+ 492              		@ frame_needed = 0, uses_anonymous_args = 0
+ 493 0000 10B5     		push	{r4, lr}
+ 494 0002 90F8A822 		ldrb	r2, [r0, #680]	@ zero_extendqisi2
+ 495 0006 0446     		mov	r4, r0
+ 496 0008 012A     		cmp	r2, #1
+ 497 000a 0BD0     		beq	.L45
+ARM GAS  /tmp/ccUiU9el.s 			page 9
+
+
+ 498 000c 0122     		movs	r2, #1
+ 499 000e 80F82410 		strb	r1, [r0, #36]
+ 500 0012 80F8A822 		strb	r2, [r0, #680]
+ 501 0016 0068     		ldr	r0, [r0]
+ 502 0018 FFF7FEFF 		bl	USB_SetDevAddress
+ 503 001c 0020     		movs	r0, #0
+ 504 001e 84F8A802 		strb	r0, [r4, #680]
+ 505              	.L44:
+ 506 0022 10BD     		pop	{r4, pc}
+ 507              	.L45:
+ 508 0024 0220     		movs	r0, #2
+ 509 0026 FCE7     		b	.L44
+ 511              		.section	.text.HAL_PCD_IRQHandler,"ax",%progbits
+ 512              		.align	1
+ 513              		.global	HAL_PCD_IRQHandler
+ 514              		.syntax unified
+ 515              		.thumb
+ 516              		.thumb_func
+ 517              		.fpu softvfp
+ 519              	HAL_PCD_IRQHandler:
+ 520              		@ args = 0, pretend = 0, frame = 16
+ 521              		@ frame_needed = 0, uses_anonymous_args = 0
+ 522 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 523 0004 0446     		mov	r4, r0
+ 524 0006 85B0     		sub	sp, sp, #20
+ 525 0008 0068     		ldr	r0, [r0]
+ 526 000a FFF7FEFF 		bl	USB_ReadInterrupts
+ 527 000e 0104     		lsls	r1, r0, #16
+ 528 0010 09D5     		bpl	.L116
+ 529 0012 DFF80C93 		ldr	r9, .L209
+ 530 0016 DFF80C83 		ldr	r8, .L209+4
+ 531              	.L47:
+ 532 001a 2068     		ldr	r0, [r4]
+ 533 001c B0F84430 		ldrh	r3, [r0, #68]
+ 534 0020 1D04     		lsls	r5, r3, #16
+ 535 0022 00F1C180 		bmi	.L115
+ 536              	.L116:
+ 537 0026 2068     		ldr	r0, [r4]
+ 538 0028 FFF7FEFF 		bl	USB_ReadInterrupts
+ 539 002c 4205     		lsls	r2, r0, #21
+ 540 002e 0FD5     		bpl	.L49
+ 541 0030 2268     		ldr	r2, [r4]
+ 542 0032 2046     		mov	r0, r4
+ 543 0034 B2F84430 		ldrh	r3, [r2, #68]
+ 544 0038 23F48063 		bic	r3, r3, #1024
+ 545 003c 1B04     		lsls	r3, r3, #16
+ 546 003e 1B0C     		lsrs	r3, r3, #16
+ 547 0040 A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 548 0044 FFF7FEFF 		bl	HAL_PCD_ResetCallback
+ 549 0048 0021     		movs	r1, #0
+ 550 004a 2046     		mov	r0, r4
+ 551 004c FFF7FEFF 		bl	HAL_PCD_SetAddress
+ 552              	.L49:
+ 553 0050 2068     		ldr	r0, [r4]
+ 554 0052 FFF7FEFF 		bl	USB_ReadInterrupts
+ 555 0056 4104     		lsls	r1, r0, #17
+ 556 0058 08D5     		bpl	.L117
+ARM GAS  /tmp/ccUiU9el.s 			page 10
+
+
+ 557 005a 2268     		ldr	r2, [r4]
+ 558 005c B2F84430 		ldrh	r3, [r2, #68]
+ 559 0060 23F48043 		bic	r3, r3, #16384
+ 560 0064 1B04     		lsls	r3, r3, #16
+ 561 0066 1B0C     		lsrs	r3, r3, #16
+ 562 0068 A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 563              	.L117:
+ 564 006c 2068     		ldr	r0, [r4]
+ 565 006e FFF7FEFF 		bl	USB_ReadInterrupts
+ 566 0072 8204     		lsls	r2, r0, #18
+ 567 0074 08D5     		bpl	.L118
+ 568 0076 2268     		ldr	r2, [r4]
+ 569 0078 B2F84430 		ldrh	r3, [r2, #68]
+ 570 007c 23F40053 		bic	r3, r3, #8192
+ 571 0080 1B04     		lsls	r3, r3, #16
+ 572 0082 1B0C     		lsrs	r3, r3, #16
+ 573 0084 A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 574              	.L118:
+ 575 0088 2068     		ldr	r0, [r4]
+ 576 008a FFF7FEFF 		bl	USB_ReadInterrupts
+ 577 008e C304     		lsls	r3, r0, #19
+ 578 0090 1CD5     		bpl	.L119
+ 579 0092 2268     		ldr	r2, [r4]
+ 580 0094 2046     		mov	r0, r4
+ 581 0096 B2F84030 		ldrh	r3, [r2, #64]
+ 582 009a 23F00403 		bic	r3, r3, #4
+ 583 009e 1B04     		lsls	r3, r3, #16
+ 584 00a0 1B0C     		lsrs	r3, r3, #16
+ 585 00a2 A2F84030 		strh	r3, [r2, #64]	@ movhi
+ 586 00a6 B2F84030 		ldrh	r3, [r2, #64]
+ 587 00aa 23F00803 		bic	r3, r3, #8
+ 588 00ae 1B04     		lsls	r3, r3, #16
+ 589 00b0 1B0C     		lsrs	r3, r3, #16
+ 590 00b2 A2F84030 		strh	r3, [r2, #64]	@ movhi
+ 591 00b6 FFF7FEFF 		bl	HAL_PCD_ResumeCallback
+ 592 00ba 2268     		ldr	r2, [r4]
+ 593 00bc B2F84430 		ldrh	r3, [r2, #68]
+ 594 00c0 23F48053 		bic	r3, r3, #4096
+ 595 00c4 1B04     		lsls	r3, r3, #16
+ 596 00c6 1B0C     		lsrs	r3, r3, #16
+ 597 00c8 A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 598              	.L119:
+ 599 00cc 2068     		ldr	r0, [r4]
+ 600 00ce FFF7FEFF 		bl	USB_ReadInterrupts
+ 601 00d2 0705     		lsls	r7, r0, #20
+ 602 00d4 46D5     		bpl	.L120
+ 603 00d6 6846     		mov	r0, sp
+ 604 00d8 2368     		ldr	r3, [r4]
+ 605 00da 0646     		mov	r6, r0
+ 606 00dc 1946     		mov	r1, r3
+ 607 00de 1A46     		mov	r2, r3
+ 608 00e0 03F12005 		add	r5, r3, #32
+ 609              	.L121:
+ 610 00e4 32F8047B 		ldrh	r7, [r2], #4
+ 611 00e8 9542     		cmp	r5, r2
+ 612 00ea 26F8027B 		strh	r7, [r6], #2	@ movhi
+ 613 00ee F9D1     		bne	.L121
+ARM GAS  /tmp/ccUiU9el.s 			page 11
+
+
+ 614 00f0 B3F84020 		ldrh	r2, [r3, #64]
+ 615 00f4 92B2     		uxth	r2, r2
+ 616 00f6 42F00102 		orr	r2, r2, #1
+ 617 00fa A3F84020 		strh	r2, [r3, #64]	@ movhi
+ 618 00fe B3F84020 		ldrh	r2, [r3, #64]
+ 619 0102 22F00102 		bic	r2, r2, #1
+ 620 0106 1204     		lsls	r2, r2, #16
+ 621 0108 120C     		lsrs	r2, r2, #16
+ 622 010a A3F84020 		strh	r2, [r3, #64]	@ movhi
+ 623              	.L122:
+ 624 010e B3F84420 		ldrh	r2, [r3, #68]
+ 625 0112 5605     		lsls	r6, r2, #21
+ 626 0114 FBD5     		bpl	.L122
+ 627 0116 B3F84420 		ldrh	r2, [r3, #68]
+ 628 011a 22F48062 		bic	r2, r2, #1024
+ 629 011e 1204     		lsls	r2, r2, #16
+ 630 0120 120C     		lsrs	r2, r2, #16
+ 631 0122 A3F84420 		strh	r2, [r3, #68]	@ movhi
+ 632              	.L123:
+ 633 0126 30F8022B 		ldrh	r2, [r0], #2
+ 634 012a 21F8042B 		strh	r2, [r1], #4	@ movhi
+ 635 012e 8D42     		cmp	r5, r1
+ 636 0130 F9D1     		bne	.L123
+ 637 0132 B3F84020 		ldrh	r2, [r3, #64]
+ 638 0136 2046     		mov	r0, r4
+ 639 0138 92B2     		uxth	r2, r2
+ 640 013a 42F00802 		orr	r2, r2, #8
+ 641 013e A3F84020 		strh	r2, [r3, #64]	@ movhi
+ 642 0142 B3F84420 		ldrh	r2, [r3, #68]
+ 643 0146 22F40062 		bic	r2, r2, #2048
+ 644 014a 1204     		lsls	r2, r2, #16
+ 645 014c 120C     		lsrs	r2, r2, #16
+ 646 014e A3F84420 		strh	r2, [r3, #68]	@ movhi
+ 647 0152 B3F84020 		ldrh	r2, [r3, #64]
+ 648 0156 92B2     		uxth	r2, r2
+ 649 0158 42F00402 		orr	r2, r2, #4
+ 650 015c A3F84020 		strh	r2, [r3, #64]	@ movhi
+ 651 0160 FFF7FEFF 		bl	HAL_PCD_SuspendCallback
+ 652              	.L120:
+ 653 0164 2068     		ldr	r0, [r4]
+ 654 0166 FFF7FEFF 		bl	USB_ReadInterrupts
+ 655 016a 8205     		lsls	r2, r0, #22
+ 656 016c 0BD5     		bpl	.L124
+ 657 016e 2268     		ldr	r2, [r4]
+ 658 0170 2046     		mov	r0, r4
+ 659 0172 B2F84430 		ldrh	r3, [r2, #68]
+ 660 0176 23F40073 		bic	r3, r3, #512
+ 661 017a 1B04     		lsls	r3, r3, #16
+ 662 017c 1B0C     		lsrs	r3, r3, #16
+ 663 017e A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 664 0182 FFF7FEFF 		bl	HAL_PCD_SOFCallback
+ 665              	.L124:
+ 666 0186 2068     		ldr	r0, [r4]
+ 667 0188 FFF7FEFF 		bl	USB_ReadInterrupts
+ 668 018c C305     		lsls	r3, r0, #23
+ 669 018e 08D5     		bpl	.L46
+ 670 0190 2268     		ldr	r2, [r4]
+ARM GAS  /tmp/ccUiU9el.s 			page 12
+
+
+ 671 0192 B2F84430 		ldrh	r3, [r2, #68]
+ 672 0196 23F48073 		bic	r3, r3, #256
+ 673 019a 1B04     		lsls	r3, r3, #16
+ 674 019c 1B0C     		lsrs	r3, r3, #16
+ 675 019e A2F84430 		strh	r3, [r2, #68]	@ movhi
+ 676              	.L46:
+ 677 01a2 05B0     		add	sp, sp, #20
+ 678              		@ sp needed
+ 679 01a4 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 680              	.L115:
+ 681 01a8 B0F84460 		ldrh	r6, [r0, #68]
+ 682 01ac B1B2     		uxth	r1, r6
+ 683 01ae 16F00F06 		ands	r6, r6, #15
+ 684 01b2 40F0C180 		bne	.L50
+ 685 01b6 11F01001 		ands	r1, r1, #16
+ 686 01ba 2DD1     		bne	.L51
+ 687 01bc 0388     		ldrh	r3, [r0]
+ 688 01be 9BB2     		uxth	r3, r3
+ 689 01c0 03EA0903 		and	r3, r3, r9
+ 690 01c4 43F40043 		orr	r3, r3, #32768
+ 691 01c8 0380     		strh	r3, [r0]	@ movhi
+ 692 01ca B0F85030 		ldrh	r3, [r0, #80]
+ 693 01ce 94F82820 		ldrb	r2, [r4, #40]	@ zero_extendqisi2
+ 694 01d2 9BB2     		uxth	r3, r3
+ 695 01d4 03EBC203 		add	r3, r3, r2, lsl #3
+ 696 01d8 00EB4300 		add	r0, r0, r3, lsl #1
+ 697 01dc B0F80434 		ldrh	r3, [r0, #1028]
+ 698 01e0 E26B     		ldr	r2, [r4, #60]
+ 699 01e2 C3F30903 		ubfx	r3, r3, #0, #10
+ 700 01e6 6364     		str	r3, [r4, #68]
+ 701 01e8 1344     		add	r3, r3, r2
+ 702 01ea E363     		str	r3, [r4, #60]
+ 703 01ec 2046     		mov	r0, r4
+ 704 01ee FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
+ 705 01f2 94F82430 		ldrb	r3, [r4, #36]	@ zero_extendqisi2
+ 706 01f6 002B     		cmp	r3, #0
+ 707 01f8 3FF40FAF 		beq	.L47
+ 708 01fc 226C     		ldr	r2, [r4, #64]
+ 709 01fe 002A     		cmp	r2, #0
+ 710 0200 7FF40BAF 		bne	.L47
+ 711 0204 94F82430 		ldrb	r3, [r4, #36]	@ zero_extendqisi2
+ 712 0208 2168     		ldr	r1, [r4]
+ 713 020a 43F08003 		orr	r3, r3, #128
+ 714 020e A1F84C30 		strh	r3, [r1, #76]	@ movhi
+ 715 0212 84F82420 		strb	r2, [r4, #36]
+ 716 0216 00E7     		b	.L47
+ 717              	.L51:
+ 718 0218 0588     		ldrh	r5, [r0]
+ 719 021a ABB2     		uxth	r3, r5
+ 720 021c 15F40065 		ands	r5, r5, #2048
+ 721 0220 21D0     		beq	.L55
+ 722 0222 B0F85030 		ldrh	r3, [r0, #80]
+ 723 0226 94F86821 		ldrb	r2, [r4, #360]	@ zero_extendqisi2
+ 724 022a 9BB2     		uxth	r3, r3
+ 725 022c 03EBC203 		add	r3, r3, r2, lsl #3
+ 726 0230 00EB4303 		add	r3, r0, r3, lsl #1
+ 727 0234 B3F80C34 		ldrh	r3, [r3, #1036]
+ARM GAS  /tmp/ccUiU9el.s 			page 13
+
+
+ 728 0238 B4F86E21 		ldrh	r2, [r4, #366]
+ 729 023c C3F30903 		ubfx	r3, r3, #0, #10
+ 730 0240 C4F88431 		str	r3, [r4, #388]
+ 731 0244 04F52C71 		add	r1, r4, #688
+ 732 0248 FFF7FEFF 		bl	USB_ReadPMA
+ 733 024c 2268     		ldr	r2, [r4]
+ 734 024e 2046     		mov	r0, r4
+ 735 0250 1388     		ldrh	r3, [r2]
+ 736 0252 23F07003 		bic	r3, r3, #112
+ 737 0256 1B05     		lsls	r3, r3, #20
+ 738 0258 1B0D     		lsrs	r3, r3, #20
+ 739 025a 43F08003 		orr	r3, r3, #128
+ 740 025e 1380     		strh	r3, [r2]	@ movhi
+ 741 0260 FFF7FEFF 		bl	HAL_PCD_SetupStageCallback
+ 742 0264 D9E6     		b	.L47
+ 743              	.L55:
+ 744 0266 1B04     		lsls	r3, r3, #16
+ 745 0268 7FF5D7AE 		bpl	.L47
+ 746 026c 0388     		ldrh	r3, [r0]
+ 747 026e 23F07003 		bic	r3, r3, #112
+ 748 0272 1B05     		lsls	r3, r3, #20
+ 749 0274 1B0D     		lsrs	r3, r3, #20
+ 750 0276 43F08003 		orr	r3, r3, #128
+ 751 027a 0380     		strh	r3, [r0]	@ movhi
+ 752 027c B0F85030 		ldrh	r3, [r0, #80]
+ 753 0280 94F86821 		ldrb	r2, [r4, #360]	@ zero_extendqisi2
+ 754 0284 9BB2     		uxth	r3, r3
+ 755 0286 03EBC203 		add	r3, r3, r2, lsl #3
+ 756 028a 00EB4303 		add	r3, r0, r3, lsl #1
+ 757 028e B3F80C34 		ldrh	r3, [r3, #1036]
+ 758 0292 C3F30903 		ubfx	r3, r3, #0, #10
+ 759 0296 C4F88431 		str	r3, [r4, #388]
+ 760 029a 8BB1     		cbz	r3, .L56
+ 761 029c D4F87C11 		ldr	r1, [r4, #380]
+ 762 02a0 71B1     		cbz	r1, .L56
+ 763 02a2 B4F86E21 		ldrh	r2, [r4, #366]
+ 764 02a6 FFF7FEFF 		bl	USB_ReadPMA
+ 765 02aa D4F87C31 		ldr	r3, [r4, #380]
+ 766 02ae D4F88421 		ldr	r2, [r4, #388]
+ 767 02b2 2946     		mov	r1, r5
+ 768 02b4 1344     		add	r3, r3, r2
+ 769 02b6 2046     		mov	r0, r4
+ 770 02b8 C4F87C31 		str	r3, [r4, #380]
+ 771 02bc FFF7FEFF 		bl	HAL_PCD_DataOutStageCallback
+ 772              	.L56:
+ 773 02c0 2168     		ldr	r1, [r4]
+ 774 02c2 0B88     		ldrh	r3, [r1]
+ 775 02c4 1F05     		lsls	r7, r3, #20
+ 776 02c6 3FF5A8AE 		bmi	.L47
+ 777 02ca B1F85030 		ldrh	r3, [r1, #80]
+ 778 02ce D4F87851 		ldr	r5, [r4, #376]
+ 779 02d2 9BB2     		uxth	r3, r3
+ 780 02d4 01F20C40 		addw	r0, r1, #1036
+ 781 02d8 CDB9     		cbnz	r5, .L57
+ 782 02da C25A     		ldrh	r2, [r0, r3]
+ 783 02dc 22F4F842 		bic	r2, r2, #31744
+ 784 02e0 1204     		lsls	r2, r2, #16
+ARM GAS  /tmp/ccUiU9el.s 			page 14
+
+
+ 785 02e2 120C     		lsrs	r2, r2, #16
+ 786 02e4 C252     		strh	r2, [r0, r3]	@ movhi
+ 787 02e6 C25A     		ldrh	r2, [r0, r3]
+ 788 02e8 92B2     		uxth	r2, r2
+ 789 02ea 42F40042 		orr	r2, r2, #32768
+ 790              	.L199:
+ 791 02ee C252     		strh	r2, [r0, r3]	@ movhi
+ 792 02f0 0B88     		ldrh	r3, [r1]
+ 793 02f2 23F48043 		bic	r3, r3, #16384
+ 794 02f6 23F07003 		bic	r3, r3, #112
+ 795 02fa 1B04     		lsls	r3, r3, #16
+ 796 02fc 1B0C     		lsrs	r3, r3, #16
+ 797 02fe 83F44053 		eor	r3, r3, #12288
+ 798 0302 43F40043 		orr	r3, r3, #32768
+ 799 0306 43F08003 		orr	r3, r3, #128
+ 800 030a 0B80     		strh	r3, [r1]	@ movhi
+ 801 030c 85E6     		b	.L47
+ 802              	.L57:
+ 803 030e 3E2D     		cmp	r5, #62
+ 804 0310 0AD8     		bhi	.L59
+ 805 0312 6A08     		lsrs	r2, r5, #1
+ 806 0314 EE07     		lsls	r6, r5, #31
+ 807 0316 48BF     		it	mi
+ 808 0318 0132     		addmi	r2, r2, #1
+ 809 031a 9202     		lsls	r2, r2, #10
+ 810              	.L200:
+ 811 031c 92B2     		uxth	r2, r2
+ 812 031e E6E7     		b	.L199
+ 813              	.L210:
+ 814              		.align	2
+ 815              	.L209:
+ 816 0320 0F8FFFFF 		.word	-28913
+ 817 0324 0080FFFF 		.word	-32768
+ 818              	.L59:
+ 819 0328 6A09     		lsrs	r2, r5, #5
+ 820 032a ED06     		lsls	r5, r5, #27
+ 821 032c 08BF     		it	eq
+ 822 032e 02F1FF32 		addeq	r2, r2, #-1
+ 823 0332 48EA8222 		orr	r2, r8, r2, lsl #10
+ 824 0336 F1E7     		b	.L200
+ 825              	.L50:
+ 826 0338 30F82630 		ldrh	r3, [r0, r6, lsl #2]
+ 827 033c 1904     		lsls	r1, r3, #16
+ 828 033e 9FB2     		uxth	r7, r3
+ 829 0340 40F1EE80 		bpl	.L62
+ 830 0344 2821     		movs	r1, #40
+ 831 0346 30F82630 		ldrh	r3, [r0, r6, lsl #2]
+ 832 034a 01FB0641 		mla	r1, r1, r6, r4
+ 833 034e 23F07003 		bic	r3, r3, #112
+ 834 0352 1B05     		lsls	r3, r3, #20
+ 835 0354 1B0D     		lsrs	r3, r3, #20
+ 836 0356 43F08003 		orr	r3, r3, #128
+ 837 035a 20F82630 		strh	r3, [r0, r6, lsl #2]	@ movhi
+ 838 035e 91F87431 		ldrb	r3, [r1, #372]	@ zero_extendqisi2
+ 839 0362 00F5806C 		add	ip, r0, #1024
+ 840 0366 B3B9     		cbnz	r3, .L63
+ 841 0368 B0F85030 		ldrh	r3, [r0, #80]
+ARM GAS  /tmp/ccUiU9el.s 			page 15
+
+
+ 842 036c 91F86821 		ldrb	r2, [r1, #360]	@ zero_extendqisi2
+ 843 0370 9BB2     		uxth	r3, r3
+ 844 0372 0633     		adds	r3, r3, #6
+ 845 0374 03EBC203 		add	r3, r3, r2, lsl #3
+ 846 0378 3CF81350 		ldrh	r5, [ip, r3, lsl #1]
+ 847 037c C5F30905 		ubfx	r5, r5, #0, #10
+ 848 0380 002D     		cmp	r5, #0
+ 849 0382 00F0B180 		beq	.L64
+ 850 0386 2B46     		mov	r3, r5
+ 851 0388 B1F86E21 		ldrh	r2, [r1, #366]
+ 852              	.L201:
+ 853 038c D1F87C11 		ldr	r1, [r1, #380]
+ 854 0390 FFF7FEFF 		bl	USB_ReadPMA
+ 855 0394 A8E0     		b	.L64
+ 856              	.L63:
+ 857 0396 91F86B21 		ldrb	r2, [r1, #363]	@ zero_extendqisi2
+ 858 039a 91F86831 		ldrb	r3, [r1, #360]	@ zero_extendqisi2
+ 859 039e 022A     		cmp	r2, #2
+ 860 03a0 40F08180 		bne	.L65
+ 861 03a4 B0F85050 		ldrh	r5, [r0, #80]
+ 862 03a8 17F4804A 		ands	r10, r7, #16384
+ 863 03ac D1F88021 		ldr	r2, [r1, #384]
+ 864 03b0 4FEAC30B 		lsl	fp, r3, #3
+ 865 03b4 ADB2     		uxth	r5, r5
+ 866 03b6 07F0400E 		and	lr, r7, #64
+ 867 03ba 3BD0     		beq	.L66
+ 868 03bc AB44     		add	fp, fp, r5
+ 869 03be 0BF1020B 		add	fp, fp, #2
+ 870 03c2 3CF81B50 		ldrh	r5, [ip, fp, lsl #1]
+ 871 03c6 C5F30905 		ubfx	r5, r5, #0, #10
+ 872 03ca 9542     		cmp	r5, r2
+ 873 03cc 13D9     		bls	.L67
+ 874 03ce 0022     		movs	r2, #0
+ 875 03d0 C1F88021 		str	r2, [r1, #384]
+ 876              	.L68:
+ 877 03d4 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 878 03d8 22F48042 		bic	r2, r2, #16384
+ 879 03dc 22F07002 		bic	r2, r2, #112
+ 880 03e0 1204     		lsls	r2, r2, #16
+ 881 03e2 120C     		lsrs	r2, r2, #16
+ 882 03e4 82F40052 		eor	r2, r2, #8192
+ 883 03e8 42F40042 		orr	r2, r2, #32768
+ 884 03ec 42F08002 		orr	r2, r2, #128
+ 885 03f0 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
+ 886 03f4 04E0     		b	.L69
+ 887              	.L67:
+ 888 03f6 521B     		subs	r2, r2, r5
+ 889 03f8 C1F88021 		str	r2, [r1, #384]
+ 890 03fc 002A     		cmp	r2, #0
+ 891 03fe E9D0     		beq	.L68
+ 892              	.L69:
+ 893 0400 BEF1000F 		cmp	lr, #0
+ 894 0404 0DD0     		beq	.L70
+ 895 0406 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 896 040a 22F4E042 		bic	r2, r2, #28672
+ 897 040e 22F07002 		bic	r2, r2, #112
+ 898 0412 1204     		lsls	r2, r2, #16
+ARM GAS  /tmp/ccUiU9el.s 			page 16
+
+
+ 899 0414 120C     		lsrs	r2, r2, #16
+ 900 0416 42F40042 		orr	r2, r2, #32768
+ 901 041a 42F0C002 		orr	r2, r2, #192
+ 902 041e 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
+ 903              	.L70:
+ 904 0422 002D     		cmp	r5, #0
+ 905 0424 60D0     		beq	.L64
+ 906 0426 2821     		movs	r1, #40
+ 907 0428 01FB0641 		mla	r1, r1, r6, r4
+ 908              	.L208:
+ 909 042c 2B46     		mov	r3, r5
+ 910 042e B1F87021 		ldrh	r2, [r1, #368]
+ 911 0432 ABE7     		b	.L201
+ 912              	.L66:
+ 913 0434 5D44     		add	r5, r5, fp
+ 914 0436 0635     		adds	r5, r5, #6
+ 915 0438 3CF81550 		ldrh	r5, [ip, r5, lsl #1]
+ 916 043c C5F30905 		ubfx	r5, r5, #0, #10
+ 917 0440 9542     		cmp	r5, r2
+ 918 0442 12D9     		bls	.L71
+ 919 0444 C1F880A1 		str	r10, [r1, #384]
+ 920              	.L72:
+ 921 0448 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 922 044c 22F48042 		bic	r2, r2, #16384
+ 923 0450 22F07002 		bic	r2, r2, #112
+ 924 0454 1204     		lsls	r2, r2, #16
+ 925 0456 120C     		lsrs	r2, r2, #16
+ 926 0458 82F40052 		eor	r2, r2, #8192
+ 927 045c 42F40042 		orr	r2, r2, #32768
+ 928 0460 42F08002 		orr	r2, r2, #128
+ 929 0464 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
+ 930 0468 04E0     		b	.L73
+ 931              	.L71:
+ 932 046a 521B     		subs	r2, r2, r5
+ 933 046c C1F88021 		str	r2, [r1, #384]
+ 934 0470 002A     		cmp	r2, #0
+ 935 0472 E9D0     		beq	.L72
+ 936              	.L73:
+ 937 0474 BEF1000F 		cmp	lr, #0
+ 938 0478 0DD1     		bne	.L74
+ 939 047a 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 940 047e 22F4E042 		bic	r2, r2, #28672
+ 941 0482 22F07002 		bic	r2, r2, #112
+ 942 0486 1204     		lsls	r2, r2, #16
+ 943 0488 120C     		lsrs	r2, r2, #16
+ 944 048a 42F40042 		orr	r2, r2, #32768
+ 945 048e 42F0C002 		orr	r2, r2, #192
+ 946 0492 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
+ 947              	.L74:
+ 948 0496 3DB3     		cbz	r5, .L64
+ 949 0498 2821     		movs	r1, #40
+ 950 049a 01FB0641 		mla	r1, r1, r6, r4
+ 951              	.L202:
+ 952 049e 2B46     		mov	r3, r5
+ 953 04a0 B1F87221 		ldrh	r2, [r1, #370]
+ 954 04a4 72E7     		b	.L201
+ 955              	.L65:
+ARM GAS  /tmp/ccUiU9el.s 			page 17
+
+
+ 956 04a6 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 957 04aa 22F4E042 		bic	r2, r2, #28672
+ 958 04ae 22F07002 		bic	r2, r2, #112
+ 959 04b2 1204     		lsls	r2, r2, #16
+ 960 04b4 120C     		lsrs	r2, r2, #16
+ 961 04b6 42F40042 		orr	r2, r2, #32768
+ 962 04ba 42F0C002 		orr	r2, r2, #192
+ 963 04be 20F82320 		strh	r2, [r0, r3, lsl #2]	@ movhi
+ 964 04c2 91F86831 		ldrb	r3, [r1, #360]	@ zero_extendqisi2
+ 965 04c6 30F82320 		ldrh	r2, [r0, r3, lsl #2]
+ 966 04ca DB00     		lsls	r3, r3, #3
+ 967 04cc 12F4804F 		tst	r2, #16384
+ 968 04d0 B0F85020 		ldrh	r2, [r0, #80]
+ 969 04d4 92B2     		uxth	r2, r2
+ 970 04d6 56D0     		beq	.L75
+ 971 04d8 0232     		adds	r2, r2, #2
+ 972 04da 1344     		add	r3, r3, r2
+ 973 04dc 3CF81350 		ldrh	r5, [ip, r3, lsl #1]
+ 974 04e0 C5F30905 		ubfx	r5, r5, #0, #10
+ 975 04e4 002D     		cmp	r5, #0
+ 976 04e6 A1D1     		bne	.L208
+ 977              	.L64:
+ 978 04e8 2821     		movs	r1, #40
+ 979 04ea 7143     		muls	r1, r6, r1
+ 980 04ec 6318     		adds	r3, r4, r1
+ 981 04ee D3F88421 		ldr	r2, [r3, #388]
+ 982 04f2 2A44     		add	r2, r2, r5
+ 983 04f4 C3F88421 		str	r2, [r3, #388]
+ 984 04f8 D3F87C21 		ldr	r2, [r3, #380]
+ 985 04fc 2A44     		add	r2, r2, r5
+ 986 04fe C3F87C21 		str	r2, [r3, #380]
+ 987 0502 D3F88021 		ldr	r2, [r3, #384]
+ 988 0506 1AB1     		cbz	r2, .L76
+ 989 0508 D3F87831 		ldr	r3, [r3, #376]
+ 990 050c 9D42     		cmp	r5, r3
+ 991 050e 43D2     		bcs	.L77
+ 992              	.L76:
+ 993 0510 2823     		movs	r3, #40
+ 994 0512 03FB0643 		mla	r3, r3, r6, r4
+ 995 0516 2046     		mov	r0, r4
+ 996 0518 93F86811 		ldrb	r1, [r3, #360]	@ zero_extendqisi2
+ 997 051c FFF7FEFF 		bl	HAL_PCD_DataOutStageCallback
+ 998              	.L62:
+ 999 0520 3A06     		lsls	r2, r7, #24
+ 1000 0522 7FF57AAD 		bpl	.L47
+ 1001 0526 2825     		movs	r5, #40
+ 1002 0528 2068     		ldr	r0, [r4]
+ 1003 052a 05FB0645 		mla	r5, r5, r6, r4
+ 1004 052e 30F82630 		ldrh	r3, [r0, r6, lsl #2]
+ 1005 0532 9BB2     		uxth	r3, r3
+ 1006 0534 03EA0903 		and	r3, r3, r9
+ 1007 0538 43F40043 		orr	r3, r3, #32768
+ 1008 053c 20F82630 		strh	r3, [r0, r6, lsl #2]	@ movhi
+ 1009 0540 95F82B30 		ldrb	r3, [r5, #43]	@ zero_extendqisi2
+ 1010 0544 95F82810 		ldrb	r1, [r5, #40]	@ zero_extendqisi2
+ 1011 0548 032B     		cmp	r3, #3
+ 1012 054a 04D0     		beq	.L78
+ARM GAS  /tmp/ccUiU9el.s 			page 18
+
+
+ 1013 054c 1BB1     		cbz	r3, .L78
+ 1014 054e 022B     		cmp	r3, #2
+ 1015 0550 3AD1     		bne	.L79
+ 1016 0552 FB05     		lsls	r3, r7, #23
+ 1017 0554 38D4     		bmi	.L79
+ 1018              	.L78:
+ 1019 0556 2825     		movs	r5, #40
+ 1020 0558 B0F85030 		ldrh	r3, [r0, #80]
+ 1021 055c 05FB0642 		mla	r2, r5, r6, r4
+ 1022 0560 9BB2     		uxth	r3, r3
+ 1023 0562 0233     		adds	r3, r3, #2
+ 1024 0564 03EBC103 		add	r3, r3, r1, lsl #3
+ 1025 0568 00EB4303 		add	r3, r0, r3, lsl #1
+ 1026 056c B3F800C4 		ldrh	ip, [r3, #1024]
+ 1027 0570 176C     		ldr	r7, [r2, #64]
+ 1028 0572 CCF3090C 		ubfx	ip, ip, #0, #10
+ 1029 0576 6745     		cmp	r7, ip
+ 1030 0578 15D8     		bhi	.L80
+ 1031 057a 0023     		movs	r3, #0
+ 1032 057c 1364     		str	r3, [r2, #64]
+ 1033              	.L81:
+ 1034 057e 2046     		mov	r0, r4
+ 1035 0580 FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
+ 1036 0584 49E5     		b	.L47
+ 1037              	.L75:
+ 1038 0586 0632     		adds	r2, r2, #6
+ 1039 0588 1344     		add	r3, r3, r2
+ 1040 058a 3CF81350 		ldrh	r5, [ip, r3, lsl #1]
+ 1041 058e C5F30905 		ubfx	r5, r5, #0, #10
+ 1042 0592 002D     		cmp	r5, #0
+ 1043 0594 A8D0     		beq	.L64
+ 1044 0596 82E7     		b	.L202
+ 1045              	.L77:
+ 1046 0598 01F5B471 		add	r1, r1, #360
+ 1047 059c 2068     		ldr	r0, [r4]
+ 1048 059e 2144     		add	r1, r1, r4
+ 1049 05a0 FFF7FEFF 		bl	USB_EPStartXfer
+ 1050 05a4 BCE7     		b	.L62
+ 1051              	.L80:
+ 1052 05a6 A7EB0C07 		sub	r7, r7, ip
+ 1053 05aa 1764     		str	r7, [r2, #64]
+ 1054 05ac 002F     		cmp	r7, #0
+ 1055 05ae E6D0     		beq	.L81
+ 1056 05b0 06FB0555 		mla	r5, r6, r5, r5
+ 1057 05b4 D16B     		ldr	r1, [r2, #60]
+ 1058 05b6 536C     		ldr	r3, [r2, #68]
+ 1059 05b8 6144     		add	r1, r1, ip
+ 1060 05ba 6344     		add	r3, r3, ip
+ 1061 05bc D163     		str	r1, [r2, #60]
+ 1062 05be 5364     		str	r3, [r2, #68]
+ 1063 05c0 6119     		adds	r1, r4, r5
+ 1064 05c2 FFF7FEFF 		bl	USB_EPStartXfer
+ 1065 05c6 28E5     		b	.L47
+ 1066              	.L79:
+ 1067 05c8 2823     		movs	r3, #40
+ 1068 05ca 03FB0643 		mla	r3, r3, r6, r4
+ 1069 05ce B0F850C0 		ldrh	ip, [r0, #80]
+ARM GAS  /tmp/ccUiU9el.s 			page 19
+
+
+ 1070 05d2 4FEAC10A 		lsl	r10, r1, #3
+ 1071 05d6 1FFA8CFC 		uxth	ip, ip
+ 1072 05da 17F04002 		ands	r2, r7, #64
+ 1073 05de 1B6C     		ldr	r3, [r3, #64]
+ 1074 05e0 00F5806E 		add	lr, r0, #1024
+ 1075 05e4 D444     		add	ip, ip, r10
+ 1076 05e6 07F48047 		and	r7, r7, #16384
+ 1077 05ea 00F0E480 		beq	.L83
+ 1078 05ee 0CF1020C 		add	ip, ip, #2
+ 1079 05f2 3EF81CC0 		ldrh	ip, [lr, ip, lsl #1]
+ 1080 05f6 2822     		movs	r2, #40
+ 1081 05f8 CCF3090C 		ubfx	ip, ip, #0, #10
+ 1082 05fc 9C45     		cmp	ip, r3
+ 1083 05fe 28BF     		it	cs
+ 1084 0600 0023     		movcs	r3, #0
+ 1085 0602 02FB0642 		mla	r2, r2, r6, r4
+ 1086 0606 38BF     		it	cc
+ 1087 0608 A3EB0C03 		subcc	r3, r3, ip
+ 1088 060c 1364     		str	r3, [r2, #64]
+ 1089 060e BFB2     		uxth	r7, r7
+ 1090 0610 002B     		cmp	r3, #0
+ 1091 0612 51D1     		bne	.L85
+ 1092 0614 95F82920 		ldrb	r2, [r5, #41]	@ zero_extendqisi2
+ 1093 0618 002A     		cmp	r2, #0
+ 1094 061a 3AD1     		bne	.L86
+ 1095 061c B0F85060 		ldrh	r6, [r0, #80]
+ 1096 0620 0B01     		lsls	r3, r1, #4
+ 1097 0622 B2B2     		uxth	r2, r6
+ 1098 0624 00F20446 		addw	r6, r0, #1028
+ 1099 0628 1644     		add	r6, r6, r2
+ 1100 062a F25A     		ldrh	r2, [r6, r3]
+ 1101 062c 22F4F842 		bic	r2, r2, #31744
+ 1102 0630 1204     		lsls	r2, r2, #16
+ 1103 0632 120C     		lsrs	r2, r2, #16
+ 1104 0634 F252     		strh	r2, [r6, r3]	@ movhi
+ 1105 0636 F25A     		ldrh	r2, [r6, r3]
+ 1106 0638 92B2     		uxth	r2, r2
+ 1107 063a 42F40042 		orr	r2, r2, #32768
+ 1108 063e F252     		strh	r2, [r6, r3]	@ movhi
+ 1109 0640 B0F85020 		ldrh	r2, [r0, #80]
+ 1110 0644 00F20C40 		addw	r0, r0, #1036
+ 1111 0648 92B2     		uxth	r2, r2
+ 1112 064a 1044     		add	r0, r0, r2
+ 1113 064c C25A     		ldrh	r2, [r0, r3]
+ 1114 064e 22F4F842 		bic	r2, r2, #31744
+ 1115 0652 1204     		lsls	r2, r2, #16
+ 1116 0654 120C     		lsrs	r2, r2, #16
+ 1117 0656 C252     		strh	r2, [r0, r3]	@ movhi
+ 1118 0658 C25A     		ldrh	r2, [r0, r3]
+ 1119 065a 92B2     		uxth	r2, r2
+ 1120 065c 42F40042 		orr	r2, r2, #32768
+ 1121 0660 C252     		strh	r2, [r0, r3]	@ movhi
+ 1122              	.L87:
+ 1123 0662 2046     		mov	r0, r4
+ 1124 0664 FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
+ 1125 0668 002F     		cmp	r7, #0
+ 1126 066a 00F0E280 		beq	.L89
+ARM GAS  /tmp/ccUiU9el.s 			page 20
+
+
+ 1127              	.L207:
+ 1128 066e 95F82810 		ldrb	r1, [r5, #40]	@ zero_extendqisi2
+ 1129 0672 2268     		ldr	r2, [r4]
+ 1130 0674 32F82130 		ldrh	r3, [r2, r1, lsl #2]
+ 1131 0678 23F4E043 		bic	r3, r3, #28672
+ 1132 067c 23F07003 		bic	r3, r3, #112
+ 1133 0680 1B04     		lsls	r3, r3, #16
+ 1134 0682 1B0C     		lsrs	r3, r3, #16
+ 1135 0684 43F44043 		orr	r3, r3, #49152
+ 1136 0688 43F08003 		orr	r3, r3, #128
+ 1137 068c 22F82130 		strh	r3, [r2, r1, lsl #2]	@ movhi
+ 1138 0690 CFE0     		b	.L89
+ 1139              	.L86:
+ 1140 0692 012A     		cmp	r2, #1
+ 1141 0694 E5D1     		bne	.L87
+ 1142 0696 B0F85060 		ldrh	r6, [r0, #80]
+ 1143 069a 0A01     		lsls	r2, r1, #4
+ 1144 069c 1FFA86FC 		uxth	ip, r6
+ 1145 06a0 00F20446 		addw	r6, r0, #1028
+ 1146 06a4 6644     		add	r6, r6, ip
+ 1147 06a6 B352     		strh	r3, [r6, r2]	@ movhi
+ 1148 06a8 B0F85060 		ldrh	r6, [r0, #80]
+ 1149 06ac 00F20C40 		addw	r0, r0, #1036
+ 1150 06b0 B6B2     		uxth	r6, r6
+ 1151 06b2 3044     		add	r0, r0, r6
+ 1152 06b4 8352     		strh	r3, [r0, r2]	@ movhi
+ 1153 06b6 D4E7     		b	.L87
+ 1154              	.L85:
+ 1155 06b8 6FB1     		cbz	r7, .L90
+ 1156 06ba 30F82130 		ldrh	r3, [r0, r1, lsl #2]
+ 1157 06be 23F4E043 		bic	r3, r3, #28672
+ 1158 06c2 23F07003 		bic	r3, r3, #112
+ 1159 06c6 1B04     		lsls	r3, r3, #16
+ 1160 06c8 1B0C     		lsrs	r3, r3, #16
+ 1161 06ca 43F44043 		orr	r3, r3, #49152
+ 1162 06ce 43F08003 		orr	r3, r3, #128
+ 1163 06d2 20F82130 		strh	r3, [r0, r1, lsl #2]	@ movhi
+ 1164              	.L90:
+ 1165 06d6 2823     		movs	r3, #40
+ 1166 06d8 03FB0643 		mla	r3, r3, r6, r4
+ 1167 06dc 93F84C20 		ldrb	r2, [r3, #76]	@ zero_extendqisi2
+ 1168 06e0 012A     		cmp	r2, #1
+ 1169 06e2 40F0A680 		bne	.L89
+ 1170 06e6 DA6B     		ldr	r2, [r3, #60]
+ 1171 06e8 D3F848E0 		ldr	lr, [r3, #72]
+ 1172 06ec 02EB0C07 		add	r7, r2, ip
+ 1173 06f0 5A6C     		ldr	r2, [r3, #68]
+ 1174 06f2 DF63     		str	r7, [r3, #60]
+ 1175 06f4 6244     		add	r2, r2, ip
+ 1176 06f6 5A64     		str	r2, [r3, #68]
+ 1177 06f8 9A6B     		ldr	r2, [r3, #56]
+ 1178 06fa 9645     		cmp	lr, r2
+ 1179 06fc 29D3     		bcc	.L92
+ 1180 06fe AEEB020E 		sub	lr, lr, r2
+ 1181 0702 C3F848E0 		str	lr, [r3, #72]
+ 1182              	.L93:
+ 1183 0706 95F829C0 		ldrb	ip, [r5, #41]	@ zero_extendqisi2
+ARM GAS  /tmp/ccUiU9el.s 			page 21
+
+
+ 1184 070a 93B2     		uxth	r3, r2
+ 1185 070c BCF1000F 		cmp	ip, #0
+ 1186 0710 44D1     		bne	.L95
+ 1187 0712 B0F850C0 		ldrh	ip, [r0, #80]
+ 1188 0716 00F2044E 		addw	lr, r0, #1028
+ 1189 071a 1FFA8CFC 		uxth	ip, ip
+ 1190 071e F444     		add	ip, ip, lr
+ 1191 0720 0901     		lsls	r1, r1, #4
+ 1192 0722 1ABB     		cbnz	r2, .L96
+ 1193 0724 3CF80120 		ldrh	r2, [ip, r1]
+ 1194 0728 22F4F842 		bic	r2, r2, #31744
+ 1195 072c 1204     		lsls	r2, r2, #16
+ 1196 072e 120C     		lsrs	r2, r2, #16
+ 1197 0730 2CF80120 		strh	r2, [ip, r1]	@ movhi
+ 1198 0734 3CF80120 		ldrh	r2, [ip, r1]
+ 1199 0738 92B2     		uxth	r2, r2
+ 1200 073a 42F40042 		orr	r2, r2, #32768
+ 1201 073e 2CF80120 		strh	r2, [ip, r1]	@ movhi
+ 1202              	.L97:
+ 1203 0742 2821     		movs	r1, #40
+ 1204 0744 01FB0646 		mla	r6, r1, r6, r4
+ 1205 0748 328E     		ldrh	r2, [r6, #48]
+ 1206              	.L206:
+ 1207 074a 3946     		mov	r1, r7
+ 1208 074c FFF7FEFF 		bl	USB_WritePMA
+ 1209 0750 6FE0     		b	.L89
+ 1210              	.L92:
+ 1211 0752 BEF1000F 		cmp	lr, #0
+ 1212 0756 03D1     		bne	.L94
+ 1213 0758 6246     		mov	r2, ip
+ 1214 075a 83F84CE0 		strb	lr, [r3, #76]
+ 1215 075e D2E7     		b	.L93
+ 1216              	.L94:
+ 1217 0760 0022     		movs	r2, #0
+ 1218 0762 83F84C20 		strb	r2, [r3, #76]
+ 1219 0766 9A64     		str	r2, [r3, #72]
+ 1220 0768 7246     		mov	r2, lr
+ 1221 076a CCE7     		b	.L93
+ 1222              	.L96:
+ 1223 076c 3E2A     		cmp	r2, #62
+ 1224 076e 0CD8     		bhi	.L98
+ 1225 0770 4FEA520E 		lsr	lr, r2, #1
+ 1226 0774 D207     		lsls	r2, r2, #31
+ 1227 0776 48BF     		it	mi
+ 1228 0778 0EF1010E 		addmi	lr, lr, #1
+ 1229 077c 4FEA8E2E 		lsl	lr, lr, #10
+ 1230              	.L203:
+ 1231 0780 1FFA8EFE 		uxth	lr, lr
+ 1232 0784 2CF801E0 		strh	lr, [ip, r1]	@ movhi
+ 1233 0788 DBE7     		b	.L97
+ 1234              	.L98:
+ 1235 078a 4FEA521E 		lsr	lr, r2, #5
+ 1236 078e D206     		lsls	r2, r2, #27
+ 1237 0790 08BF     		it	eq
+ 1238 0792 0EF1FF3E 		addeq	lr, lr, #-1
+ 1239 0796 48EA8E2E 		orr	lr, r8, lr, lsl #10
+ 1240 079a F1E7     		b	.L203
+ARM GAS  /tmp/ccUiU9el.s 			page 22
+
+
+ 1241              	.L95:
+ 1242 079c BCF1010F 		cmp	ip, #1
+ 1243 07a0 CFD1     		bne	.L97
+ 1244 07a2 B0F85020 		ldrh	r2, [r0, #80]
+ 1245 07a6 0901     		lsls	r1, r1, #4
+ 1246 07a8 1FFA82FC 		uxth	ip, r2
+ 1247 07ac 00F20442 		addw	r2, r0, #1028
+ 1248 07b0 6244     		add	r2, r2, ip
+ 1249 07b2 5352     		strh	r3, [r2, r1]	@ movhi
+ 1250 07b4 C5E7     		b	.L97
+ 1251              	.L83:
+ 1252 07b6 0CF1060C 		add	ip, ip, #6
+ 1253 07ba 3EF81CC0 		ldrh	ip, [lr, ip, lsl #1]
+ 1254 07be BFB2     		uxth	r7, r7
+ 1255 07c0 CCF3090C 		ubfx	ip, ip, #0, #10
+ 1256 07c4 9C45     		cmp	ip, r3
+ 1257 07c6 98BF     		it	ls
+ 1258 07c8 A3EB0C02 		subls	r2, r3, ip
+ 1259 07cc 2823     		movs	r3, #40
+ 1260 07ce 03FB0643 		mla	r3, r3, r6, r4
+ 1261 07d2 1A64     		str	r2, [r3, #64]
+ 1262 07d4 002A     		cmp	r2, #0
+ 1263 07d6 52D1     		bne	.L102
+ 1264 07d8 95F82930 		ldrb	r3, [r5, #41]	@ zero_extendqisi2
+ 1265 07dc 002B     		cmp	r3, #0
+ 1266 07de 3CD1     		bne	.L103
+ 1267 07e0 B0F85060 		ldrh	r6, [r0, #80]
+ 1268 07e4 0B01     		lsls	r3, r1, #4
+ 1269 07e6 B2B2     		uxth	r2, r6
+ 1270 07e8 00F20446 		addw	r6, r0, #1028
+ 1271 07ec 1644     		add	r6, r6, r2
+ 1272 07ee F25A     		ldrh	r2, [r6, r3]
+ 1273 07f0 22F4F842 		bic	r2, r2, #31744
+ 1274 07f4 1204     		lsls	r2, r2, #16
+ 1275 07f6 120C     		lsrs	r2, r2, #16
+ 1276 07f8 F252     		strh	r2, [r6, r3]	@ movhi
+ 1277 07fa F25A     		ldrh	r2, [r6, r3]
+ 1278 07fc 92B2     		uxth	r2, r2
+ 1279 07fe 42F40042 		orr	r2, r2, #32768
+ 1280 0802 F252     		strh	r2, [r6, r3]	@ movhi
+ 1281 0804 B0F85020 		ldrh	r2, [r0, #80]
+ 1282 0808 00F20C40 		addw	r0, r0, #1036
+ 1283 080c 92B2     		uxth	r2, r2
+ 1284 080e 1044     		add	r0, r0, r2
+ 1285 0810 C25A     		ldrh	r2, [r0, r3]
+ 1286 0812 22F4F842 		bic	r2, r2, #31744
+ 1287 0816 1204     		lsls	r2, r2, #16
+ 1288 0818 120C     		lsrs	r2, r2, #16
+ 1289 081a C252     		strh	r2, [r0, r3]	@ movhi
+ 1290 081c C25A     		ldrh	r2, [r0, r3]
+ 1291 081e 92B2     		uxth	r2, r2
+ 1292 0820 42F40042 		orr	r2, r2, #32768
+ 1293              	.L204:
+ 1294 0824 C252     		strh	r2, [r0, r3]	@ movhi
+ 1295              	.L104:
+ 1296 0826 2046     		mov	r0, r4
+ 1297 0828 FFF7FEFF 		bl	HAL_PCD_DataInStageCallback
+ARM GAS  /tmp/ccUiU9el.s 			page 23
+
+
+ 1298 082c 002F     		cmp	r7, #0
+ 1299 082e 3FF41EAF 		beq	.L207
+ 1300              	.L89:
+ 1301 0832 95F82810 		ldrb	r1, [r5, #40]	@ zero_extendqisi2
+ 1302 0836 2268     		ldr	r2, [r4]
+ 1303 0838 32F82130 		ldrh	r3, [r2, r1, lsl #2]
+ 1304 083c 9BB2     		uxth	r3, r3
+ 1305 083e 23F4E043 		bic	r3, r3, #28672
+ 1306 0842 23F04003 		bic	r3, r3, #64
+ 1307 0846 83F03003 		eor	r3, r3, #48
+ 1308 084a 43F40043 		orr	r3, r3, #32768
+ 1309 084e 43F08003 		orr	r3, r3, #128
+ 1310 0852 22F82130 		strh	r3, [r2, r1, lsl #2]	@ movhi
+ 1311 0856 FFF7E0BB 		b	.L47
+ 1312              	.L103:
+ 1313 085a 012B     		cmp	r3, #1
+ 1314 085c E3D1     		bne	.L104
+ 1315 085e B0F85060 		ldrh	r6, [r0, #80]
+ 1316 0862 0B01     		lsls	r3, r1, #4
+ 1317 0864 1FFA86FC 		uxth	ip, r6
+ 1318 0868 00F20446 		addw	r6, r0, #1028
+ 1319 086c 6644     		add	r6, r6, ip
+ 1320 086e F252     		strh	r2, [r6, r3]	@ movhi
+ 1321 0870 B0F85060 		ldrh	r6, [r0, #80]
+ 1322 0874 00F20C40 		addw	r0, r0, #1036
+ 1323 0878 B6B2     		uxth	r6, r6
+ 1324 087a 3044     		add	r0, r0, r6
+ 1325 087c D2E7     		b	.L204
+ 1326              	.L102:
+ 1327 087e 6FB9     		cbnz	r7, .L105
+ 1328 0880 30F82130 		ldrh	r3, [r0, r1, lsl #2]
+ 1329 0884 23F4E043 		bic	r3, r3, #28672
+ 1330 0888 23F07003 		bic	r3, r3, #112
+ 1331 088c 1B04     		lsls	r3, r3, #16
+ 1332 088e 1B0C     		lsrs	r3, r3, #16
+ 1333 0890 43F44043 		orr	r3, r3, #49152
+ 1334 0894 43F08003 		orr	r3, r3, #128
+ 1335 0898 20F82130 		strh	r3, [r0, r1, lsl #2]	@ movhi
+ 1336              	.L105:
+ 1337 089c 2822     		movs	r2, #40
+ 1338 089e 02FB0642 		mla	r2, r2, r6, r4
+ 1339 08a2 92F84C30 		ldrb	r3, [r2, #76]	@ zero_extendqisi2
+ 1340 08a6 012B     		cmp	r3, #1
+ 1341 08a8 C3D1     		bne	.L89
+ 1342 08aa 536C     		ldr	r3, [r2, #68]
+ 1343 08ac D76B     		ldr	r7, [r2, #60]
+ 1344 08ae 6344     		add	r3, r3, ip
+ 1345 08b0 D2F848E0 		ldr	lr, [r2, #72]
+ 1346 08b4 5364     		str	r3, [r2, #68]
+ 1347 08b6 936B     		ldr	r3, [r2, #56]
+ 1348 08b8 6744     		add	r7, r7, ip
+ 1349 08ba 9E45     		cmp	lr, r3
+ 1350 08bc D763     		str	r7, [r2, #60]
+ 1351 08be 22D3     		bcc	.L106
+ 1352 08c0 AEEB030E 		sub	lr, lr, r3
+ 1353 08c4 C2F848E0 		str	lr, [r2, #72]
+ 1354              	.L107:
+ARM GAS  /tmp/ccUiU9el.s 			page 24
+
+
+ 1355 08c8 95F82920 		ldrb	r2, [r5, #41]	@ zero_extendqisi2
+ 1356 08cc 1FFA83FC 		uxth	ip, r3
+ 1357 08d0 002A     		cmp	r2, #0
+ 1358 08d2 3DD1     		bne	.L109
+ 1359 08d4 B0F85020 		ldrh	r2, [r0, #80]
+ 1360 08d8 00F20C4E 		addw	lr, r0, #1036
+ 1361 08dc 92B2     		uxth	r2, r2
+ 1362 08de 7244     		add	r2, r2, lr
+ 1363 08e0 0901     		lsls	r1, r1, #4
+ 1364 08e2 EBB9     		cbnz	r3, .L110
+ 1365 08e4 535A     		ldrh	r3, [r2, r1]
+ 1366 08e6 23F4F843 		bic	r3, r3, #31744
+ 1367 08ea 1B04     		lsls	r3, r3, #16
+ 1368 08ec 1B0C     		lsrs	r3, r3, #16
+ 1369 08ee 5352     		strh	r3, [r2, r1]	@ movhi
+ 1370 08f0 535A     		ldrh	r3, [r2, r1]
+ 1371 08f2 9BB2     		uxth	r3, r3
+ 1372 08f4 43F40043 		orr	r3, r3, #32768
+ 1373 08f8 5352     		strh	r3, [r2, r1]	@ movhi
+ 1374              	.L111:
+ 1375 08fa 2821     		movs	r1, #40
+ 1376 08fc 01FB0646 		mla	r6, r1, r6, r4
+ 1377 0900 6346     		mov	r3, ip
+ 1378 0902 728E     		ldrh	r2, [r6, #50]
+ 1379 0904 21E7     		b	.L206
+ 1380              	.L106:
+ 1381 0906 BEF1000F 		cmp	lr, #0
+ 1382 090a 03D1     		bne	.L108
+ 1383 090c 6346     		mov	r3, ip
+ 1384 090e 82F84CE0 		strb	lr, [r2, #76]
+ 1385 0912 D9E7     		b	.L107
+ 1386              	.L108:
+ 1387 0914 0023     		movs	r3, #0
+ 1388 0916 9364     		str	r3, [r2, #72]
+ 1389 0918 82F84C30 		strb	r3, [r2, #76]
+ 1390 091c 7346     		mov	r3, lr
+ 1391 091e D3E7     		b	.L107
+ 1392              	.L110:
+ 1393 0920 3E2B     		cmp	r3, #62
+ 1394 0922 0CD8     		bhi	.L112
+ 1395 0924 4FEA530E 		lsr	lr, r3, #1
+ 1396 0928 DB07     		lsls	r3, r3, #31
+ 1397 092a 48BF     		it	mi
+ 1398 092c 0EF1010E 		addmi	lr, lr, #1
+ 1399 0930 4FEA8E2E 		lsl	lr, lr, #10
+ 1400              	.L205:
+ 1401 0934 1FFA8EFE 		uxth	lr, lr
+ 1402 0938 22F801E0 		strh	lr, [r2, r1]	@ movhi
+ 1403 093c DDE7     		b	.L111
+ 1404              	.L112:
+ 1405 093e 4FEA531E 		lsr	lr, r3, #5
+ 1406 0942 DB06     		lsls	r3, r3, #27
+ 1407 0944 08BF     		it	eq
+ 1408 0946 0EF1FF3E 		addeq	lr, lr, #-1
+ 1409 094a 48EA8E2E 		orr	lr, r8, lr, lsl #10
+ 1410 094e F1E7     		b	.L205
+ 1411              	.L109:
+ARM GAS  /tmp/ccUiU9el.s 			page 25
+
+
+ 1412 0950 012A     		cmp	r2, #1
+ 1413 0952 D2D1     		bne	.L111
+ 1414 0954 B0F85030 		ldrh	r3, [r0, #80]
+ 1415 0958 9AB2     		uxth	r2, r3
+ 1416 095a 00F20C43 		addw	r3, r0, #1036
+ 1417 095e 1344     		add	r3, r3, r2
+ 1418 0960 0A01     		lsls	r2, r1, #4
+ 1419 0962 23F802C0 		strh	ip, [r3, r2]	@ movhi
+ 1420 0966 C8E7     		b	.L111
+ 1422              		.section	.text.HAL_PCD_EP_Open,"ax",%progbits
+ 1423              		.align	1
+ 1424              		.global	HAL_PCD_EP_Open
+ 1425              		.syntax unified
+ 1426              		.thumb
+ 1427              		.thumb_func
+ 1428              		.fpu softvfp
+ 1430              	HAL_PCD_EP_Open:
+ 1431              		@ args = 0, pretend = 0, frame = 0
+ 1432              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1433 0000 11F0800F 		tst	r1, #128
+ 1434 0004 70B5     		push	{r4, r5, r6, lr}
+ 1435 0006 0546     		mov	r5, r0
+ 1436 0008 4FF02804 		mov	r4, #40
+ 1437 000c 01F00700 		and	r0, r1, #7
+ 1438 0010 1CD0     		beq	.L212
+ 1439 0012 0126     		movs	r6, #1
+ 1440 0014 00FB0441 		mla	r1, r0, r4, r4
+ 1441 0018 2944     		add	r1, r1, r5
+ 1442 001a 4E70     		strb	r6, [r1, #1]
+ 1443              	.L213:
+ 1444 001c 0A61     		str	r2, [r1, #16]
+ 1445 001e 4A78     		ldrb	r2, [r1, #1]	@ zero_extendqisi2
+ 1446 0020 0870     		strb	r0, [r1]
+ 1447 0022 CB70     		strb	r3, [r1, #3]
+ 1448 0024 02B1     		cbz	r2, .L214
+ 1449 0026 C881     		strh	r0, [r1, #14]	@ movhi
+ 1450              	.L214:
+ 1451 0028 022B     		cmp	r3, #2
+ 1452 002a 04BF     		itt	eq
+ 1453 002c 0023     		moveq	r3, #0
+ 1454 002e 0B71     		strbeq	r3, [r1, #4]
+ 1455 0030 95F8A832 		ldrb	r3, [r5, #680]	@ zero_extendqisi2
+ 1456 0034 012B     		cmp	r3, #1
+ 1457 0036 12D0     		beq	.L217
+ 1458 0038 0123     		movs	r3, #1
+ 1459 003a 2868     		ldr	r0, [r5]
+ 1460 003c 85F8A832 		strb	r3, [r5, #680]
+ 1461 0040 FFF7FEFF 		bl	USB_ActivateEndpoint
+ 1462 0044 0020     		movs	r0, #0
+ 1463 0046 85F8A802 		strb	r0, [r5, #680]
+ 1464              	.L216:
+ 1465 004a 70BD     		pop	{r4, r5, r6, pc}
+ 1466              	.L212:
+ 1467 004c 0026     		movs	r6, #0
+ 1468 004e 4443     		muls	r4, r0, r4
+ 1469 0050 04F5B471 		add	r1, r4, #360
+ 1470 0054 2C44     		add	r4, r4, r5
+ARM GAS  /tmp/ccUiU9el.s 			page 26
+
+
+ 1471 0056 2944     		add	r1, r1, r5
+ 1472 0058 84F86961 		strb	r6, [r4, #361]
+ 1473 005c DEE7     		b	.L213
+ 1474              	.L217:
+ 1475 005e 0220     		movs	r0, #2
+ 1476 0060 F3E7     		b	.L216
+ 1478              		.section	.text.HAL_PCD_EP_Close,"ax",%progbits
+ 1479              		.align	1
+ 1480              		.global	HAL_PCD_EP_Close
+ 1481              		.syntax unified
+ 1482              		.thumb
+ 1483              		.thumb_func
+ 1484              		.fpu softvfp
+ 1486              	HAL_PCD_EP_Close:
+ 1487              		@ args = 0, pretend = 0, frame = 0
+ 1488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1489 0000 11F0800F 		tst	r1, #128
+ 1490 0004 10B5     		push	{r4, lr}
+ 1491 0006 4FF02803 		mov	r3, #40
+ 1492 000a 0446     		mov	r4, r0
+ 1493 000c 01F00702 		and	r2, r1, #7
+ 1494 0010 13D0     		beq	.L222
+ 1495 0012 02FB0331 		mla	r1, r2, r3, r3
+ 1496 0016 0144     		add	r1, r1, r0
+ 1497 0018 0120     		movs	r0, #1
+ 1498 001a 4870     		strb	r0, [r1, #1]
+ 1499              	.L223:
+ 1500 001c 0A70     		strb	r2, [r1]
+ 1501 001e 94F8A832 		ldrb	r3, [r4, #680]	@ zero_extendqisi2
+ 1502 0022 012B     		cmp	r3, #1
+ 1503 0024 12D0     		beq	.L225
+ 1504 0026 0123     		movs	r3, #1
+ 1505 0028 2068     		ldr	r0, [r4]
+ 1506 002a 84F8A832 		strb	r3, [r4, #680]
+ 1507 002e FFF7FEFF 		bl	USB_DeactivateEndpoint
+ 1508 0032 0020     		movs	r0, #0
+ 1509 0034 84F8A802 		strb	r0, [r4, #680]
+ 1510              	.L224:
+ 1511 0038 10BD     		pop	{r4, pc}
+ 1512              	.L222:
+ 1513 003a 5343     		muls	r3, r2, r3
+ 1514 003c 03F5B471 		add	r1, r3, #360
+ 1515 0040 0144     		add	r1, r1, r0
+ 1516 0042 0344     		add	r3, r3, r0
+ 1517 0044 0020     		movs	r0, #0
+ 1518 0046 83F86901 		strb	r0, [r3, #361]
+ 1519 004a E7E7     		b	.L223
+ 1520              	.L225:
+ 1521 004c 0220     		movs	r0, #2
+ 1522 004e F3E7     		b	.L224
+ 1524              		.section	.text.HAL_PCD_EP_Receive,"ax",%progbits
+ 1525              		.align	1
+ 1526              		.global	HAL_PCD_EP_Receive
+ 1527              		.syntax unified
+ 1528              		.thumb
+ 1529              		.thumb_func
+ 1530              		.fpu softvfp
+ARM GAS  /tmp/ccUiU9el.s 			page 27
+
+
+ 1532              	HAL_PCD_EP_Receive:
+ 1533              		@ args = 0, pretend = 0, frame = 0
+ 1534              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1535 0000 70B5     		push	{r4, r5, r6, lr}
+ 1536 0002 01F00705 		and	r5, r1, #7
+ 1537 0006 2821     		movs	r1, #40
+ 1538 0008 0026     		movs	r6, #0
+ 1539 000a 6943     		muls	r1, r5, r1
+ 1540 000c 4418     		adds	r4, r0, r1
+ 1541 000e 01F5B471 		add	r1, r1, #360
+ 1542 0012 0144     		add	r1, r1, r0
+ 1543 0014 C4E95F23 		strd	r2, r3, [r4, #380]
+ 1544 0018 C4F88461 		str	r6, [r4, #388]
+ 1545 001c 84F86961 		strb	r6, [r4, #361]
+ 1546 0020 84F86851 		strb	r5, [r4, #360]
+ 1547 0024 0068     		ldr	r0, [r0]
+ 1548 0026 FFF7FEFF 		bl	USB_EPStartXfer
+ 1549 002a 3046     		mov	r0, r6
+ 1550 002c 70BD     		pop	{r4, r5, r6, pc}
+ 1552              		.section	.text.HAL_PCD_EP_GetRxCount,"ax",%progbits
+ 1553              		.align	1
+ 1554              		.global	HAL_PCD_EP_GetRxCount
+ 1555              		.syntax unified
+ 1556              		.thumb
+ 1557              		.thumb_func
+ 1558              		.fpu softvfp
+ 1560              	HAL_PCD_EP_GetRxCount:
+ 1561              		@ args = 0, pretend = 0, frame = 0
+ 1562              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1563              		@ link register save eliminated.
+ 1564 0000 2823     		movs	r3, #40
+ 1565 0002 01F00701 		and	r1, r1, #7
+ 1566 0006 03FB0100 		mla	r0, r3, r1, r0
+ 1567 000a D0F88401 		ldr	r0, [r0, #388]
+ 1568 000e 7047     		bx	lr
+ 1570              		.section	.text.HAL_PCD_EP_Transmit,"ax",%progbits
+ 1571              		.align	1
+ 1572              		.global	HAL_PCD_EP_Transmit
+ 1573              		.syntax unified
+ 1574              		.thumb
+ 1575              		.thumb_func
+ 1576              		.fpu softvfp
+ 1578              	HAL_PCD_EP_Transmit:
+ 1579              		@ args = 0, pretend = 0, frame = 0
+ 1580              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1581 0000 70B5     		push	{r4, r5, r6, lr}
+ 1582 0002 01F00705 		and	r5, r1, #7
+ 1583 0006 2821     		movs	r1, #40
+ 1584 0008 01FB0504 		mla	r4, r1, r5, r0
+ 1585 000c 0026     		movs	r6, #0
+ 1586 000e C4E90F23 		strd	r2, r3, [r4, #60]
+ 1587 0012 0122     		movs	r2, #1
+ 1588 0014 05FB0111 		mla	r1, r5, r1, r1
+ 1589 0018 84F84C20 		strb	r2, [r4, #76]
+ 1590 001c 0144     		add	r1, r1, r0
+ 1591 001e A364     		str	r3, [r4, #72]
+ 1592 0020 6664     		str	r6, [r4, #68]
+ARM GAS  /tmp/ccUiU9el.s 			page 28
+
+
+ 1593 0022 84F82920 		strb	r2, [r4, #41]
+ 1594 0026 84F82850 		strb	r5, [r4, #40]
+ 1595 002a 0068     		ldr	r0, [r0]
+ 1596 002c FFF7FEFF 		bl	USB_EPStartXfer
+ 1597 0030 3046     		mov	r0, r6
+ 1598 0032 70BD     		pop	{r4, r5, r6, pc}
+ 1600              		.section	.text.HAL_PCD_EP_SetStall,"ax",%progbits
+ 1601              		.align	1
+ 1602              		.global	HAL_PCD_EP_SetStall
+ 1603              		.syntax unified
+ 1604              		.thumb
+ 1605              		.thumb_func
+ 1606              		.fpu softvfp
+ 1608              	HAL_PCD_EP_SetStall:
+ 1609              		@ args = 0, pretend = 0, frame = 0
+ 1610              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1611 0000 38B5     		push	{r3, r4, r5, lr}
+ 1612 0002 4368     		ldr	r3, [r0, #4]
+ 1613 0004 01F00705 		and	r5, r1, #7
+ 1614 0008 9D42     		cmp	r5, r3
+ 1615 000a 0446     		mov	r4, r0
+ 1616 000c 28D8     		bhi	.L234
+ 1617 000e 11F0800F 		tst	r1, #128
+ 1618 0012 4FF02803 		mov	r3, #40
+ 1619 0016 1AD0     		beq	.L231
+ 1620 0018 0122     		movs	r2, #1
+ 1621 001a 05FB0331 		mla	r1, r5, r3, r3
+ 1622 001e 0144     		add	r1, r1, r0
+ 1623 0020 4A70     		strb	r2, [r1, #1]
+ 1624              	.L232:
+ 1625 0022 0123     		movs	r3, #1
+ 1626 0024 0D70     		strb	r5, [r1]
+ 1627 0026 8B70     		strb	r3, [r1, #2]
+ 1628 0028 94F8A822 		ldrb	r2, [r4, #680]	@ zero_extendqisi2
+ 1629 002c 9A42     		cmp	r2, r3
+ 1630 002e 19D0     		beq	.L235
+ 1631 0030 2068     		ldr	r0, [r4]
+ 1632 0032 84F8A832 		strb	r3, [r4, #680]
+ 1633 0036 FFF7FEFF 		bl	USB_EPSetStall
+ 1634 003a 25B9     		cbnz	r5, .L233
+ 1635 003c 2068     		ldr	r0, [r4]
+ 1636 003e 04F52C71 		add	r1, r4, #688
+ 1637 0042 FFF7FEFF 		bl	USB_EP0_OutStart
+ 1638              	.L233:
+ 1639 0046 0020     		movs	r0, #0
+ 1640 0048 84F8A802 		strb	r0, [r4, #680]
+ 1641              	.L230:
+ 1642 004c 38BD     		pop	{r3, r4, r5, pc}
+ 1643              	.L231:
+ 1644 004e 0022     		movs	r2, #0
+ 1645 0050 4B43     		muls	r3, r1, r3
+ 1646 0052 03F5B471 		add	r1, r3, #360
+ 1647 0056 0344     		add	r3, r3, r0
+ 1648 0058 0144     		add	r1, r1, r0
+ 1649 005a 83F86921 		strb	r2, [r3, #361]
+ 1650 005e E0E7     		b	.L232
+ 1651              	.L234:
+ARM GAS  /tmp/ccUiU9el.s 			page 29
+
+
+ 1652 0060 0120     		movs	r0, #1
+ 1653 0062 F3E7     		b	.L230
+ 1654              	.L235:
+ 1655 0064 0220     		movs	r0, #2
+ 1656 0066 F1E7     		b	.L230
+ 1658              		.section	.text.HAL_PCD_EP_ClrStall,"ax",%progbits
+ 1659              		.align	1
+ 1660              		.global	HAL_PCD_EP_ClrStall
+ 1661              		.syntax unified
+ 1662              		.thumb
+ 1663              		.thumb_func
+ 1664              		.fpu softvfp
+ 1666              	HAL_PCD_EP_ClrStall:
+ 1667              		@ args = 0, pretend = 0, frame = 0
+ 1668              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1669 0000 38B5     		push	{r3, r4, r5, lr}
+ 1670 0002 4368     		ldr	r3, [r0, #4]
+ 1671 0004 01F00F02 		and	r2, r1, #15
+ 1672 0008 9A42     		cmp	r2, r3
+ 1673 000a 0446     		mov	r4, r0
+ 1674 000c 25D8     		bhi	.L240
+ 1675 000e 11F0800F 		tst	r1, #128
+ 1676 0012 4FF02803 		mov	r3, #40
+ 1677 0016 01F00702 		and	r2, r1, #7
+ 1678 001a 15D0     		beq	.L238
+ 1679 001c 02FB0331 		mla	r1, r2, r3, r3
+ 1680 0020 0144     		add	r1, r1, r0
+ 1681 0022 0120     		movs	r0, #1
+ 1682 0024 4870     		strb	r0, [r1, #1]
+ 1683              	.L239:
+ 1684 0026 0025     		movs	r5, #0
+ 1685 0028 0A70     		strb	r2, [r1]
+ 1686 002a 8D70     		strb	r5, [r1, #2]
+ 1687 002c 94F8A832 		ldrb	r3, [r4, #680]	@ zero_extendqisi2
+ 1688 0030 012B     		cmp	r3, #1
+ 1689 0032 14D0     		beq	.L241
+ 1690 0034 0123     		movs	r3, #1
+ 1691 0036 2068     		ldr	r0, [r4]
+ 1692 0038 84F8A832 		strb	r3, [r4, #680]
+ 1693 003c FFF7FEFF 		bl	USB_EPClearStall
+ 1694 0040 2846     		mov	r0, r5
+ 1695 0042 84F8A852 		strb	r5, [r4, #680]
+ 1696              	.L237:
+ 1697 0046 38BD     		pop	{r3, r4, r5, pc}
+ 1698              	.L238:
+ 1699 0048 5343     		muls	r3, r2, r3
+ 1700 004a 03F5B471 		add	r1, r3, #360
+ 1701 004e 0144     		add	r1, r1, r0
+ 1702 0050 0344     		add	r3, r3, r0
+ 1703 0052 0020     		movs	r0, #0
+ 1704 0054 83F86901 		strb	r0, [r3, #361]
+ 1705 0058 E5E7     		b	.L239
+ 1706              	.L240:
+ 1707 005a 0120     		movs	r0, #1
+ 1708 005c F3E7     		b	.L237
+ 1709              	.L241:
+ 1710 005e 0220     		movs	r0, #2
+ARM GAS  /tmp/ccUiU9el.s 			page 30
+
+
+ 1711 0060 F1E7     		b	.L237
+ 1713              		.section	.text.HAL_PCD_EP_Flush,"ax",%progbits
+ 1714              		.align	1
+ 1715              		.global	HAL_PCD_EP_Flush
+ 1716              		.syntax unified
+ 1717              		.thumb
+ 1718              		.thumb_func
+ 1719              		.fpu softvfp
+ 1721              	HAL_PCD_EP_Flush:
+ 1722              		@ args = 0, pretend = 0, frame = 0
+ 1723              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1724 0000 10B5     		push	{r4, lr}
+ 1725 0002 90F8A832 		ldrb	r3, [r0, #680]	@ zero_extendqisi2
+ 1726 0006 0446     		mov	r4, r0
+ 1727 0008 012B     		cmp	r3, #1
+ 1728 000a 10D0     		beq	.L246
+ 1729 000c 0123     		movs	r3, #1
+ 1730 000e 80F8A832 		strb	r3, [r0, #680]
+ 1731 0012 0B06     		lsls	r3, r1, #24
+ 1732 0014 0068     		ldr	r0, [r0]
+ 1733 0016 07D5     		bpl	.L244
+ 1734 0018 01F00701 		and	r1, r1, #7
+ 1735 001c FFF7FEFF 		bl	USB_FlushTxFifo
+ 1736              	.L245:
+ 1737 0020 0020     		movs	r0, #0
+ 1738 0022 84F8A802 		strb	r0, [r4, #680]
+ 1739              	.L243:
+ 1740 0026 10BD     		pop	{r4, pc}
+ 1741              	.L244:
+ 1742 0028 FFF7FEFF 		bl	USB_FlushRxFifo
+ 1743 002c F8E7     		b	.L245
+ 1744              	.L246:
+ 1745 002e 0220     		movs	r0, #2
+ 1746 0030 F9E7     		b	.L243
+ 1748              		.section	.text.HAL_PCD_ActivateRemoteWakeup,"ax",%progbits
+ 1749              		.align	1
+ 1750              		.global	HAL_PCD_ActivateRemoteWakeup
+ 1751              		.syntax unified
+ 1752              		.thumb
+ 1753              		.thumb_func
+ 1754              		.fpu softvfp
+ 1756              	HAL_PCD_ActivateRemoteWakeup:
+ 1757              		@ args = 0, pretend = 0, frame = 0
+ 1758              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1759              		@ link register save eliminated.
+ 1760 0000 0068     		ldr	r0, [r0]
+ 1761 0002 FFF7FEBF 		b	USB_ActivateRemoteWakeup
+ 1763              		.section	.text.HAL_PCD_DeActivateRemoteWakeup,"ax",%progbits
+ 1764              		.align	1
+ 1765              		.global	HAL_PCD_DeActivateRemoteWakeup
+ 1766              		.syntax unified
+ 1767              		.thumb
+ 1768              		.thumb_func
+ 1769              		.fpu softvfp
+ 1771              	HAL_PCD_DeActivateRemoteWakeup:
+ 1772              		@ args = 0, pretend = 0, frame = 0
+ 1773              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccUiU9el.s 			page 31
+
+
+ 1774              		@ link register save eliminated.
+ 1775 0000 0068     		ldr	r0, [r0]
+ 1776 0002 FFF7FEBF 		b	USB_DeActivateRemoteWakeup
+ 1778              		.section	.text.HAL_PCD_GetState,"ax",%progbits
+ 1779              		.align	1
+ 1780              		.global	HAL_PCD_GetState
+ 1781              		.syntax unified
+ 1782              		.thumb
+ 1783              		.thumb_func
+ 1784              		.fpu softvfp
+ 1786              	HAL_PCD_GetState:
+ 1787              		@ args = 0, pretend = 0, frame = 0
+ 1788              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1789              		@ link register save eliminated.
+ 1790 0000 90F8A902 		ldrb	r0, [r0, #681]	@ zero_extendqisi2
+ 1791 0004 7047     		bx	lr
+ 1793              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccUiU9el.s 			page 32
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_pcd.c
+     /tmp/ccUiU9el.s:14     .text.HAL_PCD_MspInit:0000000000000000 $t
+     /tmp/ccUiU9el.s:22     .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+     /tmp/ccUiU9el.s:29     .text.HAL_PCD_Init:0000000000000000 $t
+     /tmp/ccUiU9el.s:36     .text.HAL_PCD_Init:0000000000000000 HAL_PCD_Init
+     /tmp/ccUiU9el.s:137    .text.HAL_PCD_MspDeInit:0000000000000000 $t
+     /tmp/ccUiU9el.s:144    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+     /tmp/ccUiU9el.s:151    .text.HAL_PCD_DeInit:0000000000000000 $t
+     /tmp/ccUiU9el.s:158    .text.HAL_PCD_DeInit:0000000000000000 HAL_PCD_DeInit
+     /tmp/ccUiU9el.s:183    .text.HAL_PCD_Start:0000000000000000 $t
+     /tmp/ccUiU9el.s:190    .text.HAL_PCD_Start:0000000000000000 HAL_PCD_Start
+     /tmp/ccUiU9el.s:216    .text.HAL_PCD_Stop:0000000000000000 $t
+     /tmp/ccUiU9el.s:223    .text.HAL_PCD_Stop:0000000000000000 HAL_PCD_Stop
+     /tmp/ccUiU9el.s:249    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 $t
+     /tmp/ccUiU9el.s:256    .text.HAL_PCD_WKUP_IRQHandler:0000000000000000 HAL_PCD_WKUP_IRQHandler
+     /tmp/ccUiU9el.s:267    .text.HAL_PCD_WKUP_IRQHandler:000000000000000c $d
+     /tmp/ccUiU9el.s:270    .text.HAL_PCD_DataOutStageCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:277    .text.HAL_PCD_DataOutStageCallback:0000000000000000 HAL_PCD_DataOutStageCallback
+     /tmp/ccUiU9el.s:284    .text.HAL_PCD_DataInStageCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:291    .text.HAL_PCD_DataInStageCallback:0000000000000000 HAL_PCD_DataInStageCallback
+     /tmp/ccUiU9el.s:298    .text.HAL_PCD_SetupStageCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:305    .text.HAL_PCD_SetupStageCallback:0000000000000000 HAL_PCD_SetupStageCallback
+     /tmp/ccUiU9el.s:312    .text.HAL_PCD_SOFCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:319    .text.HAL_PCD_SOFCallback:0000000000000000 HAL_PCD_SOFCallback
+     /tmp/ccUiU9el.s:326    .text.HAL_PCD_ResetCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:333    .text.HAL_PCD_ResetCallback:0000000000000000 HAL_PCD_ResetCallback
+     /tmp/ccUiU9el.s:340    .text.HAL_PCD_SuspendCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:347    .text.HAL_PCD_SuspendCallback:0000000000000000 HAL_PCD_SuspendCallback
+     /tmp/ccUiU9el.s:354    .text.HAL_PCD_ResumeCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:361    .text.HAL_PCD_ResumeCallback:0000000000000000 HAL_PCD_ResumeCallback
+     /tmp/ccUiU9el.s:368    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:375    .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 HAL_PCD_ISOOUTIncompleteCallback
+     /tmp/ccUiU9el.s:382    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:389    .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 HAL_PCD_ISOINIncompleteCallback
+     /tmp/ccUiU9el.s:396    .text.HAL_PCD_ConnectCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:403    .text.HAL_PCD_ConnectCallback:0000000000000000 HAL_PCD_ConnectCallback
+     /tmp/ccUiU9el.s:410    .text.HAL_PCD_DisconnectCallback:0000000000000000 $t
+     /tmp/ccUiU9el.s:417    .text.HAL_PCD_DisconnectCallback:0000000000000000 HAL_PCD_DisconnectCallback
+     /tmp/ccUiU9el.s:424    .text.HAL_PCD_DevConnect:0000000000000000 $t
+     /tmp/ccUiU9el.s:431    .text.HAL_PCD_DevConnect:0000000000000000 HAL_PCD_DevConnect
+     /tmp/ccUiU9el.s:453    .text.HAL_PCD_DevDisconnect:0000000000000000 $t
+     /tmp/ccUiU9el.s:460    .text.HAL_PCD_DevDisconnect:0000000000000000 HAL_PCD_DevDisconnect
+     /tmp/ccUiU9el.s:483    .text.HAL_PCD_SetAddress:0000000000000000 $t
+     /tmp/ccUiU9el.s:490    .text.HAL_PCD_SetAddress:0000000000000000 HAL_PCD_SetAddress
+     /tmp/ccUiU9el.s:512    .text.HAL_PCD_IRQHandler:0000000000000000 $t
+     /tmp/ccUiU9el.s:519    .text.HAL_PCD_IRQHandler:0000000000000000 HAL_PCD_IRQHandler
+     /tmp/ccUiU9el.s:816    .text.HAL_PCD_IRQHandler:0000000000000320 $d
+     /tmp/ccUiU9el.s:819    .text.HAL_PCD_IRQHandler:0000000000000328 $t
+     /tmp/ccUiU9el.s:1423   .text.HAL_PCD_EP_Open:0000000000000000 $t
+     /tmp/ccUiU9el.s:1430   .text.HAL_PCD_EP_Open:0000000000000000 HAL_PCD_EP_Open
+     /tmp/ccUiU9el.s:1479   .text.HAL_PCD_EP_Close:0000000000000000 $t
+     /tmp/ccUiU9el.s:1486   .text.HAL_PCD_EP_Close:0000000000000000 HAL_PCD_EP_Close
+     /tmp/ccUiU9el.s:1525   .text.HAL_PCD_EP_Receive:0000000000000000 $t
+     /tmp/ccUiU9el.s:1532   .text.HAL_PCD_EP_Receive:0000000000000000 HAL_PCD_EP_Receive
+     /tmp/ccUiU9el.s:1553   .text.HAL_PCD_EP_GetRxCount:0000000000000000 $t
+     /tmp/ccUiU9el.s:1560   .text.HAL_PCD_EP_GetRxCount:0000000000000000 HAL_PCD_EP_GetRxCount
+ARM GAS  /tmp/ccUiU9el.s 			page 33
+
+
+     /tmp/ccUiU9el.s:1571   .text.HAL_PCD_EP_Transmit:0000000000000000 $t
+     /tmp/ccUiU9el.s:1578   .text.HAL_PCD_EP_Transmit:0000000000000000 HAL_PCD_EP_Transmit
+     /tmp/ccUiU9el.s:1601   .text.HAL_PCD_EP_SetStall:0000000000000000 $t
+     /tmp/ccUiU9el.s:1608   .text.HAL_PCD_EP_SetStall:0000000000000000 HAL_PCD_EP_SetStall
+     /tmp/ccUiU9el.s:1659   .text.HAL_PCD_EP_ClrStall:0000000000000000 $t
+     /tmp/ccUiU9el.s:1666   .text.HAL_PCD_EP_ClrStall:0000000000000000 HAL_PCD_EP_ClrStall
+     /tmp/ccUiU9el.s:1714   .text.HAL_PCD_EP_Flush:0000000000000000 $t
+     /tmp/ccUiU9el.s:1721   .text.HAL_PCD_EP_Flush:0000000000000000 HAL_PCD_EP_Flush
+     /tmp/ccUiU9el.s:1749   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccUiU9el.s:1756   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 HAL_PCD_ActivateRemoteWakeup
+     /tmp/ccUiU9el.s:1764   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccUiU9el.s:1771   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 HAL_PCD_DeActivateRemoteWakeup
+     /tmp/ccUiU9el.s:1779   .text.HAL_PCD_GetState:0000000000000000 $t
+     /tmp/ccUiU9el.s:1786   .text.HAL_PCD_GetState:0000000000000000 HAL_PCD_GetState
+
+UNDEFINED SYMBOLS
+USB_DisableGlobalInt
+USB_CoreInit
+USB_SetCurrentMode
+USB_DevInit
+USB_DevDisconnect
+USB_StopDevice
+USB_EnableGlobalInt
+HAL_PCDEx_SetConnectionState
+USB_DevConnect
+USB_SetDevAddress
+USB_ReadInterrupts
+USB_ReadPMA
+USB_EPStartXfer
+USB_WritePMA
+USB_ActivateEndpoint
+USB_DeactivateEndpoint
+USB_EPSetStall
+USB_EP0_OutStart
+USB_EPClearStall
+USB_FlushTxFifo
+USB_FlushRxFifo
+USB_ActivateRemoteWakeup
+USB_DeActivateRemoteWakeup

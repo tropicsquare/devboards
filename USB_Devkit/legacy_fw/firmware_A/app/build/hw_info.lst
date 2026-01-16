@@ -1,0 +1,36 @@
+ARM GAS  /tmp/ccRM3dxV.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"hw_info.c"
+  12              		.text
+  13              		.global	HW_INFO
+  14              		.section	.HW_INFO,"aw"
+  15              		.align	3
+  18              	HW_INFO:
+  19 0000 FF000000 		.word	255
+  20 0004 00000000 		.word	0
+  21 0008 00000000 		.space	248
+  21      00000000 
+  21      00000000 
+  21      00000000 
+  21      00000000 
+  22              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccRM3dxV.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 hw_info.c
+     /tmp/ccRM3dxV.s:18     .HW_INFO:0000000000000000 HW_INFO
+     /tmp/ccRM3dxV.s:15     .HW_INFO:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,511 @@
+ARM GAS  /tmp/ccSo0BwX.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_cortex.c"
+  12              		.text
+  13              		.section	.text.HAL_NVIC_SetPriorityGrouping,"ax",%progbits
+  14              		.align	1
+  15              		.global	HAL_NVIC_SetPriorityGrouping
+  16              		.arch armv7-m
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	HAL_NVIC_SetPriorityGrouping:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 0749     		ldr	r1, .L2
+  27 0002 0302     		lsls	r3, r0, #8
+  28 0004 CA68     		ldr	r2, [r1, #12]
+  29 0006 03F4E063 		and	r3, r3, #1792
+  30 000a 22F4E062 		bic	r2, r2, #1792
+  31 000e 1204     		lsls	r2, r2, #16
+  32 0010 120C     		lsrs	r2, r2, #16
+  33 0012 1343     		orrs	r3, r3, r2
+  34 0014 43F0BF63 		orr	r3, r3, #100139008
+  35 0018 43F40033 		orr	r3, r3, #131072
+  36 001c CB60     		str	r3, [r1, #12]
+  37 001e 7047     		bx	lr
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 0020 00ED00E0 		.word	-536810240
+  43              		.section	.text.HAL_NVIC_SetPriority,"ax",%progbits
+  44              		.align	1
+  45              		.global	HAL_NVIC_SetPriority
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu softvfp
+  51              	HAL_NVIC_SetPriority:
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54 0000 164B     		ldr	r3, .L9
+  55 0002 30B5     		push	{r4, r5, lr}
+  56 0004 DC68     		ldr	r4, [r3, #12]
+  57 0006 C4F30224 		ubfx	r4, r4, #8, #3
+  58 000a C4F10703 		rsb	r3, r4, #7
+  59 000e 251D     		adds	r5, r4, #4
+  60 0010 042B     		cmp	r3, #4
+ARM GAS  /tmp/ccSo0BwX.s 			page 2
+
+
+  61 0012 28BF     		it	cs
+  62 0014 0423     		movcs	r3, #4
+  63 0016 062D     		cmp	r5, #6
+  64 0018 4FF0FF35 		mov	r5, #-1
+  65 001c 98BF     		it	ls
+  66 001e 0024     		movls	r4, #0
+  67 0020 05FA03F3 		lsl	r3, r5, r3
+  68 0024 88BF     		it	hi
+  69 0026 033C     		subhi	r4, r4, #3
+  70 0028 21EA0303 		bic	r3, r1, r3
+  71 002c A340     		lsls	r3, r3, r4
+  72 002e 05FA04F4 		lsl	r4, r5, r4
+  73 0032 22EA0402 		bic	r2, r2, r4
+  74 0036 0028     		cmp	r0, #0
+  75 0038 43EA0203 		orr	r3, r3, r2
+  76 003c ACBF     		ite	ge
+  77 003e 00F16040 		addge	r0, r0, #-536870912
+  78 0042 074A     		ldrlt	r2, .L9+4
+  79 0044 4FEA0313 		lsl	r3, r3, #4
+  80 0048 DBB2     		uxtb	r3, r3
+  81 004a ABBF     		itete	ge
+  82 004c 00F56140 		addge	r0, r0, #57600
+  83 0050 00F00F00 		andlt	r0, r0, #15
+  84 0054 80F80033 		strbge	r3, [r0, #768]
+  85 0058 1354     		strblt	r3, [r2, r0]
+  86 005a 30BD     		pop	{r4, r5, pc}
+  87              	.L10:
+  88              		.align	2
+  89              	.L9:
+  90 005c 00ED00E0 		.word	-536810240
+  91 0060 14ED00E0 		.word	-536810220
+  93              		.section	.text.HAL_NVIC_EnableIRQ,"ax",%progbits
+  94              		.align	1
+  95              		.global	HAL_NVIC_EnableIRQ
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu softvfp
+ 101              	HAL_NVIC_EnableIRQ:
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		@ link register save eliminated.
+ 105 0000 0028     		cmp	r0, #0
+ 106 0002 08DB     		blt	.L11
+ 107 0004 0123     		movs	r3, #1
+ 108 0006 4209     		lsrs	r2, r0, #5
+ 109 0008 00F01F00 		and	r0, r0, #31
+ 110 000c 03FA00F0 		lsl	r0, r3, r0
+ 111 0010 014B     		ldr	r3, .L13
+ 112 0012 43F82200 		str	r0, [r3, r2, lsl #2]
+ 113              	.L11:
+ 114 0016 7047     		bx	lr
+ 115              	.L14:
+ 116              		.align	2
+ 117              	.L13:
+ 118 0018 00E100E0 		.word	-536813312
+ 120              		.section	.text.HAL_NVIC_DisableIRQ,"ax",%progbits
+ARM GAS  /tmp/ccSo0BwX.s 			page 3
+
+
+ 121              		.align	1
+ 122              		.global	HAL_NVIC_DisableIRQ
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.fpu softvfp
+ 128              	HAL_NVIC_DisableIRQ:
+ 129              		@ args = 0, pretend = 0, frame = 0
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		@ link register save eliminated.
+ 132 0000 0028     		cmp	r0, #0
+ 133 0002 0DDB     		blt	.L15
+ 134 0004 0122     		movs	r2, #1
+ 135 0006 4309     		lsrs	r3, r0, #5
+ 136 0008 00F01F00 		and	r0, r0, #31
+ 137 000c 02FA00F0 		lsl	r0, r2, r0
+ 138 0010 044A     		ldr	r2, .L17
+ 139 0012 2033     		adds	r3, r3, #32
+ 140 0014 42F82300 		str	r0, [r2, r3, lsl #2]
+ 141              		.syntax unified
+ 142              	@ 271 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 143 0018 BFF34F8F 		dsb 0xF
+ 144              	@ 0 "" 2
+ 145              	@ 260 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 146 001c BFF36F8F 		isb 0xF
+ 147              	@ 0 "" 2
+ 148              		.thumb
+ 149              		.syntax unified
+ 150              	.L15:
+ 151 0020 7047     		bx	lr
+ 152              	.L18:
+ 153 0022 00BF     		.align	2
+ 154              	.L17:
+ 155 0024 00E100E0 		.word	-536813312
+ 157              		.section	.text.HAL_NVIC_SystemReset,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	HAL_NVIC_SystemReset
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 163              		.fpu softvfp
+ 165              	HAL_NVIC_SystemReset:
+ 166              		@ Volatile: function does not return.
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169              		@ link register save eliminated.
+ 170              		.syntax unified
+ 171              	@ 271 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 172 0000 BFF34F8F 		dsb 0xF
+ 173              	@ 0 "" 2
+ 174              		.thumb
+ 175              		.syntax unified
+ 176 0004 0549     		ldr	r1, .L21
+ 177 0006 064B     		ldr	r3, .L21+4
+ 178 0008 CA68     		ldr	r2, [r1, #12]
+ 179 000a 02F4E062 		and	r2, r2, #1792
+ 180 000e 1343     		orrs	r3, r3, r2
+ARM GAS  /tmp/ccSo0BwX.s 			page 4
+
+
+ 181 0010 CB60     		str	r3, [r1, #12]
+ 182              		.syntax unified
+ 183              	@ 271 "../sdk/stm32/CMSIS/inc/cmsis_gcc.h" 1
+ 184 0012 BFF34F8F 		dsb 0xF
+ 185              	@ 0 "" 2
+ 186              		.thumb
+ 187              		.syntax unified
+ 188              	.L20:
+ 189              		.syntax unified
+ 190              	@ 1773 "../sdk/stm32/CMSIS/inc/core_cm3.h" 1
+ 191 0016 00BF     		nop
+ 192              	@ 0 "" 2
+ 193              		.thumb
+ 194              		.syntax unified
+ 195 0018 FDE7     		b	.L20
+ 196              	.L22:
+ 197 001a 00BF     		.align	2
+ 198              	.L21:
+ 199 001c 00ED00E0 		.word	-536810240
+ 200 0020 0400FA05 		.word	100270084
+ 202              		.section	.text.HAL_SYSTICK_Config,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	HAL_SYSTICK_Config
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.fpu softvfp
+ 210              	HAL_SYSTICK_Config:
+ 211              		@ args = 0, pretend = 0, frame = 0
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213              		@ link register save eliminated.
+ 214 0000 0138     		subs	r0, r0, #1
+ 215 0002 B0F1807F 		cmp	r0, #16777216
+ 216 0006 0BD2     		bcs	.L25
+ 217 0008 4FF0E023 		mov	r3, #-536813568
+ 218 000c F021     		movs	r1, #240
+ 219 000e 054A     		ldr	r2, .L26
+ 220 0010 5861     		str	r0, [r3, #20]
+ 221 0012 82F82310 		strb	r1, [r2, #35]
+ 222 0016 0020     		movs	r0, #0
+ 223 0018 0722     		movs	r2, #7
+ 224 001a 9861     		str	r0, [r3, #24]
+ 225 001c 1A61     		str	r2, [r3, #16]
+ 226 001e 7047     		bx	lr
+ 227              	.L25:
+ 228 0020 0120     		movs	r0, #1
+ 229 0022 7047     		bx	lr
+ 230              	.L27:
+ 231              		.align	2
+ 232              	.L26:
+ 233 0024 00ED00E0 		.word	-536810240
+ 235              		.section	.text.HAL_NVIC_GetPriorityGrouping,"ax",%progbits
+ 236              		.align	1
+ 237              		.global	HAL_NVIC_GetPriorityGrouping
+ 238              		.syntax unified
+ 239              		.thumb
+ 240              		.thumb_func
+ARM GAS  /tmp/ccSo0BwX.s 			page 5
+
+
+ 241              		.fpu softvfp
+ 243              	HAL_NVIC_GetPriorityGrouping:
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+ 247 0000 024B     		ldr	r3, .L29
+ 248 0002 D868     		ldr	r0, [r3, #12]
+ 249 0004 C0F30220 		ubfx	r0, r0, #8, #3
+ 250 0008 7047     		bx	lr
+ 251              	.L30:
+ 252 000a 00BF     		.align	2
+ 253              	.L29:
+ 254 000c 00ED00E0 		.word	-536810240
+ 256              		.section	.text.HAL_NVIC_GetPriority,"ax",%progbits
+ 257              		.align	1
+ 258              		.global	HAL_NVIC_GetPriority
+ 259              		.syntax unified
+ 260              		.thumb
+ 261              		.thumb_func
+ 262              		.fpu softvfp
+ 264              	HAL_NVIC_GetPriority:
+ 265              		@ args = 0, pretend = 0, frame = 0
+ 266              		@ frame_needed = 0, uses_anonymous_args = 0
+ 267 0000 70B5     		push	{r4, r5, r6, lr}
+ 268 0002 0028     		cmp	r0, #0
+ 269 0004 B8BF     		it	lt
+ 270 0006 154C     		ldrlt	r4, .L37
+ 271 0008 01F00701 		and	r1, r1, #7
+ 272 000c ADBF     		iteet	ge
+ 273 000e 00F16040 		addge	r0, r0, #-536870912
+ 274 0012 00F00F00 		andlt	r0, r0, #15
+ 275 0016 205C     		ldrblt	r0, [r4, r0]	@ zero_extendqisi2
+ 276 0018 00F56140 		addge	r0, r0, #57600
+ 277 001c C1F10704 		rsb	r4, r1, #7
+ 278 0020 01F10405 		add	r5, r1, #4
+ 279 0024 A8BF     		it	ge
+ 280 0026 90F80003 		ldrbge	r0, [r0, #768]	@ zero_extendqisi2
+ 281 002a 042C     		cmp	r4, #4
+ 282 002c 28BF     		it	cs
+ 283 002e 0424     		movcs	r4, #4
+ 284 0030 062D     		cmp	r5, #6
+ 285 0032 98BF     		it	ls
+ 286 0034 0021     		movls	r1, #0
+ 287 0036 4FF0FF35 		mov	r5, #-1
+ 288 003a 4FEA1010 		lsr	r0, r0, #4
+ 289 003e 88BF     		it	hi
+ 290 0040 0339     		subhi	r1, r1, #3
+ 291 0042 20FA01F6 		lsr	r6, r0, r1
+ 292 0046 05FA04F4 		lsl	r4, r5, r4
+ 293 004a 05FA01F1 		lsl	r1, r5, r1
+ 294 004e 26EA0404 		bic	r4, r6, r4
+ 295 0052 20EA0100 		bic	r0, r0, r1
+ 296 0056 1460     		str	r4, [r2]
+ 297 0058 1860     		str	r0, [r3]
+ 298 005a 70BD     		pop	{r4, r5, r6, pc}
+ 299              	.L38:
+ 300              		.align	2
+ARM GAS  /tmp/ccSo0BwX.s 			page 6
+
+
+ 301              	.L37:
+ 302 005c 14ED00E0 		.word	-536810220
+ 304              		.section	.text.HAL_NVIC_SetPendingIRQ,"ax",%progbits
+ 305              		.align	1
+ 306              		.global	HAL_NVIC_SetPendingIRQ
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 310              		.fpu softvfp
+ 312              	HAL_NVIC_SetPendingIRQ:
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 0, uses_anonymous_args = 0
+ 315              		@ link register save eliminated.
+ 316 0000 0028     		cmp	r0, #0
+ 317 0002 09DB     		blt	.L39
+ 318 0004 0122     		movs	r2, #1
+ 319 0006 4309     		lsrs	r3, r0, #5
+ 320 0008 00F01F00 		and	r0, r0, #31
+ 321 000c 02FA00F0 		lsl	r0, r2, r0
+ 322 0010 024A     		ldr	r2, .L41
+ 323 0012 4033     		adds	r3, r3, #64
+ 324 0014 42F82300 		str	r0, [r2, r3, lsl #2]
+ 325              	.L39:
+ 326 0018 7047     		bx	lr
+ 327              	.L42:
+ 328 001a 00BF     		.align	2
+ 329              	.L41:
+ 330 001c 00E100E0 		.word	-536813312
+ 332              		.section	.text.HAL_NVIC_GetPendingIRQ,"ax",%progbits
+ 333              		.align	1
+ 334              		.global	HAL_NVIC_GetPendingIRQ
+ 335              		.syntax unified
+ 336              		.thumb
+ 337              		.thumb_func
+ 338              		.fpu softvfp
+ 340              	HAL_NVIC_GetPendingIRQ:
+ 341              		@ args = 0, pretend = 0, frame = 0
+ 342              		@ frame_needed = 0, uses_anonymous_args = 0
+ 343              		@ link register save eliminated.
+ 344 0000 0028     		cmp	r0, #0
+ 345 0002 A1BF     		itttt	ge
+ 346 0004 4309     		lsrge	r3, r0, #5
+ 347 0006 064A     		ldrge	r2, .L46
+ 348 0008 4033     		addge	r3, r3, #64
+ 349 000a 52F82330 		ldrge	r3, [r2, r3, lsl #2]
+ 350 000e A3BF     		ittte	ge
+ 351 0010 00F01F00 		andge	r0, r0, #31
+ 352 0014 23FA00F0 		lsrge	r0, r3, r0
+ 353 0018 00F00100 		andge	r0, r0, #1
+ 354 001c 0020     		movlt	r0, #0
+ 355 001e 7047     		bx	lr
+ 356              	.L47:
+ 357              		.align	2
+ 358              	.L46:
+ 359 0020 00E100E0 		.word	-536813312
+ 361              		.section	.text.HAL_NVIC_ClearPendingIRQ,"ax",%progbits
+ 362              		.align	1
+ARM GAS  /tmp/ccSo0BwX.s 			page 7
+
+
+ 363              		.global	HAL_NVIC_ClearPendingIRQ
+ 364              		.syntax unified
+ 365              		.thumb
+ 366              		.thumb_func
+ 367              		.fpu softvfp
+ 369              	HAL_NVIC_ClearPendingIRQ:
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		@ link register save eliminated.
+ 373 0000 0028     		cmp	r0, #0
+ 374 0002 09DB     		blt	.L48
+ 375 0004 0122     		movs	r2, #1
+ 376 0006 4309     		lsrs	r3, r0, #5
+ 377 0008 00F01F00 		and	r0, r0, #31
+ 378 000c 02FA00F0 		lsl	r0, r2, r0
+ 379 0010 024A     		ldr	r2, .L50
+ 380 0012 6033     		adds	r3, r3, #96
+ 381 0014 42F82300 		str	r0, [r2, r3, lsl #2]
+ 382              	.L48:
+ 383 0018 7047     		bx	lr
+ 384              	.L51:
+ 385 001a 00BF     		.align	2
+ 386              	.L50:
+ 387 001c 00E100E0 		.word	-536813312
+ 389              		.section	.text.HAL_NVIC_GetActive,"ax",%progbits
+ 390              		.align	1
+ 391              		.global	HAL_NVIC_GetActive
+ 392              		.syntax unified
+ 393              		.thumb
+ 394              		.thumb_func
+ 395              		.fpu softvfp
+ 397              	HAL_NVIC_GetActive:
+ 398              		@ args = 0, pretend = 0, frame = 0
+ 399              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400              		@ link register save eliminated.
+ 401 0000 0028     		cmp	r0, #0
+ 402 0002 A1BF     		itttt	ge
+ 403 0004 4309     		lsrge	r3, r0, #5
+ 404 0006 064A     		ldrge	r2, .L55
+ 405 0008 8033     		addge	r3, r3, #128
+ 406 000a 52F82330 		ldrge	r3, [r2, r3, lsl #2]
+ 407 000e A3BF     		ittte	ge
+ 408 0010 00F01F00 		andge	r0, r0, #31
+ 409 0014 23FA00F0 		lsrge	r0, r3, r0
+ 410 0018 00F00100 		andge	r0, r0, #1
+ 411 001c 0020     		movlt	r0, #0
+ 412 001e 7047     		bx	lr
+ 413              	.L56:
+ 414              		.align	2
+ 415              	.L55:
+ 416 0020 00E100E0 		.word	-536813312
+ 418              		.section	.text.HAL_SYSTICK_CLKSourceConfig,"ax",%progbits
+ 419              		.align	1
+ 420              		.global	HAL_SYSTICK_CLKSourceConfig
+ 421              		.syntax unified
+ 422              		.thumb
+ 423              		.thumb_func
+ARM GAS  /tmp/ccSo0BwX.s 			page 8
+
+
+ 424              		.fpu softvfp
+ 426              	HAL_SYSTICK_CLKSourceConfig:
+ 427              		@ args = 0, pretend = 0, frame = 0
+ 428              		@ frame_needed = 0, uses_anonymous_args = 0
+ 429              		@ link register save eliminated.
+ 430 0000 4FF0E023 		mov	r3, #-536813568
+ 431 0004 1A69     		ldr	r2, [r3, #16]
+ 432 0006 0428     		cmp	r0, #4
+ 433 0008 0CBF     		ite	eq
+ 434 000a 42F00402 		orreq	r2, r2, #4
+ 435 000e 22F00402 		bicne	r2, r2, #4
+ 436 0012 1A61     		str	r2, [r3, #16]
+ 437 0014 7047     		bx	lr
+ 439              		.section	.text.HAL_SYSTICK_Callback,"ax",%progbits
+ 440              		.align	1
+ 441              		.weak	HAL_SYSTICK_Callback
+ 442              		.syntax unified
+ 443              		.thumb
+ 444              		.thumb_func
+ 445              		.fpu softvfp
+ 447              	HAL_SYSTICK_Callback:
+ 448              		@ args = 0, pretend = 0, frame = 0
+ 449              		@ frame_needed = 0, uses_anonymous_args = 0
+ 450              		@ link register save eliminated.
+ 451 0000 7047     		bx	lr
+ 453              		.section	.text.HAL_SYSTICK_IRQHandler,"ax",%progbits
+ 454              		.align	1
+ 455              		.global	HAL_SYSTICK_IRQHandler
+ 456              		.syntax unified
+ 457              		.thumb
+ 458              		.thumb_func
+ 459              		.fpu softvfp
+ 461              	HAL_SYSTICK_IRQHandler:
+ 462              		@ args = 0, pretend = 0, frame = 0
+ 463              		@ frame_needed = 0, uses_anonymous_args = 0
+ 464 0000 08B5     		push	{r3, lr}
+ 465 0002 FFF7FEFF 		bl	HAL_SYSTICK_Callback
+ 466 0006 08BD     		pop	{r3, pc}
+ 468              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccSo0BwX.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_cortex.c
+     /tmp/ccSo0BwX.s:14     .text.HAL_NVIC_SetPriorityGrouping:0000000000000000 $t
+     /tmp/ccSo0BwX.s:22     .text.HAL_NVIC_SetPriorityGrouping:0000000000000000 HAL_NVIC_SetPriorityGrouping
+     /tmp/ccSo0BwX.s:41     .text.HAL_NVIC_SetPriorityGrouping:0000000000000020 $d
+     /tmp/ccSo0BwX.s:44     .text.HAL_NVIC_SetPriority:0000000000000000 $t
+     /tmp/ccSo0BwX.s:51     .text.HAL_NVIC_SetPriority:0000000000000000 HAL_NVIC_SetPriority
+     /tmp/ccSo0BwX.s:90     .text.HAL_NVIC_SetPriority:000000000000005c $d
+     /tmp/ccSo0BwX.s:94     .text.HAL_NVIC_EnableIRQ:0000000000000000 $t
+     /tmp/ccSo0BwX.s:101    .text.HAL_NVIC_EnableIRQ:0000000000000000 HAL_NVIC_EnableIRQ
+     /tmp/ccSo0BwX.s:118    .text.HAL_NVIC_EnableIRQ:0000000000000018 $d
+     /tmp/ccSo0BwX.s:121    .text.HAL_NVIC_DisableIRQ:0000000000000000 $t
+     /tmp/ccSo0BwX.s:128    .text.HAL_NVIC_DisableIRQ:0000000000000000 HAL_NVIC_DisableIRQ
+     /tmp/ccSo0BwX.s:155    .text.HAL_NVIC_DisableIRQ:0000000000000024 $d
+     /tmp/ccSo0BwX.s:158    .text.HAL_NVIC_SystemReset:0000000000000000 $t
+     /tmp/ccSo0BwX.s:165    .text.HAL_NVIC_SystemReset:0000000000000000 HAL_NVIC_SystemReset
+     /tmp/ccSo0BwX.s:199    .text.HAL_NVIC_SystemReset:000000000000001c $d
+     /tmp/ccSo0BwX.s:203    .text.HAL_SYSTICK_Config:0000000000000000 $t
+     /tmp/ccSo0BwX.s:210    .text.HAL_SYSTICK_Config:0000000000000000 HAL_SYSTICK_Config
+     /tmp/ccSo0BwX.s:233    .text.HAL_SYSTICK_Config:0000000000000024 $d
+     /tmp/ccSo0BwX.s:236    .text.HAL_NVIC_GetPriorityGrouping:0000000000000000 $t
+     /tmp/ccSo0BwX.s:243    .text.HAL_NVIC_GetPriorityGrouping:0000000000000000 HAL_NVIC_GetPriorityGrouping
+     /tmp/ccSo0BwX.s:254    .text.HAL_NVIC_GetPriorityGrouping:000000000000000c $d
+     /tmp/ccSo0BwX.s:257    .text.HAL_NVIC_GetPriority:0000000000000000 $t
+     /tmp/ccSo0BwX.s:264    .text.HAL_NVIC_GetPriority:0000000000000000 HAL_NVIC_GetPriority
+     /tmp/ccSo0BwX.s:302    .text.HAL_NVIC_GetPriority:000000000000005c $d
+     /tmp/ccSo0BwX.s:305    .text.HAL_NVIC_SetPendingIRQ:0000000000000000 $t
+     /tmp/ccSo0BwX.s:312    .text.HAL_NVIC_SetPendingIRQ:0000000000000000 HAL_NVIC_SetPendingIRQ
+     /tmp/ccSo0BwX.s:330    .text.HAL_NVIC_SetPendingIRQ:000000000000001c $d
+     /tmp/ccSo0BwX.s:333    .text.HAL_NVIC_GetPendingIRQ:0000000000000000 $t
+     /tmp/ccSo0BwX.s:340    .text.HAL_NVIC_GetPendingIRQ:0000000000000000 HAL_NVIC_GetPendingIRQ
+     /tmp/ccSo0BwX.s:359    .text.HAL_NVIC_GetPendingIRQ:0000000000000020 $d
+     /tmp/ccSo0BwX.s:362    .text.HAL_NVIC_ClearPendingIRQ:0000000000000000 $t
+     /tmp/ccSo0BwX.s:369    .text.HAL_NVIC_ClearPendingIRQ:0000000000000000 HAL_NVIC_ClearPendingIRQ
+     /tmp/ccSo0BwX.s:387    .text.HAL_NVIC_ClearPendingIRQ:000000000000001c $d
+     /tmp/ccSo0BwX.s:390    .text.HAL_NVIC_GetActive:0000000000000000 $t
+     /tmp/ccSo0BwX.s:397    .text.HAL_NVIC_GetActive:0000000000000000 HAL_NVIC_GetActive
+     /tmp/ccSo0BwX.s:416    .text.HAL_NVIC_GetActive:0000000000000020 $d
+     /tmp/ccSo0BwX.s:419    .text.HAL_SYSTICK_CLKSourceConfig:0000000000000000 $t
+     /tmp/ccSo0BwX.s:426    .text.HAL_SYSTICK_CLKSourceConfig:0000000000000000 HAL_SYSTICK_CLKSourceConfig
+     /tmp/ccSo0BwX.s:440    .text.HAL_SYSTICK_Callback:0000000000000000 $t
+     /tmp/ccSo0BwX.s:447    .text.HAL_SYSTICK_Callback:0000000000000000 HAL_SYSTICK_Callback
+     /tmp/ccSo0BwX.s:454    .text.HAL_SYSTICK_IRQHandler:0000000000000000 $t
+     /tmp/ccSo0BwX.s:461    .text.HAL_SYSTICK_IRQHandler:0000000000000000 HAL_SYSTICK_IRQHandler
+
+NO UNDEFINED SYMBOLS

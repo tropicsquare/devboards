@@ -1,0 +1,679 @@
+ARM GAS  /tmp/ccFg5kR8.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usbd_core.c"
+  12              		.text
+  13              		.section	.text.USBD_Init,"ax",%progbits
+  14              		.align	1
+  15              		.global	USBD_Init
+  16              		.arch armv7-m
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	USBD_Init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 78B1     		cbz	r0, .L2
+  27 0002 0023     		movs	r3, #0
+  28 0004 C0F8B832 		str	r3, [r0, #696]
+  29 0008 C0F8C032 		str	r3, [r0, #704]
+  30 000c C0F8CC32 		str	r3, [r0, #716]
+  31 0010 09B1     		cbz	r1, .L3
+  32 0012 C0F8B412 		str	r1, [r0, #692]
+  33              	.L3:
+  34 0016 0123     		movs	r3, #1
+  35 0018 0270     		strb	r2, [r0]
+  36 001a 80F89C32 		strb	r3, [r0, #668]
+  37 001e FFF7FEBF 		b	USBD_LL_Init
+  38              	.L2:
+  39 0022 0320     		movs	r0, #3
+  40 0024 7047     		bx	lr
+  42              		.section	.text.USBD_DeInit,"ax",%progbits
+  43              		.align	1
+  44              		.global	USBD_DeInit
+  45              		.syntax unified
+  46              		.thumb
+  47              		.thumb_func
+  48              		.fpu softvfp
+  50              	USBD_DeInit:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53 0000 10B5     		push	{r4, lr}
+  54 0002 0446     		mov	r4, r0
+  55 0004 FFF7FEFF 		bl	USBD_LL_Stop
+  56 0008 0123     		movs	r3, #1
+  57 000a 84F89C32 		strb	r3, [r4, #668]
+  58 000e D4F8B832 		ldr	r3, [r4, #696]
+  59 0012 43B1     		cbz	r3, .L8
+  60 0014 5B68     		ldr	r3, [r3, #4]
+ARM GAS  /tmp/ccFg5kR8.s 			page 2
+
+
+  61 0016 2046     		mov	r0, r4
+  62 0018 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+  63 001a 9847     		blx	r3
+  64 001c 0023     		movs	r3, #0
+  65 001e C4F8B832 		str	r3, [r4, #696]
+  66 0022 C4F8C032 		str	r3, [r4, #704]
+  67              	.L8:
+  68 0026 0023     		movs	r3, #0
+  69 0028 2046     		mov	r0, r4
+  70 002a C4F8B432 		str	r3, [r4, #692]
+  71 002e C4F8CC32 		str	r3, [r4, #716]
+  72 0032 BDE81040 		pop	{r4, lr}
+  73 0036 FFF7FEBF 		b	USBD_LL_DeInit
+  75              		.section	.text.USBD_RegisterClass,"ax",%progbits
+  76              		.align	1
+  77              		.global	USBD_RegisterClass
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu softvfp
+  83              	USBD_RegisterClass:
+  84              		@ args = 0, pretend = 0, frame = 8
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 37B5     		push	{r0, r1, r2, r4, r5, lr}
+  87 0002 0025     		movs	r5, #0
+  88 0004 0446     		mov	r4, r0
+  89 0006 ADF80650 		strh	r5, [sp, #6]	@ movhi
+  90 000a 59B1     		cbz	r1, .L14
+  91 000c CB6A     		ldr	r3, [r1, #44]
+  92 000e C0F8B812 		str	r1, [r0, #696]
+  93 0012 4BB1     		cbz	r3, .L15
+  94 0014 0DF10600 		add	r0, sp, #6
+  95 0018 9847     		blx	r3
+  96 001a C4F8CC02 		str	r0, [r4, #716]
+  97 001e 2846     		mov	r0, r5
+  98              	.L13:
+  99 0020 03B0     		add	sp, sp, #12
+ 100              		@ sp needed
+ 101 0022 30BD     		pop	{r4, r5, pc}
+ 102              	.L14:
+ 103 0024 0320     		movs	r0, #3
+ 104 0026 FBE7     		b	.L13
+ 105              	.L15:
+ 106 0028 1846     		mov	r0, r3
+ 107 002a F9E7     		b	.L13
+ 109              		.section	.text.USBD_Start,"ax",%progbits
+ 110              		.align	1
+ 111              		.global	USBD_Start
+ 112              		.syntax unified
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.fpu softvfp
+ 117              	USBD_Start:
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120              		@ link register save eliminated.
+ 121 0000 FFF7FEBF 		b	USBD_LL_Start
+ARM GAS  /tmp/ccFg5kR8.s 			page 3
+
+
+ 123              		.section	.text.USBD_Stop,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	USBD_Stop
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu softvfp
+ 131              	USBD_Stop:
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 0, uses_anonymous_args = 0
+ 134 0000 10B5     		push	{r4, lr}
+ 135 0002 0446     		mov	r4, r0
+ 136 0004 FFF7FEFF 		bl	USBD_LL_Stop
+ 137 0008 D4F8B832 		ldr	r3, [r4, #696]
+ 138 000c 1BB1     		cbz	r3, .L18
+ 139 000e 2046     		mov	r0, r4
+ 140 0010 5B68     		ldr	r3, [r3, #4]
+ 141 0012 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 142 0014 9847     		blx	r3
+ 143              	.L18:
+ 144 0016 0020     		movs	r0, #0
+ 145 0018 10BD     		pop	{r4, pc}
+ 147              		.section	.text.USBD_RunTestMode,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	USBD_RunTestMode
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu softvfp
+ 155              	USBD_RunTestMode:
+ 156              		@ args = 0, pretend = 0, frame = 0
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158              		@ link register save eliminated.
+ 159 0000 0020     		movs	r0, #0
+ 160 0002 7047     		bx	lr
+ 162              		.section	.text.USBD_SetClassConfig,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	USBD_SetClassConfig
+ 165              		.syntax unified
+ 166              		.thumb
+ 167              		.thumb_func
+ 168              		.fpu softvfp
+ 170              	USBD_SetClassConfig:
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173              		@ link register save eliminated.
+ 174 0000 D0F8B832 		ldr	r3, [r0, #696]
+ 175 0004 0BB1     		cbz	r3, .L24
+ 176 0006 1B68     		ldr	r3, [r3]
+ 177 0008 1847     		bx	r3
+ 178              	.L24:
+ 179 000a 0320     		movs	r0, #3
+ 180 000c 7047     		bx	lr
+ 182              		.section	.text.USBD_ClrClassConfig,"ax",%progbits
+ 183              		.align	1
+ 184              		.global	USBD_ClrClassConfig
+ 185              		.syntax unified
+ARM GAS  /tmp/ccFg5kR8.s 			page 4
+
+
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.fpu softvfp
+ 190              	USBD_ClrClassConfig:
+ 191              		@ args = 0, pretend = 0, frame = 0
+ 192              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193 0000 08B5     		push	{r3, lr}
+ 194 0002 D0F8B832 		ldr	r3, [r0, #696]
+ 195 0006 0BB1     		cbz	r3, .L26
+ 196 0008 5B68     		ldr	r3, [r3, #4]
+ 197 000a 9847     		blx	r3
+ 198              	.L26:
+ 199 000c 0020     		movs	r0, #0
+ 200 000e 08BD     		pop	{r3, pc}
+ 202              		.section	.text.USBD_LL_SetupStage,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	USBD_LL_SetupStage
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.fpu softvfp
+ 210              	USBD_LL_SetupStage:
+ 211              		@ args = 0, pretend = 0, frame = 0
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213 0000 38B5     		push	{r3, r4, r5, lr}
+ 214 0002 00F2AA25 		addw	r5, r0, #682
+ 215 0006 0446     		mov	r4, r0
+ 216 0008 2846     		mov	r0, r5
+ 217 000a FFF7FEFF 		bl	USBD_ParseSetupRequest
+ 218 000e 0123     		movs	r3, #1
+ 219 0010 94F8AA12 		ldrb	r1, [r4, #682]	@ zero_extendqisi2
+ 220 0014 C4F89432 		str	r3, [r4, #660]
+ 221 0018 B4F8B032 		ldrh	r3, [r4, #688]
+ 222 001c C4F89832 		str	r3, [r4, #664]
+ 223 0020 01F01F03 		and	r3, r1, #31
+ 224 0024 012B     		cmp	r3, #1
+ 225 0026 08D0     		beq	.L31
+ 226 0028 022B     		cmp	r3, #2
+ 227 002a 0CD0     		beq	.L32
+ 228 002c 8BB9     		cbnz	r3, .L33
+ 229 002e 2946     		mov	r1, r5
+ 230 0030 2046     		mov	r0, r4
+ 231 0032 BDE83840 		pop	{r3, r4, r5, lr}
+ 232 0036 FFF7FEBF 		b	USBD_StdDevReq
+ 233              	.L31:
+ 234 003a 2946     		mov	r1, r5
+ 235 003c 2046     		mov	r0, r4
+ 236 003e BDE83840 		pop	{r3, r4, r5, lr}
+ 237 0042 FFF7FEBF 		b	USBD_StdItfReq
+ 238              	.L32:
+ 239 0046 2946     		mov	r1, r5
+ 240 0048 2046     		mov	r0, r4
+ 241 004a BDE83840 		pop	{r3, r4, r5, lr}
+ 242 004e FFF7FEBF 		b	USBD_StdEPReq
+ 243              	.L33:
+ 244 0052 2046     		mov	r0, r4
+ 245 0054 BDE83840 		pop	{r3, r4, r5, lr}
+ARM GAS  /tmp/ccFg5kR8.s 			page 5
+
+
+ 246 0058 01F08001 		and	r1, r1, #128
+ 247 005c FFF7FEBF 		b	USBD_LL_StallEP
+ 249              		.section	.text.USBD_LL_DataOutStage,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	USBD_LL_DataOutStage
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.fpu softvfp
+ 257              	USBD_LL_DataOutStage:
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260 0000 70B5     		push	{r4, r5, r6, lr}
+ 261 0002 0446     		mov	r4, r0
+ 262 0004 1546     		mov	r5, r2
+ 263 0006 F9B9     		cbnz	r1, .L35
+ 264 0008 D0F89432 		ldr	r3, [r0, #660]
+ 265 000c 032B     		cmp	r3, #3
+ 266 000e 0CD1     		bne	.L36
+ 267 0010 D0E95732 		ldrd	r3, r2, [r0, #348]
+ 268 0014 9342     		cmp	r3, r2
+ 269 0016 0AD9     		bls	.L37
+ 270 0018 9B1A     		subs	r3, r3, r2
+ 271 001a 9A42     		cmp	r2, r3
+ 272 001c 28BF     		it	cs
+ 273 001e 1A46     		movcs	r2, r3
+ 274 0020 2946     		mov	r1, r5
+ 275 0022 C0F85C31 		str	r3, [r0, #348]
+ 276 0026 FFF7FEFF 		bl	USBD_CtlContinueRx
+ 277              	.L36:
+ 278 002a 0020     		movs	r0, #0
+ 279 002c 70BD     		pop	{r4, r5, r6, pc}
+ 280              	.L37:
+ 281 002e 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 282 0032 032B     		cmp	r3, #3
+ 283 0034 04D1     		bne	.L38
+ 284 0036 D0F8B832 		ldr	r3, [r0, #696]
+ 285 003a 1B69     		ldr	r3, [r3, #16]
+ 286 003c 03B1     		cbz	r3, .L38
+ 287 003e 9847     		blx	r3
+ 288              	.L38:
+ 289 0040 2046     		mov	r0, r4
+ 290 0042 FFF7FEFF 		bl	USBD_CtlSendStatus
+ 291 0046 F0E7     		b	.L36
+ 292              	.L35:
+ 293 0048 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 294 004c 032B     		cmp	r3, #3
+ 295 004e ECD1     		bne	.L36
+ 296 0050 D0F8B832 		ldr	r3, [r0, #696]
+ 297 0054 9B69     		ldr	r3, [r3, #24]
+ 298 0056 002B     		cmp	r3, #0
+ 299 0058 E7D0     		beq	.L36
+ 300 005a BDE87040 		pop	{r4, r5, r6, lr}
+ 301 005e 1847     		bx	r3
+ 303              		.section	.text.USBD_LL_DataInStage,"ax",%progbits
+ 304              		.align	1
+ 305              		.global	USBD_LL_DataInStage
+ARM GAS  /tmp/ccFg5kR8.s 			page 6
+
+
+ 306              		.syntax unified
+ 307              		.thumb
+ 308              		.thumb_func
+ 309              		.fpu softvfp
+ 311              	USBD_LL_DataInStage:
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314 0000 70B5     		push	{r4, r5, r6, lr}
+ 315 0002 0446     		mov	r4, r0
+ 316 0004 1646     		mov	r6, r2
+ 317 0006 0D46     		mov	r5, r1
+ 318 0008 D9BB     		cbnz	r1, .L46
+ 319 000a D0F89432 		ldr	r3, [r0, #660]
+ 320 000e 022B     		cmp	r3, #2
+ 321 0010 0ED1     		bne	.L47
+ 322 0012 D0E90732 		ldrd	r3, r2, [r0, #28]
+ 323 0016 9342     		cmp	r3, r2
+ 324 0018 13D9     		bls	.L48
+ 325 001a 9A1A     		subs	r2, r3, r2
+ 326 001c 3146     		mov	r1, r6
+ 327 001e C261     		str	r2, [r0, #28]
+ 328 0020 FFF7FEFF 		bl	USBD_CtlContinueSendData
+ 329              	.L60:
+ 330 0024 2B46     		mov	r3, r5
+ 331 0026 2A46     		mov	r2, r5
+ 332 0028 2946     		mov	r1, r5
+ 333 002a 2046     		mov	r0, r4
+ 334 002c FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 335              	.L47:
+ 336 0030 94F8A032 		ldrb	r3, [r4, #672]	@ zero_extendqisi2
+ 337 0034 012B     		cmp	r3, #1
+ 338 0036 02D1     		bne	.L52
+ 339 0038 0023     		movs	r3, #0
+ 340 003a 84F8A032 		strb	r3, [r4, #672]
+ 341              	.L52:
+ 342 003e 0020     		movs	r0, #0
+ 343 0040 70BD     		pop	{r4, r5, r6, pc}
+ 344              	.L48:
+ 345 0042 0CD1     		bne	.L49
+ 346 0044 8269     		ldr	r2, [r0, #24]
+ 347 0046 9342     		cmp	r3, r2
+ 348 0048 09D8     		bhi	.L49
+ 349 004a D0F89832 		ldr	r3, [r0, #664]
+ 350 004e 9A42     		cmp	r2, r3
+ 351 0050 05D2     		bcs	.L49
+ 352 0052 0A46     		mov	r2, r1
+ 353 0054 FFF7FEFF 		bl	USBD_CtlContinueSendData
+ 354 0058 C4F89852 		str	r5, [r4, #664]
+ 355 005c E2E7     		b	.L60
+ 356              	.L49:
+ 357 005e 94F89C32 		ldrb	r3, [r4, #668]	@ zero_extendqisi2
+ 358 0062 032B     		cmp	r3, #3
+ 359 0064 05D1     		bne	.L50
+ 360 0066 D4F8B832 		ldr	r3, [r4, #696]
+ 361 006a DB68     		ldr	r3, [r3, #12]
+ 362 006c 0BB1     		cbz	r3, .L50
+ 363 006e 2046     		mov	r0, r4
+ARM GAS  /tmp/ccFg5kR8.s 			page 7
+
+
+ 364 0070 9847     		blx	r3
+ 365              	.L50:
+ 366 0072 8021     		movs	r1, #128
+ 367 0074 2046     		mov	r0, r4
+ 368 0076 FFF7FEFF 		bl	USBD_LL_StallEP
+ 369 007a 2046     		mov	r0, r4
+ 370 007c FFF7FEFF 		bl	USBD_CtlReceiveStatus
+ 371 0080 D6E7     		b	.L47
+ 372              	.L46:
+ 373 0082 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 374 0086 032B     		cmp	r3, #3
+ 375 0088 D9D1     		bne	.L52
+ 376 008a D0F8B832 		ldr	r3, [r0, #696]
+ 377 008e 5B69     		ldr	r3, [r3, #20]
+ 378 0090 002B     		cmp	r3, #0
+ 379 0092 D4D0     		beq	.L52
+ 380 0094 BDE87040 		pop	{r4, r5, r6, lr}
+ 381 0098 1847     		bx	r3
+ 383              		.section	.text.USBD_LL_Reset,"ax",%progbits
+ 384              		.align	1
+ 385              		.global	USBD_LL_Reset
+ 386              		.syntax unified
+ 387              		.thumb
+ 388              		.thumb_func
+ 389              		.fpu softvfp
+ 391              	USBD_LL_Reset:
+ 392              		@ args = 0, pretend = 0, frame = 0
+ 393              		@ frame_needed = 0, uses_anonymous_args = 0
+ 394 0000 0123     		movs	r3, #1
+ 395 0002 0021     		movs	r1, #0
+ 396 0004 70B5     		push	{r4, r5, r6, lr}
+ 397 0006 80F89C32 		strb	r3, [r0, #668]
+ 398 000a D0F8B832 		ldr	r3, [r0, #696]
+ 399 000e 0446     		mov	r4, r0
+ 400 0010 C0F89412 		str	r1, [r0, #660]
+ 401 0014 4160     		str	r1, [r0, #4]
+ 402 0016 C0F8A412 		str	r1, [r0, #676]
+ 403 001a DBB1     		cbz	r3, .L64
+ 404 001c D0F8BC22 		ldr	r2, [r0, #700]
+ 405 0020 12B1     		cbz	r2, .L63
+ 406 0022 5B68     		ldr	r3, [r3, #4]
+ 407 0024 03B1     		cbz	r3, .L63
+ 408 0026 9847     		blx	r3
+ 409              	.L63:
+ 410 0028 0022     		movs	r2, #0
+ 411 002a 4025     		movs	r5, #64
+ 412 002c 0126     		movs	r6, #1
+ 413 002e 1146     		mov	r1, r2
+ 414 0030 4023     		movs	r3, #64
+ 415 0032 2046     		mov	r0, r4
+ 416 0034 FFF7FEFF 		bl	USBD_LL_OpenEP
+ 417 0038 2B46     		mov	r3, r5
+ 418 003a 0022     		movs	r2, #0
+ 419 003c 8021     		movs	r1, #128
+ 420 003e 2046     		mov	r0, r4
+ 421 0040 A4F86461 		strh	r6, [r4, #356]	@ movhi
+ 422 0044 C4F86051 		str	r5, [r4, #352]
+ARM GAS  /tmp/ccFg5kR8.s 			page 8
+
+
+ 423 0048 FFF7FEFF 		bl	USBD_LL_OpenEP
+ 424 004c 0020     		movs	r0, #0
+ 425 004e A684     		strh	r6, [r4, #36]	@ movhi
+ 426 0050 2562     		str	r5, [r4, #32]
+ 427              	.L62:
+ 428 0052 70BD     		pop	{r4, r5, r6, pc}
+ 429              	.L64:
+ 430 0054 0320     		movs	r0, #3
+ 431 0056 FCE7     		b	.L62
+ 433              		.section	.text.USBD_LL_SetSpeed,"ax",%progbits
+ 434              		.align	1
+ 435              		.global	USBD_LL_SetSpeed
+ 436              		.syntax unified
+ 437              		.thumb
+ 438              		.thumb_func
+ 439              		.fpu softvfp
+ 441              	USBD_LL_SetSpeed:
+ 442              		@ args = 0, pretend = 0, frame = 0
+ 443              		@ frame_needed = 0, uses_anonymous_args = 0
+ 444              		@ link register save eliminated.
+ 445 0000 0174     		strb	r1, [r0, #16]
+ 446 0002 0020     		movs	r0, #0
+ 447 0004 7047     		bx	lr
+ 449              		.section	.text.USBD_LL_Suspend,"ax",%progbits
+ 450              		.align	1
+ 451              		.global	USBD_LL_Suspend
+ 452              		.syntax unified
+ 453              		.thumb
+ 454              		.thumb_func
+ 455              		.fpu softvfp
+ 457              	USBD_LL_Suspend:
+ 458              		@ args = 0, pretend = 0, frame = 0
+ 459              		@ frame_needed = 0, uses_anonymous_args = 0
+ 460              		@ link register save eliminated.
+ 461 0000 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 462 0004 DBB2     		uxtb	r3, r3
+ 463 0006 80F89D32 		strb	r3, [r0, #669]
+ 464 000a 0423     		movs	r3, #4
+ 465 000c 80F89C32 		strb	r3, [r0, #668]
+ 466 0010 0020     		movs	r0, #0
+ 467 0012 7047     		bx	lr
+ 469              		.section	.text.USBD_LL_Resume,"ax",%progbits
+ 470              		.align	1
+ 471              		.global	USBD_LL_Resume
+ 472              		.syntax unified
+ 473              		.thumb
+ 474              		.thumb_func
+ 475              		.fpu softvfp
+ 477              	USBD_LL_Resume:
+ 478              		@ args = 0, pretend = 0, frame = 0
+ 479              		@ frame_needed = 0, uses_anonymous_args = 0
+ 480              		@ link register save eliminated.
+ 481 0000 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 482 0004 042B     		cmp	r3, #4
+ 483 0006 02BF     		ittt	eq
+ 484 0008 90F89D32 		ldrbeq	r3, [r0, #669]	@ zero_extendqisi2
+ 485 000c DBB2     		uxtbeq	r3, r3
+ARM GAS  /tmp/ccFg5kR8.s 			page 9
+
+
+ 486 000e 80F89C32 		strbeq	r3, [r0, #668]
+ 487 0012 0020     		movs	r0, #0
+ 488 0014 7047     		bx	lr
+ 490              		.section	.text.USBD_LL_SOF,"ax",%progbits
+ 491              		.align	1
+ 492              		.global	USBD_LL_SOF
+ 493              		.syntax unified
+ 494              		.thumb
+ 495              		.thumb_func
+ 496              		.fpu softvfp
+ 498              	USBD_LL_SOF:
+ 499              		@ args = 0, pretend = 0, frame = 0
+ 500              		@ frame_needed = 0, uses_anonymous_args = 0
+ 501 0000 D0F8B822 		ldr	r2, [r0, #696]
+ 502 0004 08B5     		push	{r3, lr}
+ 503 0006 42B1     		cbz	r2, .L77
+ 504 0008 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 505 000c 032B     		cmp	r3, #3
+ 506 000e 02D1     		bne	.L78
+ 507 0010 D369     		ldr	r3, [r2, #28]
+ 508 0012 23B1     		cbz	r3, .L79
+ 509 0014 9847     		blx	r3
+ 510              	.L78:
+ 511 0016 0020     		movs	r0, #0
+ 512 0018 00E0     		b	.L76
+ 513              	.L77:
+ 514 001a 0320     		movs	r0, #3
+ 515              	.L76:
+ 516 001c 08BD     		pop	{r3, pc}
+ 517              	.L79:
+ 518 001e 1846     		mov	r0, r3
+ 519 0020 FCE7     		b	.L76
+ 521              		.section	.text.USBD_LL_IsoINIncomplete,"ax",%progbits
+ 522              		.align	1
+ 523              		.global	USBD_LL_IsoINIncomplete
+ 524              		.syntax unified
+ 525              		.thumb
+ 526              		.thumb_func
+ 527              		.fpu softvfp
+ 529              	USBD_LL_IsoINIncomplete:
+ 530              		@ args = 0, pretend = 0, frame = 0
+ 531              		@ frame_needed = 0, uses_anonymous_args = 0
+ 532 0000 D0F8B822 		ldr	r2, [r0, #696]
+ 533 0004 08B5     		push	{r3, lr}
+ 534 0006 42B1     		cbz	r2, .L82
+ 535 0008 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 536 000c 032B     		cmp	r3, #3
+ 537 000e 02D1     		bne	.L83
+ 538 0010 136A     		ldr	r3, [r2, #32]
+ 539 0012 23B1     		cbz	r3, .L84
+ 540 0014 9847     		blx	r3
+ 541              	.L83:
+ 542 0016 0020     		movs	r0, #0
+ 543 0018 00E0     		b	.L81
+ 544              	.L82:
+ 545 001a 0320     		movs	r0, #3
+ 546              	.L81:
+ARM GAS  /tmp/ccFg5kR8.s 			page 10
+
+
+ 547 001c 08BD     		pop	{r3, pc}
+ 548              	.L84:
+ 549 001e 1846     		mov	r0, r3
+ 550 0020 FCE7     		b	.L81
+ 552              		.section	.text.USBD_LL_IsoOUTIncomplete,"ax",%progbits
+ 553              		.align	1
+ 554              		.global	USBD_LL_IsoOUTIncomplete
+ 555              		.syntax unified
+ 556              		.thumb
+ 557              		.thumb_func
+ 558              		.fpu softvfp
+ 560              	USBD_LL_IsoOUTIncomplete:
+ 561              		@ args = 0, pretend = 0, frame = 0
+ 562              		@ frame_needed = 0, uses_anonymous_args = 0
+ 563 0000 D0F8B822 		ldr	r2, [r0, #696]
+ 564 0004 08B5     		push	{r3, lr}
+ 565 0006 42B1     		cbz	r2, .L87
+ 566 0008 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 567 000c 032B     		cmp	r3, #3
+ 568 000e 02D1     		bne	.L88
+ 569 0010 536A     		ldr	r3, [r2, #36]
+ 570 0012 23B1     		cbz	r3, .L89
+ 571 0014 9847     		blx	r3
+ 572              	.L88:
+ 573 0016 0020     		movs	r0, #0
+ 574 0018 00E0     		b	.L86
+ 575              	.L87:
+ 576 001a 0320     		movs	r0, #3
+ 577              	.L86:
+ 578 001c 08BD     		pop	{r3, pc}
+ 579              	.L89:
+ 580 001e 1846     		mov	r0, r3
+ 581 0020 FCE7     		b	.L86
+ 583              		.section	.text.USBD_LL_DevConnected,"ax",%progbits
+ 584              		.align	1
+ 585              		.global	USBD_LL_DevConnected
+ 586              		.syntax unified
+ 587              		.thumb
+ 588              		.thumb_func
+ 589              		.fpu softvfp
+ 591              	USBD_LL_DevConnected:
+ 592              		@ args = 0, pretend = 0, frame = 0
+ 593              		@ frame_needed = 0, uses_anonymous_args = 0
+ 594              		@ link register save eliminated.
+ 595 0000 0020     		movs	r0, #0
+ 596 0002 7047     		bx	lr
+ 598              		.section	.text.USBD_LL_DevDisconnected,"ax",%progbits
+ 599              		.align	1
+ 600              		.global	USBD_LL_DevDisconnected
+ 601              		.syntax unified
+ 602              		.thumb
+ 603              		.thumb_func
+ 604              		.fpu softvfp
+ 606              	USBD_LL_DevDisconnected:
+ 607              		@ args = 0, pretend = 0, frame = 0
+ 608              		@ frame_needed = 0, uses_anonymous_args = 0
+ 609 0000 0122     		movs	r2, #1
+ARM GAS  /tmp/ccFg5kR8.s 			page 11
+
+
+ 610 0002 08B5     		push	{r3, lr}
+ 611 0004 80F89C22 		strb	r2, [r0, #668]
+ 612 0008 D0F8B822 		ldr	r2, [r0, #696]
+ 613 000c 12B1     		cbz	r2, .L92
+ 614 000e 5268     		ldr	r2, [r2, #4]
+ 615 0010 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
+ 616 0012 9047     		blx	r2
+ 617              	.L92:
+ 618 0014 0020     		movs	r0, #0
+ 619 0016 08BD     		pop	{r3, pc}
+ 621              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccFg5kR8.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usbd_core.c
+     /tmp/ccFg5kR8.s:14     .text.USBD_Init:0000000000000000 $t
+     /tmp/ccFg5kR8.s:22     .text.USBD_Init:0000000000000000 USBD_Init
+     /tmp/ccFg5kR8.s:43     .text.USBD_DeInit:0000000000000000 $t
+     /tmp/ccFg5kR8.s:50     .text.USBD_DeInit:0000000000000000 USBD_DeInit
+     /tmp/ccFg5kR8.s:76     .text.USBD_RegisterClass:0000000000000000 $t
+     /tmp/ccFg5kR8.s:83     .text.USBD_RegisterClass:0000000000000000 USBD_RegisterClass
+     /tmp/ccFg5kR8.s:110    .text.USBD_Start:0000000000000000 $t
+     /tmp/ccFg5kR8.s:117    .text.USBD_Start:0000000000000000 USBD_Start
+     /tmp/ccFg5kR8.s:124    .text.USBD_Stop:0000000000000000 $t
+     /tmp/ccFg5kR8.s:131    .text.USBD_Stop:0000000000000000 USBD_Stop
+     /tmp/ccFg5kR8.s:148    .text.USBD_RunTestMode:0000000000000000 $t
+     /tmp/ccFg5kR8.s:155    .text.USBD_RunTestMode:0000000000000000 USBD_RunTestMode
+     /tmp/ccFg5kR8.s:163    .text.USBD_SetClassConfig:0000000000000000 $t
+     /tmp/ccFg5kR8.s:170    .text.USBD_SetClassConfig:0000000000000000 USBD_SetClassConfig
+     /tmp/ccFg5kR8.s:183    .text.USBD_ClrClassConfig:0000000000000000 $t
+     /tmp/ccFg5kR8.s:190    .text.USBD_ClrClassConfig:0000000000000000 USBD_ClrClassConfig
+     /tmp/ccFg5kR8.s:203    .text.USBD_LL_SetupStage:0000000000000000 $t
+     /tmp/ccFg5kR8.s:210    .text.USBD_LL_SetupStage:0000000000000000 USBD_LL_SetupStage
+     /tmp/ccFg5kR8.s:250    .text.USBD_LL_DataOutStage:0000000000000000 $t
+     /tmp/ccFg5kR8.s:257    .text.USBD_LL_DataOutStage:0000000000000000 USBD_LL_DataOutStage
+     /tmp/ccFg5kR8.s:304    .text.USBD_LL_DataInStage:0000000000000000 $t
+     /tmp/ccFg5kR8.s:311    .text.USBD_LL_DataInStage:0000000000000000 USBD_LL_DataInStage
+     /tmp/ccFg5kR8.s:384    .text.USBD_LL_Reset:0000000000000000 $t
+     /tmp/ccFg5kR8.s:391    .text.USBD_LL_Reset:0000000000000000 USBD_LL_Reset
+     /tmp/ccFg5kR8.s:434    .text.USBD_LL_SetSpeed:0000000000000000 $t
+     /tmp/ccFg5kR8.s:441    .text.USBD_LL_SetSpeed:0000000000000000 USBD_LL_SetSpeed
+     /tmp/ccFg5kR8.s:450    .text.USBD_LL_Suspend:0000000000000000 $t
+     /tmp/ccFg5kR8.s:457    .text.USBD_LL_Suspend:0000000000000000 USBD_LL_Suspend
+     /tmp/ccFg5kR8.s:470    .text.USBD_LL_Resume:0000000000000000 $t
+     /tmp/ccFg5kR8.s:477    .text.USBD_LL_Resume:0000000000000000 USBD_LL_Resume
+     /tmp/ccFg5kR8.s:491    .text.USBD_LL_SOF:0000000000000000 $t
+     /tmp/ccFg5kR8.s:498    .text.USBD_LL_SOF:0000000000000000 USBD_LL_SOF
+     /tmp/ccFg5kR8.s:522    .text.USBD_LL_IsoINIncomplete:0000000000000000 $t
+     /tmp/ccFg5kR8.s:529    .text.USBD_LL_IsoINIncomplete:0000000000000000 USBD_LL_IsoINIncomplete
+     /tmp/ccFg5kR8.s:553    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 $t
+     /tmp/ccFg5kR8.s:560    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 USBD_LL_IsoOUTIncomplete
+     /tmp/ccFg5kR8.s:584    .text.USBD_LL_DevConnected:0000000000000000 $t
+     /tmp/ccFg5kR8.s:591    .text.USBD_LL_DevConnected:0000000000000000 USBD_LL_DevConnected
+     /tmp/ccFg5kR8.s:599    .text.USBD_LL_DevDisconnected:0000000000000000 $t
+     /tmp/ccFg5kR8.s:606    .text.USBD_LL_DevDisconnected:0000000000000000 USBD_LL_DevDisconnected
+
+UNDEFINED SYMBOLS
+USBD_LL_Init
+USBD_LL_Stop
+USBD_LL_DeInit
+USBD_LL_Start
+USBD_ParseSetupRequest
+USBD_StdDevReq
+USBD_StdItfReq
+USBD_StdEPReq
+USBD_LL_StallEP
+USBD_CtlContinueRx
+USBD_CtlSendStatus
+USBD_CtlContinueSendData
+USBD_LL_PrepareReceive
+ARM GAS  /tmp/ccFg5kR8.s 			page 13
+
+
+USBD_CtlReceiveStatus
+USBD_LL_OpenEP

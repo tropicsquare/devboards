@@ -1,0 +1,494 @@
+ARM GAS  /tmp/ccOeori2.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"uart.c"
+  12              		.text
+  13              		.section	.text.uart_brr_value,"ax",%progbits
+  14              		.align	1
+  15              		.global	uart_brr_value
+  16              		.arch armv7-m
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	uart_brr_value:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 1923     		movs	r3, #25
+  27 0002 5843     		muls	r0, r3, r0
+  28 0004 8900     		lsls	r1, r1, #2
+  29 0006 6423     		movs	r3, #100
+  30 0008 B0FBF1F1 		udiv	r1, r0, r1
+  31 000c B1FBF3F0 		udiv	r0, r1, r3
+  32 0010 03FB1011 		mls	r1, r3, r0, r1
+  33 0014 0901     		lsls	r1, r1, #4
+  34 0016 3231     		adds	r1, r1, #50
+  35 0018 B1FBF3F1 		udiv	r1, r1, r3
+  36 001c 01EB0010 		add	r0, r1, r0, lsl #4
+  37 0020 7047     		bx	lr
+  39              		.section	.text.main_wakeup,"ax",%progbits
+  40              		.align	1
+  41              		.weak	main_wakeup
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu softvfp
+  47              	main_wakeup:
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50              		@ link register save eliminated.
+  51 0000 7047     		bx	lr
+  53              		.section	.text.uart2_getchar,"ax",%progbits
+  54              		.align	1
+  55              		.global	uart2_getchar
+  56              		.syntax unified
+  57              		.thumb
+  58              		.thumb_func
+  59              		.fpu softvfp
+  61              	uart2_getchar:
+  62              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccOeori2.s 			page 2
+
+
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64 0000 10B5     		push	{r4, lr}
+  65 0002 0B4B     		ldr	r3, .L9
+  66 0004 0B4C     		ldr	r4, .L9+4
+  67 0006 1B68     		ldr	r3, [r3]
+  68 0008 2268     		ldr	r2, [r4]
+  69 000a 9A42     		cmp	r2, r3
+  70 000c 0CD0     		beq	.L7
+  71 000e 0A49     		ldr	r1, .L9+8
+  72 0010 0A48     		ldr	r0, .L9+12
+  73 0012 0B68     		ldr	r3, [r1]
+  74 0014 0132     		adds	r2, r2, #1
+  75 0016 C05C     		ldrb	r0, [r0, r3]	@ zero_extendqisi2
+  76 0018 0133     		adds	r3, r3, #1
+  77 001a B3F5007F 		cmp	r3, #512
+  78 001e 28BF     		it	cs
+  79 0020 0023     		movcs	r3, #0
+  80 0022 2260     		str	r2, [r4]
+  81 0024 0B60     		str	r3, [r1]
+  82              	.L3:
+  83 0026 10BD     		pop	{r4, pc}
+  84              	.L7:
+  85 0028 4FF0FF30 		mov	r0, #-1
+  86 002c FBE7     		b	.L3
+  87              	.L10:
+  88 002e 00BF     		.align	2
+  89              	.L9:
+  90 0030 00000000 		.word	.LANCHOR1
+  91 0034 00000000 		.word	.LANCHOR0
+  92 0038 00000000 		.word	.LANCHOR2
+  93 003c 00000000 		.word	.LANCHOR3
+  95              		.section	.text.uart2_putchar,"ax",%progbits
+  96              		.align	1
+  97              		.global	uart2_putchar
+  98              		.syntax unified
+  99              		.thumb
+ 100              		.thumb_func
+ 101              		.fpu softvfp
+ 103              	uart2_putchar:
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106 0000 1249     		ldr	r1, .L16
+ 107 0002 134A     		ldr	r2, .L16+4
+ 108 0004 0B68     		ldr	r3, [r1]
+ 109 0006 1268     		ldr	r2, [r2]
+ 110 0008 10B5     		push	{r4, lr}
+ 111 000a 9B1A     		subs	r3, r3, r2
+ 112 000c B3F5806F 		cmp	r3, #1024
+ 113 0010 19D2     		bcs	.L14
+ 114 0012 104B     		ldr	r3, .L16+8
+ 115 0014 104C     		ldr	r4, .L16+12
+ 116 0016 1A68     		ldr	r2, [r3]
+ 117 0018 A054     		strb	r0, [r4, r2]
+ 118 001a 1A68     		ldr	r2, [r3]
+ 119 001c 0120     		movs	r0, #1
+ 120 001e 0132     		adds	r2, r2, #1
+ 121 0020 B2F5806F 		cmp	r2, #1024
+ARM GAS  /tmp/ccOeori2.s 			page 3
+
+
+ 122 0024 1A60     		str	r2, [r3]
+ 123 0026 24BF     		itt	cs
+ 124 0028 0022     		movcs	r2, #0
+ 125 002a 1A60     		strcs	r2, [r3]
+ 126 002c 0B68     		ldr	r3, [r1]
+ 127 002e 0133     		adds	r3, r3, #1
+ 128 0030 0B60     		str	r3, [r1]
+ 129 0032 0A4B     		ldr	r3, .L16+16
+ 130 0034 1A68     		ldr	r2, [r3]
+ 131 0036 2AB9     		cbnz	r2, .L11
+ 132 0038 094A     		ldr	r2, .L16+20
+ 133 003a 1860     		str	r0, [r3]
+ 134 003c D368     		ldr	r3, [r2, #12]
+ 135 003e 43F08003 		orr	r3, r3, #128
+ 136 0042 D360     		str	r3, [r2, #12]
+ 137              	.L11:
+ 138 0044 10BD     		pop	{r4, pc}
+ 139              	.L14:
+ 140 0046 0020     		movs	r0, #0
+ 141 0048 FCE7     		b	.L11
+ 142              	.L17:
+ 143 004a 00BF     		.align	2
+ 144              	.L16:
+ 145 004c 00000000 		.word	.LANCHOR4
+ 146 0050 00000000 		.word	.LANCHOR5
+ 147 0054 00000000 		.word	.LANCHOR6
+ 148 0058 00000000 		.word	.LANCHOR7
+ 149 005c 00000000 		.word	.LANCHOR8
+ 150 0060 00440040 		.word	1073759232
+ 152              		.section	.text.u2_tx,"ax",%progbits
+ 153              		.align	1
+ 154              		.global	u2_tx
+ 155              		.syntax unified
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.fpu softvfp
+ 160              	u2_tx:
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              		@ link register save eliminated.
+ 164 0000 094B     		ldr	r3, .L20
+ 165 0002 0A49     		ldr	r1, .L20+4
+ 166 0004 1A68     		ldr	r2, [r3]
+ 167 0006 895C     		ldrb	r1, [r1, r2]	@ zero_extendqisi2
+ 168 0008 1A68     		ldr	r2, [r3]
+ 169 000a 0132     		adds	r2, r2, #1
+ 170 000c B2F5806F 		cmp	r2, #1024
+ 171 0010 1A60     		str	r2, [r3]
+ 172 0012 24BF     		itt	cs
+ 173 0014 0022     		movcs	r2, #0
+ 174 0016 1A60     		strcs	r2, [r3]
+ 175 0018 054A     		ldr	r2, .L20+8
+ 176 001a 1368     		ldr	r3, [r2]
+ 177 001c 0133     		adds	r3, r3, #1
+ 178 001e 1360     		str	r3, [r2]
+ 179 0020 044B     		ldr	r3, .L20+12
+ 180 0022 5960     		str	r1, [r3, #4]
+ARM GAS  /tmp/ccOeori2.s 			page 4
+
+
+ 181 0024 7047     		bx	lr
+ 182              	.L21:
+ 183 0026 00BF     		.align	2
+ 184              	.L20:
+ 185 0028 00000000 		.word	.LANCHOR9
+ 186 002c 00000000 		.word	.LANCHOR7
+ 187 0030 00000000 		.word	.LANCHOR5
+ 188 0034 00440040 		.word	1073759232
+ 190              		.section	.text.USART2_IRQHandler,"ax",%progbits
+ 191              		.align	1
+ 192              		.global	USART2_IRQHandler
+ 193              		.syntax unified
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.fpu softvfp
+ 198              	USART2_IRQHandler:
+ 199              		@ args = 0, pretend = 0, frame = 0
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
+ 201 0000 194B     		ldr	r3, .L36
+ 202 0002 10B5     		push	{r4, lr}
+ 203 0004 1868     		ldr	r0, [r3]
+ 204 0006 0106     		lsls	r1, r0, #24
+ 205 0008 0FD5     		bpl	.L23
+ 206 000a DA68     		ldr	r2, [r3, #12]
+ 207 000c 1206     		lsls	r2, r2, #24
+ 208 000e 0CD5     		bpl	.L23
+ 209 0010 164A     		ldr	r2, .L36+4
+ 210 0012 1168     		ldr	r1, [r2]
+ 211 0014 164A     		ldr	r2, .L36+8
+ 212 0016 1268     		ldr	r2, [r2]
+ 213 0018 9142     		cmp	r1, r2
+ 214 001a 22D1     		bne	.L24
+ 215 001c DA68     		ldr	r2, [r3, #12]
+ 216 001e 22F08002 		bic	r2, r2, #128
+ 217 0022 DA60     		str	r2, [r3, #12]
+ 218 0024 0022     		movs	r2, #0
+ 219 0026 134B     		ldr	r3, .L36+12
+ 220 0028 1A60     		str	r2, [r3]
+ 221              	.L23:
+ 222 002a 8306     		lsls	r3, r0, #26
+ 223 002c 18D5     		bpl	.L22
+ 224 002e 0E4B     		ldr	r3, .L36
+ 225 0030 1149     		ldr	r1, .L36+16
+ 226 0032 124A     		ldr	r2, .L36+20
+ 227 0034 5C68     		ldr	r4, [r3, #4]
+ 228 0036 1268     		ldr	r2, [r2]
+ 229 0038 0B68     		ldr	r3, [r1]
+ 230 003a 9B1A     		subs	r3, r3, r2
+ 231 003c B3F5007F 		cmp	r3, #512
+ 232 0040 0ED2     		bcs	.L22
+ 233 0042 0F4B     		ldr	r3, .L36+24
+ 234 0044 0F48     		ldr	r0, .L36+28
+ 235 0046 1A68     		ldr	r2, [r3]
+ 236 0048 8454     		strb	r4, [r0, r2]
+ 237 004a 1A68     		ldr	r2, [r3]
+ 238 004c 0132     		adds	r2, r2, #1
+ 239 004e B2F5007F 		cmp	r2, #512
+ARM GAS  /tmp/ccOeori2.s 			page 5
+
+
+ 240 0052 1A60     		str	r2, [r3]
+ 241 0054 24BF     		itt	cs
+ 242 0056 0022     		movcs	r2, #0
+ 243 0058 1A60     		strcs	r2, [r3]
+ 244 005a 0B68     		ldr	r3, [r1]
+ 245 005c 0133     		adds	r3, r3, #1
+ 246 005e 0B60     		str	r3, [r1]
+ 247              	.L22:
+ 248 0060 10BD     		pop	{r4, pc}
+ 249              	.L24:
+ 250 0062 FFF7FEFF 		bl	u2_tx
+ 251 0066 E0E7     		b	.L23
+ 252              	.L37:
+ 253              		.align	2
+ 254              	.L36:
+ 255 0068 00440040 		.word	1073759232
+ 256 006c 00000000 		.word	.LANCHOR4
+ 257 0070 00000000 		.word	.LANCHOR5
+ 258 0074 00000000 		.word	.LANCHOR8
+ 259 0078 00000000 		.word	.LANCHOR1
+ 260 007c 00000000 		.word	.LANCHOR0
+ 261 0080 00000000 		.word	.LANCHOR10
+ 262 0084 00000000 		.word	.LANCHOR3
+ 264              		.section	.text.uart2_init,"ax",%progbits
+ 265              		.align	1
+ 266              		.global	uart2_init
+ 267              		.syntax unified
+ 268              		.thumb
+ 269              		.thumb_func
+ 270              		.fpu softvfp
+ 272              	uart2_init:
+ 273              		@ args = 0, pretend = 0, frame = 24
+ 274              		@ frame_needed = 0, uses_anonymous_args = 0
+ 275 0000 0023     		movs	r3, #0
+ 276 0002 70B5     		push	{r4, r5, r6, lr}
+ 277 0004 86B0     		sub	sp, sp, #24
+ 278 0006 CDE90433 		strd	r3, r3, [sp, #16]
+ 279 000a 03F18043 		add	r3, r3, #1073741824
+ 280 000e 03F50433 		add	r3, r3, #135168
+ 281 0012 DA69     		ldr	r2, [r3, #28]
+ 282 0014 154E     		ldr	r6, .L39
+ 283 0016 42F40032 		orr	r2, r2, #131072
+ 284 001a DA61     		str	r2, [r3, #28]
+ 285 001c 9A69     		ldr	r2, [r3, #24]
+ 286 001e 144D     		ldr	r5, .L39+4
+ 287 0020 42F00402 		orr	r2, r2, #4
+ 288 0024 9A61     		str	r2, [r3, #24]
+ 289 0026 B368     		ldr	r3, [r6, #8]
+ 290 0028 0922     		movs	r2, #9
+ 291 002a 0193     		str	r3, [sp, #4]
+ 292 002c 0323     		movs	r3, #3
+ 293 002e 0446     		mov	r4, r0
+ 294 0030 01A9     		add	r1, sp, #4
+ 295 0032 2846     		mov	r0, r5
+ 296 0034 CDE90223 		strd	r2, r3, [sp, #8]
+ 297 0038 FFF7FEFF 		bl	LL_GPIO_Init
+ 298 003c F368     		ldr	r3, [r6, #12]
+ARM GAS  /tmp/ccOeori2.s 			page 6
+
+
+ 299 003e 2846     		mov	r0, r5
+ 300 0040 0193     		str	r3, [sp, #4]
+ 301 0042 0423     		movs	r3, #4
+ 302 0044 0DEB0301 		add	r1, sp, r3
+ 303 0048 0293     		str	r3, [sp, #8]
+ 304 004a FFF7FEFF 		bl	LL_GPIO_Init
+ 305 004e 2146     		mov	r1, r4
+ 306 0050 0848     		ldr	r0, .L39+8
+ 307 0052 FFF7FEFF 		bl	uart_brr_value
+ 308 0056 084C     		ldr	r4, .L39+12
+ 309 0058 0721     		movs	r1, #7
+ 310 005a A060     		str	r0, [r4, #8]
+ 311 005c 2620     		movs	r0, #38
+ 312 005e FFF7FEFF 		bl	irq_enable
+ 313 0062 42F2AC03 		movw	r3, #8364
+ 314 0066 E360     		str	r3, [r4, #12]
+ 315 0068 06B0     		add	sp, sp, #24
+ 316              		@ sp needed
+ 317 006a 70BD     		pop	{r4, r5, r6, pc}
+ 318              	.L40:
+ 319              		.align	2
+ 320              	.L39:
+ 321 006c 00000000 		.word	gpio_ll_map
+ 322 0070 00080140 		.word	1073809408
+ 323 0074 00512502 		.word	36000000
+ 324 0078 00440040 		.word	1073759232
+ 326              		.section	.text.uart2_set_state,"ax",%progbits
+ 327              		.align	1
+ 328              		.global	uart2_set_state
+ 329              		.syntax unified
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.fpu softvfp
+ 334              	uart2_set_state:
+ 335              		@ args = 0, pretend = 0, frame = 0
+ 336              		@ frame_needed = 0, uses_anonymous_args = 0
+ 337              		@ link register save eliminated.
+ 338 0000 044B     		ldr	r3, .L45
+ 339 0002 DA69     		ldr	r2, [r3, #28]
+ 340 0004 18B1     		cbz	r0, .L42
+ 341 0006 42F40032 		orr	r2, r2, #131072
+ 342              	.L44:
+ 343 000a DA61     		str	r2, [r3, #28]
+ 344 000c 7047     		bx	lr
+ 345              	.L42:
+ 346 000e 22F40032 		bic	r2, r2, #131072
+ 347 0012 FAE7     		b	.L44
+ 348              	.L46:
+ 349              		.align	2
+ 350              	.L45:
+ 351 0014 00100240 		.word	1073876992
+ 353              		.global	u2_tx_run
+ 354              		.global	u2_tx_rd_cnt
+ 355              		.global	u2_tx_rd_index
+ 356              		.global	u2_tx_wr_cnt
+ 357              		.global	u2_tx_wr_index
+ 358              		.global	u2_tx_buf
+ARM GAS  /tmp/ccOeori2.s 			page 7
+
+
+ 359              		.global	u2_rx_run
+ 360              		.global	u2_rx_rd_cnt
+ 361              		.global	u2_rx_rd_index
+ 362              		.global	u2_rx_wr_cnt
+ 363              		.global	u2_rx_wr_index
+ 364              		.global	u2_rx_buf
+ 365              		.section	.bss.u2_rx_buf,"aw",%nobits
+ 366              		.set	.LANCHOR3,. + 0
+ 369              	u2_rx_buf:
+ 370 0000 00000000 		.space	512
+ 370      00000000 
+ 370      00000000 
+ 370      00000000 
+ 370      00000000 
+ 371              		.section	.bss.u2_rx_rd_cnt,"aw",%nobits
+ 372              		.align	2
+ 373              		.set	.LANCHOR0,. + 0
+ 376              	u2_rx_rd_cnt:
+ 377 0000 00000000 		.space	4
+ 378              		.section	.bss.u2_rx_rd_index,"aw",%nobits
+ 379              		.align	2
+ 380              		.set	.LANCHOR2,. + 0
+ 383              	u2_rx_rd_index:
+ 384 0000 00000000 		.space	4
+ 385              		.section	.bss.u2_rx_run,"aw",%nobits
+ 386              		.align	2
+ 389              	u2_rx_run:
+ 390 0000 00000000 		.space	4
+ 391              		.section	.bss.u2_rx_wr_cnt,"aw",%nobits
+ 392              		.align	2
+ 393              		.set	.LANCHOR1,. + 0
+ 396              	u2_rx_wr_cnt:
+ 397 0000 00000000 		.space	4
+ 398              		.section	.bss.u2_rx_wr_index,"aw",%nobits
+ 399              		.align	2
+ 400              		.set	.LANCHOR10,. + 0
+ 403              	u2_rx_wr_index:
+ 404 0000 00000000 		.space	4
+ 405              		.section	.bss.u2_tx_buf,"aw",%nobits
+ 406              		.set	.LANCHOR7,. + 0
+ 409              	u2_tx_buf:
+ 410 0000 00000000 		.space	1024
+ 410      00000000 
+ 410      00000000 
+ 410      00000000 
+ 410      00000000 
+ 411              		.section	.bss.u2_tx_rd_cnt,"aw",%nobits
+ 412              		.align	2
+ 413              		.set	.LANCHOR5,. + 0
+ 416              	u2_tx_rd_cnt:
+ 417 0000 00000000 		.space	4
+ 418              		.section	.bss.u2_tx_rd_index,"aw",%nobits
+ 419              		.align	2
+ 420              		.set	.LANCHOR9,. + 0
+ 423              	u2_tx_rd_index:
+ 424 0000 00000000 		.space	4
+ 425              		.section	.bss.u2_tx_run,"aw",%nobits
+ARM GAS  /tmp/ccOeori2.s 			page 8
+
+
+ 426              		.align	2
+ 427              		.set	.LANCHOR8,. + 0
+ 430              	u2_tx_run:
+ 431 0000 00000000 		.space	4
+ 432              		.section	.bss.u2_tx_wr_cnt,"aw",%nobits
+ 433              		.align	2
+ 434              		.set	.LANCHOR4,. + 0
+ 437              	u2_tx_wr_cnt:
+ 438 0000 00000000 		.space	4
+ 439              		.section	.bss.u2_tx_wr_index,"aw",%nobits
+ 440              		.align	2
+ 441              		.set	.LANCHOR6,. + 0
+ 444              	u2_tx_wr_index:
+ 445 0000 00000000 		.space	4
+ 446              		.ident	"GCC: (15:10.3-2021.07-4) 10.3.1 20210621 (release)"
+ARM GAS  /tmp/ccOeori2.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 uart.c
+     /tmp/ccOeori2.s:14     .text.uart_brr_value:0000000000000000 $t
+     /tmp/ccOeori2.s:22     .text.uart_brr_value:0000000000000000 uart_brr_value
+     /tmp/ccOeori2.s:40     .text.main_wakeup:0000000000000000 $t
+     /tmp/ccOeori2.s:47     .text.main_wakeup:0000000000000000 main_wakeup
+     /tmp/ccOeori2.s:54     .text.uart2_getchar:0000000000000000 $t
+     /tmp/ccOeori2.s:61     .text.uart2_getchar:0000000000000000 uart2_getchar
+     /tmp/ccOeori2.s:90     .text.uart2_getchar:0000000000000030 $d
+     /tmp/ccOeori2.s:96     .text.uart2_putchar:0000000000000000 $t
+     /tmp/ccOeori2.s:103    .text.uart2_putchar:0000000000000000 uart2_putchar
+     /tmp/ccOeori2.s:145    .text.uart2_putchar:000000000000004c $d
+     /tmp/ccOeori2.s:153    .text.u2_tx:0000000000000000 $t
+     /tmp/ccOeori2.s:160    .text.u2_tx:0000000000000000 u2_tx
+     /tmp/ccOeori2.s:185    .text.u2_tx:0000000000000028 $d
+     /tmp/ccOeori2.s:191    .text.USART2_IRQHandler:0000000000000000 $t
+     /tmp/ccOeori2.s:198    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
+     /tmp/ccOeori2.s:255    .text.USART2_IRQHandler:0000000000000068 $d
+     /tmp/ccOeori2.s:265    .text.uart2_init:0000000000000000 $t
+     /tmp/ccOeori2.s:272    .text.uart2_init:0000000000000000 uart2_init
+     /tmp/ccOeori2.s:321    .text.uart2_init:000000000000006c $d
+     /tmp/ccOeori2.s:327    .text.uart2_set_state:0000000000000000 $t
+     /tmp/ccOeori2.s:334    .text.uart2_set_state:0000000000000000 uart2_set_state
+     /tmp/ccOeori2.s:351    .text.uart2_set_state:0000000000000014 $d
+     /tmp/ccOeori2.s:430    .bss.u2_tx_run:0000000000000000 u2_tx_run
+     /tmp/ccOeori2.s:416    .bss.u2_tx_rd_cnt:0000000000000000 u2_tx_rd_cnt
+     /tmp/ccOeori2.s:423    .bss.u2_tx_rd_index:0000000000000000 u2_tx_rd_index
+     /tmp/ccOeori2.s:437    .bss.u2_tx_wr_cnt:0000000000000000 u2_tx_wr_cnt
+     /tmp/ccOeori2.s:444    .bss.u2_tx_wr_index:0000000000000000 u2_tx_wr_index
+     /tmp/ccOeori2.s:409    .bss.u2_tx_buf:0000000000000000 u2_tx_buf
+     /tmp/ccOeori2.s:389    .bss.u2_rx_run:0000000000000000 u2_rx_run
+     /tmp/ccOeori2.s:376    .bss.u2_rx_rd_cnt:0000000000000000 u2_rx_rd_cnt
+     /tmp/ccOeori2.s:383    .bss.u2_rx_rd_index:0000000000000000 u2_rx_rd_index
+     /tmp/ccOeori2.s:396    .bss.u2_rx_wr_cnt:0000000000000000 u2_rx_wr_cnt
+     /tmp/ccOeori2.s:403    .bss.u2_rx_wr_index:0000000000000000 u2_rx_wr_index
+     /tmp/ccOeori2.s:369    .bss.u2_rx_buf:0000000000000000 u2_rx_buf
+     /tmp/ccOeori2.s:370    .bss.u2_rx_buf:0000000000000000 $d
+     /tmp/ccOeori2.s:372    .bss.u2_rx_rd_cnt:0000000000000000 $d
+     /tmp/ccOeori2.s:379    .bss.u2_rx_rd_index:0000000000000000 $d
+     /tmp/ccOeori2.s:386    .bss.u2_rx_run:0000000000000000 $d
+     /tmp/ccOeori2.s:392    .bss.u2_rx_wr_cnt:0000000000000000 $d
+     /tmp/ccOeori2.s:399    .bss.u2_rx_wr_index:0000000000000000 $d
+     /tmp/ccOeori2.s:410    .bss.u2_tx_buf:0000000000000000 $d
+     /tmp/ccOeori2.s:412    .bss.u2_tx_rd_cnt:0000000000000000 $d
+     /tmp/ccOeori2.s:419    .bss.u2_tx_rd_index:0000000000000000 $d
+     /tmp/ccOeori2.s:426    .bss.u2_tx_run:0000000000000000 $d
+     /tmp/ccOeori2.s:433    .bss.u2_tx_wr_cnt:0000000000000000 $d
+     /tmp/ccOeori2.s:440    .bss.u2_tx_wr_index:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+LL_GPIO_Init
+irq_enable
+gpio_ll_map
