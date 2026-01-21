@@ -1,22 +1,24 @@
 # TROPIC01 Development Boards
 
-This repository collects all resources for development boards which are available for the TROPIC01 secure element.
+Welcome, PCB designers! This repository collects all resources for development boards which are available for the TROPIC01 secure element.
 
 | Development Board        | Description                           | PCB resources                  |
 |:------------------------:|:-------------------------------------:|:------------------------------:|
 | **USB Devkit**           | TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
 | **Raspberry Pi Shield**  | Shield for Raspberry Pi form factor   | [View](./Raspberry_Pi_Shield/) |
-| **Mini Board**           | Compact standalone board              | [View](./Mini_Board/)          |
+| **Mini Board**           | Compact PCB board                     | [View](./Mini_Board/)          |
 | **Arduino Shield**       | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
 
 
 ## I got a devboard, now what?
 
-Section here.
+TBD, describe more the process how first steps might look.
+* Identify devboard
+* Follow tutorials in [libtropic](https://www.github.com/tropicsquare/libtropic/)
 
 ## I want to design PCB
 
-Symbol, 3D model and Tropic Square logos for silkscreen for **KiCAD** are available in `KiCAD-lib/` folder.
+TROPIC01 `Schematic symbol`, `3D model` and `Tropic Square logos` for silkscreen are available in `KiCAD-lib/` folder, ready to be used with **KiCAD** EDA tool. Check out [README.md](KiCAD-lib/README.md) for details.
 
 ## About TROPIC01
 
@@ -27,10 +29,10 @@ For more information about the TROPIC01 secure element, please see the official 
 
 ## License
 
-This repository contains not only PCB rsources, but in same cases also HW which comes with devkit. Each part is under different license.
+This repository dos not contain only PCB resources, but in same cases also HW which comes with devkit. Each part is under different license, more details in following table:
 
-| Component | License | Applies To |
-|:----------|:--------|:-----------|
-| **PCB Hardware** | [CERN-OHL-P-2.0](LICENSE.txt) | Arduino_Shield/, Raspberry_Pi_Shield/, Mini_Board/, USB_Devkit/pcb/ |
-| **Firmware** | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | USB_Devkit/legacy_fw/ |
-| **Third-party USB library** | Specific | USB_Devkit/legacy_fw/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt) |
+| Component        | License  | Applies To                                                                                          |
+|:-----------------|:---------|:----------------------------------------------------------------------------------------------------|
+| **PCB Hardware**            | [CERN-OHL-P-2.0](LICENSE.txt) | Arduino_Shield/, Raspberry_Pi_Shield/, Mini_Board/, USB_Devkit/pcb/ |
+| **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | USB_Devkit/legacy_fw/                         |
+| **Third-party USB library** | Specific | USB_Devkit/legacy_fw/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |
