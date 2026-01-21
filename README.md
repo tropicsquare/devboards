@@ -9,16 +9,9 @@ Welcome, PCB designers! This repository collects all resources for development b
 | **Mini Board**           | <a href="Mini_Board/TS1701_PCB/img/top_assembled.png"><img src="Mini_Board/TS1701_PCB/img/top_assembled.png" width="100"></a> | Compact PCB board                    | [View](./Mini_Board/)          |
 | **Arduino Shield**       | <a href="Arduino_Shield/TS1401_design/img/top_assembled.png"><img src="Arduino_Shield/TS1401_design/img/top_assembled.png" width="100"></a> | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
 
+## FAQ
 
-## I got a devboard, now what?
-
-TBD, describe more the process how first steps might look.
-* Identify devboard
-* Follow tutorials in [libtropic](https://www.github.com/tropicsquare/libtropic/)
-
-## I want to design PCB
-
-TROPIC01 `Schematic symbol`, `3D model` and `Tropic Square logos` for silkscreen are available in `KiCad-lib/` folder, ready to be used with **KiCad** EDA tool. Check out [README.md](KiCad-lib/README.md) for details.
+See [FAQ.md](FAQ.md) for frequently asked questions about getting started, identifying boards, and designing with TROPIC01.
 
 ## About TROPIC01
 
