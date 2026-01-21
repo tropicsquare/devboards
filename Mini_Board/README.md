@@ -2,10 +2,9 @@
 
 This repository contains the design files for the TROPIC01 Mini Board. Each folder corresponds to a specific PCB revision.
 
-| PCB Revision | TROPIC01 Part Number | Picture                                   | Order |
-|:------------:|:--------------------:|:-----------------------------------------:|:-----:|
-| **1701**     | link T301            | [🖼️ Top View](./TS1701_PCB/img/top.png) | link  |
-
+| Version | PCB Marking | PCB Revision | TROPIC01 Part Number | BOM                                            | Picture                                   | Order |
+|:-------:|:-----------:|:------------:|:--------------------:|:----------------------------------------------:|:-----------------------------------------:|:-----:|
+| 1.0     | none        | **TS1701**   | TR01-C2P-T301        | [BOM](./TS1701_PCB/bom/ts17-tropic01-mini.csv) | [Top View](./TS1701_PCB/img/top.png)      | link  |
 
 ## Getting Started
 
