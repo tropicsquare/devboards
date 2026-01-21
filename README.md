@@ -2,7 +2,7 @@
 
 Welcome, PCB designers! This repository collects all resources for development boards which are available for the TROPIC01 secure element.
 
-| Development Board        | Image  | Description                           | PCB resources                  |
+| Product name             | Image  | Description                        | HW resources                   |
 |:------------------------:|-----|:-------------------------------------:|:------------------------------:|
 | **USB Devkit**           | <a href="USB_Devkit/pcb/TS1302/img/top_assembled.png"><img src="USB_Devkit/pcb/TS1302/img/top_assembled.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
 | **Raspberry Pi Shield**  | <a href="Raspberry_Pi_Shield/TS1501_design/img/top_assembled.png"><img src="Raspberry_Pi_Shield/TS1501_design/img/top_assembled.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./Raspberry_Pi_Shield/) |
@@ -18,7 +18,7 @@ TBD, describe more the process how first steps might look.
 
 ## I want to design PCB
 
-TROPIC01 `Schematic symbol`, `3D model` and `Tropic Square logos` for silkscreen are available in `KiCAD-lib/` folder, ready to be used with **KiCAD** EDA tool. Check out [README.md](KiCAD-lib/README.md) for details.
+TROPIC01 `Schematic symbol`, `3D model` and `Tropic Square logos` for silkscreen are available in `KiCad-lib/` folder, ready to be used with **KiCad** EDA tool. Check out [README.md](KiCad-lib/README.md) for details.
 
 ## About TROPIC01
 

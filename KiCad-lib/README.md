@@ -1,8 +1,8 @@
-# TROPIC01 KiCAD Library
+# TROPIC01 KiCad Library
 
-This directory contains support files for designing PCB with TROPIC01, **Tested with KiCAD 9.0**.
+This directory contains support files for designing PCB with TROPIC01, **Tested with KiCad 9.0**.
 
-<img src="KiCAD_banner_TROPIC01.png" alt="KiCAD 3D Model Configuration" width="50%">
+<img src="KiCad_banner_TROPIC01.png" alt="KiCad printscreens" width="50%">
 
 ## Content
 
@@ -10,16 +10,16 @@ This directory contains support files for designing PCB with TROPIC01, **Tested 
 - `TROPIC01.step` - 3D STEP model for the TROPIC01 chip package
 - `logos.pretty/` - Tropic Square logo and branding, provided as footprints, ready to be used in silkscreen
 
-As footprint we recommend to use standard `Package_DFN_QFN:QFN-32-1EP_4x4mm_P0.4mm_EP2.65x2.65mm` provided by KiCAD.
+As footprint we recommend to use standard `Package_DFN_QFN:QFN-32-1EP_4x4mm_P0.4mm_EP2.65x2.65mm` provided by KiCad.
 
 ## Installation and Usage as Project-Specific Libraries (Recommended)
 
-This method keeps the libraries just with your project. For more details refer to original KiCAD documentation about how to use libraries.
+This method keeps the libraries just with your project. For more details refer to original KiCad documentation about how to use libraries.
 
-1. **Copy the KiCAD-lib folder** into your KiCAD project directory or a subdirectory (e.g., `libraries/`)
+1. **Copy the KiCad-lib folder** into your KiCad project directory or a subdirectory (e.g., `libraries/`)
 
 2. **Add the Symbol Library:**
-  - Open your KiCAD project
+  - Open your KiCad project
   - Go to `Preferences` → `Manage Symbol Libraries...`
   - In the "Project Specific Libraries" tab, click the folder icon to add a new library
   - Browse to and select `TROPIC01.kicad_sym`
@@ -35,7 +35,7 @@ This method keeps the libraries just with your project. For more details refer t
 
 4. **Configure 3D Model Path:**
 
-By default KiCAD will use 3D model for used QFN32 package, but it is possible to change this model to the one provided by us, so you could see a palm tree on TROPIC01 package on your PCB when you render PCB in 3D viewer. To reference our 3D model instead of the one provided with official QFN32 footprint, you need to update the path:
+By default KiCad will use 3D model for used QFN32 package, but it is possible to change this model to the one provided by us, so you could see a palm tree on TROPIC01 package on your PCB when you render PCB in 3D viewer. To reference our 3D model instead of the one provided with official QFN32 footprint, you need to update the path:
   - Open the PCB editor
   - Select a TROPIC01 footprint
   - Right-click → `Properties` → `3D Models` tab
