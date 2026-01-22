@@ -5,9 +5,8 @@ This repository contains design files for the TROPIC01 USB Devkit:
 - **PCB/** - Hardware files for all board revisions (schematics, layouts, BOMs, gerbers)
 - **legacy_fw/** - Firmware versions that boards were distributed with
 
-## Board Revisions
 
-| Version | PCB Marking | PCB Revision | MCU             | TROPIC01 Part Number | BOM                             | Firmware                   | Picture                                 | Order |
+| Product version | PCB Marking | PCB Revision | MCU             | TROPIC01 Part Number | BOM                             | Firmware                   | Picture                                 | Order |
 |:-------:|:-----------:|:------------:|:---------------:|:--------------------:|:-------------------------------:|:--------------------------:|:---------------------------------------:|:-----:|
 | 1.0     | none *([More info..](../IDENTIFY_DEVBOARD.md))*       | **TS1301**     | STM32F1 (256kB) | TR01-C2P-T103        | [BOM](./PCB/TS1301/bom/bom.csv) | [FW A](./fw/firmware_A/)   | [Top View](./PCB/TS1301/img/top.png)  | link  |
 | 2.0     | none *([More info..](../IDENTIFY_DEVBOARD.md))*        | **TS1302**     | STM32U5 (256kB) | TR01-C2P-T103        | [BOM](./PCB/TS1302/bom/bom.csv) | [FW B](./fw/firmware_B/)   | [Top View](./PCB/TS1302/img/top.png)  | link  |
