@@ -1,6 +1,9 @@
 # TROPIC01 USB Devkit
 
-This repository contains design files for the TROPIC01 USB Devkit.
+This repository contains **hardware** design files for the TROPIC01 USB Devkit.
+
+> [!TIP]
+> **Ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## PCB Revisions + BOMs
 
@@ -34,10 +37,6 @@ Common specifications for all revisions:
 Standard SMD components (0805 size):
 - Resistor tolerance: 5% (unless specified)
 - Capacitor tolerance: 20% (unless specified)
-
-## Getting Started
-
-Ready to explore TROPIC01? Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## About TROPIC01
 

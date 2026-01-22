@@ -1,6 +1,9 @@
 # TROPIC01 Mini Board
 
-This repository contains design files for the TROPIC01 Mini Board.
+This repository contains **hardware** design files for the TROPIC01 Mini Board.
+
+> [!TIP]
+> **Ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## PCB Revisions + BOMs
 
@@ -11,10 +14,6 @@ This repository contains design files for the TROPIC01 Mini Board.
 | Product version | PCB Marking | PCB Revision | TROPIC01 Part Number | BOM                                            | Picture                                   | Order |
 |:-------:|:-----------:|:------------:|:--------------------:|:----------------------------------------------:|:-----------------------------------------:|:-----:|
 | 1.0     | none        | **TS1701**   | TR01-C2P-T301        | [BOM](./TS1701/bom/ts17-tropic01-mini.csv) | [Top View](./TS1701/img/top.png)      | link  |
-
-## Getting Started
-
-Ready to explore TROPIC01? Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## About TROPIC01
 
