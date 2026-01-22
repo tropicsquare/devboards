@@ -20,7 +20,8 @@ Each particular board folder contains complete design files for all released rev
 
 You're free to use these as reference, modify for your needs, or manufacture your own boards.
 
-Some devboards include firmware in their folders. Note that firmware may be under a different licensing scheme - see the [licensing section](#license) below for details.
+> [!IMPORTANT]
+> Some devboards include firmware in their folders. Note that firmware or its parts may be under various licensing schemes - see the [licensing section](#license) below for details.
 
 ## Contributing
 
