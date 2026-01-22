@@ -1,6 +1,13 @@
 # TROPIC01 USB Devkit
 
-This repository contains the design files for the TROPIC01 USB Devkit. Each folder corresponds to a specific PCB revision.
+This repository contains the design files for the TROPIC01 USB Devkit.
+
+## Repository Structure
+
+- **PCB/** - Hardware files for all board revisions (schematics, layouts, BOMs, gerbers)
+- **legacy_fw/** - Firmware versions that boards were distributed with
+
+## Board Revisions
 
 | Version | PCB Marking | PCB Revision | MCU             | TROPIC01 Part Number | BOM                             | Firmware                   | Picture                                 | Order |
 |:-------:|:-----------:|:------------:|:---------------:|:--------------------:|:-------------------------------:|:--------------------------:|:---------------------------------------:|:-----:|
