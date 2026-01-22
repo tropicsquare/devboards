@@ -4,7 +4,7 @@ This repository contains design files for the TROPIC01 Mini Board.
 
 ## PCB Revisions + BOMs
 
-- **TS1701/** - schematics, layouts, BOMs, gerbers
+- **TS1701/** - PCB revision 1.0 hardware files (schematics, layouts, BOMs, gerbers)
 
 ## Product Versions
 

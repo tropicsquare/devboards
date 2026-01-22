@@ -4,7 +4,7 @@ This repository contains design files for the TROPIC01 Raspberry Pi Shield.
 
 ## PCB Revisions + BOMs
 
-- **TS1501/** - schematics, layouts, BOMs, gerbers
+- **TS1501/** - PCB revision 1.0 hardware files (schematics, layouts, BOMs, gerbers)
 
 ## Product Versions
 

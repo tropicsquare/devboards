@@ -4,7 +4,7 @@ This repository contains design files for the TROPIC01 Arduino Shield.
 
 ## PCB Revisions + BOMs
 
-- **TS1401/** - schematics, layouts, BOMs, gerbers
+- **TS1401/** - PCB revision 1.0 hardware files (schematics, layouts, BOMs, gerbers)
 
 ## Product Versions
 
