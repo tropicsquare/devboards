@@ -24,14 +24,14 @@ tropic01-devboards/
 │
 ├── Arduino_Shield/
 │   ├── LICENSE.txt                       [CERN-OHL-P-2.0] PCB designs
-│   └── TS1401_design/                    Hardware files
+│   └── TS1401/                           Hardware files
 │
 ├── Raspberry_Pi_Shield/
 │   ├── LICENSE.txt                       [CERN-OHL-P-2.0] PCB designs
-│   └── TS1501_design/                    Hardware files
+│   └── TS1501/                           Hardware files
 │
 ├── Mini_Board/
-│   └── TS1701_PCB/
+│   └── TS1701/
 │       ├── LICENSE.txt                   [BSD-3-Clause-Clear] (existing)
 │       └── (hardware files)
 │
@@ -81,7 +81,7 @@ tropic01-devboards/
 **Files:**
 - `LICENSES/FIRMWARE-LICENSE.txt`
 - `../USB_Devkit/legacy_fw/firmware_B/LICENSE.txt`
-- `../Mini_Board/TS1701_PCB/LICENSE.txt`
+- `../Mini_Board/TS1701/LICENSE.txt`
 
 **Applies to:**
 - Application code (`app/`)
@@ -188,7 +188,7 @@ tropic01-devboards/
 1. ✅ `../README.md` - Added comprehensive license section
 
 ### Existing Files (Preserved):
-- `../Mini_Board/TS1701_PCB/LICENSE.txt` - Kept original Clear BSD
+- `../Mini_Board/TS1701/LICENSE.txt` - Kept original Clear BSD
 - `../USB_Devkit/legacy_fw/firmware_B/LICENSE.txt` - Kept original Clear BSD
 - `../USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md` - Third-party
 - `../USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt` - Third-party
