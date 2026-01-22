@@ -65,7 +65,7 @@ tropic01-devboards/
 - `../LICENSE.txt` (root)
 - `../Arduino_Shield/LICENSE.txt`
 - `../Raspberry_Pi_Shield/LICENSE.txt`
-- `../USB_Devkit/pcb/LICENSE.txt`
+- `../USB_Devkit/PCB/LICENSE.txt`
 
 **Applies to:**
 - `.kicad_pcb` - PCB layouts
@@ -181,7 +181,7 @@ tropic01-devboards/
 4. ✅ `LICENSES/LICENSE_GUIDE.md` - Comprehensive user guide
 5. ✅ `../Arduino_Shield/LICENSE.txt` - Hardware license
 6. ✅ `../Raspberry_Pi_Shield/LICENSE.txt` - Hardware license
-7. ✅ `../USB_Devkit/pcb/LICENSE.txt` - Hardware license
+7. ✅ `../USB_Devkit/PCB/LICENSE.txt` - Hardware license
 8. ✅ `../USB_Devkit/legacy_fw/firmware_B/NOTICE.txt` - Firmware third-party notices
 
 ### Updated Files:

@@ -1,6 +1,8 @@
 # TROPIC01 Development Boards
 
-Welcome, PCB designers! This repository collects all resources for development boards which are available for the TROPIC01 secure element.
+Welcome, PCB designers! 
+
+This repository collects all resources for development boards which we designed with our TROPIC01 secure element. All PCB designs are freely available under **[CERN-OHL-P-2.0](https://ohwr.org/cernohl) Open Hardware license**. We encourage you to re-use designs, modify, or build your own boards!
 
 | Product name             | Image  | Description                           | HW resources                   |
 |:------------------------:|:------:|:-------------------------------------:|:------------------------------:|
@@ -9,9 +11,25 @@ Welcome, PCB designers! This repository collects all resources for development b
 | **Mini Board**           | <a href="Mini_Board/TS1701_PCB/img/top_assembled.png"><img src="Mini_Board/TS1701_PCB/img/top_assembled.png" width="100"></a> | Compact PCB board                    | [View](./Mini_Board/)          |
 | **Arduino Shield**       | <a href="Arduino_Shield/TS1401_design/img/top_assembled.png"><img src="Arduino_Shield/TS1401_design/img/top_assembled.png" width="100"></a> | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
 
+## Using These Designs
+
+Each particular board folder contains complete design files for all released revisions:
+- **Schematics** (`.kicad_sch`) - Showing how components are wired together
+- **PCB layouts** (`.kicad_pcb`) - Design of the PCB - how components are physically placed on the PCB
+- **BOMs** - Component lists with part numbers
+- **Gerbers** - Manufacturing files for PCB fabrication
+
+You're free to use these as reference, modify for your needs, or manufacture your own boards.
+
+## Contributing
+
+Found an improvement? We welcome contributions! Please open an issue or pull request with:
+- Clear description of changes
+- Updated schematics/layouts if applicable
+
 ## FAQ
 
-See [FAQ.md](FAQ.md) for frequently asked questions about getting started, identifying boards, and designing with TROPIC01.
+See [FAQ.md](FAQ.md)
 
 ## About TROPIC01
 
