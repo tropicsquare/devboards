@@ -8,7 +8,6 @@ This repository contains the design files for the TROPIC01 USB Devkit. Each fold
 | 2.0     | none *([More info..](../IDENTIFY_DEVBOARD.md))*        | **TS1302**     | STM32U5 (256kB) | TR01-C2P-T103        | [BOM](./PCB/TS1302/bom/bom.csv) | [FW B](./fw/firmware_B/)   | [Top View](./PCB/TS1302/img/top.png)  | link  |
 | 3.0     | 25057-XXXX<br>25058-XXXX  | **TS1303**     | STM32U5 (512kB) | TR01-C2P-T301        | [BOM](./PCB/TS1303/bom/bom.csv) | [FW B](./fw/firmware_B/)   | [Top View](./PCB/TS1303/img/top.png)  | link  |
 
-*[See](../IDENTIFY_DEVBOARD.md).*
 
 ## Getting Started
 
