@@ -1,5 +1,4 @@
-# TROPIC01 Development Boards
-
+# TROPIC01 devboards
 Welcome, PCB designers! 
 
 This repository collects all resources for development boards which we designed with our TROPIC01 secure element. All PCB designs are freely available under **[CERN-OHL-P-2.0](https://ohwr.org/cernohl) Open Hardware license**. We encourage you to re-use designs, modify, or build your own boards!
@@ -20,6 +19,8 @@ Each particular board folder contains complete design files for all released rev
 - **Gerbers** - Manufacturing files for PCB fabrication
 
 You're free to use these as reference, modify for your needs, or manufacture your own boards.
+
+Some devboards include firmware in their folders. Note that firmware may be under a different licensing scheme - see the [licensing section](#license) below for details.
 
 ## Contributing
 
