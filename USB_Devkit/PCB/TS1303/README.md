@@ -1,37 +1,46 @@
-# About
+# TS1303 – USB Devkit (Revision 3.0)
 
-TS13 – TROPIC01 USB Development Kit
-A KiCad-based hardware project providing a minimal development platform for the TROPIC01 chip.
+KiCad-based hardware project providing a development platform for the TROPIC01 chip via USB interface.
 
-The TS13 features a USB-C interface and an STM32 microcontroller acting as a USB-to-SPI converter,
-enabling straightforward host communication with TROPIC01.
+## Features
 
-Devkit was distributed with [this](./../../legacy_fw/firmware_B/README.md) firmware.
+- **USB-C interface** with STM32U5 microcontroller (512kB)
+- **Firmware**: [Firmware B](./../../legacy_fw/firmware_A/README.md) acts as USB-to-SPI converter for host communication with TROPIC01
+- **PCB Marking**: See [here](../../README.md)
 
-# Project structure
+## Getting Started
 
-`*.kicad_pro` - KiCad project file \
-`*.kicad_sch` - Schematic file \
-`*.kicad_pcb` - PCB layout file \
-`./out/` - Generated gerber data for PCB manufacturing \
-`./bom/` - Bill of materials, including order codes and interactive BOM \
-`./img/` - Images (PCB renders) \
-`*_schematics.pdf` - Exported schematic diagrams (latest version) \
+Ready to use this devkit? Follow tutorials in [libtropic](https://github.com/tropicsquare/libtropic) to get started with TROPIC01.
 
-# Manufacturing instructions
+## Project Structure
 
-## Assembly
+| File/Folder        | Description                                            |
+|:--------------     |:-------------------------------------------------------|
+| `*.kicad_pro`      | KiCad project file                                     |
+| `*.kicad_sch`      | Schematic file                                         |
+| `*.kicad_pcb`      | PCB layout file                                        |
+| `*_schematics.pdf` | Exported schematic diagrams                            |
+| `./out/`           | Gerber files for PCB manufacturing                     |
+| `./bom/`           | Bill of materials with order codes and interactive BOM |
+| `./img/`           | PCB renders and images                                 |
 
-There are no any special requirements for C and R components.
-Where not specified the R tolerance is 5% and C 20%.
+## Manufacturing
 
-## PCB
+### Assembly Notes
 
-  Number of cu layers: 2 \
-  Board Thickness: 1.0 \
-  Core: FR4 \
-  Size: 20 x 46 mm \
-  Mask: Blue \
-  Silkscreen: Yes (TOP and BOTTOM)
+Standard SMD components (0805 size):
+- Resistor tolerance: 5% (unless specified)
+- Capacitor tolerance: 20% (unless specified)
+
+### PCB Specifications
+
+| Parameter   | Value                                                         |
+|:------------|:--------------------------------------------------------------|
+| Layers      | 2-layer                                                       |
+| Thickness   | 1.0 mm                                                        |
+| Material    | FR4                                                           |
+| Size        | 20 × 46 mm                                                    |
+| Solder Mask | Blue                                                          |
+| Silkscreen  | Yes (top and bottom)                                          |
 
 
