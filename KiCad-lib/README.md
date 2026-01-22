@@ -6,7 +6,7 @@ This directory contains support files for designing PCB with TROPIC01, **Tested 
 
 ## Content
 
-- `TROPIC01.kicad_sym` - Symbol library containing the TROPIC01 chip schematic symbol
+- `TROPIC01.kicad_sym` - Symbol library containing schematic symbol for TROPIC01 chip
 - `TROPIC01.step` - 3D STEP model for the TROPIC01 chip package
 - `logos.pretty/` - Tropic Square logo and branding, provided as footprints, ready to be used in silkscreen
 
@@ -18,7 +18,7 @@ This method keeps the libraries just with your project. For more details refer t
 
 1. **Copy the KiCad-lib folder** into your KiCad project directory or a subdirectory (e.g., `libraries/`)
 
-2. **Add the Symbol Library:**
+2. **Add the Library:**
   - Open your KiCad project
   - Go to `Preferences` → `Manage Symbol Libraries...`
   - In the "Project Specific Libraries" tab, click the folder icon to add a new library
@@ -35,12 +35,11 @@ This method keeps the libraries just with your project. For more details refer t
 
 4. **Configure 3D Model Path:**
 
-By default KiCad will use 3D model for used QFN32 package, but it is possible to change this model to the one provided by us, so you could see a palm tree on TROPIC01 package on your PCB when you render PCB in 3D viewer. To reference our 3D model instead of the one provided with official QFN32 footprint, you need to update the path:
+By default, KiCad uses the standard 3D model for the QFN32 footprint. You can override this with our custom model to display the palm tree logo on the TROPIC01 package in the 3D viewer. To use our 3D model:
   - Open the PCB editor
   - Select a TROPIC01 footprint
   - Right-click → `Properties` → `3D Models` tab
-  - Update the path to point to provided `TROPIC01.step`
-  - Rendered package together with silkscreen logo:
+  - Update the path so it points to provided `TROPIC01.step`
 
 
 ## Adding Logo Footprints to PCB
