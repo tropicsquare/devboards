@@ -10,7 +10,7 @@ KiCad-based hardware project providing a development platform for the TROPIC01 c
 
 ## Getting Started
 
-Ready to use this devkit? Follow tutorials in [libtropic](https://github.com/tropicsquare/libtropic) to get started with TROPIC01.
+Ready to explore TROPIC01? Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## Project Structure
 
