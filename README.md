@@ -8,10 +8,10 @@ This repository collects all resources for development boards which we designed 
 
 | Product name             | Image  | Description                           | HW resources                   |
 |:------------------------:|:------:|:-------------------------------------:|:------------------------------:|
-| **USB Devkit**           | <a href="USB_Devkit/PCB/TS1302/img/top_assembled.png"><img src="USB_Devkit/PCB/TS1302/img/top_assembled.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
-| **Raspberry Pi Shield**  | <a href="Raspberry_Pi_Shield/TS1501/img/top_assembled.png"><img src="Raspberry_Pi_Shield/TS1501/img/top_assembled.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./Raspberry_Pi_Shield/) |
-| **Mini Board**           | <a href="Mini_Board/TS1701/img/top_assembled.png"><img src="Mini_Board/TS1701/img/top_assembled.png" width="100"></a> | Compact PCB board                    | [View](./Mini_Board/)          |
-| **Arduino Shield**       | <a href="Arduino_Shield/TS1401/img/top_assembled.png"><img src="Arduino_Shield/TS1401/img/top_assembled.png" width="100"></a> | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
+| **USB Devkit**           | <a href="USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png"><img src="USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
+| **Raspberry Pi Shield**  | <a href="Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./Raspberry_Pi_Shield/) |
+| **Mini Board**           | <a href="Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> | Compact PCB board                    | [View](./Mini_Board/)          |
+| **Arduino Shield**       | <a href="Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
 
 ## Using These Designs
 
