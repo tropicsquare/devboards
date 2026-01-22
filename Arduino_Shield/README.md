@@ -3,18 +3,20 @@
 This repository contains **hardware** design files for the TROPIC01 Arduino Shield.
 
 > [!TIP]
-> **Ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
+> **Looking for code examples, ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
 ## PCB Revisions + BOMs
 
-- **TS1401/** - PCB revision 1.0 hardware files (schematics, layouts, BOMs, gerbers)
+Following folder contains schematics, layouts, BOMs and gerber files.
+
+- **PCB [TS1401](./TS1401/)**
 
 ## Product Versions
 
-| Product version | PCB Marking     | PCB Revision   | Product Variant                | TROPIC01 Part Number | BOM                                                 | Picture                                    | Order |
+| Product version | PCB Marking     | PCB Revision   | Product Variant                | TROPIC01 Part Number | BOM                                                 | Picture                                    | Availability |
 |:-------:|:---------------:|:--------------:|:------------------------------:|:--------------------:|:---------------------------------------------------:|:------------------------------------------:|:-----:|
-| 1.0     | 12345<br>12346  | **TS1401**     | Assembled with chip            | TR01-C2P-T103        | [BOM](./TS1401/bom/bom_variant_chip.csv)     | [Top View](./TS1401/img/top.png)    | link  |
-| 1.1     | 22345           | **TS1401**     | Assembled with MikroBUS socket | ---                  | [BOM](./TS1401/bom/bom_variant_microbus.csv) | [Top View](./TS1401/img/top.png)    | link  |
+| 1.1     | 22345           | **TS1401**     | Assembled with MikroBUS socket | ---                  | [BOM](./TS1401/bom/bom_variant_microbus.csv) | [Top View](./TS1401/img/top.png)    | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| 1.0     | 12345<br>12346  | **TS1401**     | Assembled with chip            | TR01-C2P-T103        | [BOM](./TS1401/bom/bom_variant_chip.csv)     | [Top View](./TS1401/img/top.png)    | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
 
 ## About TROPIC01
 

@@ -3,6 +3,9 @@ Welcome, PCB designers!
 
 This repository collects all resources for development boards which we designed with our TROPIC01 secure element. All PCB designs are freely available under **[CERN-OHL-P-2.0](https://ohwr.org/cernohl) Open Hardware license**. We encourage you to re-use designs, modify, or build your own boards!
 
+> [!TIP]
+> **Looking for code examples, ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
+
 | Product name             | Image  | Description                           | HW resources                   |
 |:------------------------:|:------:|:-------------------------------------:|:------------------------------:|
 | **USB Devkit**           | <a href="USB_Devkit/PCB/TS1302/img/top_assembled.png"><img src="USB_Devkit/PCB/TS1302/img/top_assembled.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
