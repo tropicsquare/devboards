@@ -10,8 +10,8 @@ included in this project and their respective licenses.
 1. STMicroelectronics STM32 HAL Drivers
    License: BSD-3-Clause
    Copyright: STMicroelectronics (2021)
-   Location: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/
-   License File: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md
+   Location: TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/
+   License File: TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md
    
    Description:
    Hardware abstraction layer drivers for STM32U5 microcontrollers.
@@ -26,9 +26,9 @@ included in this project and their respective licenses.
 2. Microsoft Azure RTOS (USBX Library)
    License: Microsoft Software License Terms for Microsoft Azure RTOS
    Copyright: Microsoft Corporation
-   Location: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/
-   License File: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt
-   Hardware Requirements: USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSED-HARDWARE.txt
+   Location: TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/
+   License File: TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt
+   Hardware Requirements: TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSED-HARDWARE.txt
    
    Description:
    USB stack implementation for embedded systems.
@@ -56,7 +56,7 @@ included in this project and their respective licenses.
 3. Tropic Square Firmware Code
    License: BSD-3-Clause-Clear (Clear BSD License)
    Copyright: Tropic Square (2024)
-   Location: USB_Devkit/legacy_fw/firmware_B/app/ and other Tropic Square code
+   Location: TROPIC01_USB_Devkit/legacy_fw/firmware_B/app/ and other Tropic Square code
    License File: LICENSES/FIRMWARE-LICENSE.txt
    
    Description:

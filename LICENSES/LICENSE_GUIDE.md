@@ -45,7 +45,7 @@ This repository uses a **multi-license structure** to properly accommodate diffe
 
 **License:** BSD-3-Clause-Clear  
 **Applies to:**
-- Application code in `USB_Devkit/legacy_fw/firmware_B/app/`
+- Application code in `TROPIC01_USB_Devkit/legacy_fw/firmware_B/app/`
 - Custom drivers and hardware interfaces
 - All code authored by Tropic Square
 
@@ -73,7 +73,7 @@ The firmware includes components from other sources. Each has its own license:
 #### 1. STM32 HAL Drivers (BSD-3-Clause)
 
 **Component:** STMicroelectronics Hardware Abstraction Layer  
-**Location:** `USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/`  
+**Location:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/`  
 **Copyright:** STMicroelectronics (2021)  
 **License:** BSD-3-Clause (permissive)
 
@@ -91,7 +91,7 @@ The firmware includes components from other sources. Each has its own license:
 #### 2. Microsoft Azure RTOS / USBX (Proprietary)
 
 **Component:** USB stack library  
-**Location:** `USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/`  
+**Location:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/`  
 **Copyright:** Microsoft Corporation  
 **License:** Microsoft Software License Terms
 
@@ -118,7 +118,7 @@ This component is **NOT fully open source**. Key restrictions:
 - ✅ Include Microsoft license file with distributions
 - ✅ Review full license before commercial use
 
-**License file:** `USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
+**License file:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
 
 **Alternative:** For fully open firmware, consider replacing with TinyUSB (MIT license).
 

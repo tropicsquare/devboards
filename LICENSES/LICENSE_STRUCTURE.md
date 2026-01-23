@@ -22,20 +22,20 @@ tropic01-devboards/
 │   ├── LICENSE_GUIDE.md                  Comprehensive license guide
 │   └── LICENSE_STRUCTURE.md              This file
 │
-├── Arduino_Shield/
+├── TROPIC01_Arduino_Shield/
 │   ├── LICENSE.txt                       [CERN-OHL-P-2.0] PCB designs
 │   └── TS1401/                           Hardware files
 │
-├── Raspberry_Pi_Shield/
+├── TROPIC01_Raspberry_Pi_Shield/
 │   ├── LICENSE.txt                       [CERN-OHL-P-2.0] PCB designs
 │   └── TS1501/                           Hardware files
 │
-├── Mini_Board/
+├── TROPIC01_Mini_Board/
 │   └── TS1701/
 │       ├── LICENSE.txt                   [BSD-3-Clause-Clear] (existing)
 │       └── (hardware files)
 │
-└── USB_Devkit/
+└── TROPIC01_USB_Devkit/
     ├── pcb/
     │   ├── LICENSE.txt                   [CERN-OHL-P-2.0] PCB designs
     │   └── (hardware files)
@@ -63,9 +63,9 @@ tropic01-devboards/
 **Scope:** All hardware design files  
 **Files:**
 - `../LICENSE.txt` (root)
-- `../Arduino_Shield/LICENSE.txt`
-- `../Raspberry_Pi_Shield/LICENSE.txt`
-- `../USB_Devkit/PCB/LICENSE.txt`
+- `../TROPIC01_Arduino_Shield/LICENSE.txt`
+- `../TROPIC01_Raspberry_Pi_Shield/LICENSE.txt`
+- `../TROPIC01_USB_Devkit/PCB/LICENSE.txt`
 
 **Applies to:**
 - `.kicad_pcb` - PCB layouts
@@ -80,8 +80,8 @@ tropic01-devboards/
 **Scope:** Firmware code authored by Tropic Square  
 **Files:**
 - `LICENSES/FIRMWARE-LICENSE.txt`
-- `../USB_Devkit/legacy_fw/firmware_B/LICENSE.txt`
-- `../Mini_Board/TS1701/LICENSE.txt`
+- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/LICENSE.txt`
+- `../TROPIC01_Mini_Board/TS1701/LICENSE.txt`
 
 **Applies to:**
 - Application code (`app/`)
@@ -92,7 +92,7 @@ tropic01-devboards/
 ### 📦 BSD-3-Clause (STMicroelectronics)
 
 **Scope:** STM32 HAL drivers  
-**File:** `USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md`
+**File:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md`
 
 **Applies to:**
 - HAL driver source files
@@ -101,7 +101,7 @@ tropic01-devboards/
 ### ⚠️ Microsoft Proprietary (Azure RTOS/USBX)
 
 **Scope:** USB stack library  
-**File:** `USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
+**File:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
 
 **Applies to:**
 - USBX library code
@@ -179,19 +179,19 @@ tropic01-devboards/
 2. ✅ `LICENSES/FIRMWARE-LICENSE.txt` - Firmware license (BSD-3-Clause-Clear)
 3. ✅ `LICENSES/NOTICE.txt` - Complete third-party notices
 4. ✅ `LICENSES/LICENSE_GUIDE.md` - Comprehensive user guide
-5. ✅ `../Arduino_Shield/LICENSE.txt` - Hardware license
-6. ✅ `../Raspberry_Pi_Shield/LICENSE.txt` - Hardware license
-7. ✅ `../USB_Devkit/PCB/LICENSE.txt` - Hardware license
-8. ✅ `../USB_Devkit/legacy_fw/firmware_B/NOTICE.txt` - Firmware third-party notices
+5. ✅ `../TROPIC01_Arduino_Shield/LICENSE.txt` - Hardware license
+6. ✅ `../TROPIC01_Raspberry_Pi_Shield/LICENSE.txt` - Hardware license
+7. ✅ `../TROPIC01_USB_Devkit/PCB/LICENSE.txt` - Hardware license
+8. ✅ `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/NOTICE.txt` - Firmware third-party notices
 
 ### Updated Files:
 1. ✅ `../README.md` - Added comprehensive license section
 
 ### Existing Files (Preserved):
-- `../Mini_Board/TS1701/LICENSE.txt` - Kept original Clear BSD
-- `../USB_Devkit/legacy_fw/firmware_B/LICENSE.txt` - Kept original Clear BSD
-- `../USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md` - Third-party
-- `../USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt` - Third-party
+- `../TROPIC01_Mini_Board/TS1701/LICENSE.txt` - Kept original Clear BSD
+- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/LICENSE.txt` - Kept original Clear BSD
+- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md` - Third-party
+- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt` - Third-party
 
 ---
 

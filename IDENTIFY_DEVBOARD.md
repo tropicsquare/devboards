@@ -6,10 +6,10 @@ Some early devboards were distributed without proper markings and may contain TR
 
 1. **Check PCB markings** on the board's silkscreen (top/bottom, edges, or corners)
 2. **Compare with tables** in each devboard folder:
-   - [USB_Devkit/README.md](./USB_Devkit/README.md)
-   - [Arduino_Shield/README.md](./Arduino_Shield/README.md)
-   - [Raspberry_Pi_Shield/README.md](./Raspberry_Pi_Shield/README.md)
-   - [Mini_Board/README.md](./Mini_Board/README.md)
+   - [TROPIC01_USB_Devkit/README.md](./TROPIC01_USB_Devkit/README.md)
+   - [TROPIC01_Arduino_Shield/README.md](./TROPIC01_Arduino_Shield/README.md)
+   - [TROPIC01_Raspberry_Pi_Shield/README.md](./TROPIC01_Raspberry_Pi_Shield/README.md)
+   - [TROPIC01_Mini_Board/README.md](./TROPIC01_Mini_Board/README.md)
 3. **If you still cannot identify your board**, you probably have one of early engineering devices
    - Use "identify chip" tutorial in [libtropic](https://github.com/tropicsquare/libtropic)
    - The TROPIC01 part number will appear in the debug output

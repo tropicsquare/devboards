@@ -6,12 +6,12 @@ This repository collects all resources for development boards which we designed 
 > [!TIP]
 > **Looking for code examples, ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
-| Product name             | Image  | Description                           | HW resources                   |
-|:------------------------:|:------:|:-------------------------------------:|:------------------------------:|
-| **USB Devkit**           | <a href="USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png"><img src="USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./USB_Devkit/)          |
-| **Raspberry Pi Shield**  | <a href="Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./Raspberry_Pi_Shield/) |
-| **Mini Board**           | <a href="Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> | Compact PCB board                    | [View](./Mini_Board/)          |
-| **Arduino Shield**       | <a href="Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> | Shield for Arduino form factor        | [View](./Arduino_Shield/)      |
+| Product name                      | Image  | Description                           | HW resources                   |
+|:---------------------------------:|:------:|:-------------------------------------:|:------------------------------:|
+| **TROPIC01 USB Devkit**           | <a href="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png"><img src="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./TROPIC01_USB_Devkit/)          |
+| **TROPIC01 Raspberry Pi Shield**  | <a href="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./TROPIC01_Raspberry_Pi_Shield/) |
+| **TROPIC01 Mini Board**           | <a href="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> | Compact PCB board                    | [View](./TROPIC01_Mini_Board/)          |
+| **TROPIC01 Arduino Shield**       | <a href="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> | Shield for Arduino form factor        | [View](./TROPIC01_Arduino_Shield/)      |
 
 ## Using These Designs
 
@@ -49,6 +49,6 @@ This repository does not contain only PCB resources, but in some cases also HW w
 
 | Component        | License  | Applies To                                                                                          |
 |:-----------------|:---------|:----------------------------------------------------------------------------------------------------|
-| **PCB Hardware**            | [CERN-OHL-P-2.0](LICENSE.txt) | Arduino_Shield/, Raspberry_Pi_Shield/, Mini_Board/, USB_Devkit/PCB/ |
-| **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | USB_Devkit/legacy_fw/                         |
-| **Third-party USB library** | Specific | USB_Devkit/legacy_fw/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |
+| **PCB Hardware**            | [CERN-OHL-P-2.0](LICENSE.txt) | TROPIC01_Arduino_Shield/, TROPIC01_Raspberry_Pi_Shield/, TROPIC01_Mini_Board/, TROPIC01_USB_Devkit/PCB/ |
+| **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | TROPIC01_USB_Devkit/legacy_fw/                         |
+| **Third-party USB library** | Specific | TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |
