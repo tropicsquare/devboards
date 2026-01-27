@@ -41,3 +41,7 @@ For more information about the TROPIC01 secure element, please see the official 
 
 *   [TROPIC01 Development resources](https://github.com/tropicsquare/tropic01/tree/main/)
 *   [TROPIC01 Website](https://www.tropicsquare.com/tropic01)
+
+## Support & Warranty
+
+This devkit is provided as-is for evaluation and prototyping. No warranties are provided, and no production certifications (e.g., CE/FCC) are implied. Community-level support only; for examples and tutorials, visit [libtropic](https://github.com/tropicsquare/libtropic).

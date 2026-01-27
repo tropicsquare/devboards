@@ -26,22 +26,13 @@ You're free to use these as reference, modify for your needs, or manufacture you
 > [!IMPORTANT]
 > Some devboards include firmware in their folders. Note that firmware or its parts may be under various licensing schemes - see the [licensing section](#license) below for details.
 
-## Contributing
-
-Found an improvement? We welcome contributions! Please open an issue or pull request with:
-- Clear description of changes
-- Updated schematics/layouts if applicable
-
 ## FAQ
 
 See [FAQ.md](FAQ.md)
 
-## About TROPIC01
+## Support & Warranty
 
-For more information about the TROPIC01 secure element, please see the official documentation:
-
-*   [TROPIC01 Development resources](https://github.com/tropicsquare/tropic01/tree/main/)
-*   [TROPIC01 Website](https://www.tropicsquare.com/tropic01)
+These designs and devkits are provided as-is for evaluation and prototyping. No warranties are provided, and no production certifications (e.g., CE/FCC) are implied. Support is best-effort; for code examples and guidance, see [libtropic](https://github.com/tropicsquare/libtropic).
 
 ## License
 
@@ -52,3 +43,10 @@ This repository does not contain only PCB resources, but in some cases also HW w
 | **PCB Hardware**            | [CERN-OHL-P-2.0](LICENSE.txt) | TROPIC01_Arduino_Shield/, TROPIC01_Raspberry_Pi_Shield/, TROPIC01_Mini_Board/, TROPIC01_USB_Devkit/PCB/ |
 | **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | TROPIC01_USB_Devkit/firmwares/                         |
 | **Third-party USB library** | Specific | TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |
+
+## About TROPIC01
+
+For more information about the TROPIC01 secure element, please see the official documentation:
+
+*   [TROPIC01 Development resources](https://github.com/tropicsquare/tropic01/tree/main/)
+*   [TROPIC01 Website](https://www.tropicsquare.com/tropic01)
