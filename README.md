@@ -50,5 +50,5 @@ This repository does not contain only PCB resources, but in some cases also HW w
 | Component        | License  | Applies To                                                                                          |
 |:-----------------|:---------|:----------------------------------------------------------------------------------------------------|
 | **PCB Hardware**            | [CERN-OHL-P-2.0](LICENSE.txt) | TROPIC01_Arduino_Shield/, TROPIC01_Raspberry_Pi_Shield/, TROPIC01_Mini_Board/, TROPIC01_USB_Devkit/PCB/ |
-| **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | TROPIC01_USB_Devkit/legacy_fw/                         |
-| **Third-party USB library** | Specific | TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |
+| **Firmware**                | [BSD-3-Clause-Clear](LICENSES/FIRMWARE-LICENSE.txt) | TROPIC01_USB_Devkit/firmwares/                         |
+| **Third-party USB library** | Specific | TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/ - See [LICENSES/NOTICE.txt](LICENSES/NOTICE.txt)    |

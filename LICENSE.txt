@@ -38,7 +38,7 @@ components in this repository are licensed under different terms.
 
 See the following files for firmware/software licenses:
 - LICENSES/FIRMWARE-LICENSE.txt (for Tropic Square firmware code)
-- TROPIC01_USB_Devkit/legacy_fw/firmware_B/LICENSE.txt (firmware application code)
+- TROPIC01_USB_Devkit/firmwares/firmware_B/LICENSE.txt (firmware application code)
 - LICENSES/NOTICE.txt (third-party software notices)
 
 Full CERN-OHL-P v2 license text: https://ohwr.org/cernohl

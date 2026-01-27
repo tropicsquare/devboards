@@ -36,11 +36,11 @@ tropic01-devboards/
 │       └── (hardware files)
 │
 └── TROPIC01_USB_Devkit/
-    ├── pcb/
+    ├── PCB/
     │   ├── LICENSE.txt                   [CERN-OHL-P-2.0] PCB designs
     │   └── (hardware files)
     │
-    └── legacy_fw/
+    └── firmwares/
         └── firmware_B/
             ├── LICENSE.txt               [BSD-3-Clause-Clear] Application code
             ├── NOTICE.txt                Third-party notices
@@ -80,7 +80,7 @@ tropic01-devboards/
 **Scope:** Firmware code authored by Tropic Square  
 **Files:**
 - `LICENSES/FIRMWARE-LICENSE.txt`
-- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/LICENSE.txt`
+- `../TROPIC01_USB_Devkit/firmwares/firmware_B/LICENSE.txt`
 - `../TROPIC01_Mini_Board/TS1701/LICENSE.txt`
 
 **Applies to:**
@@ -92,7 +92,7 @@ tropic01-devboards/
 ### 📦 BSD-3-Clause (STMicroelectronics)
 
 **Scope:** STM32 HAL drivers  
-**File:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md`
+**File:** `TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md`
 
 **Applies to:**
 - HAL driver source files
@@ -101,7 +101,7 @@ tropic01-devboards/
 ### ⚠️ Microsoft Proprietary (Azure RTOS/USBX)
 
 **Scope:** USB stack library  
-**File:** `TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
+**File:** `TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt`
 
 **Applies to:**
 - USBX library code
@@ -182,16 +182,16 @@ tropic01-devboards/
 5. ✅ `../TROPIC01_Arduino_Shield/LICENSE.txt` - Hardware license
 6. ✅ `../TROPIC01_Raspberry_Pi_Shield/LICENSE.txt` - Hardware license
 7. ✅ `../TROPIC01_USB_Devkit/PCB/LICENSE.txt` - Hardware license
-8. ✅ `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/NOTICE.txt` - Firmware third-party notices
+8. ✅ `../TROPIC01_USB_Devkit/firmwares/firmware_B/NOTICE.txt` - Firmware third-party notices
 
 ### Updated Files:
 1. ✅ `../README.md` - Added comprehensive license section
 
 ### Existing Files (Preserved):
 - `../TROPIC01_Mini_Board/TS1701/LICENSE.txt` - Kept original Clear BSD
-- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/LICENSE.txt` - Kept original Clear BSD
-- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md` - Third-party
-- `../TROPIC01_USB_Devkit/legacy_fw/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt` - Third-party
+- `../TROPIC01_USB_Devkit/firmwares/firmware_B/LICENSE.txt` - Kept original Clear BSD
+- `../TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/stm32/STM32U5xx_HAL_Driver/LICENSE.md` - Third-party
+- `../TROPIC01_USB_Devkit/firmwares/firmware_B/sdk/stm32/STM32_USBX_Library/LICENSE.txt` - Third-party
 
 ---
 

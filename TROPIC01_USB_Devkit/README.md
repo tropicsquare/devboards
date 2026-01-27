@@ -17,9 +17,9 @@ Following folders contain schematics, layouts, BOMs and gerber files.
 
 | Product version | PCB Marking | PCB Revision | MCU        | TROPIC01 Part Number | BOM               | Firmware                          | Picture                        | Availability |
 |:----:|:-----------------------------------------------:|:----------:|:---------------:|:--------------------:|:-------------------------------:|:--------------:|:---------:|:-----:|
-| 3.0  | 25057-XXXX<br>25058-XXXX                        | **TS1303** | STM32U5 (512kB) | TR01-C2P-T301 | [BOM](./PCB/TS1303/bom/bom.csv) | [FW B](./legacy_fw/firmware_B/)   | [Top View](./PCB/TS1303/img/top.png)  | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
-| 2.0  | none *([More info..](../IDENTIFY_DEVBOARD.md))* | **TS1302** | STM32U5 (256kB) | TR01-C2P-T103 | [BOM](./PCB/TS1302/bom/bom.csv) | [FW B](./legacy_fw/firmware_B/)   | [Top View](./PCB/TS1302/img/top.png)  | DEPRECATED  |
-| 1.0  | none *([More info..](../IDENTIFY_DEVBOARD.md))* | **TS1301** | STM32F1 (256kB) | TR01-C2P-T103 | [BOM](./PCB/TS1301/bom/bom.csv) | [FW A](./legacy_fw/firmware_A/)   | [Top View](./PCB/TS1301/img/top.png)  | DEPRECATED  |
+| 3.0  | 25057-XXXX<br>25058-XXXX                        | **TS1303** | STM32U5 (512kB) | TR01-C2P-T301 | [BOM](./PCB/TS1303/bom/bom.csv) | [FW B](./firmwares/firmware_B/)   | [Top View](./PCB/TS1303/img/top.png)  | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| 2.0  | none *([More info..](../IDENTIFY_DEVBOARD.md))* | **TS1302** | STM32U5 (256kB) | TR01-C2P-T103 | [BOM](./PCB/TS1302/bom/bom.csv) | [FW B](./firmwares/firmware_B/)   | [Top View](./PCB/TS1302/img/top.png)  | DEPRECATED  |
+| 1.0  | none *([More info..](../IDENTIFY_DEVBOARD.md))* | **TS1301** | STM32F1 (256kB) | TR01-C2P-T103 | [BOM](./PCB/TS1301/bom/bom.csv) | [FW A](./firmwares/firmware_A/)   | [Top View](./PCB/TS1301/img/top.png)  | DEPRECATED  |
 ## PCB Specifications
 
 Common specifications for all revisions:

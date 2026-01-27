@@ -28,4 +28,4 @@ See the root LICENSE.txt file for complete license information.
 ---
 
 NOTE: Firmware for this development kit is licensed separately under 
-BSD-3-Clause-Clear. See ../legacy_fw/firmware_B/LICENSE.txt
+BSD-3-Clause-Clear. See ../firmwares/firmware_B/LICENSE.txt
