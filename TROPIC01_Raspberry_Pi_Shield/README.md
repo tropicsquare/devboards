@@ -13,10 +13,11 @@ Following folder contains schematics, layouts, BOMs and gerber files.
 
 ## Product Versions
 
-| Product version | PCB Marking | PCB Revision | Product Variant          | TROPIC01 Part Number | BOM          | Picture            | Availability |
-|:-------:|:-----------:|:------------:|:----------------:|:--------------------:|:------------------------------:|:-----------------------:|:-----:|
-| 1.1     | none        | **TS1501**   | Assembled with MikroBUS socket | ---            | [BOM](./TS1501/bom/bom_variant_microbus.csv) | [Top View](./TS1501/img/top.png)    | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
-| 1.0     | none        | **TS1501**   | Assembled with chip            | TR01-C2P-T301  | [BOM](./TS1501/bom/bom_variant_chip.csv)     | [Top View](./TS1501/img/top.png)    | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| Product version | PCB Tracking | PCB Revision | TROPIC01 Part Number | BOM          | Picture            | Availability |
+|:-------:|:-----------:|:------------:|:--------------------:|:------------------------------:|:-----------------------:|:-----:|
+| 1.2     | none        | **TS1501**   | TR01-C2P-T103  | [BOM](./TS1501/bom/bom_variant_chip.csv)     | [Top View](./TS1501/img/top.png)    | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| 1.1     | none        | **TS1501**   | TR01-C2P-T101  | [BOM](./TS1501/bom/bom_variant_chip.csv)     | [Top View](./TS1501/img/top.png)    | DEPRECATED  |
+| 1.0     | none        | **TS1501**   | TR01-B2S-T005  | [BOM](./TS1501/bom/bom_variant_chip.csv)     | [Top View](./TS1501/img/top.png)    | DEPRECATED  |
 
 ## About TROPIC01
 
