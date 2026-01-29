@@ -13,9 +13,9 @@ Following folder contains schematics, layouts, BOMs and gerber files.
 
 ## Product Versions
 
-| Product version | PCB Marking | PCB Revision | TROPIC01 Part Number | BOM          | Picture                    | Availability |
+| Product version | PCB Tracking | PCB Revision | TROPIC01 Part Number | BOM          | Picture                    | Availability |
 |:-------:|:-----------:|:------------:|:--------------------:|:----------------------------------------------:|:-----------------------------------------:|:-----:|
-| 1.0     | none        | **TS1701**   | TR01-C2P-T301        | [BOM](./TS1701/bom/ts17-tropic01-mini.csv) | [Top View](./TS1701/img/top.png)      | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| 1.0     | none        | **TS1701**   | TR01-C2P-T101        | [BOM](./TS1701/bom/ts17-tropic01-mini.csv) | [Top View](./TS1701/img/top.png)      | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
 
 ## About TROPIC01
 
