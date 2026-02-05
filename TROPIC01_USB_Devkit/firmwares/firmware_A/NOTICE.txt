@@ -1,0 +1,20 @@
+Firmware Third-Party Components
+================================
+
+This firmware includes the following third-party software components:
+
+1. STMicroelectronics STM32F1xx HAL Driver
+   License: BSD-3-Clause
+   Copyright: STMicroelectronics (2016)
+   Location: sdk/stm32/STM32F1xx_HAL_Driver/
+   License File: sdk/stm32/STM32F1xx_HAL_Driver/LICENSE.md
+
+2. STMicroelectronics USB Device Library
+   License: Ultimate Liberty license SLA0044 (Proprietary)
+   Copyright: STMicroelectronics
+   Location: sdk/stm32/STM32_USB_Device_Library/
+   
+   IMPORTANT: This component is licensed under ST's Ultimate Liberty license.
+   Users must review and comply with the license terms.
+
+See the root LICENSES/NOTICE.txt file for additional license information.
