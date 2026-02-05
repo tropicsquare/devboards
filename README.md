@@ -6,12 +6,12 @@ This repository collects all resources for development boards which we designed 
 > [!TIP]
 > **Looking for code examples, ready to get started?** Head over to [libtropic](https://github.com/tropicsquare/libtropic) and pick a tutorial that matches your interests. Whether you're new to secure elements or building production systems, you'll find step-by-step guides to get you up and running quickly.
 
-| Product name                      | Image  | Description                           | HW resources                   |
-|:---------------------------------:|:------:|:-------------------------------------:|:------------------------------:|
-| **TROPIC01 USB Devkit**           | <a href="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png"><img src="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png" width="100"></a> | For TROPIC01 evaluation over USB port     | [View](./TROPIC01_USB_Devkit/)          |
-| **TROPIC01 Raspberry Pi Shield**  | <a href="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> | Shield for Raspberry Pi form factor   | [View](./TROPIC01_Raspberry_Pi_Shield/) |
-| **TROPIC01 Mini Board**           | <a href="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> | Compact PCB board                    | [View](./TROPIC01_Mini_Board/)          |
-| **TROPIC01 Arduino Shield**       | <a href="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> | Shield for Arduino form factor        | [View](./TROPIC01_Arduino_Shield/)      |
+| Product name                      | HW resources                   | Description                           | Image  |
+|:---------------------------------:|:------------------------------:|:-------------------------------------:|:------:|
+| **TROPIC01 USB Devkit**           | [View](./TROPIC01_USB_Devkit/)          | For TROPIC01 evaluation over USB port     | <a href="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png"><img src="TROPIC01_USB_Devkit/PCB/TS1303/img/TS1303_USB_Devkit_prod_photo.png" width="100"></a> |
+| **TROPIC01 Raspberry Pi Shield**  | [View](./TROPIC01_Raspberry_Pi_Shield/) | Shield for Raspberry Pi form factor   | <a href="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> |
+| **TROPIC01 Mini Board**           | [View](./TROPIC01_Mini_Board/)          | Compact PCB board                    | <a href="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> |
+| **TROPIC01 Arduino Shield**       | [View](./TROPIC01_Arduino_Shield/)      | Shield for Arduino form factor        | <a href="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> |
 
 ## Using These Designs
 
