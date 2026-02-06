@@ -13,8 +13,8 @@ None avaiable (Developed by MIKRO-E)
 
 | Product version | PCB Tracking | PCB Revision | TROPIC01 Part Number | BOM          | Picture                    | Availability |
 |:-------:|:-----------:|:------------:|:--------------------:|:----------------------------------------------:|:-----------------------------------------:|:-----:|
-| 1.1     | none        | none      | TR01-C2P-T101        | External vendor | [Top View](./TS1701/img/top.png) << Add image here      | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
-| 1.0     | none        | none      | TR01-B2S-T005        | External vendor | [Top View](./TS1701/img/top.png) << Add image here      | [DEPRECATED]  |
+| 1.1     | none        | none      | TR01-C2P-T101        | External vendor | [Top View](./img/secure-tropic-click.png)      | [BUY HERE](https://www.tropicsquare.com/order-devkit)  |
+| 1.0     | none        | none      | TR01-B2S-T005        | External vendor | [Top View](./img/secure-tropic-click.png)      | [DEPRECATED]  |
 
 ## About TROPIC01
 

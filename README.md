@@ -12,6 +12,7 @@ This repository collects all resources for development boards which we designed 
 | **TROPIC01 Raspberry Pi Shield**  | [View](./TROPIC01_Raspberry_Pi_Shield/) | Shield for Raspberry Pi form factor   | <a href="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png"><img src="TROPIC01_Raspberry_Pi_Shield/TS1501/img/TS1501_Raspberry_Pi_Shield_prod_photo.png" width="100"></a> |
 | **TROPIC01 Mini Board**           | [View](./TROPIC01_Mini_Board/)          | Compact PCB board                    | <a href="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png"><img src="TROPIC01_Mini_Board/TS1701/img/TS1701_Mini_Board_prod_photo.png" width="100"></a> |
 | **TROPIC01 Arduino Shield**       | [View](./TROPIC01_Arduino_Shield/)      | Shield for Arduino form factor        | <a href="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png"><img src="TROPIC01_Arduino_Shield/TS1401/img/TS1401_Arduino_Shield_prod_photo.png" width="100"></a> |
+| **TROPIC01 SECURE TROPIC CLICK**  | [View](./TROPIC01_SECURE_TROPIC_CLICK/) | MIKRO-E Click board                   | <a href="TROPIC01_SECURE_TROPIC_CLICK/img/secure-tropic-click.png"><img src="TROPIC01_SECURE_TROPIC_CLICK/img/secure-tropic-click.png" width="100"></a> |
 
 ## Using These Designs
 
