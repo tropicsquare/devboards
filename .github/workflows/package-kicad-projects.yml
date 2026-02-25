@@ -1,4 +1,4 @@
-name: Package KiCad projects
+name: Package Hardware designs
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: KiCad projects ${{ github.ref_name }}
+          name: Hardware designs ${{ github.ref_name }}
           body: Separate ZIP files containing designs uploaded on ${{ github.ref_name }}.
           files: dist/*.zip
