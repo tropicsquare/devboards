@@ -11,7 +11,7 @@ Describe what this PR changes.
 
 
 ## Next steps: How to release files for manufacturing?
-Once all in master is ready, then:
-- Create tag in ISO 8601 format (`YYYY-MM-DD`, for example `2026-03-01`) from the `master` commit
+Once all in main is ready, then:
+- Create tag in ISO 8601 format (`YYYY-MM-DD`, for example `2026-03-01`) from the `main` commit
 - push it, github action will be triggered, data will be packed into zip
 - Verify the GitHub Release for that tag contains the expected ZIP assets.

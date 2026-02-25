@@ -36,5 +36,5 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: KiCad projects ${{ github.ref_name }}
-          body: Separate ZIP files for hardcoded KiCad project folders for tag ${{ github.ref_name }}.
+          body: Separate ZIP files containing designs uploaded on ${{ github.ref_name }}.
           files: dist/*.zip
