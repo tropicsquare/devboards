@@ -26,6 +26,7 @@ jobs:
 
           zip -r "dist/TROPIC01_Arduino_Shield__TS1401__${TAG_SUFFIX}.zip" "TROPIC01_Arduino_Shield/TS1401"
           zip -r "dist/TROPIC01_Mini_Board__TS1701__${TAG_SUFFIX}.zip" "TROPIC01_Mini_Board/TS1701"
+          zip -r "dist/TROPIC01_Mini_Board__TS1702__${TAG_SUFFIX}.zip" "TROPIC01_Mini_Board/TS1702"
           zip -r "dist/TROPIC01_Raspberry_Pi_Shield__TS1501__${TAG_SUFFIX}.zip" "TROPIC01_Raspberry_Pi_Shield/TS1501"
           zip -r "dist/TROPIC01_USB_Devkit__PCB__TS1301__${TAG_SUFFIX}.zip" "TROPIC01_USB_Devkit/PCB/TS1301"
           zip -r "dist/TROPIC01_USB_Devkit__PCB__TS1302__${TAG_SUFFIX}.zip" "TROPIC01_USB_Devkit/PCB/TS1302"
