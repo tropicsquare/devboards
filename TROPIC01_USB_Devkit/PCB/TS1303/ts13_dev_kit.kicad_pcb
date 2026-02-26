@@ -14843,6 +14843,17 @@
 		(layer "F.SilkS")
 		(uuid "f242cf3f-a57b-4556-8cc7-04447d69040c")
 	)
+	(gr_rect
+		(start 124.5 54.3)
+		(end 135.5 56.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "b8a2620e-7f6d-4578-805c-e2025f415882")
+	)
 	(gr_line
 		(start 137.5 50)
 		(end 122.5 50)
@@ -15163,7 +15174,7 @@
 		)
 	)
 	(gr_text "TROPIC01"
-		(at 130 56.25 0)
+		(at 129.851396 54.176745 0)
 		(layer "B.SilkS")
 		(uuid "7cc7bc5b-d5a0-4896-8de5-50ea22a75c6f")
 		(effects
